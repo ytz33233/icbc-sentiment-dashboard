@@ -1,0 +1,194 @@
+{
+  "reportDate": "2026-05-12",
+  "generatedAt": "2026-05-12 01:26",
+  "fromHistory": false,
+  "summary": {
+    "total": 3,
+    "recentCount": 3,
+    "historyCount": 0,
+    "negativeCount": 1,
+    "negativePct": 33,
+    "positiveCount": 2,
+    "neutralCount": 0,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "xiaohongshu": 3
+  },
+  "bySentiment": {
+    "negative": 1,
+    "positive": 2
+  },
+  "byRisk": {
+    "medium": 1,
+    "low": 2
+  },
+  "byProduct": {
+    "升金有礼": 1,
+    "i豆活动": 2
+  },
+  "byCategory": {
+    "资产达标": 1,
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-06",
+      "total": 4,
+      "recent": 0,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-08",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-09",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-10",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-11",
+      "total": 27,
+      "recent": 2,
+      "history": 25,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-12",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "工行",
+      "count": 3
+    },
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "攻略",
+      "count": 2
+    },
+    {
+      "word": "升金有礼",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-12）共采集 3 条舆情，其中负面 1 条，正面 2 条。24小时内新增 3 条。主要集中在「i豆活动、升金有礼」等产品，来源以小红书为主，热词包括「工行、i豆、攻略」。",
+    "date": "2026-05-12",
+    "generatedAt": "2026-05-13T17:26:01.014Z"
+  },
+  "records": [
+    {
+      "id": "20260512-01",
+      "date": "2026-04-14",
+      "publishTime": "2026-04-14 16:16:39",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "medium",
+      "title": "工行三月升金有礼又空包！",
+      "content": "工行三月升金有礼又空包！",
+      "keywords": [
+        "工行",
+        "升金有礼"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69de6867000000001e00da58",
+      "author": "Little monster",
+      "status": "需关注",
+      "relatedProduct": "升金有礼",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 14,
+      "comments": 87,
+      "favorites": 11,
+      "heatScore": 205,
+      "category": "资产达标"
+    },
+    {
+      "id": "20260512-02",
+      "date": "2026-05-05",
+      "publishTime": "2026-05-05 02:41:29",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5月工行i豆乐园活动攻略来咯！",
+      "content": "5月工行i豆乐园活动攻略来咯！",
+      "keywords": [
+        "工行",
+        "i豆",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69f958d90000000036019bf3",
+      "author": "琦琦攻略社",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 11,
+      "comments": 13,
+      "favorites": 2,
+      "heatScore": 40,
+      "category": "i豆兑换"
+    },
+    {
+      "id": "20260512-03",
+      "date": "2026-04-30",
+      "publishTime": "2026-04-30 16:16:37",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5月工行i豆乐园活动攻略",
+      "content": "5月工行i豆乐园活动攻略",
+      "keywords": [
+        "工行",
+        "i豆",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69f38065000000002301c26d",
+      "author": "小巷表弟",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 50,
+      "comments": 122,
+      "favorites": 30,
+      "heatScore": 339,
+      "category": "i豆兑换"
+    }
+  ]
+}

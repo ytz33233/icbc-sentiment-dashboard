@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-13",
+  "source": "weibo-mcp",
+  "keyword": "工行 升金有礼",
+  "results": [
+    {
+      "id": "5131351546136808",
+      "text": "湖南工行-任务中心-享活动-湘约升礼 报名抽立减金",
+      "user": "分享白菜达人",
+      "likes": 16,
+      "comments": 3,
+      "created_at": "2025-02-07"
+    },
+    {
+      "id": "unknown",
+      "text": "自测~工行微信任务，体验升金有礼，1.88立减金，扫码进推送",
+      "user": "无敌",
+      "likes": 9,
+      "comments": 20,
+      "created_at": "unknown"
+    },
+    {
+      "id": "unknown",
+      "text": "工行 任务中心， 浏览普惠版 中了就是6立减，不是必中",
+      "user": "扒羊毛",
+      "likes": 3,
+      "comments": 3,
+      "created_at": "unknown"
+    }
+  ]
+}

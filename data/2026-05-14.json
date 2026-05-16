@@ -1,0 +1,231 @@
+{
+  "reportDate": "2026-05-14",
+  "generatedAt": "2026-05-14 11:08",
+  "fromHistory": false,
+  "summary": {
+    "total": 3,
+    "recentCount": 0,
+    "historyCount": 13,
+    "negativeCount": 2,
+    "negativePct": 15,
+    "positiveCount": 0,
+    "neutralCount": 11,
+    "channelCount": 3,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "complaint": 2,
+    "news": 1
+  },
+  "bySentiment": {
+    "negative": 2,
+    "neutral": 1
+  },
+  "byRisk": {
+    "medium": 2,
+    "low": 1
+  },
+  "byProduct": {
+    "升金有礼": 1,
+    "i豆活动": 8,
+    "其他": 4
+  },
+  "byCategory": {
+    "i豆兑换": 13
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-08",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-09",
+      "total": 8,
+      "recent": 6,
+      "history": 2,
+      "negative": 2
+    },
+    {
+      "date": "2026-05-10",
+      "total": 3,
+      "recent": 0,
+      "history": 3,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-11",
+      "total": 28,
+      "recent": 2,
+      "history": 26,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-13",
+      "total": 10,
+      "recent": 0,
+      "history": 10,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-14",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 8
+    },
+    {
+      "word": "立减金",
+      "count": 5
+    },
+    {
+      "word": "投诉",
+      "count": 2
+    },
+    {
+      "word": "兑换",
+      "count": 2
+    },
+    {
+      "word": "升金有礼",
+      "count": 1
+    },
+    {
+      "word": "空奖",
+      "count": 1
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "虚假宣传",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    },
+    {
+      "word": "美团",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-14）共采集 13 条舆情，其中负面 2 条，中性 11 条。主要集中在「i豆活动、其他」等产品，来源以微博、投诉平台为主，热词包括「i豆、立减金、投诉」。",
+    "date": "2026-05-14",
+    "generatedAt": "2026-05-14T03:08:11.170Z"
+  },
+  "records": [
+    {
+      "title": "黑猫投诉：工行长辈客户升金有礼抽奖空奖",
+      "content": "用户投诉2026年3月参加工商银行长辈客户升金有礼活动，宣传提升100万可得300元微信立减金，实际达标后仅让抽奖且为空奖，客服称奖励已领完。",
+      "source": "黑猫投诉平台",
+      "publishTime": "2026-05-09",
+      "sentimentRaw": "负面",
+      "isComplaint": "是",
+      "fermentation": "中",
+      "recency": "历史",
+      "sentiment": "negative",
+      "sourceType": "complaint",
+      "riskLevel": "medium",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼",
+        "立减金",
+        "空奖",
+        "抽奖",
+        "投诉"
+      ],
+      "amount": "300元",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-05-09",
+      "fetchTime": "2026-05-14",
+      "author": "黑猫投诉平台",
+      "url": "",
+      "id": "20260514-01",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "黑猫投诉：工行i豆权益兑换虚假宣传",
+      "content": "用户投诉工行i豆权益兑换宣传与实际使用规则不符，误导金融消费者，侵害消费者知情权，要求全额退还。",
+      "source": "黑猫投诉平台",
+      "publishTime": "2026-05-09",
+      "sentimentRaw": "负面",
+      "isComplaint": "是",
+      "fermentation": "低",
+      "recency": "历史",
+      "sentiment": "negative",
+      "sourceType": "complaint",
+      "riskLevel": "medium",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "投诉",
+        "虚假宣传",
+        "兑换"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-05-09",
+      "fetchTime": "2026-05-14",
+      "author": "黑猫投诉平台",
+      "url": "",
+      "id": "20260514-02",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "老行长网：2026年信用卡绑卡消费累积i豆规则复杂",
+      "content": "工行信用卡绑卡消费累积i豆活动，部分信用卡（百夫长黑金卡、百夫长白金卡、航空联名卡、香格里拉联名卡、光芒Plus版等）不参与累积，规则较为复杂。",
+      "source": "老行长网",
+      "publishTime": "2026-04-20",
+      "sentimentRaw": "中性",
+      "isComplaint": "待观察",
+      "fermentation": "低",
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "news",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "信用卡"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-04-20",
+      "fetchTime": "2026-05-14",
+      "author": "老行长网",
+      "url": "",
+      "id": "20260514-03",
+      "category": "i豆兑换",
+      "heatScore": 0
+    }
+  ]
+}

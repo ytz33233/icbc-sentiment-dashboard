@@ -1,0 +1,21 @@
+{
+  "alertDate": "2026-05-12",
+  "generatedAt": "2026-05-13T17:26:01.015Z",
+  "summary": {
+    "high": 0,
+    "medium": 1,
+    "total": 1
+  },
+  "records": [
+    {
+      "id": "20260512-01",
+      "title": "工行三月升金有礼又空包！",
+      "source": "小红书",
+      "content": "工行三月升金有礼又空包！",
+      "riskLevel": "medium",
+      "sentiment": "negative",
+      "url": "https://www.xiaohongshu.com/explore/69de6867000000001e00da58",
+      "relatedProduct": "升金有礼"
+    }
+  ]
+}

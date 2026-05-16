@@ -1,0 +1,23 @@
+{
+  "reportDate": "2026-04-25",
+  "generatedAt": "2026-05-13T16:41:29.693Z",
+  "fromHistory": false,
+  "summary": {
+    "total": 0,
+    "recentCount": 0,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 0,
+    "neutralCount": 0,
+    "channelCount": 0,
+    "highRiskCount": 0
+  },
+  "bySource": {},
+  "bySentiment": {},
+  "byRisk": {},
+  "byProduct": {},
+  "byCategory": {},
+  "hotKeywords": [],
+  "records": []
+}

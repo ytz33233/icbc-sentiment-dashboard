@@ -1,0 +1,5308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运营活动客户舆情雷达</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   运营活动客户舆情看板 — 深色终端风格
+   设计风格：金融终端与编辑排版的融合
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  --bg: #0b1220;
+  --bg-elevated: #111a2b;
+  --bg-card: #111d2e;
+  --bg-card-hover: #162438;
+  --border: #2b3a57;
+  --border-light: #3a4f75;
+  --text: #f3f6ff;
+  --text-muted: #aec0df;
+  --text-dim: #88a0c7;
+  --accent: #57b3ff;
+  --accent-light: #8cc8ff;
+  --accent-glow: rgba(87, 179, 255, 0.15);
+  --gold: #f6b84b;
+  --green: #37c486;
+  --orange: #ff9800;
+  --bad: #ef6678;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 30px var(--accent-glow);
+  --shadow-panel: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top right, #12213d 0%, var(--bg) 45%), var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Noise Texture Overlay ── */
+.noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ── Animation System ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50% { box-shadow: 0 0 20px 4px var(--accent-glow); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-delay="1"] { animation-delay: 0.08s; }
+[data-delay="2"] { animation-delay: 0.16s; }
+[data-delay="3"] { animation-delay: 0.24s; }
+[data-delay="4"] { animation-delay: 0.32s; }
+[data-delay="5"] { animation-delay: 0.40s; }
+[data-delay="6"] { animation-delay: 0.48s; }
+[data-delay="7"] { animation-delay: 0.56s; }
+[data-delay="8"] { animation-delay: 0.64s; }
+[data-delay="9"] { animation-delay: 0.72s; }
+
+/* ── App Layout ── */
+.app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+}
+
+@media (max-width: 768px) {
+  .app { padding: 0 16px 32px; }
+}
+
+/* ── Masthead ── */
+.masthead {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.masthead-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.masthead-icon {
+  width: 48px; height: 48px;
+  background: var(--accent);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-glow);
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.masthead-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.masthead-meta {
+  text-align: right;
+}
+
+.masthead-date {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent-light);
+  letter-spacing: -0.01em;
+}
+
+.masthead-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.masthead-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* ── Masthead Actions ── */
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Info Toggle Button ── */
+.info-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-dim);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.info-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.info-toggle-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Version Toggle Button ── */
+.version-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-dim);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.version-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.version-toggle-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.version-toggle-btn .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+.version-toggle-btn.active .dot {
+  background: #fff;
+}
+
+/* ── Info Panel ── */
+.info-panel {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px 20px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  background: rgba(87, 179, 255, 0.04);
+  border: 1px solid rgba(87, 179, 255, 0.1);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  animation: fadeIn 0.25s ease;
+}
+.info-panel.show {
+  display: grid;
+}
+.info-panel strong {
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.info-panel span {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  white-space: normal;
+}
+
+/* ── Masthead Responsive ── */
+@media (max-width: 1100px) {
+  .masthead {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead-brand h1 {
+    font-size: 22px;
+  }
+  .info-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.version-panel {
+  display: none;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  background: rgba(246, 184, 75, 0.04);
+  border: 1px solid rgba(246, 184, 75, 0.1);
+  border-radius: var(--radius-sm);
+  animation: fadeIn 0.25s ease;
+}
+.version-panel.show {
+  display: block;
+}
+.version-panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+}
+.version-section {
+  line-height: 1.8;
+}
+.version-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.version-list {
+  margin: 0;
+  padding-left: 16px;
+  list-style: disc;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.version-list li {
+  margin-bottom: 4px;
+}
+.version-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(246, 184, 75, 0.1);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .version-panel-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ── Summary Card ── */
+.summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent);
+}
+
+.summary-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-light);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.summary-body {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.summary-body strong {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.summary-meta {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 14px;
+  letter-spacing: 0.02em;
+}
+
+/* ── KPI Section ── */
+.kpi-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .kpi-section { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .kpi-section { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-panel);
+}
+
+.kpi-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+.kpi-card.accent {
+  border-color: rgba(87, 179, 255, 0.45);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(87, 179, 255, 0.06) 100%);
+}
+
+.kpi-card.accent::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.kpi-card.accent-negative {
+  border-color: rgba(239, 102, 120, 0.35);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(239, 102, 120, 0.06) 100%);
+}
+
+.kpi-card.accent-negative .kpi-big {
+  color: var(--bad);
+}
+
+.kpi-card.accent-positive {
+  border-color: rgba(55, 196, 134, 0.35);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(55, 196, 134, 0.06) 100%);
+}
+
+.kpi-card.accent-positive .kpi-big {
+  color: var(--green);
+}
+
+.kpi-sublabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.kpi-big {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  animation: countUp 0.6s ease-out both;
+}
+
+.kpi-card.accent .kpi-big {
+  color: var(--accent-light);
+}
+
+.kpi-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.kpi-detail span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Filter Section ── */
+.filter-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.filter-input, .filter-select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-input:focus, .filter-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.filter-input::placeholder {
+  color: var(--text-dim);
+}
+
+.filter-select option {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.btn {
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border-light);
+  color: var(--text-muted);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+/* ── Charts Section ── */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.chart-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+}
+
+.chart-panel.wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1100px) {
+  .charts-section { grid-template-columns: 1fr; }
+  .chart-panel.wide { grid-column: auto; }
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-number {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.panel-header h3 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.panel-body {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Donut Chart ── */
+.donut-container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+}
+
+.donut-chart {
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.donut-center {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.donut-center-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.donut-center-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.donut-legend-bar {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.donut-legend-text {
+  color: var(--text-muted);
+}
+
+.donut-legend-count {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Bar Chart ── */
+.bar-chart-dark {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bar-dark-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bar-dark-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  min-width: 60px;
+  text-align: right;
+}
+
+.bar-dark-track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-dark-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+
+.bar-dark-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+.bar-dark-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 24px;
+  text-align: left;
+}
+
+/* ── Line Chart ── */
+.line-chart-dark {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+.line-chart-dark svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.line-chart-dark .grid-line {
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.line-chart-dark .axis-text {
+  fill: var(--text-dim);
+  font-size: 10px;
+  font-family: var(--font-body);
+}
+
+.line-chart-dark .trend-area {
+  fill: url(#trendGradient);
+}
+
+.line-chart-dark .trend-line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.line-chart-dark .trend-line.total {
+  stroke: var(--text-muted);
+  stroke-dasharray: 6 4;
+}
+
+.line-chart-dark .trend-line.negative {
+  stroke: var(--accent);
+}
+
+.line-chart-dark .trend-point {
+  transition: r 0.2s;
+  cursor: pointer;
+}
+
+.line-chart-dark .trend-point:hover {
+  r: 6;
+}
+
+.line-chart-dark .trend-tooltip {
+  position: absolute;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Trend Legend ── */
+.trend-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.trend-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.trend-legend-line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.trend-legend-total {
+  background: none;
+  border-top: 2px dashed var(--text-muted);
+  height: 0;
+  width: 20px;
+}
+
+.trend-legend-negative {
+  background: var(--accent);
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* ── Word Cloud ── */
+.word-cloud-dark {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.word-item-dark {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
+.word-item-dark:hover {
+  transform: scale(1.06) translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent-light);
+  box-shadow: var(--shadow-glow);
+  background: rgba(196,30,58,0.08);
+}
+
+/* ── Data Table ── */
+.table-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+}
+
+.table-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.table-count {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.table-count span {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--bg-elevated);
+}
+
+th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+th:hover {
+  color: var(--text-muted);
+}
+
+td {
+  padding: 14px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--text-muted);
+  transition: background 0.15s;
+}
+
+tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+tr {
+  transition: border-left 0.15s;
+  border-left: 2px solid transparent;
+}
+
+tr:hover {
+  border-left-color: var(--accent);
+}
+
+/* ── Tags ── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 4px;
+  letter-spacing: 0.02em;
+}
+
+.tag-sentiment-positive { background: rgba(76,175,80,0.12); color: var(--green); border: 1px solid rgba(76,175,80,0.2); }
+.tag-sentiment-negative { background: rgba(196,30,58,0.12); color: var(--accent-light); border: 1px solid rgba(196,30,58,0.2); }
+.tag-sentiment-neutral { background: rgba(255,152,0,0.08); color: var(--orange); border: 1px solid rgba(255,152,0,0.15); }
+.tag-recency-recent { background: rgba(245,166,35,0.08); color: var(--gold); border: 1px solid rgba(245,166,35,0.15); }
+.tag-recency-history { background: rgba(85,85,102,0.15); color: var(--text-dim); border: 1px solid var(--border); }
+
+/* ── Category Tags ── */
+.tag-category-i豆兑换 { background: rgba(87,179,255,0.12); color: var(--accent-light); border: 1px solid rgba(87,179,255,0.2); }
+.tag-category-薅羊毛 { background: rgba(246,184,75,0.12); color: var(--gold); border: 1px solid rgba(246,184,75,0.2); }
+.tag-category-资产达标 { background: rgba(55,196,134,0.12); color: var(--green); border: 1px solid rgba(55,196,134,0.2); }
+.tag-category-投诉维权 { background: rgba(239,102,120,0.12); color: #ef6678; border: 1px solid rgba(239,102,120,0.2); }
+.tag-category-虚假宣传 { background: rgba(156,39,176,0.12); color: #ce93d8; border: 1px solid rgba(156,39,176,0.2); }
+.tag-category-其他 { background: rgba(136,160,199,0.12); color: var(--text-dim); border: 1px solid var(--border); }
+
+/* ── Heat Score ── */
+.heat-score { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: 13px; color: var(--gold); }
+.heat-score-high { color: #ff6b6b; }
+.heat-metrics { display: flex; gap: 8px; font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+.heat-metrics span { display: inline-flex; align-items: center; gap: 2px; }
+
+/* ── Category Filter Bar ── */
+.category-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; padding: 0 4px; }
+.category-chip { padding: 5px 12px; border-radius: 100px; font-size: 12px; font-weight: 500; cursor: pointer; background: var(--bg-elevated); border: 1px solid var(--border); color: var(--text-muted); transition: all 0.2s; }
+.category-chip:hover { border-color: var(--accent); color: var(--accent-light); }
+.category-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 0 12px var(--accent-glow); }
+
+/* ── Content Preview ── */
+.content-preview {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.link-btn {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.link-btn:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* ── Pagination ── */
+.pagination {
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.page-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  border-color: var(--border-light);
+  color: var(--text);
+  background: var(--bg-card);
+}
+
+.page-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.modal-close {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+  background: rgba(196,30,58,0.1);
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 14px;
+  gap: 16px;
+}
+
+.detail-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 80px;
+  padding-top: 2px;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: var(--text);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.detail-content {
+  background: var(--bg-elevated);
+  padding: 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -16px; top: 4px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-card);
+}
+
+.timeline-time {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+  font-family: var(--font-body);
+}
+
+.timeline-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.empty-state {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+/* ── Mobile Card List ── */
+.mobile-card-list {
+  display: none;
+  gap: 8px;
+  padding: 12px;
+}
+
+.mobile-card {
+  border: 1px solid rgba(59, 79, 113, 0.6);
+  border-radius: var(--radius-sm);
+  background: rgba(22, 34, 56, 0.72);
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-card:active {
+  background: rgba(87, 179, 255, 0.08);
+}
+
+.mobile-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.mobile-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mobile-card-title {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.4;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mobile-card-content {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mobile-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.mobile-card-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mobile-card-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(87, 179, 255, 0.25);
+  background: rgba(87, 179, 255, 0.06);
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+.mobile-pagination {
+  display: none;
+  padding: 12px;
+  gap: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+/* ── Mobile Filter Panel ── */
+.filter-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 15, 0.6);
+  z-index: 50;
+  display: none;
+}
+
+.filter-mobile-overlay:not([hidden]) {
+  display: block;
+}
+
+.filter-mobile-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 12vh;
+  z-index: 51;
+  background: #0f1829;
+  border-radius: 16px 16px 0 0;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  display: none;
+}
+
+.filter-mobile-panel:not([hidden]) {
+  display: grid;
+}
+
+.filter-mobile-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-mobile-panel-close {
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.filter-mobile-panel-body {
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: grid;
+  gap: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-mobile-panel-body .filter-group {
+  display: grid;
+  gap: 6px;
+  align-items: start;
+}
+
+.filter-mobile-panel-body .filter-label {
+  font-size: 12px;
+}
+
+.filter-mobile-panel-body .filter-input,
+.filter-mobile-panel-body .filter-select {
+  width: 100%;
+  height: 40px;
+}
+
+.filter-mobile-panel-footer {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(17, 26, 43, 0.95);
+}
+
+.filter-mobile-panel-footer .btn {
+  flex: 1;
+  height: 44px;
+  font-size: 15px;
+}
+
+.toolbar-mobile-hint {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text-soft);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(87, 179, 255, 0.18);
+  background: rgba(87, 179, 255, 0.06);
+  margin: -4px 0 4px;
+}
+
+.toolbar-overflow-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  cursor: pointer;
+}
+
+.toolbar-overflow-btn:hover {
+  border-color: #4f6ba0;
+  color: var(--text);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .app { padding: 0 12px 24px; }
+
+  .masthead {
+    padding: 24px 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .masthead h1 {
+    font-size: 22px;
+  }
+
+  .masthead-icon {
+    width: 36px; height: 36px;
+    font-size: 16px;
+  }
+
+  .masthead-date {
+    font-size: 18px;
+  }
+
+  .filter-section {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .filter-section .filter-desktop {
+    display: none;
+  }
+
+  .filter-bar {
+    padding: 8px 0;
+  }
+
+  .filter-bar .filter-desktop {
+    display: none;
+  }
+
+  .charts-section {
+    gap: 12px;
+  }
+
+  .chart-panel {
+    padding: 16px;
+    border-radius: var(--radius-sm);
+  }
+
+  .table-section table,
+  .table-section thead,
+  .table-section tbody,
+  .table-section tr,
+  .table-section th,
+  .table-section td {
+    display: none;
+  }
+
+  .table-section .mobile-card-list {
+    display: grid;
+  }
+
+  .table-section .pagination {
+    display: none;
+  }
+
+  .table-section .mobile-pagination {
+    display: flex;
+  }
+
+  .toolbar-mobile-hint {
+    display: flex;
+  }
+
+  .toolbar-overflow-btn {
+    display: inline-flex;
+  }
+
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-width: 100vw;
+    border-radius: 16px 16px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    max-height: 90vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .kpi-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── KPI Bar Hover (需关注卡片可点击) ── */
+.kpi-bar-item.negative:hover {
+  border-color: rgba(239, 102, 120, 0.6);
+  box-shadow: 0 0 20px rgba(239, 102, 120, 0.15);
+}
+.kpi-bar-item.negative .kpi-bar-value {
+  transition: transform 0.2s ease;
+}
+.kpi-bar-item.negative:hover .kpi-bar-value {
+  transform: scale(1.08);
+}
+.click-hint {
+  font-size: 10px;
+  color: var(--text-dim);
+  opacity: 0.5;
+  margin-left: 2px;
+  transition: all 0.2s ease;
+  vertical-align: super;
+}
+.kpi-bar-item.negative:hover .click-hint {
+  opacity: 1;
+  color: var(--bad);
+  transform: translateY(-1px);
+}
+.click-tip {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: var(--text-dim);
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.kpi-bar-item.negative:hover .click-tip {
+  opacity: 0.8;
+  transform: translateX(-50%) translateY(-1px);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+/* ── KPI Bar (Compact) ── */
+.kpi-bar {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-panel);
+}
+.kpi-bar-item {
+  flex: 1;
+  padding: 14px 12px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.kpi-bar-item:last-child { border-right: none; }
+.kpi-bar-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.kpi-bar-value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.kpi-bar-item.accent .kpi-bar-value { color: var(--accent-light); }
+.kpi-bar-item.negative .kpi-bar-value { color: var(--bad); }
+
+
+/* ── Filter Bar (Subtle) ── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background: transparent;
+}
+.filter-bar .filter-group { display: flex; align-items: center; gap: 6px; }
+.filter-bar .filter-input, .filter-bar .filter-select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.filter-bar .filter-input:focus, .filter-bar .filter-select:focus {
+  border-color: var(--accent);
+}
+.filter-bar .filter-input::placeholder { color: var(--text-dim); font-size: 12px; }
+.filter-bar .btn {
+  padding: 5px 14px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Real Word Cloud ── */
+.word-cloud-real {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.word-cloud-item {
+  position: absolute;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1.2;
+}
+.word-cloud-item:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+  z-index: 2;
+}
+.word-cloud-item.active {
+  background: var(--accent);
+  color: #fff !important;
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+.word-cloud-item .trend-icon {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.65em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.word-cloud-item:hover .trend-icon {
+  opacity: 0.9;
+}
+
+/* ── Word Cloud Tooltip ── */
+.word-cloud-tooltip {
+  position: absolute;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: var(--shadow-md);
+  width: 320px;
+}
+
+/* ── Keyword Trend Modal ── */
+.modal-keyword .modal {
+  max-width: 720px;
+}
+.keyword-trend-chart {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+.keyword-trend-chart svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.keyword-trend-chart .grid-line {
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+.keyword-trend-chart .axis-text {
+  fill: var(--text-dim);
+  font-size: 10px;
+  font-family: var(--font-body);
+}
+.keyword-trend-chart .trend-area {
+  fill: url(#kwTrendGrad);
+}
+.keyword-trend-chart .trend-line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--gold);
+}
+.keyword-trend-chart .trend-point {
+  transition: r 0.2s;
+  cursor: pointer;
+  fill: var(--gold);
+}
+.keyword-trend-chart .trend-point:hover {
+  r: 6;
+}
+.keyword-trend-chart .trend-tooltip {
+  position: absolute;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--text);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+.keyword-trend-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 4px;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+.keyword-trend-meta span {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.keyword-trend-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: 100px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.keyword-trend-action:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Mobile Keyword Sheet ── */
+#kw-sheet-overlay {
+  touch-action: manipulation;
+}
+#kw-sheet-panel {
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+#kw-sheet-panel::-webkit-scrollbar {
+  width: 4px;
+}
+#kw-sheet-panel::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+#kw-sheet-panel button:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+.feedback-area {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.feedback-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.feedback-btn {
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.feedback-btn:hover { border-color: var(--accent); color: var(--text); }
+.feedback-btn.active-yes { background: rgba(55,196,134,0.12); border-color: var(--green); color: var(--green); }
+.feedback-btn.active-no { background: rgba(239,102,120,0.12); border-color: var(--bad); color: var(--bad); }
+.feedback-note {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+.feedback-input-row {
+  margin-top: 10px;
+  display: none;
+}
+.feedback-input-row.active {
+  display: block;
+  animation: fadeUp 0.25s ease-out both;
+}
+.feedback-input {
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.feedback-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.feedback-input::placeholder {
+  color: var(--text-dim);
+}
+.feedback-input-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.feedback-input-actions .btn {
+  padding: 5px 14px;
+  font-size: 11px;
+}
+.feedback-reason-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(239, 102, 120, 0.06);
+  border: 1px solid rgba(239, 102, 120, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.feedback-reason-box strong {
+  color: var(--bad);
+  font-weight: 600;
+}
+.feedback-reason-box .edit-link {
+  color: var(--accent);
+  cursor: pointer;
+  margin-left: 8px;
+  text-decoration: underline;
+  font-size: 11px;
+}
+.feedback-reason-box .edit-link:hover {
+  opacity: 0.7;
+}
+
+/* ── Keyword Filter Hint ── */
+.keyword-filter-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.keyword-filter-hint .hint-remove {
+  cursor: pointer;
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+}
+.keyword-filter-hint .hint-remove:hover { color: var(--bad); }
+
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+
+<div class="app">
+
+  <!-- ═══ MASTHEAD ═══ -->
+  <header class="masthead" data-delay="1">
+    <div class="masthead-brand">
+      <div class="masthead-icon">◉</div>
+      <div>
+        <h1>运营活动客户舆情雷达</h1>
+        <div class="masthead-sub">客户舆情监测看板 · 升金有礼 & i豆活动</div>
+      </div>
+    </div>
+    <div class="masthead-actions">
+    <button class="info-toggle-btn" id="info-toggle-btn" onclick="toggleInfoPanel()" title="数据说明">
+      <span style="font-size:14px;line-height:1">ⓘ</span> 说明
+    </button>
+    <button class="version-toggle-btn" id="version-toggle-btn" onclick="toggleVersionPanel()" title="版本公告">
+      <span class="dot"></span> 版本公告
+    </button>
+    </div>
+  </header>
+
+  <!-- ═══ INFO PANEL ═══ -->
+  <div class="info-panel" id="info-panel">
+    <span><strong>数据来源</strong> 微博、小红书、网页搜索等公开渠道</span>
+    <span><strong>监测范围</strong> 升金有礼、i豆兑换、立减金等运营活动舆情</span>
+    <span><strong>更新频率</strong> 每日 08:30 自动采集，可能存在延迟</span>
+    <span><strong>数据说明</strong> 由智能体搜索捕捉，非全量覆盖，结果仅供参考，使用时应交叉核实</span>
+    <span><strong>智能标注</strong> 情感倾向与风险等级由 AI 辅助判定，建议人工复核关键舆情</span>
+  </div>
+
+  <!-- ═══ VERSION PANEL ═══ -->
+  <div class="version-panel" id="version-panel">
+    <div class="version-panel-grid">
+      <div class="version-section">
+        <div class="version-title">v2.2.0 · 2026-05-15</div>
+        <ul class="version-list">
+          <li>"需关注"卡片支持点击查看负面舆情列表</li>
+          <li>热词云趋势图固定展示近 30 天坐标轴</li>
+          <li>新增版本公告入口</li>
+        </ul>
+      </div>
+      <div class="version-section">
+        <div class="version-title">近期更新</div>
+        <ul class="version-list">
+          <li>v2.1.0 · 移动端词云趋势面板、表格排序</li>
+          <li>v2.0.0 · 每日简报自动生成、热搜盯盘</li>
+        </ul>
+      </div>
+    </div>
+    <div class="version-footer">更多功能持续迭代中，欢迎反馈建议</div>
+  </div>
+
+  <!-- ═══ SUMMARY ═══ -->
+  <div class="summary-card" id="summary-card" style="display:none;">
+    <div class="summary-label">每日简报</div>
+    <div class="summary-body" id="summary-body">加载中...</div>
+    <div class="summary-meta" id="summary-meta"></div>
+  </div>
+
+  <!-- ═══ 核心指标 ═══ -->
+  <div class="kpi-bar" data-delay="2">
+    <div class="kpi-bar-item accent">
+      <div class="kpi-bar-label">舆情总量（默认近30天）</div>
+      <div class="kpi-bar-value" id="kpi-total">--</div>
+    </div>
+    <div class="kpi-bar-item">
+      <div class="kpi-bar-label">24h内新增</div>
+      <div class="kpi-bar-value" id="kpi-recent">--</div>
+    </div>
+    <div class="kpi-bar-item negative" id="kpi-negative-card" style="cursor:pointer;position:relative;" onclick="showNegativeList()">
+      <div class="kpi-bar-label">需关注 <span class="click-hint">↗</span></div>
+      <div class="kpi-bar-value" id="kpi-negative">--</div>
+      <div class="click-tip">点击查看负面舆情列表</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═══ CHARTS ═══ -->
+  <div class="charts-section">
+    <div class="chart-panel" data-delay="6">
+      <div class="panel-header">
+        <span class="panel-number">01</span>
+        <h3>情感分布</h3>
+      </div>
+      <div class="panel-body" id="sentiment-chart"></div>
+    </div>
+    <div class="chart-panel" data-delay="7">
+      <div class="panel-header">
+        <span class="panel-number">02</span>
+        <h3>来源渠道</h3>
+      </div>
+      <div class="panel-body" id="source-chart"></div>
+    </div>
+    <div class="chart-panel" data-delay="8">
+      <div class="panel-header">
+        <span class="panel-number">03</span>
+        <h3>舆情趋势（近30天）</h3>
+      </div>
+      <div class="panel-body" id="trend-chart"></div>
+    </div>
+    <div class="chart-panel wide" data-delay="9">
+      <div class="panel-header">
+        <span class="panel-number">04</span>
+        <h3>热词云</h3>
+      </div>
+      <div class="panel-body" id="word-cloud" style="padding:0;"></div>
+    </div>
+  </div>
+
+  <!-- ═══ CATEGORY BAR ═══ -->
+  <div class="category-bar" id="category-bar" data-delay="8"></div>
+
+  <!-- ═══ 关键词筛选提示 ═══ -->
+  <div id="keyword-filter-hint" style="display:none;"></div>
+
+  <!-- ═══ FILTERS (subtle) ═══ -->
+  <div class="filter-bar" data-delay="8">
+    <div class="toolbar-mobile-hint" id="mobile-filter-hint" style="width:100%;margin:0 0 8px;">
+      <span>👆 点击筛选查看条件</span>
+      <button class="toolbar-overflow-btn" onclick="openMobileFilter()">☰</button>
+    </div>
+    <div class="filter-group filter-desktop">
+      <span class="filter-label">时间</span>
+      <input type="date" class="filter-input" id="filter-date-start" style="width:115px;">
+      <span style="color:var(--text-dim);font-size:11px;">→</span>
+      <input type="date" class="filter-input" id="filter-date-end" style="width:115px;">
+    </div>
+    <div class="filter-group filter-desktop">
+      <span class="filter-label">关键词</span>
+      <input type="text" class="filter-input" id="filter-keyword" placeholder="搜索..." style="width:120px;">
+    </div>
+    <div class="filter-group filter-desktop">
+      <span class="filter-label">情感</span>
+      <select class="filter-select" id="filter-sentiment">
+        <option value="">全部</option>
+        <option value="positive">正面</option>
+        <option value="negative">负面</option>
+        <option value="neutral">中性</option>
+      </select>
+    </div>
+    <div class="filter-group filter-desktop">
+      <span class="filter-label">来源</span>
+      <select class="filter-select" id="filter-source">
+        <option value="">全部</option>
+        <option value="social">微博</option>
+        <option value="xiaohongshu">小红书</option>
+        <option value="news">新闻媒体</option>
+        <option value="complaint">投诉平台</option>
+        <option value="forum">论坛社区</option>
+        <option value="official">官方</option>
+      </select>
+    </div>
+    <div class="filter-group filter-desktop">
+      <span class="filter-label">类别</span>
+      <select class="filter-select" id="filter-category">
+        <option value="">全部</option>
+        <option value="i豆兑换">i豆兑换</option>
+        <option value="薅羊毛">薅羊毛</option>
+        <option value="资产达标">资产达标</option>
+        <option value="投诉维权">投诉维权</option>
+        <option value="虚假宣传">虚假宣传</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+    <div class="filter-group filter-desktop" style="margin-left:auto;">
+      <button class="btn btn-secondary" onclick="resetFilters()">重置</button>
+      <button class="btn btn-primary" onclick="onQuery()">查询</button>
+    </div>
+  </div>
+
+  <!-- ═══ DATA TABLE ═══ -->
+  <div class="table-section" data-delay="9">
+    <div class="table-header">
+      <div class="table-title">舆情列表</div>
+      <div class="table-count">共 <span id="total-count">--</span> 条记录</div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:100px;" onclick="sortTable('date')" data-sort="date">时间</th>
+          <th style="width:90px;" onclick="sortTable('sourceType')" data-sort="sourceType">来源</th>
+          <th style="width:80px;" onclick="sortTable('category')" data-sort="category">类别</th>
+          <th style="width:80px;" onclick="sortTable('heatScore')" data-sort="heatScore">热度</th>
+          <th style="width:70px;" onclick="sortTable('sentiment')" data-sort="sentiment">情感</th>
+          <th>内容摘要</th>
+          <th style="width:100px;">关键词</th>
+          <th style="width:60px;">操作</th>
+        </tr>
+      </thead>
+      <tbody id="data-tbody"></tbody>
+    </table>
+    <div class="mobile-card-list" id="mobile-card-list"></div>
+    <div class="pagination" id="pagination"></div>
+    <div class="mobile-pagination" id="mobile-pagination"></div>
+  </div>
+
+</div>
+
+<!-- ═══ MOBILE FILTER PANEL ═══ -->
+<div class="filter-mobile-overlay" id="mobile-filter-overlay" hidden onclick="closeMobileFilter()"></div>
+<div class="filter-mobile-panel" id="mobile-filter-panel" hidden>
+  <div class="filter-mobile-panel-head">
+    <span>筛选条件</span>
+    <button class="filter-mobile-panel-close" onclick="closeMobileFilter()">×</button>
+  </div>
+  <div class="filter-mobile-panel-body">
+    <div class="filter-group">
+      <span class="filter-label">时间范围</span>
+      <input type="date" class="filter-input" id="mobile-filter-date-start">
+      <input type="date" class="filter-input" id="mobile-filter-date-end" style="margin-top:6px;">
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">关键词</span>
+      <input type="text" class="filter-input" id="mobile-filter-keyword" placeholder="搜索标题或内容...">
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">情感</span>
+      <select class="filter-select" id="mobile-filter-sentiment">
+        <option value="">全部</option>
+        <option value="positive">正面</option>
+        <option value="negative">负面</option>
+        <option value="neutral">中性</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">来源</span>
+      <select class="filter-select" id="mobile-filter-source">
+        <option value="">全部</option>
+        <option value="social">微博</option>
+        <option value="xiaohongshu">小红书</option>
+        <option value="news">新闻媒体</option>
+        <option value="complaint">投诉平台</option>
+        <option value="forum">论坛社区</option>
+        <option value="official">官方</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">类别</span>
+      <select class="filter-select" id="mobile-filter-category">
+        <option value="">全部</option>
+        <option value="i豆兑换">i豆兑换</option>
+        <option value="薅羊毛">薅羊毛</option>
+        <option value="资产达标">资产达标</option>
+        <option value="投诉维权">投诉维权</option>
+        <option value="虚假宣传">虚假宣传</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+  </div>
+  <div class="filter-mobile-panel-footer">
+    <button class="btn btn-secondary" onclick="resetMobileFilters()">重置</button>
+    <button class="btn btn-primary" onclick="applyMobileFilters()">确认筛选</button>
+  </div>
+</div>
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">舆情详情</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const fallbackData = {
+  "reportDate": "2026-05-10 ~ 2026-05-16",
+  "generatedAt": "2026-05-16T04:25:12.566Z",
+  "summary": {
+    "total": 38,
+    "recentCount": 2,
+    "historyCount": 36,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 2,
+    "neutralCount": 36,
+    "channelCount": 2,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 8,
+    "xiaohongshu": 30
+  },
+  "bySentiment": {
+    "positive": 2,
+    "negative": 0,
+    "neutral": 36
+  },
+  "byRisk": {
+    "low": 33,
+    "medium": 5
+  },
+  "byProduct": {
+    "其他": 5,
+    "升金有礼": 8,
+    "i豆活动": 25
+  },
+  "byCategory": {
+    "i豆兑换": 30,
+    "资产达标": 8
+  },
+  "trend7d": [
+    {
+    "date": "2026-05-09",
+    "total": 0,
+    "recent": 0,
+    "history": 0,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-10",
+    "total": 2,
+    "recent": 0,
+    "history": 2,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-11",
+    "total": 27,
+    "recent": 2,
+    "history": 25,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-12",
+    "total": 1,
+    "recent": 0,
+    "history": 1,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-13",
+    "total": 8,
+    "recent": 0,
+    "history": 8,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-14",
+    "total": 0,
+    "recent": 0,
+    "history": 0,
+    "negative": 0
+  },
+    {
+    "date": "2026-05-15",
+    "total": 0,
+    "recent": 0,
+    "history": 0,
+    "negative": 0
+  }
+  ],
+  "hotKeywords": [
+    {
+    "word": "i豆",
+    "count": 58
+  },
+    {
+    "word": "升金有礼",
+    "count": 31
+  },
+    {
+    "word": "立减金",
+    "count": 26
+  },
+    {
+    "word": "羊毛",
+    "count": 10
+  },
+    {
+    "word": "福利",
+    "count": 5
+  },
+    {
+    "word": "薅羊毛",
+    "count": 5
+  },
+    {
+    "word": "投诉",
+    "count": 5
+  },
+    {
+    "word": "兑换",
+    "count": 5
+  },
+    {
+    "word": "到账",
+    "count": 4
+  },
+    {
+    "word": "空奖",
+    "count": 4
+  },
+    {
+    "word": "抽奖",
+    "count": 4
+  },
+    {
+    "word": "工行",
+    "count": 3
+  },
+    {
+    "word": "攻略",
+    "count": 2
+  },
+    {
+    "word": "资产提升",
+    "count": 1
+  },
+    {
+    "word": "资产达标",
+    "count": 1
+  },
+    {
+    "word": "奖励",
+    "count": 1
+  },
+    {
+    "word": "虚假宣传",
+    "count": 1
+  },
+    {
+    "word": "信用卡",
+    "count": 1
+  },
+    {
+    "word": "美团",
+    "count": 1
+  }
+  ],
+  "records": [
+    {
+    "id": "20260513-02",
+    "date": "2026-05-13",
+    "publishTime": "Fri Feb 07 09:50:07 +0800 2025",
+    "source": "分享白菜达人",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "湖南工行-任务中心-享活动-湘约升礼 报名抽立减金",
+    "content": "湖南工行-任务中心-享活动-湘约升礼 <br />报名抽立减金",
+    "keywords": [
+      "立减金",
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/5609361977?launchid=10000360-page_H5",
+    "author": "分享白菜达人",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "其他",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 16,
+    "comments": 3,
+    "favorites": 0,
+    "heatScore": 22,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-03",
+    "date": "2026-05-13",
+    "publishTime": "Thu Dec 08 11:59:38 +0800 2022",
+    "source": "无敌",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "自测~工行微信任务，体验升金有礼，1.88立减金，扫码进推送",
+    "content": "自测~工行微信任务，体验升金有礼，1.88立减金，扫码进推送",
+    "keywords": [
+      "升金有礼",
+      "立减金"
+    ],
+    "url": "https://m.weibo.cn/u/5744916923?launchid=10000360-page_H5",
+    "author": "无敌",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 9,
+    "comments": 20,
+    "favorites": 1,
+    "heatScore": 51,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-04",
+    "date": "2026-05-13",
+    "publishTime": "Thu May 07 10:06:37 +0800 2026",
+    "source": "扒羊毛",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行 任务中心， 浏览普惠版 中了就是6立减，不是必中",
+    "content": "手机里有工行app的，<br />我的，i豆乐园，挨个活动玩一下<br /><br />这个三个人助力的，i豆挺多",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/6769216988?launchid=10000360-page_H5",
+    "author": "扒羊毛",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "其他",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 3,
+    "comments": 3,
+    "favorites": 0,
+    "heatScore": 9,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-05",
+    "date": "2026-05-13",
+    "publishTime": "Sat Jan 10 09:13:37 +0800 2026",
+    "source": "宁馨儿的自在",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "U先素质试用 gh-任务中心-年末升金加码礼-记得领取i豆喔 狗东支付可以抵扣～",
+    "content": "<a  href=\"https://m.weibo.cn/p/index?extparam=U%E5%85%88%E7%B4%A0%E8%B4%A8%E8%AF%95%E7%94%A8&containerid=100808c9f05766724555f036b3383f5cb97e33&launchid=10000360-page_H5\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://n.sinaimg.cn/photo/5213b46e/20180926/timeline_card_small_super_default.png'></span><span class=\"surl-text\">U先素质试用</span></a>  <br />gh-任务中心-年末升金加码礼-记得领取i豆喔  狗东支付可以抵扣～",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/3306463470?launchid=10000360-page_H5",
+    "author": "宁馨儿的自在",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 22,
+    "comments": 28,
+    "favorites": 0,
+    "heatScore": 78,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-06",
+    "date": "2026-05-13",
+    "publishTime": "Wed Jan 21 00:09:39 +0800 2026",
+    "source": "佩奇线报",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "去抽试试 反馈5000豆 工.行 搜：【金 融 教 育】 或在i豆乐园 进入“二...",
+    "content": "去抽试试 反馈5000豆 <br />工.行 搜：【金 融 教 育】 <br />或在i豆乐园 进入“二十四节气” <br />- <br />部分答案如图⬇️",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/5371906414?launchid=10000360-page_H5",
+    "author": "佩奇线报",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 18,
+    "comments": 64,
+    "favorites": 3,
+    "heatScore": 151,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-07",
+    "date": "2026-05-13",
+    "publishTime": "Sun Jan 04 09:36:17 +0800 2026",
+    "source": "我是小小草n",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "【工行】app-任务中心-体验有礼 试试中了2000工银i豆",
+    "content": "【工行】app-任务中心-体验有礼<br />试试中了2000工银i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/7007555676?launchid=10000360-page_H5",
+    "author": "我是小小草n",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 10,
+    "comments": 2,
+    "favorites": 3,
+    "heatScore": 19,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-08",
+    "date": "2026-05-13",
+    "publishTime": "Thu Mar 05 09:38:59 +0800 2026",
+    "source": "头号情报站",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工hang.-任wu中心-享活动 下拉惊蛰萌新生 300i豆 - 工hang.-...",
+    "content": "工hang.-任wu中心-享活动 <br />下拉惊蛰萌新生 300i豆 <br />- <br />工hang.-任wu中心 <br />下拉惊蛰趣答题 选B 有66i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://m.weibo.cn/u/7797665052?launchid=10000360-page_H5",
+    "author": "头号情报站",
+    "status": "未处理",
+    "amount": "300i豆",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 57,
+    "comments": 41,
+    "favorites": 1,
+    "heatScore": 141,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-11",
+    "date": "2026-05-13",
+    "publishTime": "Sun Jul 28 12:21:59 +0800 2024",
+    "source": "优惠女孩的日常",
+    "sourceType": "social",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行app 搜“任务中心”，如有结售汇任务，反馈刚中了10元和58元立减金 比如...",
+    "content": "工行app <br />搜“任务中心”，如有结售汇任务，反馈刚中了10元和58元立减金<br />比如买：20元日元实付不到1元rmb",
+    "keywords": [
+      "立减金"
+    ],
+    "url": "https://m.weibo.cn/u/5089204622?launchid=10000360-page_H5",
+    "author": "优惠女孩的日常",
+    "status": "未处理",
+    "amount": "10元",
+    "relatedProduct": "其他",
+    "recency": "历史",
+    "fermentation": "low",
+    "fetchTime": "2026-05-13",
+    "likes": 37,
+    "comments": 48,
+    "favorites": 4,
+    "heatScore": 139,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260513-13",
+    "date": "2026-05-12",
+    "publishTime": "2026-05-12T00:52:49.000Z",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行I豆兑换",
+    "content": "工行I豆兑换",
+    "keywords": [
+      "i豆",
+      "兑换"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6a0279e1000000003601a4fc",
+    "author": "一颗荔枝",
+    "status": "未处理",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-13T02:38:09.683Z",
+    "likes": 2,
+    "comments": 3,
+    "favorites": 0,
+    "heatScore": 8,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-02",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5月工行薅羊毛攻略汇总",
+    "content": "5月工行薅羊毛攻略，包括立减金、i豆兑换、升金有礼、月月享等多项活动",
+    "keywords": [
+      "升金有礼",
+      "i豆",
+      "立减金",
+      "兑换",
+      "薅羊毛"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6a0148c3000000002300c1b8",
+    "author": "壮壮鲨(搞钱版)",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "24h内",
+    "fetchTime": "2026-05-11T09:43:29.032677",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-04",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "medium",
+    "title": "工商银行员工出道了算不算工银i豆",
+    "content": "工商银行员工出道了算不算工银i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69f3112f000000001f001550",
+    "author": "三花",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-05",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工银i豆",
+    "content": "工银i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/698c8a21000000000a02f957",
+    "author": "小老虎",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-06",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "哭晕，我的工银i豆，到期清理了😭",
+    "content": "哭晕，我的工银i豆，到期清理了😭",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69546c6b0000000022032544",
+    "author": "我在等一个奇迹",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-07",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "3月资产提升！宇宙行升金有礼！",
+    "content": "3月资产提升！宇宙行升金有礼！",
+    "keywords": [
+      "升金有礼",
+      "资产提升"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69a390be000000001a02f4c6",
+    "author": "退休少女思韵",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-09",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "今天中了66666工行i豆！",
+    "content": "今天中了66666工行i豆！",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69cc9481000000001a02aea2",
+    "author": "pic小鬼怪",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-10",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5.4新活动‼️领666*3工银i豆",
+    "content": "5.4新活动‼️领666*3工银i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69f826100000000035020ec4",
+    "author": "羊毛妹君君",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-11",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "medium",
+    "title": "工行升金有礼可以领奖啦",
+    "content": "工行升金有礼可以领奖啦",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/68254331000000002301fdf5",
+    "author": "美满",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-12",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5月工行M2及以上可以领i豆了",
+    "content": "5月工行M2及以上可以领i豆了",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69fd45cf000000001a02f449",
+    "author": "小巷表弟",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-13",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "medium",
+    "title": "工行4月升金有礼活动可以参加（有变化）",
+    "content": "工行4月升金有礼活动可以参加（有变化）",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/67fb77ae000000001e0067f9",
+    "author": "羊毛方法论",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-14",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5月10日工行i 豆任务更新，600i豆",
+    "content": "5月10日工行i 豆任务更新，600i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69ff603d000000000603010e",
+    "author": "小巷表弟",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-15",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "凑齐一百万工行i豆可以干嘛？",
+    "content": "凑齐一百万工行i豆可以干嘛？",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69684a31000000000a033228",
+    "author": "亲爱的小兔子 🐇",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-16",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行🏦，升金有礼，3月大缩水",
+    "content": "工行🏦，升金有礼，3月大缩水",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69a42a54000000002603dbc4",
+    "author": "爱攒钱的起名废",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-17",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行2025升金有礼，123月均有活动，全国可存！",
+    "content": "工行2025升金有礼，123月均有活动，全国可存！",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/67904bfe000000002903f168",
+    "author": "别喝奶茶了",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-18",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5.10工行 母亲节领600i豆+0.3r",
+    "content": "5.10工行 母亲节领600i豆+0.3r",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69ffe0d700000000350276e8",
+    "author": "饭咋贵",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:16:04.070305",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-19",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工商i豆要过期了",
+    "content": "工商i豆要过期了",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69fcadea00000000360015c4",
+    "author": "倒掉半碗心事🍜",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-20",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "大量工银i豆获取方法",
+    "content": "大量工银i豆获取方法",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/68ecb3ef000000000301aae0",
+    "author": "Paul&John",
+    "status": "已���布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-21",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "升金有礼🎁！",
+    "content": "升金有礼🎁！",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69fca92c000000002301d627",
+    "author": "嘀咕咕$",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-22",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行i豆",
+    "content": "工行i豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/68021d56000000001c00c646",
+    "author": "MiMO",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:14:38.293021",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-23",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "05.04，工行，升金有礼，05月，报名",
+    "content": "05.04，工行，升金有礼，05月，报名",
+    "keywords": [
+      "升金有礼"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69f800d2000000001b022072",
+    "author": "省钱路上越走越远的枫舞君",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "升金有礼",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-24",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "1000、8000、12000…工银i豆直接送到爽🔥",
+    "content": "1000、8000、12000…工银i豆直接送到爽🔥",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6936d0c3000000001e009b6e",
+    "author": "中国工商银行信用卡",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-25",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "5月工行i豆乐园任务汇总",
+    "content": "5月工行i豆乐园任务汇总，包括每日签到��消费任务等，最多可领10000豆",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6a00f4b2000000002301d0c1",
+    "author": "小巷表弟",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "24h内",
+    "fetchTime": "2026-05-11T09:43:29.032677",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-26",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行尊享值变i豆明显，价值缩水了!",
+    "content": "工行尊享值变i豆明显，价值缩水了!",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/686f18810000000023007683",
+    "author": "过路人",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-27",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "positive",
+    "riskLevel": "medium",
+    "title": "工行i豆兑换什么最划算",
+    "content": "工行i豆兑换什么最划算",
+    "keywords": [
+      "i豆",
+      "兑换"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69af8e7b0000000022020c8a",
+    "author": "momo",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-28",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "不会真有人连中两个66000i豆吧",
+    "content": "不会真有人连中两个66000i豆吧",
+    "keywords": [
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69536803000000002200acb1",
+    "author": "小颛",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:50.007845",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-29",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行2月升金和资产达标门槛降低奖励加码",
+    "content": "工行2月升金和资产达标门槛降低奖励加码",
+    "keywords": [
+      "资产达标",
+      "奖励"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6980aeb5000000002103edff",
+    "author": "momomama",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "其他",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:13:25.690957",
+    "heatScore": 0,
+    "category": "资产达标"
+  },
+    {
+    "id": "20260511-30",
+    "date": "2026-05-11",
+    "publishTime": "2026-05-11",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行转账多少给立减金？",
+    "content": "工行转账多少给立减金？",
+    "keywords": [
+      "立减金"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/69fb09aa000000001a02cd27",
+    "author": "momo",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "其他",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T22:15:13.873061",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-01",
+    "date": "2026-05-10",
+    "publishTime": "2026-05-10",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "neutral",
+    "riskLevel": "low",
+    "title": "工行5月新活动汇总，不要错过！",
+    "content": "工行5月新活动汇总，包括升金有礼、月月享、i豆乐园等多项福利",
+    "keywords": [
+      "升金有礼",
+      "i豆",
+      "福利"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6a00d3c4000000002103b200",
+    "author": "羊毛方法论",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T09:43:29.032677",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  },
+    {
+    "id": "20260511-03",
+    "date": "2026-05-10",
+    "publishTime": "2026-05-10",
+    "source": "小红书",
+    "sourceType": "xiaohongshu",
+    "sentiment": "positive",
+    "riskLevel": "medium",
+    "title": "工行5月升金有礼活动来了！",
+    "content": "工行5月升金有礼活动来了！提升资产最高领300万i豆，达标更有惊喜",
+    "keywords": [
+      "升金有礼",
+      "i豆"
+    ],
+    "url": "https://www.xiaohongshu.com/explore/6a00c1d8000000002203a4b6",
+    "author": "壮壮鲨(搞钱版)",
+    "status": "已发布",
+    "amount": "-",
+    "relatedProduct": "i豆活动",
+    "recency": "历史",
+    "fetchTime": "2026-05-11T09:43:29.032677",
+    "heatScore": 0,
+    "category": "i豆兑换"
+  }
+  ]
+};
+
+const CONFIG = {
+  dataDir: 'data/',
+  pageSize: 10,
+  maxBackDays: 60,
+  fallbackDate: '2026-05-09',
+  labels: {
+    source: { social: '微博', news: '新闻媒体', complaint: '投诉平台', forum: '论坛社区', official: '官方', xiaohongshu: '小红书' },
+    sentiment: { positive: '正面', negative: '负面', neutral: '中性' },
+    risk: { high: '高', medium: '中', low: '低' },
+    recency: { '24h内': '24h内', '历史': '历史' },
+    category: { 'i豆兑换': 'i豆兑换', '薅羊毛': '薅羊毛', '资产达标': '资产达标', '投诉维权': '投诉维权', '虚假宣传': '虚假宣传', '其他': '其他' }
+  },
+  colors: {
+    sentiment: { positive: '#4caf50', negative: '#c41e3a', neutral: '#ff9800' },
+    source: { complaint: '#c62828', news: '#2196f3', forum: '#9c27b0', social: '#e91e63', official: '#607d8b', xiaohongshu: '#ff2442' },
+    risk: { high: '#c62828', medium: '#ff9800', low: '#4caf50' },
+    category: { 'i豆兑换': '#57b3ff', '薅羊毛': '#f6b84b', '资产达标': '#37c486', '投诉维权': '#ef6678', '虚假宣传': '#ce93d8', '其他': '#88a0c7' }
+  }
+};
+
+// ===================== 全局状态 =====================
+let loadedData = null;
+let filteredData = [];
+let currentPage = 1;
+let sortState = { field: null, order: 'desc' };
+
+function formatDate(d) {
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+// 获取北京时间（Asia/Shanghai）今天的日期字符串 YYYY-MM-DD
+// 不依赖 locale 格式，使用 UTC 偏移计算，确保跨浏览器一致性
+function getTodayBeijing() {
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const beijingTime = new Date(utc + (3600000 * 8));
+  const yyyy = beijingTime.getFullYear();
+  const mm = String(beijingTime.getMonth() + 1).padStart(2, '0');
+  const dd = String(beijingTime.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+function getSentimentLabel(s) { return CONFIG.labels.sentiment[s] || s; }
+function getSourceLabel(t) { return CONFIG.labels.source[t] || t; }
+function getRecencyLabel(r) { return CONFIG.labels.recency[r] || r; }
+
+function emptyData(dateStr) {
+  return {
+    reportDate: dateStr,
+    dateRangeStart: dateStr,
+    dateRangeEnd: dateStr,
+    summary: { total: 0, recentCount: 0, historyCount: 0, negativeCount: 0, negativePct: 0, positiveCount: 0, neutralCount: 0, channelCount: 0, highRiskCount: 0 },
+    bySource: {}, bySentiment: {}, byRisk: {}, byProduct: {}, byCategory: {},
+    trend7d: [], hotKeywords: [], records: [],
+    dailyBrief: null
+  };
+}
+
+// 去重：按 id + url + title 三层去重（前端版本，与 generate-dashboard-data.js 保持一致）
+function dedupRecords(records) {
+  const seenIds = new Set();
+  const seenUrls = new Map(); // url -> index
+  const seenTitles = new Map(); // cleanTitle -> index
+  const result = [];
+
+  for (const r of records) {
+    // 1. ID 去重
+    if (r.id && seenIds.has(r.id)) continue;
+    if (r.id) seenIds.add(r.id);
+
+    // 2. URL 去重
+    let urlMatch = false;
+    if (r.url) {
+      let norm = r.url.trim().toLowerCase();
+      const hi = norm.indexOf('#'); if (hi !== -1) norm = norm.slice(0, hi);
+      const qi = norm.indexOf('?'); if (qi !== -1) norm = norm.slice(0, qi);
+      norm = norm.replace(/\/+$/, '');
+      if (norm && seenUrls.has(norm)) {
+        const idx = seenUrls.get(norm);
+        // 保留更长的 content
+        if ((r.content || '').length > (result[idx].content || '').length) {
+          result[idx].content = r.content;
+        }
+        urlMatch = true;
+        continue;
+      }
+      if (norm) seenUrls.set(norm, result.length);
+    }
+    if (urlMatch) continue;
+
+    // 3. Title 去重（去掉 HTML 标签和空格后的前20字符）
+    const plainTitle = ((r.title || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
+    const titleKey = plainTitle.slice(0, 20).toLowerCase().replace(/[\s\p{P}\p{S}]+/gu, '');
+    if (titleKey.length >= 4) {
+      if (seenTitles.has(titleKey)) {
+        const idx = seenTitles.get(titleKey);
+        // 合并：保留更长的 content，合并 source
+        const existing = result[idx];
+        if ((r.content || '').length > (existing.content || '').length) {
+          existing.content = r.content;
+        }
+        if (r.source && r.source !== existing.source && (existing.source || '').indexOf(r.source) === -1) {
+          existing.source = (existing.source || '') + ' / ' + r.source;
+        }
+        continue;
+      }
+      seenTitles.set(titleKey, result.length);
+    }
+
+    result.push({ ...r });
+  }
+  return result;
+}
+
+// ===================== 数据加载 =====================
+async function fetchJson(dateStr) {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+    const res = await fetch(`${CONFIG.dataDir}${dateStr}.json`, { cache: 'no-store', signal: controller.signal });
+    clearTimeout(timeoutId);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) {
+    return null;
+  }
+}
+
+async function loadSingleDate(dateStr) {
+  const data = await fetchJson(dateStr);
+  if (data) {
+    loadedData = data;
+  } else if (window.location.protocol === 'file:') {
+    loadedData = fallbackData;
+  } else {
+    loadedData = emptyData(dateStr);
+  }
+  currentPage = 1;
+  applyFilters();
+}
+
+async function loadByRange(startStr, endStr) {
+  const start = new Date(startStr);
+  const end = new Date(endStr);
+  if (isNaN(start) || isNaN(end) || start > end) {
+    alert('时间范围无效');
+    return;
+  }
+
+  let allRecords = [];
+  let allHotKeywords = [];
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+    const dateStr = formatDate(d);
+    const data = await fetchJson(dateStr);
+    if (data && data.records && data.records.length) {
+      allRecords = allRecords.concat(data.records);
+      // 合并热词
+      (data.hotKeywords || []).forEach(k => {
+        const existing = allHotKeywords.find(x => x.word === k.word);
+        if (existing) {
+          existing.count += k.count;
+        } else {
+          allHotKeywords.push({ word: k.word, count: k.count });
+        }
+      });
+    }
+  }
+
+  // 未获取到任何数据时回退到 fallback（直接使用全部 fallback 数据）
+  if (allRecords.length === 0) {
+    allRecords = fallbackData.records || [];
+    allHotKeywords = fallbackData.hotKeywords || [];
+  }
+
+  // 严格去重（按 id + url + title 三层去重）
+  const uniqueRecords = dedupRecords(allRecords);
+
+  // 根据实际 records 动态计算热词频次
+  allHotKeywords = computeHotKeywords(uniqueRecords);
+
+  // 重新计算统计（基于全部数据）
+  const stats = computeStats(uniqueRecords);
+  const trend = computeTrend(uniqueRecords, startStr, endStr);
+
+  // 单独获取最新日期的 dailyBrief（每日简报）
+  let dailyBrief = null;
+  const latestData = await fetchJson(endStr);
+  if (latestData && latestData.dailyBrief) {
+    dailyBrief = latestData.dailyBrief;
+  }
+
+  loadedData = {
+    reportDate: `${startStr} ~ ${endStr}`,
+    dateRangeStart: startStr,
+    dateRangeEnd: endStr,
+    records: uniqueRecords,
+    summary: stats.summary,
+    bySentiment: stats.bySentiment,
+    bySource: stats.bySource,
+    byRisk: stats.byRisk,
+    byProduct: stats.byProduct,
+    trend7d: trend,
+    hotKeywords: allHotKeywords,
+    dailyBrief: dailyBrief
+  };
+
+  // 应用当前筛选条件并刷新 UI
+  applyFilters();
+  updateUI();
+}
+
+// 从基准日期字符串（YYYY-MM-DD）减去指定天数，返回新的日期字符串
+function getDateStrBefore(baseStr, days) {
+  const [yyyy, mm, dd] = baseStr.split('-').map(Number);
+  const d = new Date(yyyy, mm - 1, dd);
+  d.setDate(d.getDate() - days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+async function loadLatest() {
+  const todayStr = getTodayBeijing();
+  const daysAgoStr = getDateStrBefore(todayStr, 29);
+  console.log('[loadLatest] 加载最近30天:', daysAgoStr, '~', todayStr);
+  document.getElementById('filter-date-start').value = daysAgoStr;
+  document.getElementById('filter-date-end').value = todayStr;
+  await loadByRange(daysAgoStr, todayStr);
+}
+
+// ===================== 日期工具 =====================
+function getDateStrBefore(baseStr, days) {
+  const [yyyy, mm, dd] = baseStr.split('-').map(Number);
+  const d = new Date(yyyy, mm - 1, dd);
+  d.setDate(d.getDate() - days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+// 只保留最近30天内的记录（今天 + 前29天）
+function filterWithin30Days(records) {
+  const todayStr = getTodayBeijing();
+  const daysAgoStr = getDateStrBefore(todayStr, 29);
+  return records.filter(r => {
+    const d = (r.date || '').toString().slice(0, 10);
+    return d >= daysAgoStr;
+  });
+}
+
+// ===================== 统计计算 =====================
+function computeStats(records) {
+  // 统计全部可用数据
+  const total = records.length;
+  const negativeCount = records.filter(r => r.sentiment === 'negative').length;
+  const positiveCount = records.filter(r => r.sentiment === 'positive').length;
+  const neutralCount = records.filter(r => r.sentiment === 'neutral').length;
+  const negPct = total > 0 ? Math.round((negativeCount / total) * 100) : 0;
+  const highRiskCount = records.filter(r => r.riskLevel === 'high').length;
+  const channelCount = new Set(records.map(r => r.sourceType)).size;
+  const recentCount = records.filter(r => r.recency === '24h内').length;
+  const historyCount = records.filter(r => r.recency === '历史').length;
+
+  const bySentiment = { positive: positiveCount, negative: negativeCount, neutral: neutralCount };
+  const bySource = {}; const byRisk = {}; const byProduct = {};
+  records.forEach(r => {
+    bySource[r.sourceType] = (bySource[r.sourceType] || 0) + 1;
+    byRisk[r.riskLevel] = (byRisk[r.riskLevel] || 0) + 1;
+    byProduct[r.relatedProduct || '其他'] = (byProduct[r.relatedProduct || '其他'] || 0) + 1;
+  });
+
+  return {
+    summary: { total, recentCount, historyCount, negativeCount, negativePct: negPct, positiveCount, neutralCount, channelCount, highRiskCount },
+    bySentiment, bySource, byRisk, byProduct
+  };
+}
+
+function computeHotKeywords(records) {
+  const kwMap = {};
+  records.forEach(function(r) {
+    (r.keywords || []).forEach(function(kw) {
+      if (kw) kwMap[kw] = (kwMap[kw] || 0) + 1;
+    });
+  });
+  return Object.entries(kwMap)
+    .map(function(e) { return { word: e[0], count: e[1] }; })
+    .sort(function(a, b) { return b.count - a.count; })
+    .slice(0, 20);
+}
+
+function computeTrend(records, startStr, endStr) {
+  const start = new Date(startStr);
+  const end = new Date(endStr);
+  const days = Math.max(1, Math.ceil((end - start) / 86400000) + 1);
+  const trend = [];
+
+  for (let i = 0; i < days; i++) {
+    const d = new Date(start);
+    d.setDate(d.getDate() + i);
+    const ds = formatDate(d);
+    // 按舆情发生日期（date）分组，统一展示舆情发生时间的分布
+    const dayRecords = records.filter(r => {
+      const pubDate = (r.date || '').toString().slice(0, 10);
+      return pubDate === ds;
+    });
+    const recent = dayRecords.filter(r => r.recency === '24h内').length;
+    const history = dayRecords.filter(r => r.recency === '历史').length;
+    trend.push({
+      date: ds,
+      total: dayRecords.length,
+      recent, history,
+      negative: dayRecords.filter(r => r.sentiment === 'negative').length
+    });
+  }
+  return trend;
+}
+
+// 计算指定关键词在历史数据中的每日出现频率 — 固定最近30天
+function computeKeywordTrend(word, records) {
+  var dateMap = {};
+  records.forEach(function(r) {
+    var kws = r.keywords || [];
+    if (kws.indexOf(word) === -1) return;
+    var d = (r.date || '').toString().slice(0, 10);
+    if (!d) return;
+    dateMap[d] = (dateMap[d] || 0) + 1;
+  });
+
+  // 固定最近30天：今天往前推29天
+  var endStr = getTodayBeijing();
+  var startStr = getDateStrBefore(endStr, 29);
+  var start = new Date(startStr);
+  var end = new Date(endStr);
+  var spanDays = Math.ceil((end - start) / 86400000) + 1; // 30
+
+  var trend = [];
+  for (var i = 0; i < spanDays; i++) {
+    var d = new Date(start);
+    d.setDate(d.getDate() + i);
+    var ds = formatDate(d);
+    trend.push({ date: ds, count: dateMap[ds] || 0 });
+  }
+  return trend;
+}
+
+// ===================== UI 渲染（Editorial Dark Terminal）=====================
+
+function updateUI() {
+  renderSummary();
+  renderKPI();
+  renderSentimentDonut();
+  renderSourceBars();
+  renderTrendLine();
+  renderWordCloud();
+  renderCategoryBar();
+  renderTable();
+  updateReportDate();
+}
+
+function updateReportDate() {
+  const el = document.getElementById("report-date");
+  if (el && loadedData && loadedData.reportDate) {
+    el.textContent = loadedData.reportDate;
+  }
+}
+
+function renderKPI() {
+  const records = filteredData || [];
+  const total = records.length;
+  const recentCount = records.filter(r => r.recency === '24h内').length;
+  const negativeCount = records.filter(r => r.sentiment === 'negative').length;
+  document.getElementById("kpi-total").textContent = total;
+  document.getElementById("kpi-recent").textContent = recentCount;
+  document.getElementById("kpi-negative").textContent = negativeCount;
+}
+
+function renderSummary() {
+  const card = document.getElementById("summary-card");
+  const body = document.getElementById("summary-body");
+  const meta = document.getElementById("summary-meta");
+
+  // 优先使用每日简报（当天数据）
+  const brief = loadedData.dailyBrief;
+  if (brief && brief.text) {
+    body.innerHTML = brief.text;
+    // 使用北京时间格式化
+    let genTime = brief.generatedAt;
+    if (genTime) {
+      try {
+        const d = new Date(genTime);
+        genTime = d.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).replace(/\//g, '-');
+      } catch (e) {}
+    }
+    meta.textContent = '简报日期：' + brief.date + ' · 生成于 ' + genTime;
+    card.style.display = "block";
+    return;
+  }
+
+  // fallback：基于今日实际采集数据动态生成简报
+  const todayRecords = (loadedData.records || []).filter(r => {
+    const ft = (r.fetchTime || '').toString().slice(0, 10);
+    const today = loadedData.dateRangeEnd || loadedData.reportDate;
+    return ft === today || ft.startsWith(today);
+  });
+  const todayTotal = todayRecords.length;
+  const total = (loadedData.records || []).length;
+  if (!loadedData.records || !loadedData.records.length) { card.style.display = "none"; return; }
+
+  const s = loadedData.summary || {};
+  const neg = s.negativeCount || 0;
+  const pos = s.positiveCount || 0;
+  const neu = s.neutralCount || 0;
+  const recent = s.recentCount || 0;
+
+  // 今日记录的热词/渠道/产品
+  const todayKwMap = {};
+  todayRecords.forEach(r => { (r.keywords || []).forEach(k => { todayKwMap[k] = (todayKwMap[k] || 0) + 1; }); });
+  const topKw = Object.entries(todayKwMap).sort((a, b) => b[1] - a[1]).slice(0, 3).map(x => x[0]);
+
+  const todaySrcMap = {};
+  todayRecords.forEach(r => { todaySrcMap[r.sourceType] = (todaySrcMap[r.sourceType] || 0) + 1; });
+
+  const todayProdMap = {};
+  todayRecords.forEach(r => { const p = r.relatedProduct || "其他"; todayProdMap[p] = (todayProdMap[p] || 0) + 1; });
+  const topProd = Object.entries(todayProdMap).sort((a, b) => b[1] - a[1]).slice(0, 2).map(x => x[0]);
+
+  // 全部记录的渠道（今日无数据时 fallback 用）
+  const allSrcMap = {};
+  (loadedData.records || []).forEach(r => { allSrcMap[r.sourceType] = (allSrcMap[r.sourceType] || 0) + 1; });
+
+  let text = "";
+  if (todayTotal === 0 && total === 0) {
+    text = "今日暂无相关舆情数据。";
+  } else if (todayTotal === 0 && total > 0) {
+    text = "今日无新增舆情，当前展示 <strong>" + total + "</strong> 条历史持续舆情。";
+  } else {
+    text = "今日共采集 <strong>" + todayTotal + "</strong> 条舆情";
+    const todayNeg = todayRecords.filter(r => r.sentiment === 'negative').length;
+    const todayPos = todayRecords.filter(r => r.sentiment === 'positive').length;
+    const todayNeu = todayRecords.filter(r => r.sentiment === 'neutral').length;
+    if (todayNeg > 0) text += "，其中负面 <strong>" + todayNeg + "</strong> 条";
+    if (todayPos > 0) text += "，正面 " + todayPos + " 条";
+    if (todayNeu > 0) text += "，中性 " + todayNeu + " 条";
+    text += "。";
+    if (recent > 0) text += "24小时内新增 <strong>" + recent + "</strong> 条。";
+    if (topProd.length > 0) text += "主要集中在「" + topProd.join("、") + "」等产品";
+    const topSrc = Object.entries(todaySrcMap).sort((a, b) => b[1] - a[1]).slice(0, 2).map(x => CONFIG.labels.source[x[0]] || x[0]);
+    if (topSrc.length > 0) text += "，来源以" + topSrc.join("、") + "为主";
+    if (topKw.length > 0) text += "，热词包括「" + topKw.join("、") + "」";
+    text += "。";
+  }
+
+  body.innerHTML = text;
+  // 今日无数据时用全部记录的渠道
+  const activeSrcMap = todayTotal > 0 ? todaySrcMap : allSrcMap;
+  const srcNames = Object.keys(activeSrcMap).map(k => CONFIG.labels.source[k] || k).join('、');
+
+  let updateTime = loadedData.reportDate || '';
+  if (updateTime.includes('~')) {
+    updateTime = updateTime.split('~').pop().trim();
+  }
+  // 使用北京时间
+  const now = new Date();
+  const beijingTime = now.toLocaleString('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit'
+  }).replace(/\//g, '-');
+  meta.textContent = '更新至 ' + beijingTime + ' · 渠道：' + srcNames;
+  card.style.display = "block";
+}
+
+function renderSentimentDonut() {
+  const records = filteredData || [];
+  const total = records.length;
+  const container = document.getElementById("sentiment-chart");
+
+  if (total === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  const bySentiment = { positive: 0, negative: 0, neutral: 0 };
+  records.forEach(r => {
+    const s = r.sentiment;
+    if (bySentiment[s] !== undefined) bySentiment[s]++;
+  });
+
+  const colors = CONFIG.colors.sentiment;
+  let currentDeg = 0;
+  const slices = [];
+  ["negative", "neutral", "positive"].forEach(key => {
+    const count = bySentiment[key] || 0;
+    const deg = (count / total) * 360;
+    if (deg > 0) {
+      slices.push(colors[key] + " " + currentDeg + "deg " + (currentDeg + deg) + "deg");
+      currentDeg += deg;
+    }
+  });
+
+  const donutStyle = slices.length > 0 ? "conic-gradient(" + slices.join(", ") + ")" : "#222";
+
+  let legendHtml = "";
+  ["negative", "neutral", "positive"].forEach(key => {
+    const count = bySentiment[key] || 0;
+    if (count === 0) return;
+    legendHtml += '<div class="donut-legend-item"><span class="donut-legend-bar" style="background:' + colors[key] + ';"></span><span class="donut-legend-text">' + getSentimentLabel(key) + '</span><span class="donut-legend-count">' + count + '</span></div>';
+  });
+
+  container.innerHTML = '<div class="donut-container"><div class="donut-chart" style="background:' + donutStyle + ';"><div class="donut-center"><div class="donut-center-value">' + total + '</div><div class="donut-center-label">总计</div></div></div><div class="donut-legend">' + legendHtml + '</div></div>';
+}
+
+function renderSourceBars() {
+  const records = filteredData || [];
+  const bySource = {};
+  records.forEach(r => {
+    bySource[r.sourceType] = (bySource[r.sourceType] || 0) + 1;
+  });
+  const types = Object.keys(bySource).filter(k => bySource[k] > 0).sort((a, b) => bySource[b] - bySource[a]);
+  const container = document.getElementById("source-chart");
+
+  if (types.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  const maxVal = Math.max(...Object.values(bySource));
+  const colors = CONFIG.colors.source;
+
+  container.innerHTML = '<div class="bar-chart-dark">' + types.map(type => {
+    const val = bySource[type];
+    const color = colors[type] || "#607d8b";
+    return '<div class="bar-dark-item"><div class="bar-dark-label">' + getSourceLabel(type) + '</div><div class="bar-dark-track"><div class="bar-dark-fill" style="width:0%;background:' + color + ';"></div></div><div class="bar-dark-value">' + val + '</div></div>';
+  }).join("") + '</div>';
+
+  requestAnimationFrame(() => {
+    container.querySelectorAll(".bar-dark-fill").forEach((el, i) => {
+      setTimeout(() => {
+        const type = types[i];
+        const val = bySource[type];
+        const pct = maxVal > 0 ? (val / maxVal) * 100 : 0;
+        el.style.width = pct + "%";
+      }, i * 80);
+    });
+  });
+}
+
+function renderTrendLine() {
+  const records = filteredData || [];
+  const container = document.getElementById("trend-chart");
+
+  if (records.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  const startStr = loadedData.dateRangeStart || getTodayBeijing();
+  const endStr   = loadedData.dateRangeEnd   || getTodayBeijing();
+  const trend = computeTrend(records, startStr, endStr);
+
+  if (trend.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  const width   = 860;
+  const height  = 300;
+  const padding = { top: 36, right: 36, bottom: 56, left: 50 };
+  const chartW  = width  - padding.left - padding.right;
+  const chartH  = height - padding.top  - padding.bottom;
+
+  /* ── Y 轴自适应：取最近的 5 的倍数，至少 5 ── */
+  const maxTotal = Math.max(...trend.map(d => d.total || 0), 1);
+  const maxNeg   = Math.max(...trend.map(d => d.negative || 0), 0);
+  const maxVal   = Math.max(maxTotal, maxNeg);
+  const yMax     = Math.max(5, Math.ceil(maxVal / 5) * 5);
+  const yStep    = Math.max(1, Math.ceil(yMax / 6));
+
+  const xScale = i => padding.left + (i / (trend.length - 1)) * chartW;
+  const yScale = v => padding.top + chartH - (v / yMax) * chartH;
+
+  /* ── 水平网格线 ── */
+  let gridY = '';
+  for (let v = 0; v <= yMax; v += yStep) {
+    const y = yScale(v);
+    gridY += '<line x1="' + padding.left + '" y1="' + y + '" x2="' + (width - padding.right) + '" y2="' + y + '" stroke="var(--border)" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>';
+    gridY += '<text x="' + (padding.left - 10) + '" y="' + (y + 3) + '" text-anchor="end" fill="var(--text-dim)" font-size="10" font-family="var(--font-body)">' + v + '</text>';
+  }
+
+  /* ── X 轴：每 5 天显示一个主标签，其余短刻度 ── */
+  const labelInterval = Math.max(1, Math.floor(trend.length / 7));
+  let xLabels = '';
+  let xTicks  = '';
+  trend.forEach((d, i) => {
+    const x = xScale(i);
+    const isMajor = i % labelInterval === 0 || i === trend.length - 1;
+    const h = isMajor ? 6 : 3;
+    xTicks += '<line x1="' + x + '" y1="' + (padding.top + chartH) + '" x2="' + x + '" y2="' + (padding.top + chartH + h) + '" stroke="var(--border-light)" stroke-width="1"/>';
+    if (isMajor) {
+      xLabels += '<text x="' + x + '" y="' + (height - 20) + '" text-anchor="middle" fill="var(--text-dim)" font-size="10" font-family="var(--font-body)">' + d.date.slice(5) + '</text>';
+    }
+  });
+
+  /* ── 折线路径 ── */
+  const totalPoints = trend.map((d, i) => xScale(i) + "," + yScale(d.total || 0)).join(" ");
+  const negPoints   = trend.map((d, i) => xScale(i) + "," + yScale(d.negative || 0)).join(" ");
+
+  /* ── 面积填充（总量线下方）── */
+  const areaPath = "M" + xScale(0) + "," + (padding.top + chartH) +
+    " L" + totalPoints.replace(/ /g, " L") +
+    " L" + xScale(trend.length - 1) + "," + (padding.top + chartH) + " Z";
+
+  /* ── 数据点 ── */
+  const totalDots = trend.map((d, i) => {
+    const x = xScale(i), y = yScale(d.total || 0);
+    return '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="var(--text-muted)" class="trend-point" ' +
+      'onmouseenter="showTrendTip(event, \'' + d.date + '\', ' + d.total + ', ' + d.negative + ', \'total\')" ' +
+      'onmouseleave="hideTrendTip()"/>';
+  }).join("");
+
+  const negDots = trend.map((d, i) => {
+    const x = xScale(i), y = yScale(d.negative || 0);
+    return '<circle cx="' + x + '" cy="' + y + '" r="3.5" fill="var(--bad)" class="trend-point" ' +
+      'onmouseenter="showTrendTip(event, \'' + d.date + '\', ' + d.total + ', ' + d.negative + ', \'negative\')" ' +
+      'onmouseleave="hideTrendTip()"/>';
+  }).join("");
+
+  /* ── 图例：左下 + 右下，不重叠 ── */
+  const legendSvg =
+    '<g transform="translate(' + padding.left + ', ' + (height - 36) + ')">' +
+    '<line x1="0" y1="0" x2="16" y2="0" stroke="var(--text-muted)" stroke-width="2.5" stroke-dasharray="5 3" stroke-linecap="round"/>' +
+    '<text x="22" y="4" fill="var(--text-dim)" font-size="11" font-family="var(--font-body)">总量</text>' +
+    '</g>' +
+    '<g transform="translate(' + (width - padding.right - 50) + ', ' + (height - 36) + ')">' +
+    '<line x1="0" y1="0" x2="16" y2="0" stroke="var(--bad)" stroke-width="2.5" stroke-linecap="round"/>' +
+    '<text x="22" y="4" fill="var(--text-dim)" font-size="11" font-family="var(--font-body)">负面</text>' +
+    '</g>';
+
+  /* ── 组装 SVG ── */
+  container.innerHTML = '<div class="line-chart-dark"><svg viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="xMidYMid meet">' +
+    '<defs>' +
+    '<linearGradient id="trendGradArea" x1="0" y1="0" x2="0" y2="1">' +
+    '<stop offset="0%" stop-color="var(--text-muted)" stop-opacity="0.12"/>' +
+    '<stop offset="100%" stop-color="var(--text-muted)" stop-opacity="0"/>' +
+    '</linearGradient>' +
+    '</defs>' +
+    gridY + xTicks + xLabels +
+    '<path d="' + areaPath + '" fill="url(#trendGradArea)" stroke="none"/>' +
+    '<polyline points="' + totalPoints + '" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="5 3" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<polyline points="' + negPoints + '" fill="none" stroke="var(--bad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    totalDots + negDots + legendSvg +
+    '</svg></div>';
+}
+
+function showTrendTip(evt, date, total, negative, type) {
+  const chart = document.getElementById("trend-chart");
+  let tooltip = chart.querySelector(".trend-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "trend-tooltip";
+    chart.appendChild(tooltip);
+  }
+  tooltip.innerHTML = '<strong>' + date + '</strong><br/>总计: ' + total + ' · 负面: ' + negative;
+  tooltip.style.opacity = "1";
+  const rect = evt.target.getBoundingClientRect();
+  const parentRect = chart.getBoundingClientRect();
+  tooltip.style.left = (rect.left - parentRect.left + 10) + "px";
+  tooltip.style.top = (rect.top - parentRect.top - 40) + "px";
+}
+
+function hideTrendTip() {
+  const tooltip = document.querySelector("#trend-chart .trend-tooltip");
+  if (tooltip) tooltip.style.opacity = "0";
+}
+
+function renderKeywordTrendChart(trendData, word) {
+  var container = document.getElementById("keyword-trend-chart");
+  if (!container) return;
+  if (trendData.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  var width = 660;
+  var height = 280;
+  var padding = { top: 32, right: 24, bottom: 44, left: 44 };
+  var chartW = width - padding.left - padding.right;
+  var chartH = height - padding.top - padding.bottom;
+
+  var maxVal = Math.max.apply(null, trendData.map(function(d) { return d.count; }).concat([1]));
+
+  var xScale = function(i) {
+    return padding.left + (trendData.length === 1 ? chartW / 2 : (i / (trendData.length - 1)) * chartW);
+  };
+  var yScale = function(v) {
+    return padding.top + chartH - (v / maxVal) * chartH;
+  };
+
+  var gridY = [0, 0.25, 0.5, 0.75, 1].map(function(p) {
+    var y = padding.top + chartH * (1 - p);
+    return '<line x1="' + padding.left + '" y1="' + y + '" x2="' + (width - padding.right) + '" y2="' + y + '" class="grid-line"/>';
+  }).join("");
+
+  var step = Math.max(1, Math.ceil(trendData.length / 8));
+  var xLabels = trendData.map(function(d, i) {
+    if (i % step !== 0 && i !== trendData.length - 1) return '';
+    var x = xScale(i);
+    var label = d.date.slice(5);
+    return '<text x="' + x + '" y="' + (height - 12) + '" text-anchor="middle" class="axis-text">' + label + '</text>';
+  }).join("");
+
+  var yLabels = [0, 0.5, 1].map(function(p) {
+    var v = Math.round(maxVal * p);
+    var y = padding.top + chartH * (1 - p);
+    return '<text x="' + (padding.left - 10) + '" y="' + (y + 4) + '" text-anchor="end" class="axis-text">' + v + '</text>';
+  }).join("");
+
+  var points = trendData.map(function(d, i) {
+    return xScale(i) + "," + yScale(d.count);
+  }).join(" ");
+
+  var areaPath = "M" + xScale(0) + "," + (padding.top + chartH) +
+    " L" + points.replace(/ /g, " L") +
+    " L" + xScale(trendData.length - 1) + "," + (padding.top + chartH) + " Z";
+
+  var dots = trendData.map(function(d, i) {
+    var x = xScale(i);
+    var y = yScale(d.count);
+    return '<circle cx="' + x + '" cy="' + y + '" r="4" class="trend-point" ' +
+      'onmouseenter="showKwTrendTip(event, \'' + d.date + '\', ' + d.count + ')" ' +
+      'onmouseleave="hideKwTrendTip()"/>';
+  }).join("");
+
+  var titleText = '<text x="' + (width / 2) + '" y="18" text-anchor="middle" fill="var(--text-muted)" font-size="13" font-family="var(--font-body)">' + escapeHtml(word) + ' · 出现次数</text>';
+
+  container.innerHTML = '<div class="keyword-trend-chart"><svg viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="xMidYMid meet">' +
+    '<defs><linearGradient id="kwTrendGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--gold)" stop-opacity="0.15"/><stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/></linearGradient></defs>' +
+    titleText + gridY + '<path d="' + areaPath + '" class="trend-area"/>' +
+    '<polyline points="' + points + '" class="trend-line"/>' + dots + xLabels + yLabels +
+    '</svg></div>';
+}
+
+function showKwTrendTip(evt, date, count) {
+  var chart = document.getElementById("keyword-trend-chart");
+  if (!chart) return;
+  var tooltip = chart.querySelector(".trend-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "trend-tooltip";
+    chart.appendChild(tooltip);
+  }
+  tooltip.innerHTML = '<strong>' + date + '</strong><br/>出现 ' + count + ' 次';
+  tooltip.style.opacity = "1";
+  var rect = evt.target.getBoundingClientRect();
+  var parentRect = chart.getBoundingClientRect();
+  tooltip.style.left = (rect.left - parentRect.left + 10) + "px";
+  tooltip.style.top = (rect.top - parentRect.top - 40) + "px";
+}
+
+function hideKwTrendTip() {
+  var chart = document.getElementById("keyword-trend-chart");
+  if (!chart) return;
+  var tooltip = chart.querySelector(".trend-tooltip");
+  if (tooltip) tooltip.style.opacity = "0";
+}
+
+// 渲染迷你趋势图 SVG（用于词云悬停 tooltip）
+function renderMiniTrendSvg(trend) {
+  if (trend.length === 0) return '';
+  var w = 320, h = 100, pad = { top: 8, right: 8, bottom: 24, left: 36 };
+  var cw = w - pad.left - pad.right;
+  var ch = h - pad.top - pad.bottom;
+  var maxC = Math.max.apply(null, trend.map(function(d) { return d.count; }).concat([1]));
+  var pts = trend.map(function(d, i) {
+    var x = pad.left + (trend.length === 1 ? cw / 2 : (i / (trend.length - 1)) * cw);
+    var y = pad.top + ch - (d.count / maxC) * ch;
+    return x + ',' + y;
+  }).join(' ');
+  var step = Math.max(1, Math.ceil(trend.length / 6));
+  var xLabs = trend.map(function(d, i) {
+    if (i % step !== 0 && i !== trend.length - 1) return '';
+    var x = pad.left + (trend.length === 1 ? cw / 2 : (i / (trend.length - 1)) * cw);
+    return '<text x="' + x + '" y="' + (h - 4) + '" text-anchor="middle" fill="#88a0c7" font-size="10">' + d.date.slice(5) + '</text>';
+  }).join('');
+  return '<svg viewBox="0 0 ' + w + ' ' + h + '" style="width:100%;height:100px;margin-top:8px;">' +
+    '<polyline points="' + pts + '" fill="none" stroke="#f6b84b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+    xLabs +
+    '</svg>';
+}
+
+function showWordCloudTooltip(evt, word) {
+  var container = document.getElementById('word-cloud');
+  var tooltip = container.querySelector('.word-cloud-tooltip');
+  if (!tooltip) {
+    tooltip = document.createElement('div');
+    tooltip.className = 'word-cloud-tooltip';
+    container.appendChild(tooltip);
+  }
+
+  // 计算趋势（使用全部历史数据）
+  var allRecords = loadedData.records || [];
+  var trend = computeKeywordTrend(word, allRecords);
+  var totalAppearances = trend.reduce(function(s, d) { return s + d.count; }, 0);
+  var activeDays = trend.filter(function(d) { return d.count > 0; }).length;
+
+  var trendSvg = renderMiniTrendSvg(trend);
+
+  tooltip.innerHTML = '<div style="font-weight:600;font-size:13px;margin-bottom:4px;">' + escapeHtml(word) + '</div>' +
+    '<div style="font-size:11px;color:var(--text-dim);">共命中 ' + totalAppearances + ' 次 · ' + activeDays + ' 天</div>' +
+    trendSvg +
+    '<div style="font-size:11px;color:var(--text-dim);margin-top:4px;">点击前往查看详情</div>';
+
+  tooltip.style.opacity = '1';
+
+  // 定位
+  var rect = evt.target.getBoundingClientRect();
+  var parentRect = container.getBoundingClientRect();
+  var ttWidth = 320;
+  var left = rect.left - parentRect.left + rect.width / 2 - ttWidth / 2;
+  var top = rect.top - parentRect.top - 170;
+  if (left < 0) left = 4;
+  if (left + ttWidth > parentRect.width) left = parentRect.width - ttWidth - 4;
+  if (top < 0) top = rect.bottom - parentRect.top + 4;
+  tooltip.style.left = left + 'px';
+  tooltip.style.top = top + 'px';
+}
+
+function hideWordCloudTooltip() {
+  var container = document.getElementById('word-cloud');
+  var tooltip = container.querySelector('.word-cloud-tooltip');
+  if (tooltip) tooltip.style.opacity = '0';
+}
+
+function renderWordCloud() {
+  const records = filteredData || [];
+  const keywords = computeHotKeywords(records);
+  const container = document.getElementById("word-cloud");
+  if (keywords.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">无数据</div>';
+    return;
+  }
+
+  const maxCount = Math.max(...keywords.map(k => k.count), 1);
+  const colors = [
+    '#57b3ff', '#f6b84b', '#37c486', '#ef6678', '#ce93d8',
+    '#88a0c7', '#4fc3f7', '#ff9800', '#81c784', '#e57373'
+  ];
+
+  // 准备数据：大词在前
+  const items = keywords.map((k, i) => {
+    const ratio = k.count / maxCount;
+    const size = 12 + ratio * 28; // 12px ~ 40px
+    const opacity = 0.5 + ratio * 0.5;
+    const color = colors[i % colors.length];
+    return { word: k.word, count: k.count, size, opacity, color, ratio };
+  }).sort((a, b) => b.count - a.count);
+
+  const activeKeyword = getActiveKeywordFilter();
+
+  // 词云布局坐标系（固定宽高，用百分比映射到实际容器）
+  const CLOUD_W = 900;
+  const CLOUD_H = 280;
+  const cx = CLOUD_W / 2;
+  const cy = CLOUD_H / 2;
+
+  // 创建隐藏测量容器
+  const measure = document.createElement('div');
+  measure.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;top:-9999px;left:-9999px;';
+  document.body.appendChild(measure);
+
+  const placed = [];
+
+  items.forEach(function(item) {
+    // 测量尺寸
+    var span = document.createElement('span');
+    span.style.cssText = 'font-size:' + item.size + 'px;font-weight:500;font-family:var(--font-body);padding:2px 8px;white-space:nowrap;display:inline-block;';
+    span.textContent = item.word;
+    measure.appendChild(span);
+    var w = span.offsetWidth + 10;
+    var h = span.offsetHeight + 6;
+    measure.removeChild(span);
+
+    // 螺旋放置：从中心开始，大词优先
+    var x = cx, y = cy;
+    var angle = 0;
+    var radius = 0;
+    var step = 0.4;
+    var maxR = Math.max(CLOUD_W, CLOUD_H);
+
+    while (radius < maxR) {
+      x = cx + radius * Math.cos(angle);
+      y = cy + radius * Math.sin(angle) * 0.6;
+
+      var rect = {
+        left: x - w / 2,
+        top: y - h / 2,
+        right: x + w / 2,
+        bottom: y + h / 2
+      };
+
+      // 边界检查
+      if (rect.left < 0 || rect.top < 0 || rect.right > CLOUD_W || rect.bottom > CLOUD_H) {
+        angle += step;
+        radius += 0.35;
+        continue;
+      }
+
+      // 重叠检测（AABB，留3px间距）
+      var overlap = false;
+      for (var j = 0; j < placed.length; j++) {
+        var p = placed[j];
+        if (!(rect.right < p.left - 3 || rect.left > p.right + 3 ||
+              rect.bottom < p.top - 3 || rect.top > p.bottom + 3)) {
+          overlap = true;
+          break;
+        }
+      }
+
+      if (!overlap) {
+        placed.push({
+          left: rect.left,
+          top: rect.top,
+          right: rect.right,
+          bottom: rect.bottom,
+          item: item
+        });
+        break;
+      }
+
+      angle += step;
+      radius += 0.35;
+    }
+  });
+
+  document.body.removeChild(measure);
+
+  // 渲染：百分比定位适配不同容器宽度
+  var html = '<div class="word-cloud-real">';
+  for (var i = 0; i < placed.length; i++) {
+    var p = placed[i];
+    var act = activeKeyword === p.item.word;
+    var leftPct = (p.left / CLOUD_W * 100).toFixed(2);
+    var topPct = (p.top / CLOUD_H * 100).toFixed(2);
+    var rot = Math.round(Math.sin(p.item.word.length * 7.3) * 5);
+    html += '<span class="word-cloud-item ' + (act ? 'active' : '') + '" ' +
+      'data-word="' + escapeHtml(p.item.word) + '" ' +
+      'style="left:' + leftPct + '%;top:' + topPct + '%;' +
+      'font-size:' + p.item.size.toFixed(1) + 'px;' +
+      'color:' + (act ? '#fff' : p.item.color) + ';' +
+      'opacity:' + (act ? 1 : p.item.opacity) + ';' +
+      'transform:rotate(' + rot + 'deg);">' +
+      p.item.word + ' <small style="font-size:0.6em;opacity:0.5">' + p.item.count + '</small></span>';
+  }
+  html += '</div>';
+  container.innerHTML = html;
+
+  // 绑定悬停趋势图 + 点击筛选事件
+  const isTouchDevice = 'ontouchstart' in window || window.matchMedia('(pointer: coarse)').matches;
+  container.querySelectorAll('.word-cloud-item').forEach(function(el) {
+    var word = el.getAttribute('data-word');
+    if (isTouchDevice) {
+      // 移动端：点击显示趋势图面板
+      el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showMobileKeywordSheet(word);
+      });
+    } else {
+      // 桌面端：悬停趋势图 + 点击筛选
+      el.addEventListener('mouseenter', function(e) {
+        showWordCloudTooltip(e, word);
+      });
+      el.addEventListener('mouseleave', hideWordCloudTooltip);
+      el.addEventListener('click', function() {
+        filterByKeyword(word);
+      });
+    }
+  });
+}
+
+// ===================== 移动端词云趋势面板 =====================
+function showMobileKeywordSheet(word) {
+  // 关闭已存在的面板
+  hideMobileKeywordSheet();
+
+  var allRecords = loadedData.records || [];
+  var trend = computeKeywordTrend(word, allRecords);
+  var totalAppearances = trend.reduce(function(s, d) { return s + d.count; }, 0);
+  var activeDays = trend.filter(function(d) { return d.count > 0; }).length;
+
+  // 创建遮罩层
+  var overlay = document.createElement('div');
+  overlay.id = 'kw-sheet-overlay';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9998;opacity:0;transition:opacity 0.25s ease;';
+  overlay.addEventListener('click', hideMobileKeywordSheet);
+
+  // 创建面板
+  var sheet = document.createElement('div');
+  sheet.id = 'kw-sheet-panel';
+  sheet.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--bg-card);border-radius:16px 16px 0 0;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);max-height:70vh;overflow:auto;box-shadow:0 -8px 32px rgba(0,0,0,0.4);';
+
+  var trendHtml = renderMiniTrendSvg(trend);
+
+  sheet.innerHTML =
+    '<div style="padding:20px 20px 28px;">' +
+    '<div style="width:36px;height:4px;background:var(--border-light);border-radius:2px;margin:0 auto 16px;"></div>' +
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">' +
+    '<div style="font-size:18px;font-weight:700;color:var(--text);">' + escapeHtml(word) + '</div>' +
+    '<div style="font-size:12px;color:var(--text-dim);">共命中 ' + totalAppearances + ' 次 · ' + activeDays + ' 天</div>' +
+    '</div>' +
+    '<div style="margin-bottom:16px;">' + trendHtml + '</div>' +
+    '<div style="display:flex;gap:12px;">' +
+    '<button onclick="filterByKeyword(\'' + escapeHtml(word).replace(/'/g, "\\'") + '\');hideMobileKeywordSheet();" ' +
+    'style="flex:1;padding:12px 16px;border:none;border-radius:8px;background:var(--gold);color:#0b1220;font-size:14px;font-weight:600;cursor:pointer;">点击前往查看详情</button>' +
+    '<button onclick="hideMobileKeywordSheet()" ' +
+    'style="flex:1;padding:12px 16px;border:none;border-radius:8px;background:var(--bg-elevated);color:var(--text);font-size:14px;font-weight:500;cursor:pointer;border:1px solid var(--border);">关闭</button>' +
+    '</div>' +
+    '</div>';
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(sheet);
+
+  // 动画进入
+  requestAnimationFrame(function() {
+    overlay.style.opacity = '1';
+    sheet.style.transform = 'translateY(0)';
+  });
+}
+
+function hideMobileKeywordSheet() {
+  var overlay = document.getElementById('kw-sheet-overlay');
+  var sheet = document.getElementById('kw-sheet-panel');
+  if (sheet) {
+    sheet.style.transform = 'translateY(100%)';
+  }
+  if (overlay) {
+    overlay.style.opacity = '0';
+  }
+  setTimeout(function() {
+    if (overlay) overlay.remove();
+    if (sheet) sheet.remove();
+  }, 300);
+}
+
+// ===================== 原有功能函数 =====================
+
+function getActiveKeywordFilter() {
+  const kw = document.getElementById('filter-keyword').value.trim();
+  return kw || '';
+}
+
+function filterByKeyword(word) {
+  const input = document.getElementById('filter-keyword');
+  const current = input.value.trim();
+  if (current === word) {
+    // 再次点击取消筛选
+    input.value = '';
+    hideKeywordFilterHint();
+  } else {
+    input.value = word;
+    showKeywordFilterHint(word);
+  }
+  applyFilters();
+}
+
+function showKeywordFilterHint(word) {
+  const hint = document.getElementById('keyword-filter-hint');
+  if (!hint) return;
+  hint.innerHTML = '<div class="keyword-filter-hint">热词筛选：<strong>' + word + '</strong><span class="hint-remove" onclick="clearKeywordFilter()">✕</span></div>';
+  hint.style.display = 'block';
+}
+
+function hideKeywordFilterHint() {
+  const hint = document.getElementById('keyword-filter-hint');
+  if (!hint) return;
+  hint.innerHTML = '';
+  hint.style.display = 'none';
+}
+
+function clearKeywordFilter() {
+  document.getElementById('filter-keyword').value = '';
+  hideKeywordFilterHint();
+  applyFilters();
+}
+
+function parseDateTs(item) {
+  // 优先使用 date（发布日期），而非 fetchTime（采集日期）
+  const dt = item.date || item.publishTime || item.fetchTime || '1970-01-01';
+  const s = dt.toString().trim();
+  const m = s.match(/^(\d{4})-(\d{1,2})(?:-(\d{1,2}))?/);
+  if (!m) return 0;
+  const yyyy = parseInt(m[1], 10);
+  const mm = parseInt(m[2], 10) - 1;
+  const dd = m[3] ? parseInt(m[3], 10) : 1;
+  return new Date(yyyy, mm, dd).getTime();
+}
+
+function sortTable(field) {
+  if (sortState.field === field) {
+    sortState.order = sortState.order === 'asc' ? 'desc' : 'asc';
+  } else {
+    sortState.field = field;
+    sortState.order = 'desc';
+  }
+  currentPage = 1;
+  renderTable();
+}
+
+// ===================== 表格 =====================
+function renderTable() {
+  const total = filteredData.length;
+  document.getElementById('total-count').textContent = total;
+
+  const tbody = document.getElementById('data-tbody');
+
+  if (total === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">暂无数据</td></tr>';
+    document.getElementById('pagination').innerHTML = '';
+    renderMobileCards([]);
+    return;
+  }
+
+  // 应用排序
+  let sortedData = [...filteredData];
+  if (sortState.field) {
+    sortedData.sort((a, b) => {
+      let va = a[sortState.field] || '';
+      let vb = b[sortState.field] || '';
+
+      if (sortState.field === 'date') {
+        va = parseDateTs(a);
+        vb = parseDateTs(b);
+      } else if (sortState.field === 'sentiment') {
+        const order = { negative: 3, neutral: 2, positive: 1 };
+        va = order[va] || 0;
+        vb = order[vb] || 0;
+      } else if (sortState.field === 'heatScore') {
+        va = Number(va) || 0;
+        vb = Number(vb) || 0;
+      } else if (sortState.field === 'category') {
+        va = va || '';
+        vb = vb || '';
+      }
+
+      if (va < vb) return sortState.order === 'asc' ? -1 : 1;
+      if (va > vb) return sortState.order === 'asc' ? 1 : -1;
+      // 主字段相同 → 按日期倒序（最新在前）
+      return parseDateTs(b) - parseDateTs(a);
+    });
+  } else {
+    // 默认排序：负面优先 → 时间倒序（最新在前）
+    const sentimentOrder = { negative: 3, neutral: 2, positive: 1 };
+    sortedData.sort((a, b) => {
+      const sa = sentimentOrder[a.sentiment] || 0;
+      const sb = sentimentOrder[b.sentiment] || 0;
+      if (sa !== sb) return sb - sa; // 负面(3) > 中性(2) > 正面(1)
+      return parseDateTs(b) - parseDateTs(a); // 同情感下日期倒序
+    });
+  }
+
+  const start = (currentPage - 1) * CONFIG.pageSize;
+  const pageData = sortedData.slice(start, start + CONFIG.pageSize);
+
+  tbody.innerHTML = pageData.map(item => {
+    const kwHtml = (item.keywords || []).slice(0, 2).map(k =>
+      `<span style="display:inline-block;padding:2px 6px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;font-size:11px;margin:1px;color:var(--text-muted);">${k}</span>`
+    ).join('');
+
+    const catClass = 'tag-category-' + (item.category || '其他');
+    const catLabel = CONFIG.labels.category[item.category] || item.category || '其他';
+    const heatClass = (item.heatScore || 0) >= 100 ? 'heat-score heat-score-high' : 'heat-score';
+
+    const srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || item.source || '其他';
+
+    return `
+      <tr>
+        <td>${item.date}</td>
+        <td>${srcLabel}</td>
+        <td><span class="tag ${catClass}">${catLabel}</span></td>
+        <td>
+          <div class="${heatClass}">🔥 ${item.heatScore || 0}</div>
+          <div class="heat-metrics">
+            <span>👍 ${item.likes || 0}</span>
+            <span>💬 ${item.comments || 0}</span>
+            <span>⭐ ${item.favorites || 0}</span>
+          </div>
+        </td>
+        <td><span class="tag tag-sentiment-${item.sentiment}">${getSentimentLabel(item.sentiment)}</span></td>
+        <td><div class="content-preview">${item.content}</div></td>
+        <td>${kwHtml}</td>
+        <td><a href="javascript:void(0)" class="link-btn" onclick="showDetail('${item.id}')">详情</a></td>
+      </tr>`;
+  }).join('');
+
+  renderPagination(total);
+  renderMobileCards(pageData);
+  renderMobilePagination(total);
+}
+
+function renderPagination(total) {
+  const totalPages = Math.ceil(total / CONFIG.pageSize);
+  const container = document.getElementById('pagination');
+
+  if (totalPages <= 1) {
+    container.innerHTML = '';
+    return;
+  }
+
+  let html = `<button class="page-btn" onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>`;
+  for (let i = 1; i <= totalPages; i++) {
+    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+  }
+  html += `<button class="page-btn" onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}>下一页</button>`;
+  container.innerHTML = html;
+}
+
+function changePage(delta) {
+  const totalPages = Math.ceil(filteredData.length / CONFIG.pageSize);
+  const newPage = currentPage + delta;
+  if (newPage >= 1 && newPage <= totalPages) {
+    currentPage = newPage;
+    renderTable();
+  }
+}
+
+function goToPage(page) {
+  currentPage = page;
+  renderTable();
+}
+
+// ===================== 移动端卡片 =====================
+function renderMobileCards(pageData) {
+  const container = document.getElementById('mobile-card-list');
+  if (!container) return;
+
+  if (pageData.length === 0) {
+    container.innerHTML = `<div class="empty-state">暂无数据</div>`;
+    return;
+  }
+
+  container.innerHTML = pageData.map(item => {
+    const kwHtml = (item.keywords || []).slice(0, 4).map(k =>
+      `<span class="mobile-card-tag">${k}</span>`
+    ).join('');
+
+    const sentimentColor = {
+      positive: '#37c486',
+      negative: '#ef6678',
+      neutral: '#6b7b9e'
+    }[item.sentiment] || '#6b7b9e';
+
+    const catClass = 'tag-category-' + (item.category || '其他');
+    const catLabel = CONFIG.labels.category[item.category] || item.category || '其他';
+
+    const srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || item.source || '其他';
+
+    return `
+      <div class="mobile-card" onclick="showDetail('${item.id}')">
+        <div class="mobile-card-head">
+          <div class="mobile-card-badges">
+            <span class="tag tag-sentiment-${item.sentiment}">${getSentimentLabel(item.sentiment)}</span>
+            <span class="tag ${catClass}">${catLabel}</span>
+            <span style="font-size:11px;color:var(--text-dim);">${srcLabel}</span>
+          </div>
+          <span style="font-size:11px;color:var(--text-dim);">${item.date}</span>
+        </div>
+        <div class="mobile-card-title">${item.title || item.content}</div>
+        <div class="mobile-card-content">${item.content}</div>
+        <div style="display:flex;gap:12px;font-size:11px;color:var(--text-dim);margin:6px 0;">
+          <span>🔥 ${item.heatScore || 0}</span>
+          <span>👍 ${item.likes || 0}</span>
+          <span>💬 ${item.comments || 0}</span>
+          <span>⭐ ${item.favorites || 0}</span>
+        </div>
+        <div class="mobile-card-keywords">${kwHtml}</div>
+      </div>`;
+  }).join('');
+}
+
+function renderMobilePagination(total) {
+  const container = document.getElementById('mobile-pagination');
+  if (!container) return;
+
+  const totalPages = Math.ceil(total / CONFIG.pageSize);
+  if (totalPages <= 1) {
+    container.innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = `
+    <div>第 ${currentPage} / ${totalPages} 页</div>
+    <div style="display:flex;gap:8px;width:100%;">
+      <button class="btn btn-secondary" style="flex:1;height:36px;" onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>
+      <button class="btn btn-primary" style="flex:1;height:36px;" onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}>下一页</button>
+    </div>`;
+}
+
+// ===================== 移动端筛选面板 =====================
+function openMobileFilter() {
+  document.getElementById('mobile-filter-overlay').hidden = false;
+  document.getElementById('mobile-filter-panel').hidden = false;
+  // 同步桌面端筛选值到移动端
+  document.getElementById('mobile-filter-date-start').value = document.getElementById('filter-date-start').value;
+  document.getElementById('mobile-filter-date-end').value = document.getElementById('filter-date-end').value;
+  document.getElementById('mobile-filter-keyword').value = document.getElementById('filter-keyword').value;
+  document.getElementById('mobile-filter-sentiment').value = document.getElementById('filter-sentiment').value;
+  document.getElementById('mobile-filter-source').value = document.getElementById('filter-source').value;
+  document.getElementById('mobile-filter-category').value = document.getElementById('filter-category').value;
+}
+
+function closeMobileFilter() {
+  document.getElementById('mobile-filter-overlay').hidden = true;
+  document.getElementById('mobile-filter-panel').hidden = true;
+}
+
+function applyMobileFilters() {
+  document.getElementById('filter-date-start').value = document.getElementById('mobile-filter-date-start').value;
+  document.getElementById('filter-date-end').value = document.getElementById('mobile-filter-date-end').value;
+  document.getElementById('filter-keyword').value = document.getElementById('mobile-filter-keyword').value;
+  document.getElementById('filter-sentiment').value = document.getElementById('mobile-filter-sentiment').value;
+  document.getElementById('filter-source').value = document.getElementById('mobile-filter-source').value;
+  document.getElementById('filter-category').value = document.getElementById('mobile-filter-category').value;
+  closeMobileFilter();
+  onQuery();
+}
+
+function resetMobileFilters() {
+  document.getElementById('mobile-filter-date-start').value = '';
+  document.getElementById('mobile-filter-date-end').value = '';
+  document.getElementById('mobile-filter-keyword').value = '';
+  document.getElementById('mobile-filter-sentiment').value = '';
+  document.getElementById('mobile-filter-source').value = '';
+  document.getElementById('mobile-filter-category').value = '';
+  document.getElementById('filter-date-start').value = '';
+  document.getElementById('filter-date-end').value = '';
+  document.getElementById('filter-keyword').value = '';
+  document.getElementById('filter-sentiment').value = '';
+  document.getElementById('filter-source').value = '';
+  document.getElementById('filter-category').value = '';
+  closeMobileFilter();
+  resetFilters();
+}
+
+// ===================== 日期过滤（舆情列表只保留最近30天）=====================
+function getDateStrBefore(baseStr, days) {
+  const [yyyy, mm, dd] = baseStr.split('-').map(Number);
+  const d = new Date(yyyy, mm - 1, dd);
+  d.setDate(d.getDate() - days);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function filterWithin30Days(records) {
+  const todayStr = getTodayBeijing();
+  const daysAgoStr = getDateStrBefore(todayStr, 29);
+  return records.filter(r => {
+    const d = (r.date || '').toString().slice(0, 10);
+    return d >= daysAgoStr;
+  });
+}
+
+// ===================== 类别筛选栏 =====================
+const CATEGORY_LIST = ['i豆兑换', '薅羊毛', '资产达标', '投诉维权', '虚假宣传', '其他'];
+
+function getCategoryLabel(c) { return CONFIG.labels.category[c] || c || '其他'; }
+
+function renderCategoryBar() {
+  const container = document.getElementById('category-bar');
+  if (!container || !loadedData) return;
+  const records = filteredData || [];
+  const counts = {};
+  records.forEach(r => {
+    const cat = r.category || '其他';
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+
+  let html = `<span class="filter-label" style="margin-right:4px;">类别:</span>`;
+  html += `<span class="category-chip ${!document.getElementById('filter-category').value ? 'active' : ''}" onclick="filterByCategory('')">全部 (${records.length})</span>`;
+  CATEGORY_LIST.forEach(cat => {
+    const count = counts[cat] || 0;
+    if (count > 0) {
+      const active = document.getElementById('filter-category').value === cat ? 'active' : '';
+      html += `<span class="category-chip ${active}" onclick="filterByCategory('${cat}')">${getCategoryLabel(cat)} (${count})</span>`;
+    }
+  });
+  container.innerHTML = html;
+}
+
+function syncCategoryBar(selectedCategory) {
+  const chips = document.querySelectorAll('#category-bar .category-chip');
+  chips.forEach(chip => {
+    const cat = chip.getAttribute('onclick').match(/filterByCategory\('([^']*)'\)/);
+    if (cat && cat[1] === selectedCategory) {
+      chip.classList.add('active');
+    } else {
+      chip.classList.remove('active');
+    }
+  });
+}
+
+function filterByCategory(cat) {
+  document.getElementById('filter-category').value = cat;
+  document.getElementById('mobile-filter-category').value = cat;
+  applyFilters();
+}
+
+// ===================== 筛选 =====================
+function applyFilters() {
+  const keyword = document.getElementById('filter-keyword').value.trim().toLowerCase();
+  const sentiment = document.getElementById('filter-sentiment').value;
+  const source = document.getElementById('filter-source').value;
+  const category = document.getElementById('filter-category').value;
+  const startStr = document.getElementById('filter-date-start').value;
+  const endStr = document.getElementById('filter-date-end').value;
+  let allRecords = loadedData.records || [];
+  // 舆情列表保留全部可用数据
+
+  filteredData = allRecords.filter(d => {
+    if (keyword) {
+      const inTitle = (d.title || '').toLowerCase().includes(keyword);
+      const inContent = (d.content || '').toLowerCase().includes(keyword);
+      const inKeywords = (d.keywords || []).some(k => k.toLowerCase().includes(keyword));
+      if (!inTitle && !inContent && !inKeywords) return false;
+    }
+    if (sentiment && d.sentiment !== sentiment) return false;
+    if (source && d.sourceType !== source) return false;
+    if (category && d.category !== category) return false;
+    // 日期范围筛选
+    if (startStr || endStr) {
+      const rDate = (d.date || '').toString().slice(0, 10);
+      if (startStr && rDate && rDate < startStr) return false;
+      if (endStr && rDate && rDate > endStr) return false;
+    }
+    return true;
+  });
+
+  // 同步类别标签栏高亮
+  syncCategoryBar(category);
+
+  currentPage = 1;
+  renderSentimentDonut();
+  renderSourceBars();
+  renderTrendLine();
+  renderWordCloud();
+  renderCategoryBar();
+  renderTable();
+}
+
+function resetFilters() {
+  document.getElementById('filter-keyword').value = '';
+  document.getElementById('filter-sentiment').value = '';
+  document.getElementById('filter-source').value = '';
+  document.getElementById('filter-category').value = '';
+  filteredData = loadedData.records || [];
+  syncCategoryBar('');
+  currentPage = 1;
+  renderTable();
+}
+
+async function onQuery() {
+  const startStr = document.getElementById('filter-date-start').value;
+  const endStr = document.getElementById('filter-date-end').value;
+  if (startStr && endStr) {
+    await loadByRange(startStr, endStr);
+  } else {
+    // 没有时间范围变化，仅应用当前筛选条件
+    applyFilters();
+  }
+}
+
+// ===================== 详情弹窗 =====================
+function showDetail(id) {
+  const item = (loadedData.records || []).find(d => d.id === id);
+  if (!item) return;
+
+  document.getElementById('modal-title').textContent = item.title || '舆情详情';
+
+  const kwHtml = (item.keywords || []).map(k =>
+    `<span style="display:inline-block;padding:2px 8px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;font-size:12px;margin:2px;color:var(--text-muted);">${k}</span>`
+  ).join('');
+
+  const amountHtml = item.amount && item.amount !== '-' ? `
+    <div class="detail-row"><div class="detail-label">涉诉金额</div><div class="detail-value" style="color:#c62828;font-weight:600;">${item.amount}</div></div>` : '';
+
+  const catClass = 'tag-category-' + (item.category || '其他');
+  const catLabel = CONFIG.labels.category[item.category] || item.category || '其他';
+
+  const fb = getFeedback(item.id);
+
+  const srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || '其他';
+
+  document.getElementById('modal-body').innerHTML = `
+    <div class="detail-row"><div class="detail-label">发布时间</div><div class="detail-value">${item.date}${item.publishTime && item.publishTime !== item.date ? ' ' + item.publishTime.slice(11) : ''}</div></div>
+    <div class="detail-row"><div class="detail-label">来源渠道</div><div class="detail-value">${srcLabel}</div></div>
+    <div class="detail-row"><div class="detail-label">发布者</div><div class="detail-value">${item.source}</div></div>
+    <div class="detail-row"><div class="detail-label">类别</div><div class="detail-value"><span class="tag ${catClass}">${catLabel}</span></div></div>
+    <div class="detail-row"><div class="detail-label">情感倾向</div><div class="detail-value"><span class="tag tag-sentiment-${item.sentiment}">${getSentimentLabel(item.sentiment)}</span></div></div>
+    <div class="detail-row"><div class="detail-label">热度</div><div class="detail-value"><span style="font-weight:600;color:var(--gold);">🔥 ${item.heatScore || 0}</span> <span style="color:var(--text-dim);font-size:12px;">(👍${item.likes || 0} 💬${item.comments || 0} ⭐${item.favorites || 0})</span></div></div>
+    <div class="detail-row"><div class="detail-label">关键词</div><div class="detail-value">${kwHtml}</div></div>
+    <div class="detail-row"><div class="detail-label">标题</div><div class="detail-value" style="font-weight:600;">${item.title}</div></div>
+    <div class="detail-row"><div class="detail-label">内容详情</div></div>
+    <div class="detail-content">${item.content}</div>
+    <div class="detail-row" style="margin-top:20px;"><div class="detail-label">原文链接</div><div class="detail-value"><a href="${item.url}" target="_blank" class="link-btn">${item.url}</a></div></div>
+    <div class="detail-row"><div class="detail-label">处理状态</div><div class="detail-value">${item.status}</div></div>
+    ${amountHtml}
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+      <div style="font-size:12px;font-weight:600;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">舆情处理时间线</div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-time">${item.date}</div><div class="timeline-text">舆情发布</div></div>
+        <div class="timeline-item"><div class="timeline-time">${item.date}</div><div class="timeline-text">系统收录并标记：${getSentimentLabel(item.sentiment)}</div></div>
+        <div class="timeline-item"><div class="timeline-time">${loadedData.reportDate || '今日'}</div><div class="timeline-text">当前状态：${item.status}</div></div>
+      </div>
+    </div>
+    <div class="feedback-area" id="feedback-area-${item.id}">
+      <div class="feedback-title">这条舆情判断是否准确？</div>
+    </div>`;
+
+  document.getElementById('modal').classList.add('active');
+  renderFeedbackArea(item.id);
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+  document.getElementById('modal').classList.remove('modal-keyword');
+}
+
+// 点击词云中的词，显示该词的历史出现频率趋势
+function showKeywordTrend(word) {
+  var allRecords = fallbackData.records || [];
+  if (loadedData && loadedData.records && loadedData.records.length > 0) {
+    // 合并 fallback 和 loadedData 去重
+    var seen = {};
+    allRecords = [];
+    (fallbackData.records || []).concat(loadedData.records || []).forEach(function(r) {
+      if (!seen[r.id]) {
+        seen[r.id] = true;
+        allRecords.push(r);
+      }
+    });
+  }
+
+  var trend = computeKeywordTrend(word, allRecords);
+  var totalAppearances = trend.reduce(function(sum, d) { return sum + d.count; }, 0);
+  var activeDays = trend.filter(function(d) { return d.count > 0; }).length;
+
+  document.getElementById('modal-title').textContent = '"' + word + '" 历史趋势';
+  document.getElementById('modal-body').innerHTML =
+    '<div id="keyword-trend-chart" style="min-height:280px;"></div>' +
+    '<div class="keyword-trend-meta">' +
+    '<span>共出现 ' + totalAppearances + ' 次 · 活跃 ' + activeDays + ' 天</span>' +
+    '<button class="keyword-trend-action" onclick="filterByKeywordAndCloseModal(\'' + word + '\')">' +
+    '筛选表格</button></div>';
+
+  document.getElementById('modal').classList.add('active');
+  document.getElementById('modal').classList.add('modal-keyword');
+
+  // 延迟渲染确保容器已插入 DOM
+  setTimeout(function() {
+    renderKeywordTrendChart(trend, word);
+  }, 0);
+}
+
+function filterByKeywordAndCloseModal(word) {
+  closeModal();
+  filterByKeyword(word);
+}
+
+// ===================== 用户反馈 =====================
+const FEEDBACK_KEY = 'sentiment_feedback_v1';
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function formatDateTime(isoStr) {
+  try {
+    const d = new Date(isoStr);
+    var yyyy = d.getFullYear();
+    var mm = String(d.getMonth() + 1).padStart(2, '0');
+    var dd = String(d.getDate()).padStart(2, '0');
+    var hh = String(d.getHours()).padStart(2, '0');
+    var mi = String(d.getMinutes()).padStart(2, '0');
+    return yyyy + '-' + mm + '-' + dd + ' ' + hh + ':' + mi;
+  } catch (e) { return isoStr; }
+}
+
+function getFeedback(id) {
+  try {
+    var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
+    var entry = data[id];
+    if (!entry) return null;
+    // 兼容旧格式：'yes' 或 'no' 字符串
+    if (typeof entry === 'string') {
+      return { accurate: entry === 'yes', time: '' };
+    }
+    return entry;
+  } catch (e) { return null; }
+}
+
+function toggleInfoPanel() {
+  var panel = document.getElementById('info-panel');
+  var btn = document.getElementById('info-toggle-btn');
+  if (!panel || !btn) return;
+  if (panel.classList.contains('show')) {
+    panel.classList.remove('show');
+    btn.classList.remove('active');
+  } else {
+    panel.classList.add('show');
+    btn.classList.add('active');
+  }
+}
+
+function toggleVersionPanel() {
+  var panel = document.getElementById('version-panel');
+  var btn = document.getElementById('version-toggle-btn');
+  if (!panel || !btn) return;
+  if (panel.classList.contains('show')) {
+    panel.classList.remove('show');
+    btn.classList.remove('active');
+  } else {
+    panel.classList.add('show');
+    btn.classList.add('active');
+  }
+}
+
+// ===================== 版本公告（保留为 Modal 备用）=====================
+function showVersionNotice() {
+  var html =
+    '<div style="margin-bottom:16px;">' +
+    '<div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:8px;">v2.2.0 · 2026-05-15</div>' +
+    '<div style="font-size:12px;color:var(--text-muted);line-height:1.8;">' +
+    '<div style="margin-bottom:12px;"><strong style="color:var(--text);">新增功能</strong></div>' +
+    '<ul style="padding-left:16px;margin:0;list-style:disc;">' +
+    '<li>"需关注"卡片支持点击查看负面舆情列表</li>' +
+    '<li>热词云趋势图固定展示近 30 天坐标轴</li>' +
+    '<li>新增版本公告入口</li>' +
+    '</ul>' +
+    '</div>' +
+    '</div>' +
+    '<div style="border-top:1px solid var(--border);padding-top:12px;margin-bottom:16px;">' +
+    '<div style="font-size:12px;color:var(--text-muted);line-height:1.8;">' +
+    '<div style="margin-bottom:8px;"><strong style="color:var(--text);">近期更新</strong></div>' +
+    '<ul style="padding-left:16px;margin:0;list-style:disc;">' +
+    '<li>v2.1.0 · 移动端词云趋势面板、表格排序</li>' +
+    '<li>v2.0.0 · 每日简报自动生成、热搜盯盘</li>' +
+    '</ul>' +
+    '</div>' +
+    '</div>' +
+    '<div style="font-size:11px;color:var(--text-dim);text-align:center;">更多功能持续迭代中，欢迎反馈建议</div>';
+
+  document.getElementById('modal-title').textContent = '版本公告';
+  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal').classList.add('active');
+}
+
+// ===================== 需关注舆情列表弹窗 =====================
+function showNegativeList() {
+  // 从当前筛选后的数据中找出负面舆情
+  var records = (filteredData || []).filter(function(r) { return r.sentiment === 'negative'; });
+  // 如果当前筛选后没有，尝试从全部加载数据中找
+  if (records.length === 0 && loadedData && loadedData.records) {
+    records = loadedData.records.filter(function(r) { return r.sentiment === 'negative'; });
+  }
+
+  document.getElementById('modal-title').textContent = '需关注舆情（' + records.length + ' 条）';
+
+  if (records.length === 0) {
+    document.getElementById('modal-body').innerHTML = '<div class="empty-state">当前范围内暂无负面舆情，数据正常。</div>';
+    document.getElementById('modal').classList.add('active');
+    return;
+  }
+
+  // 按日期倒序排列
+  records.sort(function(a, b) { return parseDateTs(b) - parseDateTs(a); });
+
+  var rows = records.map(function(item) {
+    var kwHtml = (item.keywords || []).slice(0, 3).map(function(k) {
+      return '<span style="display:inline-block;padding:2px 6px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;font-size:11px;margin:1px;color:var(--text-muted);">' + escapeHtml(k) + '</span>';
+    }).join('');
+
+    var srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || '其他';
+    var catLabel = CONFIG.labels.category[item.category] || item.category || '其他';
+    var catClass = 'tag-category-' + (item.category || '其他');
+
+    return '<div onclick="showDetail(\'' + item.id + '\');" style="cursor:pointer;padding:14px 16px;border-bottom:1px solid var(--border);transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.03)\'" onmouseout="this.style.background=\'transparent\'">' +
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">' +
+        '<span style="font-size:11px;color:var(--text-dim);">' + item.date + '</span>' +
+        '<span style="font-size:11px;color:var(--text-dim);">' + srcLabel + '</span>' +
+        '<span class="tag tag-sentiment-negative" style="font-size:10px;">负面</span>' +
+        '<span class="tag ' + catClass + '" style="font-size:10px;">' + catLabel + '</span>' +
+        '<span style="margin-left:auto;font-size:11px;color:var(--gold);font-weight:600;">🔥 ' + (item.heatScore || 0) + '</span>' +
+      '</div>' +
+      '<div style="font-size:14px;color:var(--text);font-weight:600;line-height:1.5;margin-bottom:4px;">' + escapeHtml(item.title || item.content || '无标题') + '</div>' +
+      '<div style="font-size:12px;color:var(--text-muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">' + escapeHtml(item.content || '') + '</div>' +
+      '<div style="margin-top:6px;">' + kwHtml + '</div>' +
+    '</div>';
+  }).join('');
+
+  document.getElementById('modal-body').innerHTML =
+    '<div style="margin-bottom:12px;font-size:12px;color:var(--text-dim);">点击列表项可查看完整详情</div>' +
+    '<div style="border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;">' + rows + '</div>';
+
+  document.getElementById('modal').classList.add('active');
+}
+
+// 点击外部关闭说明面板
+document.addEventListener('click', function(e) {
+  var panel = document.getElementById('info-panel');
+  var btn = document.getElementById('info-toggle-btn');
+  if (panel && panel.classList.contains('show') &&
+      !panel.contains(e.target) && !btn.contains(e.target)) {
+    panel.classList.remove('show');
+    btn.classList.remove('active');
+  }
+});
+
+function submitFeedback(id, isAccurate) {
+  try {
+    var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
+    data[id] = { accurate: isAccurate, time: new Date().toISOString() };
+    localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
+    renderFeedbackArea(id);
+    console.log('[Feedback]', id, isAccurate ? 'accurate' : 'inaccurate');
+  } catch (e) {
+    console.warn('反馈保存失败', e);
+  }
+}
+
+function showFeedbackForm(id) {
+  var buttons = document.getElementById('fb-buttons-' + id);
+  var form = document.getElementById('fb-form-' + id);
+  var msg = document.getElementById('fb-msg-' + id);
+  if (buttons) buttons.style.display = 'none';
+  if (msg) msg.style.display = 'none';
+  if (form) form.classList.add('active');
+  var input = document.getElementById('fb-input-' + id);
+  if (input) { input.value = ''; input.focus(); }
+}
+
+function cancelFeedbackForm(id) {
+  var buttons = document.getElementById('fb-buttons-' + id);
+  var form = document.getElementById('fb-form-' + id);
+  var msg = document.getElementById('fb-msg-' + id);
+  if (buttons) buttons.style.display = '';
+  if (msg) msg.style.display = '';
+  if (form) form.classList.remove('active');
+}
+
+function confirmInaccurateFeedback(id) {
+  var input = document.getElementById('fb-input-' + id);
+  var reason = (input ? input.value : '').trim();
+  if (!reason) {
+    alert('请填写不准确的原因');
+    if (input) input.focus();
+    return;
+  }
+  try {
+    var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
+    data[id] = { accurate: false, reason: reason, time: new Date().toISOString() };
+    localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
+    renderFeedbackArea(id);
+    console.log('[Feedback]', id, 'inaccurate:', reason);
+  } catch (e) {
+    console.warn('反馈保存失败', e);
+  }
+}
+
+function showFeedbackEditForm(id) {
+  var box = document.getElementById('fb-reason-box-' + id);
+  var form = document.getElementById('fb-edit-form-' + id);
+  if (box) box.style.display = 'none';
+  if (form) form.classList.add('active');
+  var input = document.getElementById('fb-edit-input-' + id);
+  if (input) input.focus();
+}
+
+function hideFeedbackEditForm(id) {
+  var box = document.getElementById('fb-reason-box-' + id);
+  var form = document.getElementById('fb-edit-form-' + id);
+  if (box) box.style.display = '';
+  if (form) form.classList.remove('active');
+}
+
+function updateInaccurateFeedback(id) {
+  var input = document.getElementById('fb-edit-input-' + id);
+  var reason = (input ? input.value : '').trim();
+  if (!reason) {
+    alert('请填写不准确的原因');
+    if (input) input.focus();
+    return;
+  }
+  try {
+    var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
+    data[id] = { accurate: false, reason: reason, time: new Date().toISOString() };
+    localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
+    renderFeedbackArea(id);
+    console.log('[Feedback]', id, 'inaccurate updated:', reason);
+  } catch (e) {
+    console.warn('反馈更新失败', e);
+  }
+}
+
+function renderFeedbackArea(id) {
+  var container = document.getElementById('feedback-area-' + id);
+  if (!container) return;
+  var fb = getFeedback(id);
+  var isSubmitted = fb !== null;
+  var isAccurate = fb ? fb.accurate : false;
+  var reason = fb && fb.reason ? fb.reason : '';
+  var timeStr = fb && fb.time ? formatDateTime(fb.time) : '';
+
+  var html = '<div class="feedback-title">这条舆情判断是否准确？</div>';
+
+  if (isSubmitted) {
+    if (isAccurate) {
+      html += '<div style="display:flex;align-items:center;gap:8px;">' +
+        '<span class="feedback-btn active-yes" style="cursor:default;">✓ 准确</span>' +
+        (timeStr ? '<span style="font-size:11px;color:var(--text-dim);">已提交于 ' + escapeHtml(timeStr) + '</span>' : '') +
+        '</div>' +
+        '<div class="feedback-note" style="margin-top:8px;">您已标记为「准确」，感谢反馈！</div>';
+    } else {
+      html += '<div id="fb-reason-box-' + id + '" class="feedback-reason-box">' +
+        '<strong>✗ 不准确</strong>' +
+        '<div style="margin-top:6px;color:var(--text-muted);">' + escapeHtml(reason) + '</div>' +
+        '<div style="margin-top:6px;font-size:11px;color:var(--text-dim);">' +
+        (timeStr ? '提交于 ' + escapeHtml(timeStr) + ' · ' : '') +
+        '<span class="edit-link" onclick="showFeedbackEditForm(\'' + id + '\')">修改原因</span>' +
+        '</div></div>' +
+        '<div class="feedback-input-row" id="fb-edit-form-' + id + '">' +
+        '<textarea class="feedback-input" id="fb-edit-input-' + id + '" placeholder="请说明判断不准确的原因…">' + escapeHtml(reason) + '</textarea>' +
+        '<div class="feedback-input-actions">' +
+        '<button class="btn btn-primary" onclick="updateInaccurateFeedback(\'' + id + '\')">更新反馈</button>' +
+        '<button class="btn btn-secondary" onclick="hideFeedbackEditForm(\'' + id + '\')">取消</button>' +
+        '</div></div>';
+    }
+  } else {
+    html += '<div class="feedback-buttons" id="fb-buttons-' + id + '">' +
+      '<button class="feedback-btn" id="fb-yes-' + id + '" onclick="submitFeedback(\'' + id + '\', true)">✓ 准确</button>' +
+      '<button class="feedback-btn" id="fb-no-' + id + '" onclick="showFeedbackForm(\'' + id + '\')">✗ 不准确</button>' +
+      '</div>' +
+      '<div class="feedback-note" id="fb-msg-' + id + '"></div>' +
+      '<div class="feedback-input-row" id="fb-form-' + id + '">' +
+      '<textarea class="feedback-input" id="fb-input-' + id + '" placeholder="请说明判断不准确的原因，帮助我们改进…"></textarea>' +
+      '<div class="feedback-input-actions">' +
+      '<button class="btn btn-primary" onclick="confirmInaccurateFeedback(\'' + id + '\')">提交反馈</button>' +
+      '<button class="btn btn-secondary" onclick="cancelFeedbackForm(\'' + id + '\')">取消</button>' +
+      '</div></div>';
+  }
+
+  container.innerHTML = html;
+}
+
+// ===================== 触摸滑动支持 =====================
+let mobileFilterTouchStartY = 0;
+let mobileFilterTouchCurrentY = 0;
+
+function initMobileFilterSwipe() {
+  const panel = document.getElementById('mobile-filter-panel');
+  if (!panel) return;
+  
+  panel.addEventListener('touchstart', function(e) {
+    mobileFilterTouchStartY = e.touches[0].clientY;
+    mobileFilterTouchCurrentY = mobileFilterTouchStartY;
+  }, { passive: true });
+  
+  panel.addEventListener('touchmove', function(e) {
+    mobileFilterTouchCurrentY = e.touches[0].clientY;
+    const deltaY = mobileFilterTouchCurrentY - mobileFilterTouchStartY;
+    if (deltaY > 0) {
+      panel.style.transform = 'translateY(' + deltaY + 'px)';
+    }
+  }, { passive: true });
+  
+  panel.addEventListener('touchend', function(e) {
+    const deltaY = mobileFilterTouchCurrentY - mobileFilterTouchStartY;
+    if (deltaY > 100) {
+      closeMobileFilter();
+    }
+    panel.style.transform = '';
+  }, { passive: true });
+}
+
+// ===================== 初始化 =====================
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.getElementById('filter-keyword').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') applyFilters();
+  });
+  document.getElementById('mobile-filter-keyword').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') applyMobileFilters();
+  });
+  ['filter-sentiment', 'filter-source', 'filter-category'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', applyFilters);
+  });
+  // 日期输入框 change 时触发范围查询
+  ['filter-date-start', 'filter-date-end'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', onQuery);
+  });
+  // 筛选器 change 时同步热词云高亮状态
+  var kwInput = document.getElementById('filter-keyword');
+  if (kwInput) {
+    kwInput.addEventListener('input', function() {
+      var val = kwInput.value.trim();
+      if (!val) hideKeywordFilterHint();
+      else showKeywordFilterHint(val);
+      renderWordCloud();
+    });
+  }
+
+  // fallback 数据：按舆情发生日期（date）过滤最近30天
+  const todayStr = getTodayBeijing();
+  const daysAgoStr = getDateStrBefore(todayStr, 29);
+  const fbRecords = fallbackData.records || [];
+  const monthRecords = fbRecords.filter(function(r) {
+    var d = (r.date || r.publishTime || '').toString().slice(0, 10);
+    return d >= daysAgoStr && d <= todayStr;
+  });
+
+  if (monthRecords.length > 0) {
+    var stats = computeStats(monthRecords);
+    loadedData = {
+      reportDate: daysAgoStr + ' ~ ' + todayStr,
+      dateRangeStart: daysAgoStr,
+      dateRangeEnd: todayStr,
+      records: monthRecords,
+      summary: stats.summary,
+      bySentiment: stats.bySentiment,
+      bySource: stats.bySource,
+      byRisk: stats.byRisk,
+      byProduct: stats.byProduct,
+      trend7d: computeTrend(monthRecords, daysAgoStr, todayStr),
+      hotKeywords: computeHotKeywords(monthRecords)
+    };
+  } else {
+    loadedData = fallbackData;
+  }
+
+  document.getElementById('filter-date-start').value = daysAgoStr;
+  document.getElementById('filter-date-end').value = todayStr;
+  // 默认显示全部（不预设负面筛选）
+  applyFilters();
+  updateUI();
+
+  // 后台尝试加载最新数据（不阻塞页面显示）
+  loadLatest();
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+{
+  "reportDate": "2026-05-13",
+  "generatedAt": "2026-05-13 22:54",
+  "source": "xiaohongshu",
+  "summary": {
+    "total": 5,
+    "recentCount": 0,
+    "historyCount": 5,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 1,
+    "neutralCount": 4,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "xiaohongshu": 5
+  },
+  "bySentiment": {
+    "positive": 1,
+    "negative": 0,
+    "neutral": 4
+  },
+  "byRisk": {
+    "high": 0,
+    "medium": 0,
+    "low": 5
+  },
+  "byProduct": {
+    "其他": 2,
+    "i豆活动": 3
+  },
+  "byCategory": {},
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 3
+    },
+    {
+      "word": "兑换",
+      "count": 1
+    }
+  ],
+  "records": [
+    {
+      "id": "20260513-13",
+      "date": "2026-01-03",
+      "publishTime": "2026-01-03T08:11:21.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行资产达标礼和升金礼",
+      "content": "工行资产达标礼和升金礼",
+      "url": "https://www.xiaohongshu.com/explore/6958cf29000000001e003efd",
+      "author": "猛踹瘸子那条好腿",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [],
+      "likes": 26,
+      "comments": 78,
+      "favorites": 12,
+      "heatScore": 200,
+      "category": "资产达标",
+      "channel": "xiaohongshu"
+    },
+    {
+      "id": "20260513-16",
+      "date": "2026-05-01",
+      "publishTime": "2026-05-01T04:58:39.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工银i豆互助！找长期搭子！",
+      "content": "工银i豆互助！找长期搭子！",
+      "url": "https://www.xiaohongshu.com/explore/69f432ff000000003601fcc5",
+      "author": "扯扯",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [
+        "i豆"
+      ],
+      "likes": 1,
+      "comments": 123,
+      "favorites": 3,
+      "heatScore": 252,
+      "category": "i豆兑换",
+      "channel": "xiaohongshu"
+    },
+    {
+      "id": "20260513-17",
+      "date": "2026-05-12",
+      "publishTime": "2026-05-12T00:52:49.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行I豆兑换",
+      "content": "工行I豆兑换",
+      "url": "https://www.xiaohongshu.com/explore/6a0279e1000000003601a4fc",
+      "author": "一颗荔枝",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [
+        "i豆",
+        "兑换"
+      ],
+      "likes": 2,
+      "comments": 3,
+      "favorites": 0,
+      "heatScore": 8,
+      "category": "i豆兑换",
+      "channel": "xiaohongshu"
+    },
+    {
+      "id": "20260513-19",
+      "date": "2026-02-09",
+      "publishTime": "2026-02-09T16:58:25.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行，月月升金礼＋县域提升礼",
+      "content": "工行，月月升金礼＋县域提升礼",
+      "url": "https://www.xiaohongshu.com/explore/698a1231000000001a02481b",
+      "author": "羽毛",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [],
+      "likes": 88,
+      "comments": 103,
+      "favorites": 43,
+      "heatScore": 359,
+      "category": "资产达标",
+      "channel": "xiaohongshu"
+    },
+    {
+      "id": "20260513-24",
+      "date": "2025-10-19",
+      "publishTime": "2025-10-19T15:19:27.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "「工行」新活动🧧27000i豆 等你来领",
+      "content": "「工行」新活动🧧27000i豆 等你来领",
+      "url": "https://www.xiaohongshu.com/explore/68f5017f000000000400002e",
+      "author": "龙猫猫",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [
+        "i豆"
+      ],
+      "likes": 29,
+      "comments": 18,
+      "favorites": 12,
+      "heatScore": 83,
+      "category": "i豆兑换",
+      "channel": "xiaohongshu"
+    }
+  ]
+}

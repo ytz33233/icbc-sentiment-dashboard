@@ -1,0 +1,99 @@
+{
+  "reportDate": "2026-05-15",
+  "generatedAt": "2026-05-15 09:25",
+  "fromHistory": false,
+  "summary": {
+    "total": 0,
+    "recentCount": 0,
+    "historyCount": 3,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 0,
+    "neutralCount": 3,
+    "channelCount": 3,
+    "highRiskCount": 0
+  },
+  "bySource": {},
+  "bySentiment": {},
+  "byRisk": {},
+  "byProduct": {
+    "升金有礼": 1,
+    "i豆活动": 1,
+    "其他": 19
+  },
+  "byCategory": {
+    "资产达标": 8,
+    "i豆兑换": 13
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-09",
+      "total": 8,
+      "recent": 6,
+      "history": 2,
+      "negative": 2
+    },
+    {
+      "date": "2026-05-10",
+      "total": 3,
+      "recent": 0,
+      "history": 3,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-11",
+      "total": 28,
+      "recent": 2,
+      "history": 26,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-13",
+      "total": 10,
+      "recent": 0,
+      "history": 10,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-14",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-15",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 1
+    },
+    {
+      "word": "i豆",
+      "count": 1
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-15）共采集 21 条舆情，中性 3 条。主要集中在「其他、升金有礼」等产品，来源以小红书、新闻媒体为主，热词包括「升金有礼、i豆、立减金」。",
+    "date": "2026-05-15",
+    "generatedAt": "2026-05-15T01:25:13.534Z"
+  },
+  "records": []
+}

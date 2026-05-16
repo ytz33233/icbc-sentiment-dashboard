@@ -1,0 +1,231 @@
+{
+  "reportDate": "2026-04-28",
+  "generatedAt": "2026-05-13T16:41:29.694Z",
+  "fromHistory": false,
+  "summary": {
+    "total": 6,
+    "recentCount": 0,
+    "historyCount": 6,
+    "negativeCount": 2,
+    "negativePct": 33,
+    "positiveCount": 2,
+    "neutralCount": 2,
+    "channelCount": 3,
+    "highRiskCount": 2
+  },
+  "bySource": {
+    "complaint": 2,
+    "news": 3,
+    "forum": 1
+  },
+  "bySentiment": {
+    "negative": 2,
+    "neutral": 2,
+    "positive": 2
+  },
+  "byRisk": {
+    "high": 2,
+    "medium": 2,
+    "low": 2
+  },
+  "byProduct": {
+    "升金有礼": 4,
+    "其他": 1,
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "薅羊毛": 2,
+    "i豆兑换": 2,
+    "资产达标": 2
+  },
+  "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 4
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "投诉",
+      "count": 1
+    },
+    {
+      "word": "虚假宣传",
+      "count": 1
+    },
+    {
+      "word": "谢谢参与",
+      "count": 1
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    },
+    {
+      "word": "到账",
+      "count": 1
+    },
+    {
+      "word": "资产达标",
+      "count": 1
+    },
+    {
+      "word": "i豆",
+      "count": 1
+    }
+  ],
+  "records": [
+    {
+      "id": "20260428-01",
+      "date": "2024-03-21",
+      "publishTime": "2024-03-21",
+      "source": "黑猫投诉",
+      "sourceType": "complaint",
+      "sentiment": "negative",
+      "riskLevel": "high",
+      "title": "虚假宣传投诉",
+      "content": "用户投诉\"金龙献瑞，升金有礼\"活动宣传100%中奖，提升资产24000元后抽奖得到\"谢谢参与\"，涉嫌虚假宣传。",
+      "keywords": [
+        "升金有礼",
+        "抽奖",
+        "投诉",
+        "虚假宣传",
+        "谢谢参与"
+      ],
+      "url": "https://tousu.sina.cn/complaint/view/17372076591",
+      "author": "勇敢喵",
+      "status": "投诉已完成",
+      "amount": "100元",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "low",
+      "category": "薅羊毛",
+      "heatScore": 0
+    },
+    {
+      "id": "20260428-02",
+      "date": "2024-03-15",
+      "publishTime": "2024-03-15",
+      "source": "黑猫投诉",
+      "sourceType": "complaint",
+      "sentiment": "negative",
+      "riskLevel": "high",
+      "title": "奖励金额不符",
+      "content": "资产达标10-20万，宣传可得吉祥金260+排名奖励合计320-860元，实际只到账100元立减金。",
+      "keywords": [
+        "立减金",
+        "到账",
+        "资产达标"
+      ],
+      "url": "https://tousu.sina.cn/complaint/view/17371960639",
+      "author": "洞察喵",
+      "status": "系统自动完成",
+      "amount": "1500元",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "low",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260428-03",
+      "date": "2026-02-12",
+      "publishTime": "2026-02-12",
+      "source": "证券时报",
+      "sourceType": "news",
+      "sentiment": "neutral",
+      "riskLevel": "medium",
+      "title": "银行揽储大战报道",
+      "content": "报道工商银行升金有礼活动规则，分析银行揽储策略转型。",
+      "keywords": [
+        "升金有礼"
+      ],
+      "url": "https://stcn.com/article/detail/3640196.html",
+      "author": "记者",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "low",
+      "category": "资产达标",
+      "heatScore": 0
+    },
+    {
+      "id": "20260428-04",
+      "date": "2026-01-13",
+      "publishTime": "2026-01-13",
+      "source": "同花顺财经",
+      "sourceType": "news",
+      "sentiment": "neutral",
+      "riskLevel": "medium",
+      "title": "银行短期营销困局",
+      "content": "分析银行\"有流量无留量\"问题，提及升金有礼活动。",
+      "keywords": [
+        "升金有礼"
+      ],
+      "url": "https://field.10jqka.com.cn/20260113/c673986570.shtml",
+      "author": "记者",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "low",
+      "category": "资产达标",
+      "heatScore": 0
+    },
+    {
+      "id": "20260428-05",
+      "date": "2026-02-26",
+      "publishTime": "2026-02-26",
+      "source": "xinfinite论坛",
+      "sourceType": "forum",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "薅羊毛攻略",
+      "content": "详细解读升金有礼活动玩法，计算收益率，分享操作技巧。",
+      "keywords": [
+        "升金有礼"
+      ],
+      "url": "https://www.xinfinite.net/t/topic/17733",
+      "author": "BluewingSay",
+      "status": "活跃讨论",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "低",
+      "category": "薅羊毛",
+      "heatScore": 0
+    },
+    {
+      "id": "20260428-06",
+      "date": "2026-01-27",
+      "publishTime": "2026-01-27",
+      "source": "潮新闻",
+      "sourceType": "news",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "年轻人攒i豆",
+      "content": "介绍工银i豆活动，称其为\"薅羊毛\"理财模式，在年轻人中兴起。",
+      "keywords": [
+        "i豆"
+      ],
+      "url": "https://tidenews.com.cn/news.html?id=3357952",
+      "author": "记者",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-04-28 09:00",
+      "recency": "历史",
+      "fermentation": "low",
+      "category": "i豆兑换",
+      "heatScore": 0
+    }
+  ]
+}

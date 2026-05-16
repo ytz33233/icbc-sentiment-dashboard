@@ -1,0 +1,494 @@
+{
+  "reportDate": "2026-05-12",
+  "generatedAt": "2026-05-12T16:38:43.915Z",
+  "source": "xiaohongshu",
+  "summary": {
+    "total": 15,
+    "recentCount": 2,
+    "historyCount": 13,
+    "negativeCount": 3,
+    "negativePct": 20,
+    "positiveCount": 6,
+    "neutralCount": 6,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "xiaohongshu": 15
+  },
+  "bySentiment": {
+    "positive": 6,
+    "negative": 3,
+    "neutral": 6
+  },
+  "byRisk": {
+    "low": 12,
+    "medium": 3,
+    "high": 0
+  },
+  "byProduct": {
+    "升金有礼": 4,
+    "i豆活动": 11
+  },
+  "byCategory": {
+    "资产达标": 4,
+    "i豆兑换": 11
+  },
+  "hotKeywords": [
+    {
+      "word": "工行",
+      "count": 13
+    },
+    {
+      "word": "i豆",
+      "count": 10
+    },
+    {
+      "word": "攻略",
+      "count": 4
+    },
+    {
+      "word": "升金有礼",
+      "count": 2
+    },
+    {
+      "word": "工银",
+      "count": 2
+    },
+    {
+      "word": "立减金",
+      "count": 2
+    },
+    {
+      "word": "兑换",
+      "count": 2
+    },
+    {
+      "word": "资产达标",
+      "count": 1
+    },
+    {
+      "word": "升金礼",
+      "count": 1
+    },
+    {
+      "word": "福利",
+      "count": 1
+    }
+  ],
+  "records": [
+    {
+      "id": "xhs-6991db0d000000000a0285a3",
+      "date": "2026-02-15",
+      "publishTime": "2026-02-15 14:41:17",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "medium",
+      "title": "麻了，工行的升金有礼是在这个界面吗？",
+      "content": "麻了，工行的升金有礼是在这个界面吗？",
+      "keywords": [
+        "工行",
+        "升金有礼"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/6991db0d000000000a0285a3",
+      "author": "94张张啊",
+      "status": "需关注",
+      "relatedProduct": "升金有礼",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 3,
+      "comments": 20,
+      "favorites": 4,
+      "heatScore": "low",
+      "category": "资产达标"
+    },
+    {
+      "id": "xhs-6980aeb5000000002103edff",
+      "date": "2026-02-02",
+      "publishTime": "2026-02-02 14:03:33",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行2月升金和资产达标门槛降低奖励加码",
+      "content": "工行2月升金和资产达标门槛降低奖励加码",
+      "keywords": [
+        "工行",
+        "资产达标"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/6980aeb5000000002103edff",
+      "author": "momomama",
+      "status": "正常",
+      "relatedProduct": "升金有礼",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 8,
+      "comments": 24,
+      "favorites": 4,
+      "heatScore": "low",
+      "category": "资产达标"
+    },
+    {
+      "id": "xhs-69de6867000000001e00da58",
+      "date": "2026-04-14",
+      "publishTime": "2026-04-14 16:16:39",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "medium",
+      "title": "工行三月升金有礼又空包！",
+      "content": "工行三月升金有礼又空包！",
+      "keywords": [
+        "工行",
+        "升金有礼"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69de6867000000001e00da58",
+      "author": "Little monster",
+      "status": "需关注",
+      "relatedProduct": "升金有礼",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 14,
+      "comments": 87,
+      "favorites": 11,
+      "heatScore": "medium",
+      "category": "资产达标"
+    },
+    {
+      "id": "xhs-69b58650000000001b023055",
+      "date": "2026-03-14",
+      "publishTime": "2026-03-14 16:01:20",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行升金礼2月",
+      "content": "工行升金礼2月",
+      "keywords": [
+        "工行",
+        "升金礼"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69b58650000000001b023055",
+      "author": "草莓味的风",
+      "status": "正常",
+      "relatedProduct": "升金有礼",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 1,
+      "comments": 11,
+      "favorites": 0,
+      "heatScore": "low",
+      "category": "资产达标"
+    },
+    {
+      "id": "xhs-698c8a21000000000a02f957",
+      "date": "2026-02-11",
+      "publishTime": "2026-02-11 13:54:41",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工银i豆",
+      "content": "工银i豆",
+      "keywords": [
+        "工银",
+        "i豆"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/698c8a21000000000a02f957",
+      "author": "小老虎",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 221,
+      "comments": 194,
+      "favorites": 116,
+      "heatScore": "medium",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-6878ca930000000017035f37",
+      "date": "2025-07-17",
+      "publishTime": "2025-07-17 10:04:03",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "484一克黄金｜工行i豆买金攻略",
+      "content": "484一克黄金｜工行i豆买金攻略",
+      "keywords": [
+        "工行",
+        "i豆",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/6878ca930000000017035f37",
+      "author": "爱买黄金的甜猪",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 4746,
+      "comments": 200,
+      "favorites": 4974,
+      "heatScore": "high",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-6872a813000000002201c56c",
+      "date": "2025-07-12",
+      "publishTime": "2025-07-12 18:23:15",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工银 i 豆换立减金详细攻略（包教包会版）",
+      "content": "工银 i 豆换立减金详细攻略（包教包会版）",
+      "keywords": [
+        "工银",
+        "立减金",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/6872a813000000002201c56c",
+      "author": "在逃羊毛",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 2954,
+      "comments": 405,
+      "favorites": 2407,
+      "heatScore": "high",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-69fd45cf000000001a02f449",
+      "date": "2026-05-08",
+      "publishTime": "2026-05-08 02:09:19",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5月工行M2及以上可以领i豆了",
+      "content": "5月工行M2及以上可以领i豆了",
+      "keywords": [
+        "工行",
+        "i豆"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69fd45cf000000001a02f449",
+      "author": "小巷表弟",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 46,
+      "comments": 34,
+      "favorites": 19,
+      "heatScore": "medium",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-69f958d90000000036019bf3",
+      "date": "2026-05-05",
+      "publishTime": "2026-05-05 02:41:29",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5月工行i豆乐园活动攻略来咯！",
+      "content": "5月工行i豆乐园活动攻略来咯！",
+      "keywords": [
+        "工行",
+        "i豆",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69f958d90000000036019bf3",
+      "author": "琦琦攻略社",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 11,
+      "comments": 13,
+      "favorites": 2,
+      "heatScore": "low",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-67fcaf39000000001c01e326",
+      "date": "2025-04-14",
+      "publishTime": "2025-04-14 06:46:17",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "medium",
+      "title": "看了一眼工行i豆，天塌了，我要骂人了！",
+      "content": "看了一眼工行i豆，天塌了，我要骂人了！",
+      "keywords": [
+        "工行",
+        "i豆"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/67fcaf39000000001c01e326",
+      "author": "云舒🍊",
+      "status": "需关注",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 42,
+      "comments": 30,
+      "favorites": 10,
+      "heatScore": "low",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-69fea5ab0000000037035bc4",
+      "date": "2026-05-09",
+      "publishTime": "2026-05-09 03:10:35",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行福利来咯！爽吃12000i豆！",
+      "content": "工行福利来咯！爽吃12000i豆！",
+      "keywords": [
+        "工行",
+        "i豆",
+        "福利"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69fea5ab0000000037035bc4",
+      "author": "致远的羊毛日常",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 5,
+      "comments": 4,
+      "favorites": 3,
+      "heatScore": "low",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-69af8e7b0000000022020c8a",
+      "date": "2026-03-10",
+      "publishTime": "2026-03-10 03:22:35",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行i豆兑换什么最划算",
+      "content": "工行i豆兑换什么最划算",
+      "keywords": [
+        "工行",
+        "i豆",
+        "兑换"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69af8e7b0000000022020c8a",
+      "author": "momo",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 817,
+      "comments": 354,
+      "favorites": 1048,
+      "heatScore": "high",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-681df5b800000000220287f2",
+      "date": "2025-05-09",
+      "publishTime": "2025-05-09 12:31:52",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行i豆兑换微信立减金方法",
+      "content": "工行i豆兑换微信立减金方法",
+      "keywords": [
+        "工行",
+        "i豆",
+        "立减金",
+        "兑换"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/681df5b800000000220287f2",
+      "author": "大吉（养病版😷）",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 613,
+      "comments": 58,
+      "favorites": 797,
+      "heatScore": "high",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-68eb3d97000000000503881e",
+      "date": "2025-10-12",
+      "publishTime": "2025-10-12 05:33:11",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行i豆🫘换什么好呢",
+      "content": "工行i豆🫘换什么好呢",
+      "keywords": [
+        "工行",
+        "i豆"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/68eb3d97000000000503881e",
+      "author": "momo",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 127,
+      "comments": 140,
+      "favorites": 110,
+      "heatScore": "medium",
+      "category": "i豆兑换"
+    },
+    {
+      "id": "xhs-69f38065000000002301c26d",
+      "date": "2026-04-30",
+      "publishTime": "2026-04-30 16:16:37",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5月工行i豆乐园活动攻略",
+      "content": "5月工行i豆乐园活动攻略",
+      "keywords": [
+        "工行",
+        "i豆",
+        "攻略"
+      ],
+      "url": "https://www.xiaohongshu.com/explore/69f38065000000002301c26d",
+      "author": "小巷表弟",
+      "status": "正常",
+      "relatedProduct": "i豆活动",
+      "recency": "24h内",
+      "fermentation": "低",
+      "fetchTime": "2026-05-12 23:30:00",
+      "likes": 50,
+      "comments": 122,
+      "favorites": 30,
+      "heatScore": "medium",
+      "category": "i豆兑换"
+    }
+  ]
+}

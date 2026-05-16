@@ -1,0 +1,61 @@
+{
+  "alertDate": "2026-05-10",
+  "generatedAt": "2026-05-13T17:25:53.238Z",
+  "summary": {
+    "high": 0,
+    "medium": 5,
+    "total": 5
+  },
+  "records": [
+    {
+      "id": "20260510-01",
+      "title": "长辈客户升金有礼空奖投诉",
+      "source": "黑猫投诉",
+      "content": "参加工行长辈客户升金有礼活动，宣传提升100万得300微信立减金，实际达标后却只让抽奖且为空奖，客服称已领完",
+      "riskLevel": "medium",
+      "sentiment": "negative",
+      "url": "",
+      "relatedProduct": "升金有礼"
+    },
+    {
+      "id": "20260510-11",
+      "title": "银行升金礼",
+      "source": "小红书",
+      "content": "工行升金礼5月活动不错，i豆到账快",
+      "riskLevel": "medium",
+      "sentiment": "positive",
+      "url": "https://www.xiaohongshu.com/explore/69fae323000000001a02c57b",
+      "relatedProduct": "i豆活动"
+    },
+    {
+      "id": "20260510-12",
+      "title": "工行3月升金有礼活动，豆到了吗",
+      "source": "小红书",
+      "content": "工行3月升金有礼活动豆子到账了吗？我的还没到",
+      "riskLevel": "medium",
+      "sentiment": "positive",
+      "url": "https://www.xiaohongshu.com/explore/69d84cd5000000002003b0e8",
+      "relatedProduct": "升金有礼"
+    },
+    {
+      "id": "20260510-14",
+      "title": "工行财富指在工行答题 0.6r",
+      "source": "小红书",
+      "content": "工行财富学院答题薅羊毛，0.6元立减金",
+      "riskLevel": "medium",
+      "sentiment": "neutral",
+      "url": "https://www.xiaohongshu.com/explore/69ed6d6f000000001e00e53c",
+      "relatedProduct": "其他"
+    },
+    {
+      "id": "20260510-15",
+      "title": "工行0.4立减，又薅到了",
+      "source": "小红书",
+      "content": "工行0.4元立减金，又一个羊毛到手",
+      "riskLevel": "medium",
+      "sentiment": "positive",
+      "url": "https://www.xiaohongshu.com/explore/69fef6cc000000001a037032",
+      "relatedProduct": "其他"
+    }
+  ]
+}

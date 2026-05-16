@@ -1,0 +1,515 @@
+{
+  "reportDate": "2026-05-10",
+  "generatedAt": "2026-05-10 01:25",
+  "fromHistory": true,
+  "summary": {
+    "total": 14,
+    "recentCount": 3,
+    "historyCount": 12,
+    "negativeCount": 1,
+    "negativePct": 7,
+    "positiveCount": 3,
+    "neutralCount": 11,
+    "channelCount": 4,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "forum": 2,
+    "official": 1,
+    "xiaohongshu": 11
+  },
+  "bySentiment": {
+    "neutral": 11,
+    "positive": 3
+  },
+  "byRisk": {
+    "low": 10,
+    "medium": 4
+  },
+  "byProduct": {
+    "升金有礼": 5,
+    "i豆活动": 8,
+    "其他": 2
+  },
+  "byCategory": {
+    "i豆兑换": 12,
+    "资产达标": 3
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-04",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-06",
+      "total": 4,
+      "recent": 0,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-08",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-09",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-10",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 9
+    },
+    {
+      "word": "升金有礼",
+      "count": 8
+    },
+    {
+      "word": "立减金",
+      "count": 7
+    },
+    {
+      "word": "羊毛",
+      "count": 5
+    },
+    {
+      "word": "福利",
+      "count": 2
+    },
+    {
+      "word": "薅羊毛",
+      "count": 2
+    },
+    {
+      "word": "到账",
+      "count": 2
+    },
+    {
+      "word": "空奖",
+      "count": 1
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "投诉",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-10）无新增舆情，当前展示 15 条历史持续舆情。",
+    "date": "2026-05-10",
+    "generatedAt": "2026-05-13T17:25:53.237Z"
+  },
+  "records": [
+    {
+      "title": "2026年信用卡绑卡消费i豆活动",
+      "content": "工银信用卡在微信/支付宝/京东/美团/抖音/拼多多快捷支付消费，每1元累积1i豆",
+      "source": "老行长网/池州人论坛",
+      "publishTime": "2026-04-20 / 2026-01-23",
+      "sentimentRaw": "中性",
+      "isComplaint": "否",
+      "fermentation": "低",
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "forum",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "1元",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-04-20",
+      "fetchTime": "2026-05-09",
+      "author": "老行长网/池州人论坛",
+      "url": "",
+      "id": "20260510-02",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "吉林分行i豆权益兑换招标",
+      "content": "吉林分行i豆权益兑换服务项目招标，预估金额400万元",
+      "source": "国信招标",
+      "publishTime": "2026-04-22",
+      "sentimentRaw": "中性",
+      "isComplaint": "否",
+      "fermentation": "低",
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "official",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "吉林",
+        "分行",
+        "兑换"
+      ],
+      "amount": "400万元",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-04-22",
+      "fetchTime": "2026-05-09",
+      "author": "国信招标",
+      "url": "",
+      "id": "20260510-03",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "升金有礼领奖提醒（线报）",
+      "content": "提醒3月升金礼达标用户去领i豆，4月新一期记得参与",
+      "source": "羊毛村线报",
+      "publishTime": "2026-04-15",
+      "sentimentRaw": "中性",
+      "isComplaint": "否",
+      "fermentation": "低",
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "forum",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼",
+        "i豆",
+        "提醒"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "date": "2026-04-15",
+      "fetchTime": "2026-05-09",
+      "author": "羊毛村线报",
+      "url": "",
+      "id": "20260510-04",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-05",
+      "date": "2026-05-09",
+      "publishTime": "2026-05-09",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行福利来咯！爽吃12000i豆！",
+      "content": "工行福利！完成升金有礼任务领12000工银i豆",
+      "url": "https://www.xiaohongshu.com/explore/69fea5ab0000000037035bc4",
+      "author": "致远的羊毛日常",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "24h内",
+      "keywords": [
+        "升金有礼",
+        "i豆",
+        "福利"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-06",
+      "date": "2026-05-09",
+      "publishTime": "2026-05-09",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "查漏补缺，看看哪些羊毛还没薅",
+      "content": "工行升金有礼、i豆任务、立减金等羊毛清单查漏补缺",
+      "url": "https://www.xiaohongshu.com/explore/69f32e87000000003700c6e3",
+      "author": "爱喷水的杰尼龟",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "24h内",
+      "keywords": [
+        "升金有礼",
+        "i豆",
+        "立减金",
+        "羊毛"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-07",
+      "date": "2026-05-08",
+      "publishTime": "2026-05-08",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5.8！工行达标领奖咯 9+10+5，还有100豆！",
+      "content": "5.8工行升金有礼达标领奖，9+10+5元立减金加100工银i豆",
+      "url": "https://www.xiaohongshu.com/explore/69fd29050000000023004956",
+      "author": "退休少女思韵",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "升金有礼",
+        "i豆",
+        "立减金"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-08",
+      "date": "2026-04-15",
+      "publishTime": "2026-04-15",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行3月升金有礼开奖了",
+      "content": "工行3月升金有礼开奖了，看看你的豆到了没",
+      "url": "https://www.xiaohongshu.com/explore/69def581000000001f001fa0",
+      "author": "天天上上签",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "升金有礼"
+      ],
+      "channel": "xiaohongshu",
+      "category": "资产达标",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-09",
+      "date": "2026-05-06",
+      "publishTime": "2026-05-06",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5.6工行 8.4r",
+      "content": "工行5.6薅羊毛8.4元立减金+工银i豆攻略",
+      "url": "https://www.xiaohongshu.com/explore/69fab868000000003502d64a",
+      "author": "饭咋贵",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "i豆",
+        "立减金",
+        "薅羊毛",
+        "羊毛"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-10",
+      "date": "2026-05-01",
+      "publishTime": "2026-05-01",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5月提升哪家强？中行工行已上线！",
+      "content": "工行5月升金有礼已上线，中行资产提升也来了，对比分析",
+      "url": "https://www.xiaohongshu.com/explore/69f41f52000000002202608a",
+      "author": "退休少女思韵",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "升金有礼",
+        "资产提升"
+      ],
+      "channel": "xiaohongshu",
+      "category": "资产达标",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-11",
+      "date": "2026-05-06",
+      "publishTime": "2026-05-06",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "medium",
+      "title": "银行升金礼",
+      "content": "工行升金礼5月活动不错，i豆到账快",
+      "url": "https://www.xiaohongshu.com/explore/69fae323000000001a02c57b",
+      "author": "Alwaysonline",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "i豆",
+        "到账"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-12",
+      "date": "2026-04-10",
+      "publishTime": "2026-04-10",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "medium",
+      "title": "工行3月升金有礼活动，豆到了吗",
+      "content": "工行3月升金有礼活动豆子到账了吗？我的还没到",
+      "url": "https://www.xiaohongshu.com/explore/69d84cd5000000002003b0e8",
+      "author": "茉莉",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "升金有礼",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "升金有礼",
+        "到账"
+      ],
+      "channel": "xiaohongshu",
+      "category": "资产达标",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-13",
+      "date": "2026-04-26",
+      "publishTime": "2026-04-26",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "金融街春日嘉年华羊毛多到袋子装不下",
+      "content": "工行在金融街嘉年华摆摊送福利，i豆、立减金等",
+      "url": "https://www.xiaohongshu.com/explore/69ed9aac0000000036001942",
+      "author": "夏日晚茶星",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "i豆",
+        "立减金",
+        "羊毛",
+        "福利"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-14",
+      "date": "2026-04-26",
+      "publishTime": "2026-04-26",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "medium",
+      "title": "工行财富指在工行答题 0.6r",
+      "content": "工行财富学院答题薅羊毛，0.6元立减金",
+      "url": "https://www.xiaohongshu.com/explore/69ed6d6f000000001e00e53c",
+      "author": "momo",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "历史",
+      "keywords": [
+        "立减金",
+        "薅羊毛",
+        "羊毛"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "id": "20260510-15",
+      "date": "2026-05-09",
+      "publishTime": "2026-05-09",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "medium",
+      "title": "工行0.4立减，又薅到了",
+      "content": "工行0.4元立减金，又一个羊毛到手",
+      "url": "https://www.xiaohongshu.com/explore/69fef6cc000000001a037032",
+      "author": "阿财的羊毛情报局",
+      "status": "已发布",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-09 17:00",
+      "recency": "24h内",
+      "keywords": [
+        "立减金",
+        "羊毛"
+      ],
+      "channel": "xiaohongshu",
+      "category": "i豆兑换",
+      "heatScore": 0
+    }
+  ]
+}

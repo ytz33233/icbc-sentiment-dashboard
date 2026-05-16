@@ -1,0 +1,79 @@
+{
+  "reportDate": "2026-05-08",
+  "generatedAt": "2026-05-08 01:25",
+  "fromHistory": false,
+  "summary": {
+    "total": 0,
+    "recentCount": 0,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 0,
+    "neutralCount": 0,
+    "channelCount": 0,
+    "highRiskCount": 0
+  },
+  "bySource": {},
+  "bySentiment": {},
+  "byRisk": {},
+  "byProduct": {},
+  "byCategory": {},
+  "trend7d": [
+    {
+      "date": "2026-05-02",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-03",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-04",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-06",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-08",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [],
+  "dailyBrief": {
+    "text": "今日（2026-05-08）暂无相关舆情数据。",
+    "date": "2026-05-08",
+    "generatedAt": "2026-05-13T17:25:20.487Z"
+  },
+  "records": []
+}

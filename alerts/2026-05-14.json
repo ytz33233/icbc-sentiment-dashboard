@@ -1,0 +1,31 @@
+{
+  "alertDate": "2026-05-14",
+  "generatedAt": "2026-05-14T03:08:11.171Z",
+  "summary": {
+    "high": 0,
+    "medium": 2,
+    "total": 2
+  },
+  "records": [
+    {
+      "id": "20260514-01",
+      "title": "黑猫投诉：工行长辈客户升金有礼抽奖空奖",
+      "source": "黑猫投诉平台",
+      "content": "用户投诉2026年3月参加工商银行长辈客户升金有礼活动，宣传提升100万可得300元微信立减金，实际达标后仅让抽奖且为空奖，客服称奖励已领完。",
+      "riskLevel": "medium",
+      "sentiment": "negative",
+      "url": "",
+      "relatedProduct": "升金有礼"
+    },
+    {
+      "id": "20260514-02",
+      "title": "黑猫投诉：工行i豆权益兑换虚假宣传",
+      "source": "黑猫投诉平台",
+      "content": "用户投诉工行i豆权益兑换宣传与实际使用规则不符，误导金融消费者，侵害消费者知情权，要求全额退还。",
+      "riskLevel": "medium",
+      "sentiment": "negative",
+      "url": "",
+      "relatedProduct": "i豆活动"
+    }
+  ]
+}

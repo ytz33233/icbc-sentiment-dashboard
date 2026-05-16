@@ -1,0 +1,403 @@
+{
+  "reportDate": "2026-05-13",
+  "generatedAt": "2026-05-13 01:26",
+  "fromHistory": false,
+  "summary": {
+    "total": 10,
+    "recentCount": 0,
+    "historyCount": 11,
+    "negativeCount": 1,
+    "negativePct": 9,
+    "positiveCount": 0,
+    "neutralCount": 10,
+    "channelCount": 3,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 8,
+    "xiaohongshu": 2
+  },
+  "bySentiment": {
+    "neutral": 10
+  },
+  "byRisk": {
+    "low": 10
+  },
+  "byProduct": {
+    "升金有礼": 2,
+    "其他": 3,
+    "i豆活动": 6
+  },
+  "byCategory": {
+    "i豆兑换": 11
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-08",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-09",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-10",
+      "total": 2,
+      "recent": 0,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-11",
+      "total": 27,
+      "recent": 2,
+      "history": 25,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-13",
+      "total": 11,
+      "recent": 0,
+      "history": 11,
+      "negative": 1
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 8
+    },
+    {
+      "word": "立减金",
+      "count": 4
+    },
+    {
+      "word": "升金有礼",
+      "count": 2
+    },
+    {
+      "word": "空奖",
+      "count": 1
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "投诉",
+      "count": 1
+    },
+    {
+      "word": "兑换",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-13）共采集 11 条舆情，其中负面 1 条，中性 10 条。主要集中在「i豆活动、其他、升金有礼」等产品，来源以微博、小红书、投诉平台为主，热词包括「i豆、立减金、升金有礼、空奖、抽奖」。",
+    "date": "2026-05-13",
+    "generatedAt": "2026-05-14T00:55:26.574Z"
+  },
+  "records": [
+    {
+      "title": "湖南工行-任务中心-享活动-湘约升礼 报名抽立减金",
+      "content": "湖南工行-任务中心-享活动-湘约升礼 <br />报名抽立减金",
+      "source": "分享白菜达人",
+      "publishTime": "Fri Feb 07 09:50:07 +0800 2025",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/5609361977?launchid=10000360-page_H5",
+      "likes": 16,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金",
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "分享白菜达人",
+      "id": "20260513-02",
+      "category": "i豆兑换",
+      "heatScore": 22
+    },
+    {
+      "title": "自测~工行微信任务，体验升金有礼，1.88立减金，扫码进推送",
+      "content": "自测~工行微信任务，体验升金有礼，1.88立减金，扫码进推送",
+      "source": "无敌",
+      "publishTime": "Thu Dec 08 11:59:38 +0800 2022",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/5744916923?launchid=10000360-page_H5",
+      "likes": 9,
+      "comments": 20,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼",
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "无敌",
+      "id": "20260513-03",
+      "category": "i豆兑换",
+      "heatScore": 51
+    },
+    {
+      "title": "工行 任务中心， 浏览普惠版 中了就是6立减，不是必中",
+      "content": "手机里有工行app的，<br />我的，i豆乐园，挨个活动玩一下<br /><br />这个三个人助力的，i豆挺多",
+      "source": "扒羊毛",
+      "publishTime": "Thu May 07 10:06:37 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/u/6769216988?launchid=10000360-page_H5",
+      "likes": 3,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "扒羊毛",
+      "id": "20260513-04",
+      "category": "i豆兑换",
+      "heatScore": 9
+    },
+    {
+      "title": "U先素质试用 gh-任务中心-年末升金加码礼-记得领取i豆喔 狗东支付可以抵扣～",
+      "content": "<a  href=\"https://m.weibo.cn/p/index?extparam=U%E5%85%88%E7%B4%A0%E8%B4%A8%E8%AF%95%E7%94%A8&containerid=100808c9f05766724555f036b3383f5cb97e33&launchid=10000360-page_H5\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://n.sinaimg.cn/photo/5213b46e/20180926/timeline_card_small_super_default.png'></span><span class=\"surl-text\">U先素质试用</span></a>  <br />gh-任务中心-年末升金加码礼-记得领取i豆喔  狗东支付可以抵扣～",
+      "source": "宁馨儿的自在",
+      "publishTime": "Sat Jan 10 09:13:37 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/3306463470?launchid=10000360-page_H5",
+      "likes": 22,
+      "comments": 28,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "宁馨儿的自在",
+      "id": "20260513-05",
+      "category": "i豆兑换",
+      "heatScore": 78
+    },
+    {
+      "title": "去抽试试 反馈5000豆 工.行 搜：【金 融 教 育】 或在i豆乐园 进入“二...",
+      "content": "去抽试试 反馈5000豆 <br />工.行 搜：【金 融 教 育】 <br />或在i豆乐园 进入“二十四节气” <br />- <br />部分答案如图⬇️",
+      "source": "佩奇线报",
+      "publishTime": "Wed Jan 21 00:09:39 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/5371906414?launchid=10000360-page_H5",
+      "likes": 18,
+      "comments": 64,
+      "favorites": 3,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "佩奇线报",
+      "id": "20260513-06",
+      "category": "i豆兑换",
+      "heatScore": 151
+    },
+    {
+      "title": "【工行】app-任务中心-体验有礼 试试中了2000工银i豆",
+      "content": "【工行】app-任务中心-体验有礼<br />试试中了2000工银i豆",
+      "source": "我是小小草n",
+      "publishTime": "Sun Jan 04 09:36:17 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/7007555676?launchid=10000360-page_H5",
+      "likes": 10,
+      "comments": 2,
+      "favorites": 3,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "我是小小草n",
+      "id": "20260513-07",
+      "category": "i豆兑换",
+      "heatScore": 19
+    },
+    {
+      "title": "工hang.-任wu中心-享活动 下拉惊蛰萌新生 300i豆 - 工hang.-...",
+      "content": "工hang.-任wu中心-享活动 <br />下拉惊蛰萌新生 300i豆 <br />- <br />工hang.-任wu中心 <br />下拉惊蛰趣答题 选B 有66i豆",
+      "source": "头号情报站",
+      "publishTime": "Thu Mar 05 09:38:59 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/7797665052?launchid=10000360-page_H5",
+      "likes": 57,
+      "comments": 41,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "300i豆",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "头号情报站",
+      "id": "20260513-08",
+      "category": "i豆兑换",
+      "heatScore": 141
+    },
+    {
+      "title": "工行app 搜“任务中心”，如有结售汇任务，反馈刚中了10元和58元立减金 比如...",
+      "content": "工行app <br />搜“任务中心”，如有结售汇任务，反馈刚中了10元和58元立减金<br />比如买：20元日元实付不到1元rmb",
+      "source": "优惠女孩的日常",
+      "publishTime": "Sun Jul 28 12:21:59 +0800 2024",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/u/5089204622?launchid=10000360-page_H5",
+      "likes": 37,
+      "comments": 48,
+      "favorites": 4,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "10元",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-13",
+      "author": "优惠女孩的日常",
+      "id": "20260513-11",
+      "category": "i豆兑换",
+      "heatScore": 139
+    },
+    {
+      "id": "20260513-12",
+      "date": "2026-05-01",
+      "publishTime": "2026-05-01T04:58:39.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工银i豆互助！找长期搭子！",
+      "content": "工银i豆互助！找长期搭子！",
+      "url": "https://www.xiaohongshu.com/explore/69f432ff000000003601fcc5",
+      "author": "扯扯",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [
+        "i豆"
+      ],
+      "likes": 1,
+      "comments": 123,
+      "favorites": 3,
+      "heatScore": 252,
+      "category": "i豆兑换",
+      "channel": "xiaohongshu"
+    },
+    {
+      "id": "20260513-13",
+      "date": "2026-05-12",
+      "publishTime": "2026-05-12T00:52:49.000Z",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行I豆兑换",
+      "content": "工行I豆兑换",
+      "url": "https://www.xiaohongshu.com/explore/6a0279e1000000003601a4fc",
+      "author": "一颗荔枝",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-13T02:38:09.683Z",
+      "recency": "历史",
+      "keywords": [
+        "i豆",
+        "兑换"
+      ],
+      "likes": 2,
+      "comments": 3,
+      "favorites": 0,
+      "heatScore": 8,
+      "category": "i豆兑换",
+      "channel": "xiaohongshu"
+    }
+  ]
+}

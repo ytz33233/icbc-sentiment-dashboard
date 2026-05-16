@@ -1,0 +1,53 @@
+{
+  "date": "2026-05-13",
+  "source": "weibo-mcp",
+  "keywords_searched": [
+    "工行 升金有礼",
+    "工银i豆",
+    "工行 活动 投诉",
+    "工行 积分 清零",
+    "工行 谢谢参与",
+    "工商银行 虚假宣传",
+    "工行 立减金"
+  ],
+  "total_posts": 21,
+  "summary": {
+    "positive": 12,
+    "neutral": 5,
+    "negative": 4
+  },
+  "key_findings": [
+    {
+      "topic": "升金有礼活动",
+      "sentiment": "positive",
+      "volume": 3,
+      "highlight": "用户分享活动攻略和立减金领取方式"
+    },
+    {
+      "topic": "工银i豆",
+      "sentiment": "positive",
+      "volume": 3,
+      "highlight": "金融教育、任务中心活动，用户积极分享"
+    },
+    {
+      "topic": "活动投诉",
+      "sentiment": "negative",
+      "volume": 3,
+      "highlight": "有用户投诉国宝活动兑换困难，需要熬夜0点抢"
+    },
+    {
+      "topic": "积分清零",
+      "sentiment": "negative",
+      "volume": 3,
+      "highlight": "诈骗短信冒充工行积分兑换，另有用户抱怨积分清零政策"
+    },
+    {
+      "topic": "立减金",
+      "sentiment": "mixed",
+      "volume": 3,
+      "highlight": "有用户认为活动性价比低（1100豆换1元），时间成本高"
+    }
+  ],
+  "alert_level": "low",
+  "notes": "数据来源：微博 MCP 访客模式搜索"
+}

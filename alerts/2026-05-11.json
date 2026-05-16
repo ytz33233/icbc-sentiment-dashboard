@@ -1,0 +1,61 @@
+{
+  "alertDate": "2026-05-11",
+  "generatedAt": "2026-05-13T17:25:56.982Z",
+  "summary": {
+    "high": 0,
+    "medium": 5,
+    "total": 5
+  },
+  "records": [
+    {
+      "id": "20260511-03",
+      "title": "工行5月升金有礼活动来了！",
+      "source": "小红书",
+      "content": "工行5月升金有礼活动来了！提升资产最高领300万i豆，达标更有惊喜",
+      "riskLevel": "medium",
+      "sentiment": "positive",
+      "url": "https://www.xiaohongshu.com/explore/6a00c1d8000000002203a4b6",
+      "relatedProduct": "i豆活动"
+    },
+    {
+      "id": "20260511-04",
+      "title": "工商银行员工出道了算不算工银i豆",
+      "source": "小红书",
+      "content": "工商银行员工出道了算不算工银i豆",
+      "riskLevel": "medium",
+      "sentiment": "neutral",
+      "url": "https://www.xiaohongshu.com/explore/69f3112f000000001f001550",
+      "relatedProduct": "i豆活动"
+    },
+    {
+      "id": "20260511-11",
+      "title": "工行升金有礼可以领奖啦",
+      "source": "小红书",
+      "content": "工行升金有礼可以领奖啦",
+      "riskLevel": "medium",
+      "sentiment": "neutral",
+      "url": "https://www.xiaohongshu.com/explore/68254331000000002301fdf5",
+      "relatedProduct": "升金有礼"
+    },
+    {
+      "id": "20260511-13",
+      "title": "工行4月升金有礼活动可以参加（有变化）",
+      "source": "小红书",
+      "content": "工行4月升金有礼活动可以参加（有变化）",
+      "riskLevel": "medium",
+      "sentiment": "neutral",
+      "url": "https://www.xiaohongshu.com/explore/67fb77ae000000001e0067f9",
+      "relatedProduct": "升金有礼"
+    },
+    {
+      "id": "20260511-27",
+      "title": "工行i豆兑换什么最划算",
+      "source": "小红书",
+      "content": "工行i豆兑换什么最划算",
+      "riskLevel": "medium",
+      "sentiment": "positive",
+      "url": "https://www.xiaohongshu.com/explore/69af8e7b0000000022020c8a",
+      "relatedProduct": "i豆活动"
+    }
+  ]
+}

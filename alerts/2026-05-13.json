@@ -1,0 +1,21 @@
+{
+  "alertDate": "2026-05-13",
+  "generatedAt": "2026-05-13T17:26:03.998Z",
+  "summary": {
+    "high": 0,
+    "medium": 1,
+    "total": 1
+  },
+  "records": [
+    {
+      "id": "20260513-01",
+      "title": "黑猫投诉：长辈客户升金有礼抽奖为空奖",
+      "source": "黑猫投诉",
+      "content": "2026年3月参加工行长辈客户升金有礼，宣传提升一百万得300微信立减金，实际达标后仅允许抽奖且为空奖，客服称已领完",
+      "riskLevel": "medium",
+      "sentiment": "negative",
+      "url": "",
+      "relatedProduct": "升金有礼"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]
+    - button "ⓘ 说明" [ref=e9] [cursor=pointer]
+  - generic [ref=e11]:
+    - generic [ref=e12]: 每日简报
+    - generic [ref=e13]
+    - generic [ref=e17]: 更新至 2026-05-13 15:30:00 · 渠道：投诉平台、论坛社区、新闻媒体、微博、官方、小红书
+  - generic [ref=e18]:
+    - generic [ref=e19]
+    - generic [ref=e22]
+    - generic [ref=e25]
+  - generic [ref=e28]:
+    - generic [ref=e29]
+    - generic [ref=e48]
+    - generic [ref=e63]
+    - generic [ref=e117]
+  - generic [ref=e125]:
+    - generic [ref=e126]: "类别:"
+    - generic [ref=e127] [cursor=pointer]: 全部 (5)
+    - generic [ref=e128] [cursor=pointer]: i豆兑换 (3)
+    - generic [ref=e129] [cursor=pointer]: 其他 (2)
+  - generic [ref=e894]:
+    - text: 热词筛选：
+    - strong [ref=e895]: 资产提升
+    - generic [ref=e896] [cursor=pointer]: ✕
+  - generic [ref=e130]:
+    - generic [ref=e131]
+    - generic [ref=e136]
+    - generic [ref=e139]
+    - generic [ref=e142]
+    - generic [ref=e145]
+    - generic [ref=e148]
+  - generic [ref=e151]:
+    - generic [ref=e152]
+    - table [ref=e155]
