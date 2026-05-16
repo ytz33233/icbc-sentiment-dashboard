@@ -101,10 +101,13 @@ function inferRiskLevel(record) {
     // 热搜相关 → high
     if (record.fromHotSearch) return 'high';
 
-    if (isHighFermentation && sentiment === 'negative') return 'high';
-    if (isMediumFermentation && sentiment === 'negative') return 'medium';
-    if (sentiment === 'negative' && (isComplaint.includes('是') || isComplaint.includes('yes'))) return 'medium';
-    return 'low';
+    let risk = 'low';
+    if (isHighFermentation && sentiment === 'negative') risk = 'high';
+    else if (isMediumFermentation && sentiment === 'negative') risk = 'medium';
+    else if (sentiment === 'negative' && (isComplaint.includes('是') || isComplaint.includes('yes'))) risk = 'medium';
+
+    // 应用反馈学习到的风险规则
+    return applyRiskRules(record, risk);
 }
 
 function inferProduct(title, content) {
@@ -321,13 +324,59 @@ function finalizeRecord(record, fetchDateStr, defaultSourceType) {
 }
 
 // 微博情感推断（基于关键词）
+// ===== 反馈规则加载 =====
+let FEEDBACK_RULES = null;
+function loadFeedbackRules() {
+    if (FEEDBACK_RULES) return FEEDBACK_RULES;
+    const rulesPath = path.join(WORKSPACE, 'sentiment_monitor', 'feedback-rules.json');
+    if (fs.existsSync(rulesPath)) {
+        try {
+            FEEDBACK_RULES = JSON.parse(fs.readFileSync(rulesPath, 'utf8'));
+            console.log('[FeedbackRules] 已加载', FEEDBACK_RULES.sentimentAdjustments.length, '条情感调整规则');
+        } catch (e) {
+            console.warn('[FeedbackRules] 加载失败:', e.message);
+            FEEDBACK_RULES = { sentimentAdjustments: [], riskAdjustments: [] };
+        }
+    } else {
+        FEEDBACK_RULES = { sentimentAdjustments: [], riskAdjustments: [] };
+    }
+    return FEEDBACK_RULES;
+}
+
+function applySentimentRules(text, originalSentiment) {
+    const rules = loadFeedbackRules();
+    const t = (text || '').toLowerCase();
+    for (const adj of rules.sentimentAdjustments || []) {
+        if (t.includes(adj.keyword.toLowerCase()) && originalSentiment === adj.originalSentiment) {
+            console.log('[FeedbackRules] 应用规则:', adj.keyword, originalSentiment, '->', adj.correction, `(置信度${(adj.confidence * 100).toFixed(0)}%)`);
+            return adj.correction;
+        }
+    }
+    return originalSentiment;
+}
+
+function applyRiskRules(record, originalRisk) {
+    const rules = loadFeedbackRules();
+    for (const adj of rules.riskAdjustments || []) {
+        if (record.sourceType === adj.sourceType) {
+            console.log('[FeedbackRules] 应用风险规则:', record.sourceType, `(置信度${(adj.confidence * 100).toFixed(0)}%)`);
+            // 风险调整逻辑：根据反馈降低/升高风险等级
+            if (adj.reason.includes('误判为高')) return 'medium';
+            if (adj.reason.includes('误判为低')) return 'medium';
+        }
+    }
+    return originalRisk;
+}
+
 function inferWeiboSentiment(text) {
     const t = (text || '').toLowerCase();
     const negativeWords = ['投诉', '维权', '虚假宣传', '谢谢参与', '空奖', '骗', '坑', '垃圾', '差', '烂', '被骗', '套路', '恶心', '失望', '愤怒', '差评', '吐槽', '坑人', '忽悠', '诈骗', '假货', '不满', '后悔', '坑爹', '坑死', '无语', '气死', '流氓', '黑幕', '曝光'];
     const positiveWords = ['好评', '不错', '推荐', '赞', '满意', '给力', '棒', '好用', '划算', '超值', '完美', '优秀', '惊喜', '开心', '高兴', '愉快', '实惠', '羊毛', '攻略', '必中'];
-    if (negativeWords.some(w => t.includes(w))) return 'negative';
-    if (positiveWords.some(w => t.includes(w))) return 'positive';
-    return 'neutral';
+    let sentiment = 'neutral';
+    if (negativeWords.some(w => t.includes(w))) sentiment = 'negative';
+    else if (positiveWords.some(w => t.includes(w))) sentiment = 'positive';
+    // 应用反馈学习到的规则
+    return applySentimentRules(text, sentiment);
 }
 
 // 解析微博 JSON 文件（支持 v2 MCP 格式和旧格式）

@@ -5068,6 +5068,9 @@ document.addEventListener('click', function(e) {
   }
 });
 
+// 反馈数据同时提交到 GitHub Issue（用于后端收集与迭代）
+const FEEDBACK_REPO = 'ytz33233/icbc-sentiment-dashboard';
+
 function submitFeedback(id, isAccurate) {
   try {
     var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
@@ -5075,8 +5078,56 @@ function submitFeedback(id, isAccurate) {
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
     console.log('[Feedback]', id, isAccurate ? 'accurate' : 'inaccurate');
+    // 同步提交到 GitHub Issue
+    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
+    if (record) {
+      openGitHubFeedbackIssue(id, isAccurate, '', record);
+    }
   } catch (e) {
     console.warn('反馈保存失败', e);
+  }
+}
+
+function openGitHubFeedbackIssue(id, isAccurate, reason, recordData) {
+  try {
+    var record = recordData || (loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null);
+    if (!record) {
+      console.warn('[Feedback] 无法找到记录:', id);
+      return;
+    }
+    // 频率限制：同一 ID 24h 内只打开一次
+    var lastSubmitKey = 'fb_gh_last_' + id;
+    var lastSubmit = localStorage.getItem(lastSubmitKey);
+    if (lastSubmit) {
+      var hours = (Date.now() - new Date(lastSubmit).getTime()) / 3600000;
+      if (hours < 24) {
+        console.log('[Feedback] 该条目24h内已提交过，跳过');
+        return;
+      }
+    }
+
+    var title = encodeURIComponent('[反馈] ID=' + id + ' | ' + (isAccurate ? '准确' : '不准确'));
+    var bodyLines = [
+      '**原标题**: ' + (record.title || ''),
+      '**原始内容**: ' + ((record.content || '').slice(0, 200)),
+      '**系统判断情感**: ' + (record.sentiment || ''),
+      '**系统判断风险**: ' + (record.riskLevel || ''),
+      '**来源类型**: ' + (record.sourceType || ''),
+      '**类别**: ' + (record.category || ''),
+      '**用户反馈**: ' + (reason || (isAccurate ? '判断准确' : '')),
+      '**提交时间**: ' + new Date().toISOString(),
+      '',
+      '<!-- feedback-auto -->'
+    ];
+    var body = encodeURIComponent(bodyLines.join('\n'));
+    var labels = encodeURIComponent('feedback');
+    var url = 'https://github.com/' + FEEDBACK_REPO + '/issues/new?title=' + title + '&body=' + body + '&labels=' + labels;
+
+    window.open(url, '_blank');
+    localStorage.setItem(lastSubmitKey, new Date().toISOString());
+    console.log('[Feedback] 已打开 GitHub Issue 创建页:', id);
+  } catch (e) {
+    console.warn('[Feedback] 打开 GitHub 反馈页失败:', e);
   }
 }
 
@@ -5114,6 +5165,11 @@ function confirmInaccurateFeedback(id) {
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
     console.log('[Feedback]', id, 'inaccurate:', reason);
+    // 同步提交到 GitHub Issue
+    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
+    if (record) {
+      openGitHubFeedbackIssue(id, false, reason, record);
+    }
   } catch (e) {
     console.warn('反馈保存失败', e);
   }
@@ -5149,6 +5205,11 @@ function updateInaccurateFeedback(id) {
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
     console.log('[Feedback]', id, 'inaccurate updated:', reason);
+    // 同步提交到 GitHub Issue（更新反馈）
+    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
+    if (record) {
+      openGitHubFeedbackIssue(id, false, reason, record);
+    }
   } catch (e) {
     console.warn('反馈更新失败', e);
   }
