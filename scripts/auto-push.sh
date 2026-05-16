@@ -3,15 +3,19 @@
 #
 # 用法: bash sentiment_monitor/scripts/auto-push.sh [日期YYYY-MM-DD]
 # 会自动执行: add → commit → pull --rebase → push
-# 目标仓库: https://github.com/Morning/bank-activities
+# 目标仓库:
+#   - 主仓库: https://github.com/Morning/bank-activities (历史数据归档)
+#   - 看板仓库: https://github.com/ytz33233/icbc-sentiment-dashboard (GitHub Pages)
 
 set -e
 
 WORKSPACE="/root/.openclaw/workspace"
 DATE="${1:-$(date +%Y-%m-%d)}"
 BRANCH="sync-main"
-REMOTE="bank-activities"
-REMOTE_BRANCH="main"
+REMOTE_MAIN="bank-activities"
+REMOTE_DASHBOARD="dashboard"
+REMOTE_MAIN_BRANCH="main"
+REMOTE_DASHBOARD_BRANCH="main"
 
 echo "🔍 检查 sentiment_monitor 变更..."
 cd "$WORKSPACE"
@@ -43,22 +47,34 @@ echo "📦 发现变更，开始提交和推送..."
 git config user.email "openclaw-bot@localhost" 2>/dev/null || true
 git config user.name "OpenClaw Bot" 2>/dev/null || true
 
-# 1. 暂存所有变更
+# ==== 推送到主仓库（Morning/bank-activities）====
+echo "🚀 推送到主仓库: Morning/bank-activities..."
 git add sentiment_monitor/
-
-# 2. 提交
 git commit -m "sentiment_monitor: daily update ${DATE}"
 
-# 3. 拉取远程最新变更并 rebase
 echo "🔄 同步远程最新代码..."
-git pull "$REMOTE" "$REMOTE_BRANCH" --rebase || {
-    echo "⚠️  拉取失败，尝试解决冲突..."
+git pull "$REMOTE_MAIN" "$REMOTE_MAIN_BRANCH" --rebase || {
+    echo "⚠️  主仓库拉取失败，尝试解决冲突..."
     git rebase --abort 2>/dev/null || true
     exit 1
 }
 
-# 4. 推送到远程
-echo "🚀 推送到 GitHub: Morning/bank-activities..."
-git push "$REMOTE" "${BRANCH}:${REMOTE_BRANCH}"
+git push "$REMOTE_MAIN" "${BRANCH}:${REMOTE_MAIN_BRANCH}"
+echo "✅ 主仓库推送成功！"
 
-echo "✅ 推送成功！${DATE} 的舆情监测数据已同步到 https://github.com/Morning/bank-activities"
+# ==== 推送到看板仓库（ytz33233/icbc-sentiment-dashboard）====
+echo "🚀 推送到看板仓库: ytz33233/icbc-sentiment-dashboard..."
+git add sentiment_monitor/
+git commit -m "sentiment_monitor: daily update ${DATE}" || true
+
+git push "$REMOTE_DASHBOARD" "${BRANCH}:${REMOTE_DASHBOARD_BRANCH}" -f || {
+    echo "⚠️  看板仓库推送失败，尝试直接 push..."
+    git push "$REMOTE_DASHBOARD" "HEAD:main" -f
+}
+echo "✅ 看板仓库推送成功！Pages 约 1-2 分钟后更新"
+
+echo ""
+echo "🔗 访问地址:"
+echo "   主仓库: https://github.com/Morning/bank-activities"
+echo "   看板: https://ytz33233.github.io/icbc-sentiment-dashboard/dashboard.html"
+echo "   介绍页: https://ytz33233.github.io/icbc-sentiment-dashboard/intro.html"

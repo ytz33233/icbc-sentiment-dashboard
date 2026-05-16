@@ -8,20 +8,16 @@
 
 | 页面 | 地址 |
 |---|---|
-| 项目介绍 | `https://morning.github.io/bank-activities/sentiment_monitor/intro.html` |
-| 实时看板 | `https://morning.github.io/bank-activities/sentiment_monitor/dashboard.html` |
-| 数据 API | `https://morning.github.io/bank-activities/sentiment_monitor/data/YYYY-MM-DD.json` |
+| 项目介绍 | `https://ytz33233.github.io/icbc-sentiment-dashboard/intro.html` |
+| 实时看板 | `https://ytz33233.github.io/icbc-sentiment-dashboard/dashboard.html` |
+| 数据 API | `https://ytz33233.github.io/icbc-sentiment-dashboard/data/YYYY-MM-DD.json` |
 
 > 每日 09:00 自动采集更新，看板右上角显示最后更新时间（北京时间）。
 
-## GitHub Pages 配置
+## 关联仓库
 
-1. 进入仓库 **Settings → Pages**
-2. Source 选择 **Deploy from a branch**
-3. Branch 选 `main`，Folder 选 `/(root)`
-4. 点击 Save，约 1-2 分钟后即可访问
-
-> 如使用自定义域名，可在 Settings → Pages 中添加 CNAME。
+- **数据备份**: [Morning/bank-activities](https://github.com/Morning/bank-activities)（私有仓库，用于历史数据归档）
+- **Pages 部署**: [ytz33233/icbc-sentiment-dashboard](https://github.com/ytz33233/icbc-sentiment-dashboard)（public 仓库，用于在线看板）
 
 ```
 sentiment_monitor/
