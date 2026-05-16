@@ -1998,6 +1998,9 @@ tr:hover {
       </div>
     </div>
     <div class="masthead-actions">
+    <button class="info-toggle-btn" id="export-feedback-btn" onclick="exportFeedbackData()" title="导出反馈数据" style="margin-right:4px;">
+      <span style="font-size:14px;line-height:1">↓</span> 导出反馈
+    </button>
     <button class="info-toggle-btn" id="info-toggle-btn" onclick="toggleInfoPanel()" title="数据说明">
       <span style="font-size:14px;line-height:1">ⓘ</span> 说明
     </button>
@@ -5081,57 +5084,63 @@ function submitFeedback(id, isAccurate) {
     data[id] = { accurate: isAccurate, time: new Date().toISOString() };
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
+    showToast('✓ 反馈已记录，感谢！');
     console.log('[Feedback]', id, isAccurate ? 'accurate' : 'inaccurate');
-    // 同步提交到 GitHub Issue
-    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
-    if (record) {
-      openGitHubFeedbackIssue(id, isAccurate, '', record);
-    }
   } catch (e) {
     console.warn('反馈保存失败', e);
   }
 }
 
 function openGitHubFeedbackIssue(id, isAccurate, reason, recordData) {
+  // 已停用：不再跳转 GitHub，改为本地存储 + Toast 提示
+  console.log('[Feedback] 本地记录完成，无需跳转');
+}
+
+function showToast(message, duration) {
+  duration = duration || 2000;
+  var toast = document.getElementById('feedback-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'feedback-toast';
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface);color:var(--text);padding:10px 20px;border-radius:var(--radius-sm);border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,0.3);font-size:13px;z-index:9999;opacity:0;transition:opacity 0.3s;pointer-events:none;white-space:nowrap;';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = '1';
+  if (toast._timer) clearTimeout(toast._timer);
+  toast._timer = setTimeout(function() {
+    toast.style.opacity = '0';
+  }, duration);
+}
+
+function exportFeedbackData() {
   try {
-    var record = recordData || (loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null);
-    if (!record) {
-      console.warn('[Feedback] 无法找到记录:', id);
+    var data = JSON.parse(localStorage.getItem(FEEDBACK_KEY) || '{}');
+    var keys = Object.keys(data);
+    if (keys.length === 0) {
+      showToast('暂无反馈数据可导出');
       return;
     }
-    // 频率限制：同一 ID 24h 内只打开一次
-    var lastSubmitKey = 'fb_gh_last_' + id;
-    var lastSubmit = localStorage.getItem(lastSubmitKey);
-    if (lastSubmit) {
-      var hours = (Date.now() - new Date(lastSubmit).getTime()) / 3600000;
-      if (hours < 24) {
-        console.log('[Feedback] 该条目24h内已提交过，跳过');
-        return;
-      }
+    // 转换为数组格式（便于后端处理）
+    var arr = [];
+    for (var i = 0; i < keys.length; i++) {
+      var id = keys[i];
+      var entry = data[id];
+      arr.push({ id: id, accurate: entry.accurate, reason: entry.reason || '', time: entry.time || '' });
     }
-
-    var title = encodeURIComponent('[反馈] ID=' + id + ' | ' + (isAccurate ? '准确' : '不准确'));
-    var bodyLines = [
-      '**原标题**: ' + (record.title || ''),
-      '**原始内容**: ' + ((record.content || '').slice(0, 200)),
-      '**系统判断情感**: ' + (record.sentiment || ''),
-      '**系统判断风险**: ' + (record.riskLevel || ''),
-      '**来源类型**: ' + (record.sourceType || ''),
-      '**类别**: ' + (record.category || ''),
-      '**用户反馈**: ' + (reason || (isAccurate ? '判断准确' : '')),
-      '**提交时间**: ' + new Date().toISOString(),
-      '',
-      '<!-- feedback-auto -->'
-    ];
-    var body = encodeURIComponent(bodyLines.join('\n'));
-    var labels = encodeURIComponent('feedback');
-    var url = 'https://github.com/' + FEEDBACK_REPO + '/issues/new?title=' + title + '&body=' + body + '&labels=' + labels;
-
-    window.open(url, '_blank');
-    localStorage.setItem(lastSubmitKey, new Date().toISOString());
-    console.log('[Feedback] 已打开 GitHub Issue 创建页:', id);
+    var blob = new Blob([JSON.stringify(arr, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'sentiment-feedback-' + new Date().toISOString().slice(0, 10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('✓ 已导出 ' + arr.length + ' 条反馈');
   } catch (e) {
-    console.warn('[Feedback] 打开 GitHub 反馈页失败:', e);
+    console.warn('导出反馈失败', e);
+    showToast('导出失败，请重试');
   }
 }
 
@@ -5168,12 +5177,8 @@ function confirmInaccurateFeedback(id) {
     data[id] = { accurate: false, reason: reason, time: new Date().toISOString() };
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
+    showToast('✓ 反馈已记录，感谢！');
     console.log('[Feedback]', id, 'inaccurate:', reason);
-    // 同步提交到 GitHub Issue
-    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
-    if (record) {
-      openGitHubFeedbackIssue(id, false, reason, record);
-    }
   } catch (e) {
     console.warn('反馈保存失败', e);
   }
@@ -5208,12 +5213,8 @@ function updateInaccurateFeedback(id) {
     data[id] = { accurate: false, reason: reason, time: new Date().toISOString() };
     localStorage.setItem(FEEDBACK_KEY, JSON.stringify(data));
     renderFeedbackArea(id);
+    showToast('✓ 反馈已更新，感谢！');
     console.log('[Feedback]', id, 'inaccurate updated:', reason);
-    // 同步提交到 GitHub Issue（更新反馈）
-    var record = loadedData && loadedData.records ? loadedData.records.find(function(r) { return r.id === id; }) : null;
-    if (record) {
-      openGitHubFeedbackIssue(id, false, reason, record);
-    }
   } catch (e) {
     console.warn('反馈更新失败', e);
   }

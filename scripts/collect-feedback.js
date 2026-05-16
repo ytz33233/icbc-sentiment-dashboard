@@ -1,371 +1,234 @@
 #!/usr/bin/env node
 /**
  * collect-feedback.js
- * 每天晚上收集 GitHub Issues 中的舆情反馈，分析误判模式，生成优化规则
+ * 每天晚上收集本地反馈数据，分析误判模式，生成优化规则
  *
  * 用法: node sentiment_monitor/scripts/collect-feedback.js
+ * 数据源: sentiment_monitor/feedback/*.json（从浏览器 localStorage 导出的反馈）
  * 输出: sentiment_monitor/feedback-rules.json
- * 副作用: 关闭已处理的 feedback Issue
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const WORKSPACE = '/root/.openclaw/workspace';
+const FEEDBACK_DIR = path.join(WORKSPACE, 'sentiment_monitor', 'feedback');
 const RULES_FILE = path.join(WORKSPACE, 'sentiment_monitor', 'feedback-rules.json');
+const REPORTS_DIR = path.join(WORKSPACE, 'sentiment_monitor', 'reports');
 
-// GitHub 配置
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
-const REPO_OWNER = 'ytz33233';
-const REPO_NAME = 'icbc-sentiment-dashboard';
+function getTodayBeijing() {
+    const d = new Date(Date.now() + 8 * 3600 * 1000);
+    return d.toISOString().slice(0, 10);
+}
 
-// ===== HTTP 请求工具 =====
-function httpRequest(method, url, data = null) {
-    return new Promise((resolve, reject) => {
-        const https = require('https');
-        const urlObj = new URL(url);
-        const options = {
-            hostname: urlObj.hostname,
-            path: urlObj.pathname + urlObj.search,
-            method: method,
-            headers: {
-                'Authorization': `token ${GITHUB_TOKEN}`,
-                'Accept': 'application/vnd.github+json',
-                'User-Agent': 'OpenClaw-Feedback-Collector'
-            }
-        };
-        if (data) {
-            const body = JSON.stringify(data);
-            options.headers['Content-Type'] = 'application/json';
-            options.headers['Content-Length'] = Buffer.byteLength(body);
-        }
-        const req = https.request(options, (res) => {
-            let raw = '';
-            res.on('data', chunk => raw += chunk);
-            res.on('end', () => {
-                try {
-                    const parsed = JSON.parse(raw);
-                    resolve({ status: res.statusCode, data: parsed });
-                } catch (e) {
-                    resolve({ status: res.statusCode, data: raw });
+// ===== 加载本地反馈文件 =====
+function loadLocalFeedback() {
+    const feedbacks = [];
+    if (!fs.existsSync(FEEDBACK_DIR)) {
+        console.log('[Feedback] 反馈目录不存在:', FEEDBACK_DIR);
+        return feedbacks;
+    }
+    const files = fs.readdirSync(FEEDBACK_DIR).filter(f => f.endsWith('.json'));
+    for (const file of files) {
+        const fp = path.join(FEEDBACK_DIR, file);
+        try {
+            const data = JSON.parse(fs.readFileSync(fp, 'utf8'));
+            if (Array.isArray(data)) {
+                feedbacks.push(...data);
+            } else if (data && typeof data === 'object') {
+                // 可能是 {id: {...}} 格式
+                for (const [id, entry] of Object.entries(data)) {
+                    feedbacks.push({ id, ...entry });
                 }
-            });
-        });
-        req.on('error', reject);
-        if (data) req.write(JSON.stringify(data));
-        req.end();
-    });
+            }
+            console.log(`[Feedback] 加载 ${file}: ${Array.isArray(data) ? data.length : Object.keys(data).length} 条`);
+        } catch (e) {
+            console.warn('[Feedback] 解析失败:', file, e.message);
+        }
+    }
+    return feedbacks;
 }
 
-// ===== 解析 Issue 内容 =====
-function parseFeedbackIssue(issue) {
-    const body = issue.body || '';
-    const result = {
-        id: null,
-        accurate: null,
-        reason: '',
-        originalTitle: '',
-        originalContent: '',
-        originalSentiment: '',
-        originalRisk: '',
-        sourceType: '',
-        category: '',
-        createdAt: issue.created_at,
-        issueNumber: issue.number
+// ===== 分析误判模式 =====
+function analyzePatterns(feedbacks) {
+    const patterns = {
+        sentiment: { falsePositive: [], falseNegative: [] },
+        risk: { overHigh: [], underHigh: [] },
+        keywords: {}
     };
 
-    // 从标题解析 ID 和准确状态
-    const titleMatch = issue.title.match(/\[反馈\]\s*ID=(\S+)\s*\|\s*(准确|不准确)/);
-    if (titleMatch) {
-        result.id = titleMatch[1];
-        result.accurate = titleMatch[2] === '准确';
-    }
+    for (const fb of feedbacks) {
+        if (fb.accurate === true) continue; // 只分析不准确的
 
-    // 从 body 解析字段
-    const lines = body.split('\n');
-    for (const line of lines) {
-        const trimmed = line.trim();
-        if (trimmed.startsWith('**原标题**:')) result.originalTitle = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**原始内容**:')) result.originalContent = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**系统判断情感**:')) result.originalSentiment = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**系统判断风险**:')) result.originalRisk = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**来源类型**:')) result.sourceType = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**类别**:')) result.category = trimmed.split('**:')[1]?.trim() || '';
-        if (trimmed.startsWith('**用户反馈**:')) result.reason = trimmed.split('**:')[1]?.trim() || '';
-    }
+        const reason = (fb.reason || '').toLowerCase();
+        const title = (fb.title || '').toLowerCase();
+        const text = reason + ' ' + title;
 
-    return result;
-}
-
-// ===== 分析反馈模式 =====
-function analyzeFeedback(issues) {
-    const feedbacks = issues.map(parseFeedbackIssue).filter(f => f.id !== null);
-
-    const stats = {
-        total: feedbacks.length,
-        accurate: feedbacks.filter(f => f.accurate).length,
-        inaccurate: feedbacks.filter(f => !f.accurate).length,
-        falseNegative: [],  // 实际是负面但系统判为中性/正面
-        falsePositive: [],  // 实际是中性/正面但系统判为负面
-        falseRisk: [],      // 风险等级误判
-        keywordPatterns: {},
-        sourcePatterns: {},
-        categoryPatterns: {}
-    };
-
-    for (const f of feedbacks) {
-        if (f.accurate) continue;
-
-        const text = (f.originalTitle + ' ' + f.originalContent).toLowerCase();
-
-        // 收集关键词出现频率
-        for (const kw of ['谢谢参与', '投诉', '维权', '虚假宣传', '空奖', '骗', '坑', '羊毛', '攻略', 'i豆', '升金有礼', '积分', '清零', '立减金']) {
-            if (text.includes(kw)) {
-                if (!stats.keywordPatterns[kw]) stats.keywordPatterns[kw] = { count: 0, reasons: [] };
-                stats.keywordPatterns[kw].count++;
-                if (f.reason) stats.keywordPatterns[kw].reasons.push(f.reason);
+        // 情感误判
+        if (reason.includes('情感') || reason.includes('sentiment') || reason.includes('正面') || reason.includes('负面')) {
+            if (reason.includes('误判为负面') || reason.includes('不是负面')) {
+                patterns.sentiment.falseNegative.push(fb);
+            } else if (reason.includes('误判为正面') || reason.includes('不是正面')) {
+                patterns.sentiment.falsePositive.push(fb);
+            } else if (reason.includes('应该为中性')) {
+                patterns.sentiment.falseNegative.push(fb);
             }
         }
 
-        // 收集来源模式
-        if (f.sourceType) {
-            if (!stats.sourcePatterns[f.sourceType]) stats.sourcePatterns[f.sourceType] = { count: 0, reasons: [] };
-            stats.sourcePatterns[f.sourceType].count++;
-            if (f.reason) stats.sourcePatterns[f.sourceType].reasons.push(f.reason);
-        }
-
-        // 收集类别模式
-        if (f.category) {
-            if (!stats.categoryPatterns[f.category]) stats.categoryPatterns[f.category] = { count: 0, reasons: [] };
-            stats.categoryPatterns[f.category].count++;
-            if (f.reason) stats.categoryPatterns[f.category].reasons.push(f.reason);
-        }
-
-        // 判断误判类型
-        if (f.reason) {
-            const r = f.reason.toLowerCase();
-            if (r.includes('误判为负面') || r.includes('不是负面') || r.includes('中性')) {
-                stats.falsePositive.push(f);
-            } else if (r.includes('误判为中性') || r.includes('漏判') || r.includes('应该负面')) {
-                stats.falseNegative.push(f);
-            } else if (r.includes('风险') || r.includes('高风险') || r.includes('低风险')) {
-                stats.falseRisk.push(f);
+        // 风险误判
+        if (reason.includes('风险') || reason.includes('高风险') || reason.includes('应该为')) {
+            if (reason.includes('不应该为高风险') || reason.includes('误判为高')) {
+                patterns.risk.overHigh.push(fb);
+            } else if (reason.includes('应该是高风险') || reason.includes('误判为低')) {
+                patterns.risk.underHigh.push(fb);
             }
+        }
+
+        // 关键词统计
+        const words = (fb.title || '').split(/\s+/).filter(w => w.length >= 2);
+        for (const w of words) {
+            patterns.keywords[w] = (patterns.keywords[w] || 0) + 1;
         }
     }
 
-    return { feedbacks, stats };
+    return patterns;
 }
 
-// ===== 生成优化规则 =====
-function generateRules(analysis) {
-    const { stats } = analysis;
+// ===== 生成规则 =====
+function generateRules(feedbacks) {
+    const patterns = analyzePatterns(feedbacks);
     const rules = {
-        version: new Date().toISOString().slice(0, 10),
-        lastUpdated: new Date().toISOString(),
+        generatedAt: new Date().toISOString(),
+        totalFeedback: feedbacks.length,
+        inaccurateCount: feedbacks.filter(f => f.accurate === false).length,
         sentimentAdjustments: [],
         riskAdjustments: [],
-        keywordWeightChanges: [],
-        correctionPatterns: {
-            falseNegative: stats.falseNegative.map(f => ({
-                id: f.id,
-                reason: f.reason,
-                keywords: extractKeywordsFromText(f.originalTitle + ' ' + f.originalContent)
-            })),
-            falsePositive: stats.falsePositive.map(f => ({
-                id: f.id,
-                reason: f.reason,
-                keywords: extractKeywordsFromText(f.originalTitle + ' ' + f.originalContent)
-            })),
-            misclassifiedRisk: stats.falseRisk.map(f => ({
-                id: f.id,
-                reason: f.reason,
-                originalRisk: f.originalRisk
-            }))
-        }
+        version: 1
     };
 
-    // 关键词模式 → 情感调整规则
-    for (const [kw, data] of Object.entries(stats.keywordPatterns)) {
-        if (data.count >= 2) {  // 至少 2 次反馈才生成规则
-            const reasons = data.reasons.join(' | ');
-            let adjustment = null;
-
-            if (reasons.includes('误判为负面') || reasons.includes('不是负面')) {
-                adjustment = { keyword: kw, originalSentiment: 'negative', correction: 'neutral', reason: reasons, confidence: Math.min(0.5 + data.count * 0.1, 0.95), feedbackCount: data.count };
-            } else if (reasons.includes('误判为中性')) {
-                adjustment = { keyword: kw, originalSentiment: 'neutral', correction: 'negative', reason: reasons, confidence: Math.min(0.5 + data.count * 0.1, 0.95), feedbackCount: data.count };
-            }
-
-            if (adjustment && !rules.sentimentAdjustments.find(a => a.keyword === kw)) {
-                rules.sentimentAdjustments.push(adjustment);
-            }
+    // 情感调整规则（出现 ≥2 次的误判才生成规则）
+    const sentimentKeywords = {};
+    for (const fb of patterns.sentiment.falseNegative) {
+        const kw = extractKeyPhrase(fb.title || fb.reason || '');
+        if (kw) {
+            sentimentKeywords[kw] = sentimentKeywords[kw] || { count: 0, correction: 'neutral', reason: '' };
+            sentimentKeywords[kw].count++;
+        }
+    }
+    for (const [kw, info] of Object.entries(sentimentKeywords)) {
+        if (info.count >= 2) {
+            rules.sentimentAdjustments.push({
+                keyword: kw,
+                originalSentiment: 'negative',
+                correction: 'neutral',
+                confidence: Math.min(0.95, 0.6 + info.count * 0.1),
+                count: info.count
+            });
         }
     }
 
-    // 来源模式 → 风险调整规则
-    for (const [source, data] of Object.entries(stats.sourcePatterns)) {
-        if (data.count >= 2) {
-            const reasons = data.reasons.join(' | ');
-            if (reasons.includes('风险')) {
-                rules.riskAdjustments.push({
-                    sourceType: source,
-                    reason: reasons,
-                    confidence: Math.min(0.5 + data.count * 0.1, 0.95),
-                    feedbackCount: data.count
-                });
-            }
-        }
+    // 风险调整规则
+    if (patterns.risk.overHigh.length >= 2) {
+        rules.riskAdjustments.push({
+            sourceType: 'social',
+            reason: '误判为高风险',
+            confidence: Math.min(0.95, 0.6 + patterns.risk.overHigh.length * 0.1),
+            count: patterns.risk.overHigh.length
+        });
     }
 
     return rules;
 }
 
-function extractKeywordsFromText(text) {
-    const KEYWORDS = ['升金有礼', 'i豆', '积分', '清零', '立减金', '空奖', '抽奖', '心动有礼', 'i豆乐园', '投诉', '维权', '虚假宣传', '谢谢参与', '霸王条款', '不发货', '优惠券', '冻结', '信用卡', '资产达标', '月月升金'];
-    const t = (text || '').toLowerCase();
-    return KEYWORDS.filter(kw => t.includes(kw.toLowerCase()));
+function extractKeyPhrase(text) {
+    if (!text) return '';
+    // 提取 2-6 字的关键短语
+    const candidates = [
+        '谢谢参与', '空奖', '积分清零', '虚假宣传', '投诉', '维权',
+        '不发货', '客服', '活动', '抽奖', '立减金', 'i豆', '升金有礼'
+    ];
+    for (const c of candidates) {
+        if (text.includes(c)) return c;
+    }
+    return '';
 }
 
-// ===== 主流程 =====
-async function main() {
-    console.log('🔍 开始收集舆情反馈...');
-    console.log(`📦 仓库: ${REPO_OWNER}/${REPO_NAME}`);
+// ===== 生成报告 =====
+function generateReport(feedbacks, rules) {
+    const today = getTodayBeijing();
+    const inaccurate = feedbacks.filter(f => f.accurate === false);
+    let md = `# 舆情反馈分析报告 — ${today}\n\n`;
+    md += `> 生成时间: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n\n`;
+    md += `## 概览\n\n`;
+    md += `- 总反馈数: ${feedbacks.length}\n`;
+    md += `- 不准确反馈: ${inaccurate.length}\n`;
+    md += `- 准确率: ${feedbacks.length > 0 ? Math.round((feedbacks.length - inaccurate.length) / feedbacks.length * 100) : 0}%\n\n`;
 
-    // 1. 读取所有 feedback 标签的 open Issue
-    const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/issues?labels=feedback&state=open&per_page=100`;
-    const response = await httpRequest('GET', url);
-
-    if (response.status !== 200) {
-        console.error('❌ 读取 Issues 失败:', response.status, response.data);
-        process.exit(1);
-    }
-
-    const issues = response.data;
-    if (!Array.isArray(issues) || issues.length === 0) {
-        console.log('✅ 没有新的反馈 Issue，无需处理');
-        process.exit(0);
-    }
-
-    console.log(`📋 发现 ${issues.length} 条反馈 Issue`);
-
-    // 2. 分析反馈
-    const analysis = analyzeFeedback(issues);
-    console.log(`📊 统计: 准确=${analysis.stats.accurate}, 不准确=${analysis.stats.inaccurate}`);
-    console.log(`   假阴性(漏判负面)=${analysis.stats.falseNegative.length}, 假阳性(误判负面)=${analysis.stats.falsePositive.length}, 风险误判=${analysis.stats.falseRisk.length}`);
-
-    // 3. 生成规则
-    const newRules = generateRules(analysis);
-
-    // 4. 读取旧规则并合并
-    let existingRules = { version: '2026-01-01', sentimentAdjustments: [], riskAdjustments: [] };
-    if (fs.existsSync(RULES_FILE)) {
-        try {
-            existingRules = JSON.parse(fs.readFileSync(RULES_FILE, 'utf8'));
-        } catch (e) {
-            console.warn('⚠️ 旧规则文件读取失败，使用空规则');
+    if (inaccurate.length > 0) {
+        md += `## 不准确反馈详情\n\n`;
+        for (const fb of inaccurate.slice(0, 20)) {
+            md += `### ${fb.id || '未知ID'}\n`;
+            md += `- 原因: ${fb.reason || '未填写'}\n`;
+            md += `- 时间: ${fb.time || '未知'}\n\n`;
         }
     }
 
-    // 合并：保留旧规则中 feedbackCount 更高的，新规则补充
-    const merged = mergeRules(existingRules, newRules);
-    fs.writeFileSync(RULES_FILE, JSON.stringify(merged, null, 2));
-    console.log(`📝 规则已更新: ${RULES_FILE}`);
-    console.log(`   情感调整规则: ${merged.sentimentAdjustments.length} 条`);
-    console.log(`   风险调整规则: ${merged.riskAdjustments.length} 条`);
-
-    // 5. 关闭已处理的 Issue
-    for (const issue of issues) {
-        const closeUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/issues/${issue.number}`;
-        await httpRequest('PATCH', closeUrl, { state: 'closed' });
-        console.log(`   ✅ 已关闭 Issue #${issue.number}`);
-    }
-
-    // 6. 生成分析报告
-    const reportPath = path.join(WORKSPACE, 'sentiment_monitor', 'reports', `feedback-report-${newRules.version}.md`);
-    const reportDir = path.dirname(reportPath);
-    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
-
-    const report = generateReport(analysis, merged);
-    fs.writeFileSync(reportPath, report);
-    console.log(`📄 分析报告: ${reportPath}`);
-
-    console.log('\n🎯 反馈收集完成！规则已更新，明天采集将自动应用新规则。');
-}
-
-function mergeRules(oldRules, newRules) {
-    const merged = {
-        version: newRules.version,
-        lastUpdated: newRules.lastUpdated,
-        sentimentAdjustments: [...(oldRules.sentimentAdjustments || [])],
-        riskAdjustments: [...(oldRules.riskAdjustments || [])],
-        keywordWeightChanges: [...(oldRules.keywordWeightChanges || [])],
-        correctionPatterns: newRules.correctionPatterns
-    };
-
-    // 合并情感调整：新规则覆盖旧规则，但保留 feedbackCount 更高的
-    for (const newAdj of newRules.sentimentAdjustments || []) {
-        const existingIndex = merged.sentimentAdjustments.findIndex(a => a.keyword === newAdj.keyword);
-        if (existingIndex >= 0) {
-            if (newAdj.feedbackCount > (merged.sentimentAdjustments[existingIndex].feedbackCount || 0)) {
-                merged.sentimentAdjustments[existingIndex] = newAdj;
-            }
-        } else {
-            merged.sentimentAdjustments.push(newAdj);
+    if (rules.sentimentAdjustments.length > 0 || rules.riskAdjustments.length > 0) {
+        md += `## 生成的优化规则\n\n`;
+        for (const r of rules.sentimentAdjustments) {
+            md += `- **情感调整**: 含「${r.keyword}」的负面内容 → 改为 ${r.correction}（置信度 ${(r.confidence * 100).toFixed(0)}%，基于 ${r.count} 次反馈）\n`;
         }
-    }
-
-    // 合并风险调整
-    for (const newAdj of newRules.riskAdjustments || []) {
-        const existingIndex = merged.riskAdjustments.findIndex(a => a.sourceType === newAdj.sourceType);
-        if (existingIndex >= 0) {
-            if (newAdj.feedbackCount > (merged.riskAdjustments[existingIndex].feedbackCount || 0)) {
-                merged.riskAdjustments[existingIndex] = newAdj;
-            }
-        } else {
-            merged.riskAdjustments.push(newAdj);
+        for (const r of rules.riskAdjustments) {
+            md += `- **风险调整**: ${r.sourceType} 来源高风险误判 → 降为 medium（基于 ${r.count} 次反馈）\n`;
         }
+    } else {
+        md += `## 优化规则\n\n暂无足够反馈生成规则（需要 ≥2 次同类误判）。\n`;
     }
 
-    return merged;
-}
-
-function generateReport(analysis, rules) {
-    const { stats } = analysis;
-    let md = `# 舆情反馈分析报告\n\n**生成时间**: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n**统计周期**: 本次收集\n\n`;
-    md += `## 反馈统计\n\n| 指标 | 数量 |\n|---|---|\n`;
-    md += `| 总反馈数 | ${stats.total} |\n`;
-    md += `| 判断准确 | ${stats.accurate} |\n`;
-    md += `| 判断不准确 | ${stats.inaccurate} |\n`;
-    md += `| 假阴性(漏判负面) | ${stats.falseNegative.length} |\n`;
-    md += `| 假阳性(误判负面) | ${stats.falsePositive.length} |\n`;
-    md += `| 风险等级误判 | ${stats.falseRisk.length} |\n\n`;
-
-    md += `## 关键词误判模式\n\n`;
-    const sortedKws = Object.entries(stats.keywordPatterns).sort((a, b) => b[1].count - a[1].count);
-    for (const [kw, data] of sortedKws) {
-        md += `- **${kw}**: ${data.count} 次反馈\n`;
-        const uniqueReasons = [...new Set(data.reasons)].slice(0, 3);
-        for (const r of uniqueReasons) md += `  - ${r}\n`;
-    }
-
-    md += `\n## 已生成的优化规则\n\n### 情感调整规则 (${rules.sentimentAdjustments.length} 条)\n\n`;
-    for (const adj of rules.sentimentAdjustments) {
-        md += `- **${adj.keyword}**: ${adj.originalSentiment} → ${adj.correction} (置信度: ${(adj.confidence * 100).toFixed(0)}%, 反馈数: ${adj.feedbackCount})\n`;
-        md += `  - 原因: ${adj.reason}\n`;
-    }
-
-    md += `\n### 风险调整规则 (${rules.riskAdjustments.length} 条)\n\n`;
-    for (const adj of rules.riskAdjustments) {
-        md += `- **来源: ${adj.sourceType}**: (置信度: ${(adj.confidence * 100).toFixed(0)}%, 反馈数: ${adj.feedbackCount})\n`;
-        md += `  - 原因: ${adj.reason}\n`;
-    }
-
-    md += `\n---\n*本报告由反馈收集系统自动生成*\n`;
+    md += `\n---\n`;
+    md += `*自动生成于 ${today}*\n`;
     return md;
 }
 
-main().catch(err => {
-    console.error('❌ 收集失败:', err.message);
+// ===== 主函数 =====
+async function main() {
+    const today = getTodayBeijing();
+    console.log(`\n📥 收集本地反馈数据: ${today}`);
+    console.log('='.repeat(40));
+
+    const feedbacks = loadLocalFeedback();
+    console.log(`📊 共加载 ${feedbacks.length} 条反馈`);
+
+    if (feedbacks.length === 0) {
+        console.log('⚠️ 无反馈数据，跳过规则生成');
+        // 保留旧规则
+        if (fs.existsSync(RULES_FILE)) {
+            console.log('✅ 保留现有规则');
+        } else {
+            // 生成空规则
+            const emptyRules = { generatedAt: new Date().toISOString(), totalFeedback: 0, inaccurateCount: 0, sentimentAdjustments: [], riskAdjustments: [], version: 1 };
+            fs.writeFileSync(RULES_FILE, JSON.stringify(emptyRules, null, 2));
+            console.log('✅ 已生成空规则文件');
+        }
+        return;
+    }
+
+    const rules = generateRules(feedbacks);
+    fs.writeFileSync(RULES_FILE, JSON.stringify(rules, null, 2));
+    console.log(`✅ 规则文件已更新: ${RULES_FILE}`);
+    console.log(`   情感调整: ${rules.sentimentAdjustments.length} 条`);
+    console.log(`   风险调整: ${rules.riskAdjustments.length} 条`);
+
+    // 生成报告
+    fs.mkdirSync(REPORTS_DIR, { recursive: true });
+    const report = generateReport(feedbacks, rules);
+    fs.writeFileSync(path.join(REPORTS_DIR, `feedback-report-${today}.md`), report);
+    console.log(`✅ 报告已生成: reports/feedback-report-${today}.md`);
+
+    console.log('='.repeat(40));
+}
+
+main().catch(e => {
+    console.error('❌ 脚本异常:', e);
     process.exit(1);
 });
