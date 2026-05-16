@@ -1,7 +1,7 @@
 #!/bin/bash
 # auto-push.sh — 舆情监测完成后自动推送 sentiment_monitor 到 GitHub
 #
-# 用法: bash sentiment_monitor/scripts/auto-push.sh [日期YYYY-MM-DD]
+# 用法: bash sentiment_monitor/scripts/auto-push.sh [日期YYYY-MM-DD] [批次morning|afternoon]
 # 会自动执行: add → commit → pull --rebase → push
 # 目标仓库:
 #   - 主仓库: https://github.com/Morning/bank-activities (历史数据归档)
@@ -11,6 +11,7 @@ set -e
 
 WORKSPACE="/root/.openclaw/workspace"
 DATE="${1:-$(date +%Y-%m-%d)}"
+BATCH="${2:-daily}"  # morning / afternoon / daily
 BRANCH="sync-main"
 REMOTE_MAIN="bank-activities"
 REMOTE_DASHBOARD="dashboard"
@@ -47,10 +48,19 @@ echo "📦 发现变更，开始提交和推送..."
 git config user.email "openclaw-bot@localhost" 2>/dev/null || true
 git config user.name "OpenClaw Bot" 2>/dev/null || true
 
+# 构建提交信息
+if [ "$BATCH" = "morning" ]; then
+    COMMIT_MSG="sentiment_monitor: morning update ${DATE}"
+elif [ "$BATCH" = "afternoon" ]; then
+    COMMIT_MSG="sentiment_monitor: afternoon update ${DATE}"
+else
+    COMMIT_MSG="sentiment_monitor: daily update ${DATE}"
+fi
+
 # ==== 推送到主仓库（Morning/bank-activities）====
 echo "🚀 推送到主仓库: Morning/bank-activities..."
 git add sentiment_monitor/
-git commit -m "sentiment_monitor: daily update ${DATE}"
+git commit -m "$COMMIT_MSG"
 
 echo "🔄 同步远程最新代码..."
 git pull "$REMOTE_MAIN" "$REMOTE_MAIN_BRANCH" --rebase || {
@@ -65,7 +75,7 @@ echo "✅ 主仓库推送成功！"
 # ==== 推送到看板仓库（ytz33233/icbc-sentiment-dashboard）====
 echo "🚀 推送到看板仓库: ytz33233/icbc-sentiment-dashboard..."
 git add sentiment_monitor/
-git commit -m "sentiment_monitor: daily update ${DATE}" || true
+git commit -m "$COMMIT_MSG" || true
 
 git push "$REMOTE_DASHBOARD" "${BRANCH}:${REMOTE_DASHBOARD_BRANCH}" -f || {
     echo "⚠️  看板仓库推送失败，尝试直接 push..."

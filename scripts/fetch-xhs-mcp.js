@@ -166,15 +166,40 @@ async function main() {
   // 按点赞数排序
   allFeeds.sort((a, b) => b.likes - a.likes);
 
-  // 保存数据
+  // 保存数据（追加模式：合并已有数据，去重）
   const dataDir = path.join(__dirname, '..', 'data');
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }
 
   const outputPath = path.join(dataDir, `xhs-${dateStr}.json`);
-  fs.writeFileSync(outputPath, JSON.stringify(allFeeds, null, 2), 'utf8');
-  console.log(`💾 已保存: ${outputPath}`);
+
+  // 如果已有数据，读取并合并
+  let existingFeeds = [];
+  if (fs.existsSync(outputPath)) {
+    try {
+      existingFeeds = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+      if (!Array.isArray(existingFeeds)) existingFeeds = [];
+      console.log(`📦 已存在 ${existingFeeds.length} 条数据，将合并新采集...`);
+    } catch (e) {
+      console.warn('⚠️ 读取已有数据失败，使用空数据');
+      existingFeeds = [];
+    }
+  }
+
+  // 合并并去重（按 id）
+  const mergedMap = new Map();
+  for (const f of existingFeeds) {
+    if (f.id) mergedMap.set(f.id, f);
+  }
+  for (const f of allFeeds) {
+    if (f.id) mergedMap.set(f.id, f);
+  }
+  const mergedFeeds = Array.from(mergedMap.values());
+  mergedFeeds.sort((a, b) => (b.likes || 0) - (a.likes || 0));
+
+  fs.writeFileSync(outputPath, JSON.stringify(mergedFeeds, null, 2), 'utf8');
+  console.log(`💾 已保存: ${outputPath} (共 ${mergedFeeds.length} 条，本次新增 ${mergedFeeds.length - existingFeeds.length} 条)`);
 
   // 同时写入 ym-daily 的 markdown（兼容旧流程）
   const ymDailyDir = '/root/.openclaw/workspace/ym-daily';

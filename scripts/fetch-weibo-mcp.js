@@ -179,12 +179,39 @@ async function main() {
   // 按点赞数排序
   allPosts.sort((a, b) => b.likes - a.likes);
 
-  // 保存 JSON
+  // 保存 JSON（追加模式：合并已有数据，去重）
   const dataDir = path.join(__dirname, '..', 'data');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   const jsonPath = path.join(dataDir, `weibo-${dateStr}.json`);
-  fs.writeFileSync(jsonPath, JSON.stringify(allPosts, null, 2), 'utf8');
-  console.log(`💾 JSON 已保存: ${jsonPath}`);
+
+  // 如果已有数据，读取并合并
+  let existingPosts = [];
+  if (fs.existsSync(jsonPath)) {
+    try {
+      existingPosts = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+      if (!Array.isArray(existingPosts)) existingPosts = [];
+      console.log(`📦 已存在 ${existingPosts.length} 条数据，将合并新采集...`);
+    } catch (e) {
+      console.warn('⚠️ 读取已有数据失败，使用空数据');
+      existingPosts = [];
+    }
+  }
+
+  // 合并并去重（按 id 或 url）
+  const mergedMap = new Map();
+  for (const p of existingPosts) {
+    const key = p.id || p.url || p.title;
+    if (key) mergedMap.set(key, p);
+  }
+  for (const p of allPosts) {
+    const key = p.id || p.url || p.title;
+    if (key) mergedMap.set(key, p);
+  }
+  const mergedPosts = Array.from(mergedMap.values());
+  mergedPosts.sort((a, b) => (b.likes || 0) - (a.likes || 0));
+
+  fs.writeFileSync(jsonPath, JSON.stringify(mergedPosts, null, 2), 'utf8');
+  console.log(`💾 JSON 已保存: ${jsonPath} (共 ${mergedPosts.length} 条，本次新增 ${mergedPosts.length - existingPosts.length} 条)`);
 
   // 保存 Markdown
   const ymDailyDir = '/root/.openclaw/workspace/ym-daily';
