@@ -1,0 +1,250 @@
+{
+  "reportDate": "2026-05-18",
+  "generatedAt": "2026-05-18 12:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 5,
+    "recentCount": 1,
+    "historyCount": 4,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 0,
+    "neutralCount": 5,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 5
+  },
+  "bySentiment": {
+    "neutral": 5
+  },
+  "byRisk": {
+    "low": 5
+  },
+  "byProduct": {
+    "i豆活动": 4,
+    "其他": 1
+  },
+  "byCategory": {
+    "i豆兑换": 5
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-13",
+      "total": 8,
+      "recent": 0,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-14",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-15",
+      "total": 7,
+      "recent": 0,
+      "history": 7,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-16",
+      "total": 3,
+      "recent": 1,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-17",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-18",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 4
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-18）共采集 5 条舆情，中性 5 条。24小时内新增 1 条。主要集中在「i豆活动、其他」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
+    "date": "2026-05-18",
+    "generatedAt": "2026-05-17T04:00:11.596Z"
+  },
+  "records": [
+    {
+      "title": "工行-任务中心-享活动-美好正当夏， 抽i豆",
+      "content": "工行-任务中心-享活动-美好正当夏，\n抽i豆",
+      "source": "分享白菜达人",
+      "publishTime": "2026-05-05",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/5609361977/5295161244653525",
+      "likes": 21,
+      "comments": 12,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-05",
+      "fetchTime": "2026-05-18",
+      "author": "分享白菜达人",
+      "id": "20260518-01",
+      "category": "i豆兑换",
+      "heatScore": 45
+    },
+    {
+      "title": "手机里有工行app的，任务中心，美好正当夏抽i豆",
+      "content": "手机里有工行app的，任务中心，美好正当夏抽i豆",
+      "source": "扒羊毛",
+      "publishTime": "2026-05-04",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/6769216988/5295082185949604",
+      "likes": 7,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-04",
+      "fetchTime": "2026-05-18",
+      "author": "扒羊毛",
+      "id": "20260518-02",
+      "category": "i豆兑换",
+      "heatScore": 13
+    },
+    {
+      "title": "多平台绑卡消费有机会累积“工银i豆”！ 📅即日起至2026年12月31日 💳...",
+      "content": "多平台绑卡消费有机会累积“工银i豆”！\n\n📅即日起至2026年12月31日\n💳中国境内（不含港澳台）发行的工银信用卡客户\n✨在微信、支付宝、京东、美团、抖音和拼多多快捷支付绑卡消费有机会累积“工银i豆”\n🥰每消费1元累积1“工银i豆”，多消费多累积！\n\n点击查看详情👉 ...全文",
+      "source": "中国工商银行信用卡 / 好赚日记",
+      "publishTime": "2026-05-17",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/7154944122/5299490543373127",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "1元",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-17",
+      "fetchTime": "2026-05-18",
+      "author": "中国工商银行信用卡",
+      "id": "20260518-03",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "节气节抽工银i豆 工行二十四节气——立夏 1、打开工行APP - 搜“任务中心”...",
+      "content": "节气节抽工银i豆\n\n工行二十四节气——立夏\n\n1、打开工行APP - 搜“任务中心”进入，下拉享活动“美好正当夏”，2次机会，看脸抽300~20.26万工银i豆；这种节气类数字藏品也有用，收集起来，后续可能会有活动。\n\n2、打开工行APP - 搜“任务中心”进入，下拉趣答题“节气知识知多少，立夏节气小知识”，答 ...全文",
+      "source": "羊毛酱酱",
+      "publishTime": "2026-05-05",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/8013683776/5295209983246614",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-05",
+      "fetchTime": "2026-05-18",
+      "author": "羊毛酱酱",
+      "id": "20260518-04",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "零点前匆匆忙忙去领银行的东西 还是啥也没领到 今年除了工行给了8块立减金 招行没...",
+      "content": "零点前匆匆忙忙去领银行的东西\n还是啥也没领到\n\n今年除了工行给了8块立减金\n招行没有黄金票还是缩水了\n淘宝给了6.8\n东子依旧1天的500豆\n有些app连ui都没换\nb站好像还是那张图\n我没记错吧",
+      "source": "岚山若",
+      "publishTime": "2026-05-16",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/7266276066/5299354495879920",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-16",
+      "fetchTime": "2026-05-18",
+      "author": "岚山若",
+      "id": "20260518-05",
+      "category": "i豆兑换",
+      "heatScore": 0
+    }
+  ]
+}
