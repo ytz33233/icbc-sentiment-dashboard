@@ -18,27 +18,27 @@ REMOTE_DASHBOARD="dashboard"
 REMOTE_MAIN_BRANCH="main"
 REMOTE_DASHBOARD_BRANCH="main"
 
-echo "🔍 检查 sentiment_monitor 变更..."
+echo "🔍 检查工作区变更..."
 cd "$WORKSPACE"
 
-# 检查 sentiment_monitor 目录是否有变更（包括未跟踪文件）
-UNTRACKED=$(git ls-files --others --exclude-standard sentiment_monitor/)
+# 检查所有变更（包括已跟踪文件修改、暂存区、未跟踪文件）
 CHANGED=false
 
-if ! git diff --quiet -- sentiment_monitor/ 2>/dev/null; then
+if ! git diff --quiet 2>/dev/null; then
     CHANGED=true
 fi
 
-if ! git diff --cached --quiet -- sentiment_monitor/ 2>/dev/null; then
+if ! git diff --cached --quiet 2>/dev/null; then
     CHANGED=true
 fi
 
+UNTRACKED=$(git ls-files --others --exclude-standard)
 if [ -n "$UNTRACKED" ]; then
     CHANGED=true
 fi
 
 if [ "$CHANGED" = false ]; then
-    echo "✅ sentiment_monitor 无变更，无需推送"
+    echo "✅ 工作区无变更，无需推送"
     exit 0
 fi
 
@@ -59,7 +59,9 @@ fi
 
 # ==== 推送到主仓库（Morning/bank-activities）====
 echo "🚀 推送到主仓库: Morning/bank-activities..."
-git add sentiment_monitor/
+
+# 先暂存所有变更（避免 rebase 时 unstaged changes 报错）
+git add -A
 git commit -m "$COMMIT_MSG"
 
 echo "🔄 同步远程最新代码..."

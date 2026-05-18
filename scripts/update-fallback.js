@@ -1,198 +1,198 @@
 const fs = require('fs');
 const path = require('path');
 
-const WORKSPACE = '/root/.openclaw/workspace';
-const SM = path.join(WORKSPACE, 'sentiment_monitor');
-const DATA_DIR = path.join(SM, 'data');
+const DATA_DIR = '/root/.openclaw/workspace/sentiment_monitor/data';
+const DASHBOARD_HTML = '/root/.openclaw/workspace/sentiment_monitor/dashboard.html';
 
-// ── 日期工具 ───────────────────────────
-function getTodayBeijing() {
-  const d = new Date(Date.now() + 8 * 3600 * 1000);
-  return d.toISOString().slice(0, 10);
-}
+// 加载 05-12 ~ 05-18 的数据
+const startDate = new Date('2026-05-12');
+const endDate = new Date('2026-05-18');
 
-function getDateStrBefore(baseStr, days) {
-  const [yyyy, mm, dd] = baseStr.split('-').map(Number);
-  const d = new Date(yyyy, mm - 1, dd);
-  d.setDate(d.getDate() - days);
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
-}
-
-function parseDateTs(dstr) {
-  if (!dstr) return 0;
-  const s = dstr.toString().slice(0, 10);
-  if (!/\d{4}-\d{2}-\d{2}/.test(s)) return 0;
-  return new Date(s + 'T00:00:00+08:00').getTime();
-}
-
-// ── 合并最近7天数据 ─────────────────────
-const todayStr = process.argv[2] || getTodayBeijing();
-const weekAgoStr = getDateStrBefore(todayStr, 6);
-
-const allRecords = [];
+let allRecords = [];
 let allHotKeywords = [];
 
-for (let i = 0; i <= 6; i++) {
-  const d = new Date(weekAgoStr + 'T00:00:00+08:00');
-  d.setDate(d.getDate() + i);
-  const ds = d.toISOString().slice(0, 10);
-  const fp = path.join(DATA_DIR, `${ds}.json`);
-  if (!fs.existsSync(fp)) continue;
-
-  try {
-    const raw = JSON.parse(fs.readFileSync(fp, 'utf8'));
-    const recs = raw.records || [];
-    allRecords.push(...recs);
-
-    // 合并热词
-    (raw.hotKeywords || []).forEach(k => {
-      const existing = allHotKeywords.find(x => x.word === k.word);
-      if (existing) {
-        existing.count += k.count;
-      } else {
-        allHotKeywords.push({ word: k.word, count: k.count });
-      }
-    });
-  } catch (e) {
-    console.warn('  跳过:', ds, e.message);
-  }
+for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+    const ds = d.toISOString().slice(0, 10);
+    const filePath = path.join(DATA_DIR, `${ds}.json`);
+    if (!fs.existsSync(filePath)) {
+        console.log(`跳过: ${ds}.json (不存在)`);
+        continue;
+    }
+    try {
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        if (data.records) {
+            allRecords = allRecords.concat(data.records);
+        }
+        if (data.hotKeywords) {
+            data.hotKeywords.forEach(k => {
+                const existing = allHotKeywords.find(x => x.word === k.word);
+                if (existing) {
+                    existing.count += k.count;
+                } else {
+                    allHotKeywords.push({ word: k.word, count: k.count });
+                }
+            });
+        }
+        console.log(`加载: ${ds}.json (${data.records?.length || 0} 条)`);
+    } catch (e) {
+        console.log(`错误: ${ds}.json - ${e.message}`);
+    }
 }
 
-// 去重（按 id）
+// 去重
 const seen = new Set();
-const uniqueRecords = allRecords.filter(r => {
-  if (seen.has(r.id)) return false;
-  seen.add(r.id);
-  return true;
-});
-
-// 过滤掉 date 超过一周的记录
-const weekAgoTs = new Date(weekAgoStr + 'T00:00:00+08:00').getTime();
-const filteredRecords = uniqueRecords.filter(r => {
-  const d = (r.date || '').toString().slice(0, 10);
-  if (!/\d{4}-\d{2}-\d{2}/.test(d)) return false;
-  const ts = new Date(d + 'T00:00:00+08:00').getTime();
-  return ts >= weekAgoTs;
-});
-
-// 按日期排序（新在前）
-filteredRecords.sort((a, b) => parseDateTs(b.date) - parseDateTs(a.date));
-
-// 热词排序取前20
-allHotKeywords.sort((a, b) => b.count - a.count);
-allHotKeywords = allHotKeywords.slice(0, 20);
-
-// ── 统计计算 ────────────────────────────
-const total = filteredRecords.length;
-const negativeCount = filteredRecords.filter(r => r.sentiment === 'negative').length;
-const positiveCount = filteredRecords.filter(r => r.sentiment === 'positive').length;
-const neutralCount = filteredRecords.filter(r => r.sentiment === 'neutral').length;
-const negPct = total > 0 ? Math.round((negativeCount / total) * 100) : 0;
-const highRiskCount = filteredRecords.filter(r => r.riskLevel === 'high').length;
-const channelCount = new Set(filteredRecords.map(r => r.sourceType)).size;
-const recentCount = filteredRecords.filter(r => r.recency === '24h内').length;
-const historyCount = filteredRecords.filter(r => r.recency === '历史').length;
-
-const bySentiment = { positive: positiveCount, negative: negativeCount, neutral: neutralCount };
-const bySource = {};
-const byRisk = {};
-const byProduct = {};
-const byCategory = {};
-filteredRecords.forEach(r => {
-  bySource[r.sourceType] = (bySource[r.sourceType] || 0) + 1;
-  byRisk[r.riskLevel] = (byRisk[r.riskLevel] || 0) + 1;
-  byProduct[r.relatedProduct || '其他'] = (byProduct[r.relatedProduct || '其他'] || 0) + 1;
-  byCategory[r.category || '其他'] = (byCategory[r.category || '其他'] || 0) + 1;
-});
-
-// 趋势（最近7天）
-const trend7d = [];
-for (let i = 0; i <= 6; i++) {
-  const d = new Date(weekAgoStr + 'T00:00:00+08:00');
-  d.setDate(d.getDate() + i);
-  const ds = d.toISOString().slice(0, 10);
-  const dayRecs = filteredRecords.filter(r => (r.date || '').toString().slice(0, 10) === ds);
-  trend7d.push({
-    date: ds,
-    total: dayRecs.length,
-    recent: dayRecs.filter(r => r.recency === '24h内').length,
-    history: dayRecs.filter(r => r.recency === '历史').length,
-    negative: dayRecs.filter(r => r.sentiment === 'negative').length
-  });
+const uniqueRecords = [];
+for (const r of allRecords) {
+    const key = r.id || r.url || r.title;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    uniqueRecords.push(r);
 }
 
-// 前端需要的字段
-const frontendFields = [
-  'id', 'date', 'publishTime', 'source', 'sourceType', 'sentiment',
-  'riskLevel', 'title', 'content', 'keywords', 'url', 'author',
-  'status', 'amount', 'relatedProduct', 'recency', 'fermentation',
-  'fetchTime', 'likes', 'comments', 'favorites', 'heatScore', 'category'
-];
+// 重新计算统计
+function computeStats(records) {
+    const total = records.length;
+    const recentCount = records.filter(r => r.recency === '24h内').length;
+    const historyCount = records.filter(r => r.recency === '历史').length;
+    const negativeCount = records.filter(r => r.sentiment === 'negative').length;
+    const pos = records.filter(r => r.sentiment === 'positive').length;
+    const neu = records.filter(r => r.sentiment === 'neutral').length;
+    const channelCount = new Set(records.map(r => r.sourceType)).size;
+    const highRiskCount = records.filter(r => r.riskLevel === 'high').length;
+    const negPct = total > 0 ? Math.round((negativeCount / total) * 100) : 0;
 
-const cleanRecords = filteredRecords.map(r => {
-  const clean = {};
-  for (const f of frontendFields) {
-    if (r[f] !== undefined) clean[f] = r[f];
-  }
-  return clean;
-});
+    const bySource = {}, bySentiment = {}, byRisk = {}, byProduct = {}, byCategory = {};
+    records.forEach(r => {
+        bySource[r.sourceType] = (bySource[r.sourceType] || 0) + 1;
+        bySentiment[r.sentiment] = (bySentiment[r.sentiment] || 0) + 1;
+        byRisk[r.riskLevel] = (byRisk[r.riskLevel] || 0) + 1;
+        byProduct[r.relatedProduct || '其他'] = (byProduct[r.relatedProduct || '其他'] || 0) + 1;
+        byCategory[r.category || '其他'] = (byCategory[r.category || '其他'] || 0) + 1;
+    });
 
-// ── 构建 fallbackData ──────────────────
-const fallbackObj = {
-  reportDate: weekAgoStr + ' ~ ' + todayStr,
-  generatedAt: new Date().toISOString(),
-  summary: { total, recentCount, historyCount, negativeCount, negativePct: negPct, positiveCount, neutralCount, channelCount, highRiskCount },
-  bySource,
-  bySentiment,
-  byRisk,
-  byProduct,
-  byCategory,
-  trend7d,
-  hotKeywords: allHotKeywords,
-  records: cleanRecords
+    return {
+        summary: { total, recentCount, historyCount, negativeCount, negativePct: negPct, positiveCount: pos, neutralCount: neu, channelCount, highRiskCount },
+        bySource, bySentiment, byRisk, byProduct, byCategory
+    };
+}
+
+function computeTrend(records, endDateStr) {
+    const end = new Date(endDateStr);
+    const trend = [];
+    for (let i = 6; i >= 0; i--) {
+        const d = new Date(end);
+        d.setDate(d.getDate() - i);
+        const ds = d.toISOString().slice(0, 10);
+        const dayRecords = records.filter(r => (r.date || '').startsWith(ds));
+        trend.push({
+            date: ds,
+            total: dayRecords.length,
+            recent: dayRecords.filter(r => r.recency === '24h内').length,
+            history: dayRecords.filter(r => r.recency === '历史').length,
+            negative: dayRecords.filter(r => r.sentiment === 'negative').length
+        });
+    }
+    return trend;
+}
+
+function computeHotKeywords(records) {
+    const counts = {};
+    records.forEach(r => {
+        (r.keywords || []).forEach(k => {
+            counts[k] = (counts[k] || 0) + 1;
+        });
+    });
+    return Object.entries(counts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 15)
+        .map(([word, count]) => ({ word, count }));
+}
+
+const stats = computeStats(uniqueRecords);
+const trend = computeTrend(uniqueRecords, '2026-05-18');
+const hotKeywords = computeHotKeywords(uniqueRecords);
+
+const fallbackData = {
+    reportDate: '2026-05-12 ~ 2026-05-18',
+    dateRangeStart: '2026-05-12',
+    dateRangeEnd: '2026-05-18',
+    records: uniqueRecords,
+    summary: stats.summary,
+    bySentiment: stats.bySentiment,
+    bySource: stats.bySource,
+    byRisk: stats.byRisk,
+    byProduct: stats.byProduct,
+    byCategory: stats.byCategory,
+    trend7d: trend,
+    hotKeywords: hotKeywords,
+    dailyBrief: {
+        text: `当前展示 ${uniqueRecords.length} 条历史舆情数据（2026-05-12 至 2026-05-18）。`,
+        date: '2026-05-18',
+        generatedAt: new Date().toISOString()
+    }
 };
 
-// ── 自定义 JSON stringify，不转义中文 ─────
-function safeStringify(obj, indent = 2) {
-  const space = ' '.repeat(indent);
-  if (obj === null) return 'null';
-  if (typeof obj === 'string') return JSON.stringify(obj);
-  if (typeof obj === 'number') return String(obj);
-  if (typeof obj === 'boolean') return String(obj);
-  if (Array.isArray(obj)) {
-    if (obj.length === 0) return '[]';
-    const items = obj.map(item => safeStringify(item, indent)).join(',\n' + space);
-    return '[\n' + space + items + '\n' + ' '.repeat(indent - 2) + ']';
-  }
-  const entries = Object.entries(obj);
-  if (entries.length === 0) return '{}';
-  const items = entries.map(([k, v]) => {
-    return `"${k}": ${safeStringify(v, indent + 2)}`;
-  }).join(',\n' + space);
-  return '{\n' + space + items + '\n' + ' '.repeat(indent - 2) + '}';
-}
+// 生成 JSON 字符串（格式化，与原来风格一致）
+const jsonStr = JSON.stringify(fallbackData, null, 2);
 
-const newFallback = 'const fallbackData = ' + safeStringify(fallbackObj, 2) + ';';
+// 读取 dashboard.html
+let html = fs.readFileSync(DASHBOARD_HTML, 'utf8');
 
-// ── 写入 dashboard.html ─────────────────
-const htmlPath = path.join(SM, 'dashboard.html');
-let html = fs.readFileSync(htmlPath, 'utf8');
-
+// 找到 fallbackData 的位置并替换
 const startMarker = 'const fallbackData = {';
 const startIdx = html.indexOf(startMarker);
-if (startIdx === -1) throw new Error('找不到 fallbackData 开始标记');
+if (startIdx === -1) {
+    console.error('找不到 fallbackData');
+    process.exit(1);
+}
 
-const endMarker = 'const CONFIG = {';
-const endIdx = html.indexOf(endMarker, startIdx);
-if (endIdx === -1) throw new Error('找不到 fallbackData 结束标记');
+// 找到结束位置（匹配第一个出现的 "};" 在行首）
+let braceCount = 0;
+let inString = false;
+let stringChar = '';
+let endIdx = -1;
 
-html = html.slice(0, startIdx) + newFallback + '\n\n' + html.slice(endIdx);
+for (let i = startIdx + startMarker.length - 1; i < html.length; i++) {
+    const ch = html[i];
+    
+    if (inString) {
+        if (ch === '\\') {
+            i++; // 跳过转义字符
+            continue;
+        }
+        if (ch === stringChar) {
+            inString = false;
+        }
+        continue;
+    }
+    
+    if (ch === '"' || ch === "'" || ch === '`') {
+        inString = true;
+        stringChar = ch;
+        continue;
+    }
+    
+    if (ch === '{') braceCount++;
+    if (ch === '}') {
+        braceCount--;
+        if (braceCount === 0) {
+            endIdx = i;
+            break;
+        }
+    }
+}
 
-fs.writeFileSync(htmlPath, html);
-console.log(`✅ fallbackData 已更新为 ${weekAgoStr} ~ ${todayStr} 合并数据，共 ${cleanRecords.length} 条记录`);
-console.log(`   来源: ${Object.entries(bySource).map(([k,v])=>k+' '+v).join(', ')}`);
-console.log(`   负面: ${negativeCount} (${negPct}%) | 24h内: ${recentCount} | 历史: ${historyCount}`);
-console.log(`   类别:`, byCategory);
+if (endIdx === -1) {
+    console.error('找不到 fallbackData 结束位置');
+    process.exit(1);
+}
+
+// 替换
+const newHtml = html.slice(0, startIdx) + 'const fallbackData = ' + jsonStr + ';' + html.slice(endIdx + 1);
+fs.writeFileSync(DASHBOARD_HTML, newHtml);
+
+console.log(`✅ fallbackData 已更新`);
+console.log(`   记录数: ${uniqueRecords.length}`);
+console.log(`   热词数: ${hotKeywords.length}`);
+console.log(`   日期范围: 2026-05-12 ~ 2026-05-18`);
+console.log(`   HTML 大小变化: ${html.length} → ${newHtml.length} (${newHtml.length - html.length > 0 ? '+' : ''}${newHtml.length - html.length} bytes)`);

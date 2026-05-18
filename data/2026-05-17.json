@@ -1,0 +1,401 @@
+{
+  "reportDate": "2026-05-17",
+  "generatedAt": "2026-05-17 16:07",
+  "fromHistory": false,
+  "summary": {
+    "total": 10,
+    "recentCount": 2,
+    "historyCount": 8,
+    "negativeCount": 0,
+    "negativePct": 0,
+    "positiveCount": 1,
+    "neutralCount": 9,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 10
+  },
+  "bySentiment": {
+    "neutral": 9,
+    "positive": 1
+  },
+  "byRisk": {
+    "low": 10
+  },
+  "byProduct": {
+    "其他": 6,
+    "i豆活动": 4
+  },
+  "byCategory": {
+    "i豆兑换": 10
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-11",
+      "total": 28,
+      "recent": 2,
+      "history": 26,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-13",
+      "total": 9,
+      "recent": 0,
+      "history": 9,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-14",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-15",
+      "total": 8,
+      "recent": 0,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-16",
+      "total": 3,
+      "recent": 1,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-17",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "立减金",
+      "count": 6
+    },
+    {
+      "word": "i豆",
+      "count": 4
+    },
+    {
+      "word": "通知",
+      "count": 1
+    },
+    {
+      "word": "优惠券",
+      "count": 1
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-17）共采集 10 条舆情，正面 1 条，中性 9 条。24小时内新增 2 条。主要集中在「其他、i豆活动」等产品，来源以微博为主，热词包括「立减金、i豆、通知」。",
+    "date": "2026-05-17",
+    "generatedAt": "2026-05-17T08:07:00.070Z"
+  },
+  "records": [
+    {
+      "title": "工商银行这么大的银行，为了给我发一份几元的微信立减金，还派了一个真人打电话通知。...",
+      "content": "工商银行这么大的银行，为了给我发一份几元的微信立减金，还派了一个真人打电话通知。够成本吗？意义是什么？",
+      "source": "MLRS270",
+      "publishTime": "2026-04-23",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/5119715209/5290862345193425",
+      "likes": 39,
+      "comments": 19,
+      "favorites": 2,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金",
+        "通知"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-04-23",
+      "fetchTime": "2026-05-17",
+      "author": "MLRS270",
+      "id": "20260517-01",
+      "category": "i豆兑换",
+      "heatScore": 80
+    },
+    {
+      "title": "工行 领1亓 立减金 #小程序://工行服务/uHA1dfVwlyUJImm",
+      "content": "工行  领1亓 立减金 \n#小程序://工行服务/uHA1dfVwlyUJImm",
+      "source": "分享白菜达人",
+      "publishTime": "2026-05-16",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/5609361977/5299186402591333",
+      "likes": 36,
+      "comments": 24,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-16",
+      "fetchTime": "2026-05-17",
+      "author": "分享白菜达人",
+      "id": "20260517-02",
+      "category": "i豆兑换",
+      "heatScore": 84
+    },
+    {
+      "title": "工行，1立减金 #小程序://工行服务/DBhYr0WqLGoFtUA",
+      "content": "工行，1立减金\n#小程序://工行服务/DBhYr0WqLGoFtUA",
+      "source": "分享白菜达人",
+      "publishTime": "2026-04-21",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/5609361977/5290270997876820",
+      "likes": 28,
+      "comments": 17,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-04-21",
+      "fetchTime": "2026-05-17",
+      "author": "分享白菜达人",
+      "id": "20260517-03",
+      "category": "i豆兑换",
+      "heatScore": 64
+    },
+    {
+      "title": "工行-任务中心-享活动-美好正当夏， 抽i豆",
+      "content": "工行-任务中心-享活动-美好正当夏，\n抽i豆",
+      "source": "分享白菜达人",
+      "publishTime": "2026-05-05",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/5609361977/5295161244653525",
+      "likes": 21,
+      "comments": 12,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-05",
+      "fetchTime": "2026-05-17",
+      "author": "分享白菜达人",
+      "id": "20260517-04",
+      "category": "i豆兑换",
+      "heatScore": 45
+    },
+    {
+      "title": "手机里有工行app的，任务中心，美好正当夏抽i豆",
+      "content": "手机里有工行app的，任务中心，美好正当夏抽i豆",
+      "source": "扒羊毛",
+      "publishTime": "2026-05-04",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/6769216988/5295082185949604",
+      "likes": 7,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-04",
+      "fetchTime": "2026-05-17",
+      "author": "扒羊毛",
+      "id": "20260517-05",
+      "category": "i豆兑换",
+      "heatScore": 13
+    },
+    {
+      "title": "#生活手记# 周五的工银消费季终于有5元优惠券了，好长时间没有了。 工行「工享支...",
+      "content": "#生活手记# 周五的工银消费季终于有5元优惠券了，好长时间没有了。 工行「工享支付有礼」活动完整解读\n\n一、活动基础信息\n\n• 活动名称：工享支付有礼（工行消费季）\n\n• 活动时间：2026.5.15–2026.6.5，仅限每周五可参与\n\n• 奖励内容：每期可领 5元微信立减金，领取后7天内有效\n\n二、参与领取步骤\n\n ...全文",
+      "source": "火星跑步者",
+      "publishTime": "2026-05-15",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/1756595897/5298750239277195",
+      "likes": 3,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金",
+        "优惠券"
+      ],
+      "amount": "5元",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-15",
+      "fetchTime": "2026-05-17",
+      "author": "火星跑步者",
+      "id": "20260517-06",
+      "category": "i豆兑换",
+      "heatScore": 9
+    },
+    {
+      "title": "多平台绑卡消费有机会累积“工银i豆”！ 📅即日起至2026年12月31日 💳...",
+      "content": "多平台绑卡消费有机会累积“工银i豆”！\n\n📅即日起至2026年12月31日\n💳中国境内（不含港澳台）发行的工银信用卡客户\n✨在微信、支付宝、京东、美团、抖音和拼多多快捷支付绑卡消费有机会累积“工银i豆”\n🥰每消费1元累积1“工银i豆”，多消费多累积！\n\n点击查看详情👉 ...全文",
+      "source": "中国工商银行信用卡 / 好赚日记",
+      "publishTime": "2026-05-17",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/7154944122/5299490543373127",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "1元",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-17",
+      "fetchTime": "2026-05-17",
+      "author": "中国工商银行信用卡",
+      "id": "20260517-07",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "节气节抽工银i豆 工行二十四节气——立夏 1、打开工行APP - 搜“任务中心”...",
+      "content": "节气节抽工银i豆\n\n工行二十四节气——立夏\n\n1、打开工行APP - 搜“任务中心”进入，下拉享活动“美好正当夏”，2次机会，看脸抽300~20.26万工银i豆；这种节气类数字藏品也有用，收集起来，后续可能会有活动。\n\n2、打开工行APP - 搜“任务中心”进入，下拉趣答题“节气知识知多少，立夏节气小知识”，答 ...全文",
+      "source": "羊毛酱酱",
+      "publishTime": "2026-05-05",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/8013683776/5295209983246614",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-05",
+      "fetchTime": "2026-05-17",
+      "author": "羊毛酱酱",
+      "id": "20260517-08",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "工行抽立减金 工行app-任务中心-享活动 下拉工迎万众 去抽试试 有立减金 其...",
+      "content": "工行抽立减金\n工行app-任务中心-享活动\n下拉工迎万众 去抽试试 有立减金\n其他羊毛look图二呀",
+      "source": "让生活更省一点",
+      "publishTime": "2026-05-13",
+      "sentimentRaw": "positive",
+      "url": "https://weibo.com/7406005545/5298164480344652",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "positive",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-13",
+      "fetchTime": "2026-05-17",
+      "author": "让生活更省一点",
+      "id": "20260517-09",
+      "category": "i豆兑换",
+      "heatScore": 0
+    },
+    {
+      "title": "查缺补漏：工行多个立减金汇总 网页链接",
+      "content": "查缺补漏：工行多个立减金汇总 网页链接",
+      "source": "白菜师奶",
+      "publishTime": "2026-05-17",
+      "sentimentRaw": "neutral",
+      "url": "https://weibo.com/2550116574/5299572894597138",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "date": "2026-05-17",
+      "fetchTime": "2026-05-17",
+      "author": "白菜师奶",
+      "id": "20260517-10",
+      "category": "i豆兑换",
+      "heatScore": 0
+    }
+  ]
+}

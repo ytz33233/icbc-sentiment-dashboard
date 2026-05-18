@@ -3,13 +3,13 @@
   "generatedAt": "2026-05-13 22:54",
   "source": "xiaohongshu",
   "summary": {
-    "total": 5,
+    "total": 4,
     "recentCount": 0,
     "historyCount": 5,
     "negativeCount": 0,
     "negativePct": 0,
     "positiveCount": 1,
-    "neutralCount": 4,
+    "neutralCount": 3,
     "channelCount": 1,
     "highRiskCount": 0
   },
@@ -65,33 +65,6 @@
       "favorites": 12,
       "heatScore": 200,
       "category": "资产达标",
-      "channel": "xiaohongshu"
-    },
-    {
-      "id": "20260513-16",
-      "date": "2026-05-01",
-      "publishTime": "2026-05-01T04:58:39.000Z",
-      "source": "小红书",
-      "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
-      "riskLevel": "low",
-      "title": "工银i豆互助！找长期搭子！",
-      "content": "工银i豆互助！找长期搭子！",
-      "url": "https://www.xiaohongshu.com/explore/69f432ff000000003601fcc5",
-      "author": "扯扯",
-      "status": "未处理",
-      "amount": "-",
-      "relatedProduct": "i豆活动",
-      "fetchTime": "2026-05-13T02:38:09.683Z",
-      "recency": "历史",
-      "keywords": [
-        "i豆"
-      ],
-      "likes": 1,
-      "comments": 123,
-      "favorites": 3,
-      "heatScore": 252,
-      "category": "i豆兑换",
       "channel": "xiaohongshu"
     },
     {

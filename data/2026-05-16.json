@@ -3,10 +3,10 @@
   "generatedAt": "2026-05-16 12:25",
   "fromHistory": false,
   "summary": {
-    "total": 25,
+    "total": 24,
     "recentCount": 1,
     "historyCount": 24,
-    "negativeCount": 1,
+    "negativeCount": 0,
     "negativePct": 4,
     "positiveCount": 2,
     "neutralCount": 22,
@@ -15,12 +15,11 @@
   },
   "bySource": {
     "social": 17,
-    "xiaohongshu": 8
+    "xiaohongshu": 7
   },
   "bySentiment": {
     "neutral": 22,
-    "positive": 2,
-    "negative": 1
+    "positive": 2
   },
   "byRisk": {
     "low": 25
@@ -841,37 +840,6 @@
       "date": "2026-05-14",
       "category": "i豆兑换",
       "heatScore": 2
-    },
-    {
-      "id": "20260516-25",
-      "xsecToken": "AB6sGG1Wi68OP12pqdB_B397WoY81_ryZDa-WlOv82jps=",
-      "title": "工行i豆互助，差1人",
-      "author": "小红书",
-      "authorId": "5d347630000000001000c1da",
-      "likes": 0,
-      "comments": 82,
-      "favorites": 1,
-      "shares": 0,
-      "publishTime": "2026-05-08",
-      "fetchTime": "2026-05-16",
-      "url": "https://www.xiaohongshu.com/explore/69fd93a8000000002301fdd5",
-      "source": "小红书",
-      "sourceType": "xiaohongshu",
-      "content": "工行i豆互助，差1人",
-      "sentimentRaw": "negative",
-      "sentiment": "negative",
-      "riskLevel": "low",
-      "relatedProduct": "i豆活动",
-      "keywords": [
-        "i豆"
-      ],
-      "amount": "-",
-      "recency": "历史",
-      "status": "未处理",
-      "fermentation": "low",
-      "date": "2026-05-08",
-      "category": "i豆兑换",
-      "heatScore": 166
     }
   ]
 }

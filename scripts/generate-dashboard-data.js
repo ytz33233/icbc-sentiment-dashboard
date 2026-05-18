@@ -12,6 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const dedup = require('./dedup-utils.js');
+const { filterBatch } = require('./filter-rules.js');
 
 const WORKSPACE = '/root/.openclaw/workspace';
 const DATA_DIR = path.join(WORKSPACE, 'sentiment_monitor', 'data');
@@ -302,10 +303,12 @@ function finalizeRecord(record, fetchDateStr, defaultSourceType) {
     record.status = '未处理';
     record.fermentation = record.fermentation || 'low';
 
-    // 互动数据默认 0
-    record.likes = Number(record.likes) || 0;
-    record.comments = Number(record.comments) || 0;
-    record.favorites = Number(record.favorites) || 0;
+    // 互动数据：优先从 engagement 对象提取（小红书格式），其次直接字段
+    const engagement = record.engagement || {};
+    record.likes = Number(engagement.likes || record.likes) || 0;
+    record.comments = Number(engagement.comments || record.comments) || 0;
+    record.favorites = Number(engagement.collects || record.favorites) || 0;
+    record.shares = Number(engagement.shares || record.shares) || 0;
 
     // 微博数据有 reposts 但 dashboard 用 favorites，做兼容映射
     if (record.reposts && !record.favorites) {
@@ -487,7 +490,14 @@ const ACTIVITY_KEYWORDS = ['升金有礼', 'i豆', '资产达标', '月月升金
 
 function isActivityRelated(record) {
     const text = ((record.title || '') + ' ' + (record.content || '')).toLowerCase();
-    return ACTIVITY_KEYWORDS.some(kw => text.includes(kw.toLowerCase()));
+    // 先检查是否命中活动关键词
+    const hasActivityKw = ACTIVITY_KEYWORDS.some(kw => text.includes(kw.toLowerCase()));
+    if (!hasActivityKw) return false;
+    // 排除员工个人吐槽/非活动类内容
+    const NON_ACTIVITY_KEYWORDS = ['员工出道', '打工人', '银行员工吐槽', '员工辞职', '员工离职', '员工日常'];
+    const hasNonActivityKw = NON_ACTIVITY_KEYWORDS.some(kw => text.includes(kw.toLowerCase()));
+    if (hasNonActivityKw) return false;
+    return true;
 }
 
 // ===== 合并去重 =====
@@ -612,18 +622,22 @@ function generateDailyBrief(dateStr, stats, records, hotKeywords) {
     const pos = s.positiveCount;
     const neu = s.neutralCount;
     const recent = s.recentCount;
+    const history = s.historyCount;
     const highRisk = s.highRiskCount;
 
-    // 只统计今日实际采集的记录（fetchTime === dateStr）
-    const todayRecords = records.filter(r => r.fetchTime === dateStr || (r.fetchTime || '').toString().startsWith(dateStr));
-    const todayTotal = todayRecords.length;
-    const todayNeg = todayRecords.filter(r => r.sentiment === 'negative').length;
-    const todayPos = todayRecords.filter(r => r.sentiment === 'positive').length;
-    const todayNeu = todayRecords.filter(r => r.sentiment === 'neutral').length;
+    // 统计24H内新增（基于 recency，与面板"24H内新增"口径一致）
+    const recentRecords = records.filter(r => r.recency === '24h内');
+    const recentTotal = recentRecords.length;
+    const recentNeg = recentRecords.filter(r => r.sentiment === 'negative').length;
+    const recentHighRisk = recentRecords.filter(r => r.riskLevel === 'high').length;
+
+    // 统计今日实际采集的记录（fetchTime === dateStr）
+    const todayFetched = records.filter(r => r.fetchTime === dateStr || (r.fetchTime || '').toString().startsWith(dateStr));
+    const todayFetchedCount = todayFetched.length;
 
     const prodMap = {};
     const srcMap = {};
-    todayRecords.forEach(r => {
+    recentRecords.forEach(r => {
         const p = r.relatedProduct || '其他';
         prodMap[p] = (prodMap[p] || 0) + 1;
         srcMap[r.sourceType] = (srcMap[r.sourceType] || 0) + 1;
@@ -636,19 +650,29 @@ function generateDailyBrief(dateStr, stats, records, hotKeywords) {
     const topKw = (hotKeywords || []).slice(0, 3).map(k => k.word);
 
     let text = '';
-    if (todayTotal === 0 && total === 0) {
+    if (total === 0) {
         text = `今日（${dateStr}）暂无相关舆情数据。`;
-    } else if (todayTotal === 0 && total > 0) {
-        // 今日无新数据，但有历史回填
-        text = `今日（${dateStr}）无新增舆情，当前展示 ${total} 条历史持续舆情。`;
-    } else {
-        text = `今日（${dateStr}）共采集 ${todayTotal} 条舆情`;
-        if (todayNeg > 0) text += `，其中负面 ${todayNeg} 条`;
-        if (todayPos > 0) text += `，正面 ${todayPos} 条`;
-        if (todayNeu > 0) text += `，中性 ${todayNeu} 条`;
+    } else if (recentTotal === 0) {
+        // 无24H内新增，全是历史回填
+        text = `今日（${dateStr}）无24H内新增舆情，当前展示 ${total} 条历史持续舆情`;
+        if (history > 0) text += `（其中历史 ${history} 条）`;
         text += `。`;
-        if (recent > 0) text += `24小时内新增 ${recent} 条。`;
-        if (highRisk > 0) text += `发现 ${highRisk} 条高风险舆情，需重点关注。`;
+    } else if (todayFetchedCount === 0 && recentTotal > 0) {
+        // 今日无新采集，但有24H内发布的记录（历史数据今天才发布）
+        text = `今日（${dateStr}）无新采集数据，24H内新增 ${recentTotal} 条舆情`;
+        if (recentNeg > 0) text += `，其中负面 ${recentNeg} 条`;
+        if (recentHighRisk > 0) text += `，高风险 ${recentHighRisk} 条需关注`;
+        text += `。当前累计展示 ${total} 条。`;
+    } else {
+        // 今日有新采集
+        text = `今日（${dateStr}）共采集 ${todayFetchedCount} 条舆情`;
+        if (recentTotal > todayFetchedCount) {
+            text += `，24H内累计新增 ${recentTotal} 条`;
+        }
+        if (neg > 0) text += `，其中负面 ${neg} 条`;
+        if (pos > 0) text += `，正面 ${pos} 条`;
+        if (highRisk > 0) text += `，发现 ${highRisk} 条高风险舆情需重点关注`;
+        text += `。`;
         if (topProd.length > 0) text += `主要集中在「${topProd.join('、')}」等产品`;
         if (topSrc.length > 0) text += `，来源以${topSrc.join('、')}为主`;
         if (topKw.length > 0) text += `，热词包括「${topKw.join('、')}」`;
@@ -879,7 +903,14 @@ function main() {
                 r.sentimentRaw = inferWeiboSentiment(r.title);
                 finalizeRecord(r, dateStr, 'xiaohongshu');
             });
-            console.log(`📕 xhs: ${xhsRecords.length}条`);
+            // 应用统一噪音过滤
+            const { kept: xhsKept, removed: xhsRemoved, stats: xhsStats } = filterBatch(xhsRecords);
+            xhsRecords = xhsKept;
+            if (xhsStats.removed > 0) {
+                console.log(`📕 xhs: ${xhsStats.total}条 → 过滤噪音后 ${xhsKept.length}条 (${Object.entries(xhsStats.byReason).map(([k,v])=>`${k}:${v}`).join(', ')})`);
+            } else {
+                console.log(`📕 xhs: ${xhsRecords.length}条`);
+            }
         } catch (e) {
             console.log(`⚠️  xhs 文件解析失败: ${e.message}`);
         }
@@ -890,6 +921,13 @@ function main() {
     // 2. 合并去重（加入小红书数据，跨30天历史去重）
     let allRecords = mergeRecords([webRecords, weiboRecords, hotRecords, xhsRecords], dateStr);
     console.log(`🔄 合并去重后: ${allRecords.length}条`);
+
+    // 2.5 统一噪音过滤（所有来源）
+    const { kept: filteredRecords, removed: noiseRecords, stats: noiseStats } = filterBatch(allRecords);
+    if (noiseStats.removed > 0) {
+        console.log(`🔇 噪音过滤: 移除${noiseStats.removed}条 (${Object.entries(noiseStats.byReason).map(([k,v])=>`${k}:${v}`).join(', ')})`);
+        allRecords = filteredRecords;
+    }
 
     // 3. 活动相关筛选
     const activityRecords = allRecords.filter(isActivityRelated);

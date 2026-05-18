@@ -3,33 +3,33 @@
   "generatedAt": "2026-05-13 01:26",
   "fromHistory": false,
   "summary": {
-    "total": 10,
+    "total": 9,
     "recentCount": 0,
-    "historyCount": 11,
-    "negativeCount": 1,
+    "historyCount": 10,
+    "negativeCount": 0,
     "negativePct": 9,
     "positiveCount": 0,
-    "neutralCount": 10,
-    "channelCount": 3,
+    "neutralCount": 9,
+    "channelCount": 2,
     "highRiskCount": 0
   },
   "bySource": {
     "social": 8,
-    "xiaohongshu": 2
+    "xiaohongshu": 1
   },
   "bySentiment": {
-    "neutral": 10
+    "neutral": 9
   },
   "byRisk": {
-    "low": 10
+    "low": 9
   },
   "byProduct": {
-    "升金有礼": 2,
     "其他": 3,
-    "i豆活动": 6
+    "升金有礼": 1,
+    "i豆活动": 5
   },
   "byCategory": {
-    "i豆兑换": 11
+    "i豆兑换": 9
   },
   "trend7d": [
     {
@@ -343,33 +343,6 @@
       "id": "20260513-11",
       "category": "i豆兑换",
       "heatScore": 139
-    },
-    {
-      "id": "20260513-12",
-      "date": "2026-05-01",
-      "publishTime": "2026-05-01T04:58:39.000Z",
-      "source": "小红书",
-      "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
-      "riskLevel": "low",
-      "title": "工银i豆互助！找长期搭子！",
-      "content": "工银i豆互助！找长期搭子！",
-      "url": "https://www.xiaohongshu.com/explore/69f432ff000000003601fcc5",
-      "author": "扯扯",
-      "status": "未处理",
-      "amount": "-",
-      "relatedProduct": "i豆活动",
-      "fetchTime": "2026-05-13T02:38:09.683Z",
-      "recency": "历史",
-      "keywords": [
-        "i豆"
-      ],
-      "likes": 1,
-      "comments": 123,
-      "favorites": 3,
-      "heatScore": 252,
-      "category": "i豆兑换",
-      "channel": "xiaohongshu"
     },
     {
       "id": "20260513-13",

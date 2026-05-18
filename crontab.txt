@@ -1,0 +1,2 @@
+0 7 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh morning >> /tmp/sentiment-morning.log 2>&1
+0 12 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh afternoon >> /tmp/sentiment-afternoon.log 2>&1
