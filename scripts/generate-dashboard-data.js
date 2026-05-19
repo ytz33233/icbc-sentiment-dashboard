@@ -378,6 +378,14 @@ function inferWeiboSentiment(text) {
     let sentiment = 'neutral';
     if (negativeWords.some(w => t.includes(w))) sentiment = 'negative';
     else if (positiveWords.some(w => t.includes(w))) sentiment = 'positive';
+
+    // 特殊规则：对比句式中夸工行的应判定为正面（覆盖"谢谢参与"等负面词）
+    // 例："建行...谢谢参与，而工行直接给了我...立减金"
+    const contrastPattern = /而\s*工行.*(?:给|送|拿到|获得|中了|抽到|返|得)/i;
+    if (sentiment === 'negative' && contrastPattern.test(text)) {
+        sentiment = 'positive';
+    }
+
     // 应用反馈学习到的规则
     return applySentimentRules(text, sentiment);
 }
@@ -440,10 +448,9 @@ function parseWeiboJsonFile(filePath, fetchDateStr) {
 
             // URL 构建
             let url = post.url || '';
-            if (!url && post.user_id && post.id && post.id !== 'unknown') {
-                url = `https://weibo.com/${post.user_id}/${post.id}`;
-            } else if (!url && post.authorId && post.id) {
-                url = `https://weibo.com/${post.authorId}/${post.id}`;
+            if (!url && post.id && post.id !== 'unknown') {
+                // 微博移动端链接，仅需微博ID
+                url = `https://m.weibo.cn/detail/${post.id}`;
             }
 
             // recency 判断：基于实际时间差（小时），≤24h 才算 24h内
