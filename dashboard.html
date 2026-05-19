@@ -2208,6 +2208,7 @@ tr:hover {
     </div>
     <div class="filter-group filter-desktop" style="margin-left:auto;">
       <button class="btn btn-secondary" onclick="resetFilters()">重置</button>
+      <button class="btn btn-secondary" onclick="exportToCSV()" title="导出当前筛选结果为 CSV">📥 导出 CSV</button>
       <button class="btn btn-primary" onclick="onQuery()">查询</button>
     </div>
   </div>
@@ -6040,6 +6041,65 @@ function showToast(message, duration) {
   toast._timer = setTimeout(function() {
     toast.style.opacity = '0';
   }, duration);
+}
+
+function exportToCSV() {
+  if (!filteredData || filteredData.length === 0) {
+    showToast('当前无数据可导出');
+    return;
+  }
+  var headers = ['ID','日期','来源','类别','情感','风险等级','产品','时效性','标题','内容','URL','热度','点赞','评论','收藏','分享','关键词','作者'];
+  var sourceMap = { social: '微博', xiaohongshu: '小红书', news: '新闻媒体', complaint: '投诉平台', forum: '论坛社区', official: '官方' };
+  var sentimentMap = { positive: '正面', negative: '负面', neutral: '中性' };
+
+  function escapeCSV(v) {
+    if (v === null || v === undefined) return '';
+    var s = String(v).replace(/\r?\n/g, ' ').replace(/\s+/g, ' ');
+    if (s.indexOf(',') >= 0 || s.indexOf('"') >= 0 || s.indexOf('\n') >= 0) {
+      s = '"' + s.replace(/"/g, '""') + '"';
+    }
+    return s;
+  }
+
+  var rows = [];
+  rows.push(headers.join(','));
+  for (var i = 0; i < filteredData.length; i++) {
+    var r = filteredData[i];
+    var row = [
+      r.id || '',
+      r.date || '',
+      sourceMap[r.sourceType] || r.sourceType || '',
+      r.category || '',
+      sentimentMap[r.sentiment] || r.sentiment || '',
+      r.riskLevel || '',
+      r.relatedProduct || '',
+      r.recency || '',
+      r.title || '',
+      r.content || '',
+      r.url || '',
+      r.heatScore || 0,
+      r.likes || 0,
+      r.comments || 0,
+      r.favorites || 0,
+      r.shares || 0,
+      (r.keywords || []).join(' '),
+      r.author || r.source || ''
+    ];
+    rows.push(row.map(escapeCSV).join(','));
+  }
+
+  var csvText = '\uFEFF' + rows.join('\n'); // BOM for Excel UTF-8
+  var blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  var filename = 'sentiment-export-' + (loadedData.reportDate || new Date().toISOString().slice(0,10)) + '.csv';
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('✓ 已导出 ' + filteredData.length + ' 条记录到 CSV');
 }
 
 function exportFeedbackData() {
