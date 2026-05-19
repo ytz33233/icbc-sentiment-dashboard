@@ -409,6 +409,14 @@ function parseWeiboJsonFile(filePath, fetchDateStr) {
         else if (Array.isArray(data)) {
             posts = data;
         }
+        // {keyword: [posts...]} 格式（fetch-weibo-mcp.js 保存格式）
+        else if (typeof data === 'object' && data !== null) {
+            for (const key in data) {
+                if (Array.isArray(data[key])) {
+                    posts.push(...data[key]);
+                }
+            }
+        }
 
         if (posts.length === 0) return [];
 
@@ -652,30 +660,34 @@ function generateDailyBrief(dateStr, stats, records, hotKeywords) {
     let text = '';
     if (total === 0) {
         text = `今日（${dateStr}）暂无相关舆情数据。`;
-    } else if (recentTotal === 0) {
-        // 无24H内新增，全是历史回填
-        text = `今日（${dateStr}）无24H内新增舆情，当前展示 ${total} 条历史持续舆情`;
-        if (history > 0) text += `（其中历史 ${history} 条）`;
-        text += `。`;
-    } else if (todayFetchedCount === 0 && recentTotal > 0) {
-        // 今日无新采集，但有24H内发布的记录（历史数据今天才发布）
-        text = `今日（${dateStr}）无新采集数据，24H内新增 ${recentTotal} 条舆情`;
+    } else if (todayFetchedCount > 0) {
+        // 今日有新采集
+        let baseText = `今日（${dateStr}）共采集 ${todayFetchedCount} 条舆情`;
+        if (recentTotal > todayFetchedCount) {
+            baseText += `，24H内累计新增 ${recentTotal} 条`;
+        } else if (recentTotal > 0) {
+            baseText += `，其中24H内新增 ${recentTotal} 条`;
+        }
+        if (neg > 0) baseText += `，其中负面 ${neg} 条`;
+        if (pos > 0) baseText += `，正面 ${pos} 条`;
+        if (highRisk > 0) baseText += `，发现 ${highRisk} 条高风险舆情需重点关注`;
+
+        let addonText = '';
+        if (topProd.length > 0) addonText += `主要集中在「${topProd.join('、')}」等产品`;
+        if (topSrc.length > 0) addonText += (addonText ? '，' : '') + `来源以${topSrc.join('、')}为主`;
+        if (topKw.length > 0) addonText += (addonText ? '，' : '') + `热词包括「${topKw.join('、')}」`;
+
+        text = baseText + '。' + (addonText ? addonText + '。' : '');
+    } else if (recentTotal > 0) {
+        // 无今日采集，但有24H内新增（历史数据中的新发布内容）
+        text = `今日（${dateStr}）从历史数据中发现 ${recentTotal} 条24H内新增舆情`;
         if (recentNeg > 0) text += `，其中负面 ${recentNeg} 条`;
         if (recentHighRisk > 0) text += `，高风险 ${recentHighRisk} 条需关注`;
         text += `。当前累计展示 ${total} 条。`;
     } else {
-        // 今日有新采集
-        text = `今日（${dateStr}）共采集 ${todayFetchedCount} 条舆情`;
-        if (recentTotal > todayFetchedCount) {
-            text += `，24H内累计新增 ${recentTotal} 条`;
-        }
-        if (neg > 0) text += `，其中负面 ${neg} 条`;
-        if (pos > 0) text += `，正面 ${pos} 条`;
-        if (highRisk > 0) text += `，发现 ${highRisk} 条高风险舆情需重点关注`;
-        text += `。`;
-        if (topProd.length > 0) text += `主要集中在「${topProd.join('、')}」等产品`;
-        if (topSrc.length > 0) text += `，来源以${topSrc.join('、')}为主`;
-        if (topKw.length > 0) text += `，热词包括「${topKw.join('、')}」`;
+        // 无今日采集，无24H内新增，全是历史
+        text = `今日（${dateStr}）无新增舆情，当前展示 ${total} 条历史持续舆情`;
+        if (history > 0) text += `（其中历史 ${history} 条）`;
         text += `。`;
     }
 
