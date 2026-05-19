@@ -75,15 +75,20 @@ git push "$REMOTE_MAIN" "${BRANCH}:${REMOTE_MAIN_BRANCH}"
 echo "✅ 主仓库推送成功！"
 
 # ==== 推送到看板仓库（ytz33233/icbc-sentiment-dashboard）====
+# 看板仓库 remote 在 sentiment_monitor 子仓库中，需切换目录推送
 echo "🚀 推送到看板仓库: ytz33233/icbc-sentiment-dashboard..."
-git add sentiment_monitor/
+cd "$WORKSPACE/sentiment_monitor"
+
+# 同步主仓库已提交的变更到子仓库
+git add -A
 git commit -m "$COMMIT_MSG" || true
 
-git push "$REMOTE_DASHBOARD" "${BRANCH}:${REMOTE_DASHBOARD_BRANCH}" -f || {
-    echo "⚠️  看板仓库推送失败，尝试直接 push..."
-    git push "$REMOTE_DASHBOARD" "HEAD:main" -f
+git push dashboard HEAD:main -f || {
+    echo "⚠️  看板仓库推送失败"
 }
 echo "✅ 看板仓库推送成功！Pages 约 1-2 分钟后更新"
+
+cd "$WORKSPACE"
 
 echo ""
 echo "🔗 访问地址:"

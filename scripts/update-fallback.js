@@ -49,6 +49,20 @@ for (const r of allRecords) {
     uniqueRecords.push(r);
 }
 
+// 排序：负面优先 → 热度降序 → 时间倒序
+const sentimentOrder = { negative: 3, neutral: 2, positive: 1 };
+uniqueRecords.sort((a, b) => {
+    const sa = sentimentOrder[a.sentiment] || 0;
+    const sb = sentimentOrder[b.sentiment] || 0;
+    if (sa !== sb) return sb - sa;
+    const ha = Number(a.heatScore) || 0;
+    const hb = Number(b.heatScore) || 0;
+    if (ha !== hb) return hb - ha;
+    const da = new Date(a.date || a.publishTime || 0).getTime();
+    const db = new Date(b.date || b.publishTime || 0).getTime();
+    return db - da;
+});
+
 // 重新计算统计
 function computeStats(records) {
     const total = records.length;
