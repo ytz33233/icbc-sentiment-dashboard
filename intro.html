@@ -457,20 +457,20 @@ footer a:hover { text-decoration: underline; }
 
   <div class="hero-stats animate animate-d4">
     <div class="stat-card">
-      <div class="stat-value">4+</div>
+      <div class="stat-value">2+</div>
       <div class="stat-label">监测渠道</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">10+</div>
+      <div class="stat-value">8</div>
       <div class="stat-label">搜索关键词</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">24h</div>
+      <div class="stat-value">2次/日</div>
       <div class="stat-label">更新频率</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">30天</div>
-      <div class="stat-label">历史回溯</div>
+      <div class="stat-value">7天</div>
+      <div class="stat-label">趋势回溯</div>
     </div>
   </div>
 
@@ -496,7 +496,7 @@ footer a:hover { text-decoration: underline; }
     <div class="card animate animate-d2">
       <div class="card-icon">🔍</div>
       <h3>分散信息聚合</h3>
-      <p>自动采集微博、小红书、黑猫投诉、论坛等 4+ 渠道的客户声音，统一归档到一张看板，告别多平台手动切换。</p>
+      <p>自动采集微博、小红书等公开渠道的客户声音，统一归档到一张看板，告别多平台手动切换。</p>
     </div>
     <div class="card animate animate-d3">
       <div class="card-icon">⚡</div>
@@ -511,7 +511,7 @@ footer a:hover { text-decoration: underline; }
     <div class="card animate animate-d5">
       <div class="card-icon">🤖</div>
       <h3>全自动运行</h3>
-      <p>每日 09:00 自动采集、去重、分析、生成报告并推送 GitHub。零人工干预，业务同学打开网页即看。</p>
+      <p>每日 07:00 + 12:00 两次自动采集、去重、分析、生成报告并推送 GitHub。零人工干预，业务同学打开网页即看。</p>
     </div>
   </div>
 </section>
@@ -561,12 +561,17 @@ footer a:hover { text-decoration: underline; }
     <div class="card animate animate-d2">
       <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">🔥</div>
       <h3>热度计算</h3>
-      <p>综合点赞、评论、转发/收藏量计算热度分（ likes×1 + comments×2 + favorites×1.5 ），高热度负面舆情自动上浮。</p>
+      <p>综合点赞、评论、转发/收藏量计算热度分，高热度负面舆情自动上浮。默认排序：负面优先 → 热度降序 → 时间倒序。</p>
     </div>
     <div class="card animate animate-d3">
-      <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">📅</div>
-      <h3>时效标记</h3>
-      <p>自动区分「24h 内新增」与「历史持续舆情」，帮助业务快速识别当日是否有新的客户反馈需要立即响应。</p>
+      <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">🧹</div>
+      <h3>噪音过滤</h3>
+      <p>自动过滤互助帖、广告推广、非工行内容、员工内部吐槽等低价值信息，确保看板只呈现与客户相关的有效舆情。</p>
+    </div>
+    <div class="card animate animate-d4">
+      <div class="card-icon" style="background: rgba(239,102,120,0.08); border-color: rgba(239,102,120,0.15);">⚡</div>
+      <h3>"需关注"弹窗</h3>
+      <p>点击"需关注"汇总卡片，可直接弹出负面舆情完整列表，无需在全部记录中手动翻找，快速定位风险。</p>
     </div>
   </div>
 </section>
@@ -595,15 +600,15 @@ footer a:hover { text-decoration: underline; }
       <tr>
         <td><span class="tag tag-blue">微博</span></td>
         <td>微博搜索 API（访客模式）</td>
-        <td>MCP Adapter 实时搜索</td>
-        <td>每日 09:00 自动</td>
+        <td>MCP Server 实时搜索</td>
+        <td>每日 07:00 + 12:00</td>
         <td><span class="tag tag-green">运行中</span></td>
       </tr>
       <tr>
         <td><span class="tag tag-red">小红书</span></td>
-        <td>小红书搜索 API</td>
-        <td>MCP Adapter 实时搜索</td>
-        <td>每日 09:00 自动</td>
+        <td>小红书搜索 + GitHub 数据仓库</td>
+        <td>MCP Adapter / 定时拉取</td>
+        <td>每日 07:00 + 12:00</td>
         <td><span class="tag tag-green">运行中</span></td>
       </tr>
       <tr>
@@ -662,16 +667,16 @@ footer a:hover { text-decoration: underline; }
       <div class="preview-dot red"></div>
       <div class="preview-dot yellow"></div>
       <div class="preview-dot green"></div>
-      <span class="preview-title">运营活动客户舆情雷达 — 2026-05-16</span>
+      <span class="preview-title">运营活动客户舆情雷达 — 2026-05-19</span>
     </div>
     <div class="preview-body">
       <div class="preview-card">
         <div class="label">舆情总数</div>
-        <div class="value">38</div>
+        <div class="value">78</div>
       </div>
       <div class="preview-card">
         <div class="label">24h 内新增</div>
-        <div class="value accent">1</div>
+        <div class="value accent">3</div>
       </div>
       <div class="preview-card">
         <div class="label">负面舆情</div>
@@ -680,13 +685,13 @@ footer a:hover { text-decoration: underline; }
       <div class="preview-card" style="grid-column: 1 / -1;">
         <div class="label">7 天趋势</div>
         <div class="preview-chart">
-          <div class="chart-bar" style="height: 35%;" data-label="05-10"></div>
-          <div class="chart-bar" style="height: 50%;" data-label="05-11"></div>
-          <div class="chart-bar" style="height: 42%;" data-label="05-12"></div>
-          <div class="chart-bar" style="height: 60%;" data-label="05-13"></div>
-          <div class="chart-bar" style="height: 55%;" data-label="05-14"></div>
-          <div class="chart-bar" style="height: 48%;" data-label="05-15"></div>
-          <div class="chart-bar" style="height: 40%;" data-label="05-16"></div>
+          <div class="chart-bar" style="height: 15%;" data-label="05-13"></div>
+          <div class="chart-bar" style="height: 5%;" data-label="05-14"></div>
+          <div class="chart-bar" style="height: 40%;" data-label="05-15"></div>
+          <div class="chart-bar" style="height: 20%;" data-label="05-16"></div>
+          <div class="chart-bar" style="height: 10%;" data-label="05-17"></div>
+          <div class="chart-bar" style="height: 5%;" data-label="05-18"></div>
+          <div class="chart-bar" style="height: 35%;" data-label="05-19"></div>
         </div>
       </div>
     </div>
@@ -777,17 +782,17 @@ footer a:hover { text-decoration: underline; }
     <div class="card animate">
       <div class="card-icon" style="background: rgba(87,179,255,0.08); border-color: rgba(87,179,255,0.15);">1️⃣</div>
       <h3>打开看板</h3>
-      <p>访问 <a href="dashboard.html" style="color: var(--accent);">在线看板</a>，自动加载最新数据。每日 09:00 自动更新，看板右上角显示最后更新时间（北京时间）。</p>
+      <p>访问 <a href="dashboard.html" style="color: var(--accent);">在线看板</a>，自动加载最新数据。每日 07:00 + 12:00 自动更新，看板右上角显示最后更新时间（北京时间）。启动时会有加载动画提示进度。</p>
     </div>
     <div class="card animate animate-d2">
       <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">2️⃣</div>
       <h3>筛选关注</h3>
-      <p>顶部筛选栏支持按「来源」「情感」「风险等级」「产品类别」「时效性」组合筛选。例如：只看「微博」+「负面」+「24h内」的舆情。</p>
+      <p>顶部筛选栏支持按「来源」「情感」「风险等级」「产品类别」「时效性」组合筛选。例如：只看「微博」+「负面」+「24h内」的舆情。点击"需关注"卡片可直接查看负面舆情列表。</p>
     </div>
     <div class="card animate animate-d3">
       <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">3️⃣</div>
       <h3>查看详情</h3>
-      <p>点击任意舆情卡片展开详情，查看完整内容、原文链接、互动数据（点赞/评论/转发）及情感分析依据。</p>
+      <p>点击任意舆情卡片展开详情，查看完整内容、原文链接、互动数据（点赞/评论/收藏/分享）及情感分析依据。</p>
     </div>
     <div class="card animate animate-d4">
       <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">4️⃣</div>
@@ -810,7 +815,7 @@ footer a:hover { text-decoration: underline; }
   <div class="flow-container animate animate-d3" style="flex-wrap: nowrap; overflow-x: auto;">
     <div class="flow-step" style="min-width: 140px;">
       <h4>🌐 数据源</h4>
-      <p>微博 MCP<br>小红书 MCP<br>黑猫投诉<br>论坛爬虫</p>
+      <p>微博 MCP Server<br>小红书 GitHub 仓库<br></p>
     </div>
     <div class="flow-arrow">→</div>
     <div class="flow-step" style="min-width: 140px;">
@@ -836,7 +841,7 @@ footer a:hover { text-decoration: underline; }
 
   <div style="margin-top: 32px; text-align: center; color: var(--text-dim); font-size: 13px;">
     <p>💡 技术栈：Node.js · JavaScript · GitHub Actions · GitHub Pages · MCP Protocol</p>
-    <p style="margin-top: 8px;">所有代码开源托管于 <a href="https://github.com/Morning/bank-activities" target="_blank" style="color: var(--accent);">GitHub</a>，欢迎查阅与贡献。</p>
+    <p style="margin-top: 8px;">主仓库 <a href="https://github.com/Morning/bank-activities" target="_blank" style="color: var(--accent);">Morning/bank-activities</a> · 看板仓库 <a href="https://github.com/ytz33233/icbc-sentiment-dashboard" target="_blank" style="color: var(--accent);">ytz33233/icbc-sentiment-dashboard</a></p>
   </div>
 </section>
 
@@ -849,7 +854,8 @@ footer a:hover { text-decoration: underline; }
   <p>运营活动客户舆情雷达 · 自动化监测项目</p>
   <p style="margin-top: 8px;">
     <a href="dashboard.html">访问实时看板</a> ·
-    <a href="https://github.com/Morning/bank-activities" target="_blank">GitHub 仓库</a>
+    <a href="https://github.com/Morning/bank-activities" target="_blank">主仓库</a> ·
+    <a href="https://github.com/ytz33233/icbc-sentiment-dashboard" target="_blank">看板仓库</a>
   </p>
   <p style="margin-top: 16px; opacity: 0.6;">© 2026 · 持续迭代中</p>
 </footer>
