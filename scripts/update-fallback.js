@@ -4,9 +4,10 @@ const path = require('path');
 const DATA_DIR = '/root/.openclaw/workspace/sentiment_monitor/data';
 const DASHBOARD_HTML = '/root/.openclaw/workspace/sentiment_monitor/dashboard.html';
 
-// 加载 05-12 ~ 05-18 的数据
-const startDate = new Date('2026-05-12');
-const endDate = new Date('2026-05-18');
+// 加载最近 7 天的数据（从今天往前 6 天）
+const endDate = new Date();
+const startDate = new Date(endDate);
+startDate.setDate(startDate.getDate() - 6);
 
 let allRecords = [];
 let allHotKeywords = [];
@@ -123,13 +124,14 @@ function computeHotKeywords(records) {
 }
 
 const stats = computeStats(uniqueRecords);
-const trend = computeTrend(uniqueRecords, '2026-05-18');
+const endDateStr = endDate.toISOString().slice(0, 10);
+const trend = computeTrend(uniqueRecords, endDateStr);
 const hotKeywords = computeHotKeywords(uniqueRecords);
 
 const fallbackData = {
-    reportDate: '2026-05-12 ~ 2026-05-18',
-    dateRangeStart: '2026-05-12',
-    dateRangeEnd: '2026-05-18',
+    reportDate: `${startDate.toISOString().slice(0, 10)} ~ ${endDateStr}`,
+    dateRangeStart: startDate.toISOString().slice(0, 10),
+    dateRangeEnd: endDateStr,
     records: uniqueRecords,
     summary: stats.summary,
     bySentiment: stats.bySentiment,
@@ -140,8 +142,8 @@ const fallbackData = {
     trend7d: trend,
     hotKeywords: hotKeywords,
     dailyBrief: {
-        text: `当前展示 ${uniqueRecords.length} 条历史舆情数据（2026-05-12 至 2026-05-18）。`,
-        date: '2026-05-18',
+        text: `当前展示 ${uniqueRecords.length} 条历史舆情数据（${startDate.toISOString().slice(0, 10)} 至 ${endDateStr}）。`,
+        date: endDateStr,
         generatedAt: new Date().toISOString()
     }
 };
