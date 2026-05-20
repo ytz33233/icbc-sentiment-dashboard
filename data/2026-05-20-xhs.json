@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-20",
-  "generatedAt": "2026-05-20 07:00",
+  "generatedAt": "2026-05-20 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -60,7 +60,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-20）采集到 78 条小红书舆情，负面 0 条，高风险 0 条。",
     "date": "2026-05-20",
-    "generatedAt": "2026-05-19T23:00:21.810Z"
+    "generatedAt": "2026-05-20T04:00:28.165Z"
   },
   "records": [
     {
@@ -952,7 +952,7 @@
       "sentiment": "positive",
       "riskLevel": "medium",
       "title": "工行i豆兑换什么最划算",
-      "content": "工行i豆兑换什么最���算",
+      "content": "工行i豆兑换什么最��算",
       "url": "https://www.xiaohongshu.com/explore/69af8e7b0000000022020c8a",
       "author": "momo",
       "status": "已发布",
@@ -1737,7 +1737,7 @@
       "id": "20260520-58",
       "date": "2026-05-06",
       "publishTime": "2026-05-06",
-      "source": "���红书",
+      "source": "��红书",
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
@@ -2596,7 +2596,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行刚中50➕🧧！！？",
-      "content": "工行刚中50��🧧！！？",
+      "content": "工行刚中50➕🧧！！？",
       "url": "https://www.xiaohongshu.com/explore/6a0c6f86000000003701cb8b",
       "author": "cc羊毛记录",
       "status": "已发布",
@@ -2628,7 +2628,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "工行你还搞这种，好惊喜哟",
+      "title": "工行你还搞这种���好惊喜哟",
       "content": "工行你还搞这种，好惊喜哟",
       "url": "https://www.xiaohongshu.com/explore/69f4d309000000001b021f6f",
       "author": "kiwi",
