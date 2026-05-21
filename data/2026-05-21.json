@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-21",
-  "generatedAt": "2026-05-21 23:35",
+  "generatedAt": "2026-05-21 00:41",
   "fromHistory": false,
   "summary": {
     "total": 12,
@@ -8,8 +8,8 @@
     "historyCount": 6,
     "negativeCount": 1,
     "negativePct": "8.3",
-    "positiveCount": 2,
-    "neutralCount": 9,
+    "positiveCount": 1,
+    "neutralCount": 10,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "xiaohongshu": 8
   },
   "bySentiment": {
-    "positive": 2,
-    "neutral": 9,
+    "positive": 1,
+    "neutral": 10,
     "negative": 1
   },
   "byRisk": {
@@ -122,7 +122,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-21）共采集 12 条舆情，其中24H内新增 6 条。主要集中在「i豆活动、升金有礼」等产品，来源以微博、小红书为主，热词包括「i豆、立减金、升金有礼」。",
     "date": "2026-05-21",
-    "generatedAt": "2026-05-21T15:35:07.160Z"
+    "generatedAt": "2026-05-21T16:41:48.819Z"
   },
   "records": [
     {
@@ -155,7 +155,7 @@
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "作者在提供信息，告诉用户如何通过工行app参与活动获得i豆，没有表达个人情感。",
+      "llmReason": "作者在提供信息，告诉用户工行app中有一个活动，用户可以报名参与，达标后可以获得i豆，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -169,7 +169,7 @@
       "comments": 0,
       "favorites": 0,
       "recency": "24h内",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "i豆活动",
@@ -187,8 +187,8 @@
       "id": "20260521-02",
       "category": "i豆兑换",
       "heatScore": 0,
-      "llmSentiment": "positive",
-      "llmReason": "作者提到支付宝绑卡消费可以累积工银i豆，用多个表情符号📅💳🎁🎟️表达积极情绪，鼓励用户参与活动。",
+      "llmSentiment": "neutral",
+      "llmReason": "作者在分享一个支付宝和工行合作的活动信息，告诉用户绑卡消费可以累积工银i豆，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -220,7 +220,7 @@
       "category": "i豆兑换",
       "heatScore": 67,
       "llmSentiment": "neutral",
-      "llmReason": "作者在介绍工行app的一个活动，告诉用户如何参与，没有表达个人情感。",
+      "llmReason": "作者在介绍工行app中一个名为【乐园】的功能，用户可以每天浇水、做任务抽i豆，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -255,7 +255,7 @@
       "category": "i豆兑换",
       "heatScore": 37,
       "llmSentiment": "neutral",
-      "llmReason": "作者在分享一个工行app的活动信息，提到可以获得300+500i豆，但主要是在陈述事实，没有明显的情感倾向。",
+      "llmReason": "作者在分享一个工行app的活动信息，用户可以通过完成任务获得300+500i豆，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -293,7 +293,7 @@
       "category": "i豆兑换",
       "heatScore": 94,
       "llmSentiment": "neutral",
-      "llmReason": "作者简单提到5月20日上海工行有抽i豆活动，没有表达个人情感，只是客观陈述。",
+      "llmReason": "作者在告知用户5月20日上海工行有一个抽i豆的活动，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -331,7 +331,7 @@
       "category": "i豆兑换",
       "heatScore": 83,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行活动信息的简单陈述，没有表达作者的个人情感或态度。",
+      "llmReason": "标题和内容均是对工商银行i豆活动的客观陈述，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -369,7 +369,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行活动信息的简单陈述，没有表达作者的个人情感或态度。",
+      "llmReason": "标题和内容均是对工商银行i豆任务更新的客观陈述，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -407,7 +407,7 @@
       "category": "i豆兑换",
       "heatScore": 17,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行活动信息的简单陈述，没有表达作者的个人情感或态度。",
+      "llmReason": "标题和内容均是对工商银行i豆活动的客观陈述，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -445,7 +445,7 @@
       "category": "i豆兑换",
       "heatScore": 2,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行活动信息的简单陈述，没有表达作者的个人情感或态度。",
+      "llmReason": "标题和内容均是对工商银行i豆活动的客观陈述，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -483,7 +483,7 @@
       "category": "i豆兑换",
       "heatScore": 183,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'立减金'和'可以重复薅'表达了作者对工商银行活动的积极态度，认为这是一个值得分享的好消息。",
+      "llmReason": "标题和内容中使用了“立减金”、“可以重复薅”等积极词汇，表达了作者对工商银行优惠活动的满意和兴奋。",
       "sentimentMethod": "llm"
     },
     {
@@ -563,6 +563,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-21T15:35:17.580Z",
+  "llmEnhancedAt": "2026-05-21T16:42:38.591Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

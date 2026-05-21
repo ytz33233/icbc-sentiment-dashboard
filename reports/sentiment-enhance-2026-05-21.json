@@ -1,6 +1,6 @@
 {
   "date": "2026-05-21",
-  "generatedAt": "2026-05-21T15:35:17.581Z",
+  "generatedAt": "2026-05-21T16:42:38.592Z",
   "totalRecords": 12,
   "beforeStats": {
     "positive": 0,
@@ -8,25 +8,18 @@
     "negative": 0
   },
   "afterStats": {
-    "positive": 2,
-    "neutral": 9,
+    "positive": 1,
+    "neutral": 10,
     "negative": 1
   },
-  "diffCount": 3,
+  "diffCount": 2,
   "changes": [
-    {
-      "title": "支付宝：绑卡消费笔笔累积“工银i豆”，多花多累积！ 📅即日起--2026年12...",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "作者提到支付宝绑卡消费可以累积工银i豆，用多个表情符号📅💳🎁🎟️表达积极情绪，鼓励用户参与活动。"
-    },
     {
       "title": "5月！工行11r立减金，可以重复薅！！",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题中的'立减金'和'可以重复薅'表达了作者对工商银行活动的积极态度，认为这是一个值得分享的好消息。"
+      "reason": "标题和内容中使用了“立减金”、“可以重复薅”等积极词汇，表达了作者对工商银行优惠活动的满意和兴奋。"
     },
     {
       "title": "工行环球影城联名卡抽奖一直火爆😓",

@@ -12,6 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const dedup = require('./dedup-utils.js');
+const { semanticProcess } = require('./llm-semantic-processing');
 const { filterBatch } = require('./filter-rules.js');
 
 const WORKSPACE = '/root/.openclaw/workspace';
@@ -882,7 +883,7 @@ function generateMarkdownReport(dateStr, report) {
 }
 
 // ===== 主流程 =====
-function main() {
+async function main() {
     const dateStr = process.argv[2] || getTodayBeijing();
     console.log(`\n🔍 生成舆情数据: ${dateStr}`);
     console.log('=' .repeat(40));
@@ -954,10 +955,20 @@ function main() {
         allRecords = filteredRecords;
     }
 
-    // 3. 活动相关筛选
+    // 2.6 LLM 语义处理（噪音过滤 + 活动筛选）
+    const llmSemanticResult = await semanticProcess(allRecords);
+    allRecords = llmSemanticResult.kept;
+    if (llmSemanticResult.stats.removed > 0) {
+        console.log(`🧠 LLM语义过滤: 移除${llmSemanticResult.stats.removed}条`);
+    }
+
+    // 3. 活动相关筛选（LLM已处理，保留作为兜底）
     const activityRecords = allRecords.filter(isActivityRelated);
     const filteredOut = allRecords.length - activityRecords.length;
-    console.log(`🏷️  活动筛选: 保留${activityRecords.length}条 (过滤${filteredOut}条)`);
+    if (filteredOut > 0) {
+        console.log(`🏷️  活动筛选兜底: 再过滤${filteredOut}条`);
+    }
+    console.log(`🏷️  活动筛选后: ${activityRecords.length}条`);
 
     // 3.5 过滤过旧记录（超过30天）
     const recentActivityRecords = filterOldRecords(activityRecords, dateStr);
@@ -1044,4 +1055,4 @@ function main() {
     console.log('=' .repeat(40));
 }
 
-main();
+main().catch(e => { console.error(e); process.exit(1); });
