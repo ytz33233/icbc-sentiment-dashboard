@@ -1,0 +1,137 @@
+{
+  "reportDate": "2026-05-22",
+  "generatedAt": "2026-05-22 07:01",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 0,
+    "historyCount": 1,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "xiaohongshu": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-16",
+      "total": 4,
+      "recent": 1,
+      "history": 3,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-17",
+      "total": 3,
+      "recent": 2,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-18",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-19",
+      "total": 14,
+      "recent": 0,
+      "history": 14,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-20",
+      "total": 7,
+      "recent": 1,
+      "history": 6,
+      "negative": 2
+    },
+    {
+      "date": "2026-05-21",
+      "total": 6,
+      "recent": 5,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-22",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-22）共采集 1 条舆情。热词包括「i豆」。",
+    "date": "2026-05-22",
+    "generatedAt": "2026-05-21T23:01:11.786Z"
+  },
+  "records": [
+    {
+      "id": "20260522-01",
+      "date": "2026-05-22",
+      "publishTime": "昨天 08:19",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5.21 工行 开了！小满 300i豆+66i豆",
+      "content": "5.21 工行 开了！小满 300i豆+66i豆",
+      "url": "https://www.xiaohongshu.com/explore/6a0e4f9a0000000036030ef1",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-05-22",
+      "engagement": {
+        "likes": "10",
+        "comments": "1",
+        "collects": "5",
+        "shares": "17"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 10,
+      "comments": 1,
+      "favorites": 5,
+      "shares": 17,
+      "category": "i豆兑换",
+      "heatScore": 20,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子内容仅是客观陈述工商银行的一项活动，没有表达作者的个人情感倾向。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-05-21T23:01:13.197Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
