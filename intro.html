@@ -180,6 +180,60 @@ p { color: var(--text-muted); }
   border-radius: 3px 3px 0 0; min-height: 12px;
 }
 
+/* ── Modal / Lightbox ── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  padding: 24px;
+}
+.modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+.modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  max-width: 960px; width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.95); transition: transform 0.3s;
+}
+.modal-overlay.active .modal-content { transform: scale(1); }
+
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  color: var(--text-muted); font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.2s; z-index: 10;
+}
+.modal-close:hover { background: rgba(239,102,120,0.15); color: var(--bad); border-color: var(--bad); }
+
+.modal-body { padding: 32px; }
+.modal-body h3 { font-size: 20px; margin-bottom: 12px; }
+.modal-body p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+.modal-img {
+  width: 100%; border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  cursor: zoom-in; transition: transform 0.3s;
+}
+.modal-img:hover { transform: scale(1.01); }
+
+@media (max-width: 768px) {
+  .modal-body { padding: 20px; }
+  .modal-content { max-height: 95vh; }
+}
+
+/* ── Card clickable cursor ── */
+#preview .card, #preview .preview-frame {
+  cursor: pointer;
+}
+
 /* ── Table ── */
 .coverage-table {
   width: 100%; border-collapse: collapse; margin-top: 20px;
@@ -322,7 +376,7 @@ footer a { color: var(--accent); text-decoration: none; }
     <h2>打开看板能看到什么</h2>
     <p>深色金融终端风格，数据一目了然。支持 PC、平板、手机访问。</p>
 
-    <div class="preview-frame">
+    <div class="preview-frame" onclick="openModal('kpi')">
       <div class="preview-header">
         <div class="preview-dot red"></div>
         <div class="preview-dot yellow"></div>
@@ -335,7 +389,7 @@ footer a { color: var(--accent); text-decoration: none; }
     </div>
 
     <div class="card-grid" style="margin-top: 28px;">
-      <div class="card">
+      <div class="card" onclick="openModal('kpi')">
         <div class="card-icon" style="background: rgba(87,179,255,0.08);">📊</div>
         <h3>数字卡片区</h3>
         <p>顶部数字卡片：舆情总量、24H内新增、需关注数量。一眼判断今天舆情是否平静。</p>
@@ -343,7 +397,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <img src="images/dashboard-kpi.png" alt="数字卡片" style="width:100%; display:block;">
         </div>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('charts')">
         <div class="card-icon" style="background: rgba(55,196,134,0.08);">📈</div>
         <h3>趋势图表区</h3>
         <p>30 天舆情走势、情感分布饼图、渠道来源柱状图。量化口碑变化趋势。</p>
@@ -351,7 +405,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <img src="images/dashboard-charts.png" alt="趋势图表" style="width:100%; display:block;">
         </div>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('wordcloud')">
         <div class="card-icon" style="background: rgba(246,184,75,0.08);">🔥</div>
         <h3>热词云</h3>
         <p>今天客户讨论最多的关键词，字号越大频率越高。点击可查看 30 天趋势。</p>
@@ -359,7 +413,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <img src="images/dashboard-wordcloud.png" alt="热词云" style="width:100%; display:block;">
         </div>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('table')">
         <div class="card-icon" style="background: rgba(167,139,250,0.08);">📋</div>
         <h3>帖子列表</h3>
         <p>每条舆情展示标题、来源、情感、热度、互动数据。点击展开详情和原文链接。</p>
@@ -567,6 +621,83 @@ footer a { color: var(--accent); text-decoration: none; }
   </p>
   <p style="margin-top: 16px; opacity: 0.6;">© 2026 · 每日 07:00 + 12:00 自动更新</p>
 </footer>
+
+<!-- ════════════════════════════════════════════════
+     Modal / Lightbox
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="modal-overlay" id="featureModal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-close" onclick="closeModal()">&times;</div>
+    <div class="modal-body" id="modalBody">
+      <!-- dynamically filled -->
+    </div>
+  </div>
+</div>
+
+<!-- ── Intersection Observer + Modal ── -->
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.animate').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+
+// Modal data
+const modalData = {
+  kpi: {
+    title: '📊 数字卡片区',
+    desc: '看板顶部展示 4 张核心数字卡片，让你每天早上 30 秒掌握全局：\n\n• 舆情总量 — 近 30 天累计采集了多少条舆情\n• 24H 内新增 — 今天新冒出来的帖子有多少\n• 负面舆情 — 需要重点关注的负面帖子数量\n• 需关注 — 系统标记为高风险或发酵中的舆情数',
+    img: 'images/dashboard-kpi.png'
+  },
+  charts: {
+    title: '📈 趋势图表区',
+    desc: '三个图表从多个维度量化活动口碑变化趋势：\n\n• 情感分布饼图 — 正面、中性、负面各占多少比例，一眼判断整体口碑\n• 来源渠道柱状图 — 微博、小红书、投诉平台各有多少条，知道客户主要在哪个平台讨论\n• 近 30 天趋势折线图 — 每天舆情数量变化曲线，发现波动规律',
+    img: 'images/dashboard-charts.png'
+  },
+  wordcloud: {
+    title: '🔥 热词云',
+    desc: '今天客户讨论最多的关键词，字号越大表示出现频率越高。\n\n• 比如 "i豆" 字号最大（68 次），说明这是当前最热话题\n• "立减金""升金有礼" 紧随其后\n• 点击任意关键词，可查看该词近 30 天的出现频率变化趋势\n\n帮助业务部门快速感知：客户最近在关心什么、抱怨什么。',
+    img: 'images/dashboard-wordcloud.png'
+  },
+  table: {
+    title: '📋 帖子列表',
+    desc: '每条舆情完整展示关键信息，方便逐条评估和跟进：\n\n• 时间 + 来源 — 知道什么时候、在哪个平台发的\n• 类别 — 属于哪个活动主题（i豆兑换、薅羊毛等）\n• 情感 — 正面 / 中性 / 负面，红色标记负面\n• 热度 — 综合点赞、评论、转发计算的热度分\n• 内容摘要 + 关键词 — 快速了解帖子在说什么\n• 详情按钮 — 点击展开完整内容和原文链接，可直接跳转微博/小红书查看',
+    img: 'images/dashboard-table.png'
+  }
+};
+
+function openModal(key) {
+  const data = modalData[key];
+  if (!data) return;
+  const body = document.getElementById('modalBody');
+  body.innerHTML = `
+    <h3>${data.title}</h3>
+    <p>${data.desc.replace(/\n/g, '<br>')}</p>
+    <img src="${data.img}" alt="${data.title}" class="modal-img">
+  `;
+  document.getElementById('featureModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('featureModal')) return;
+  document.getElementById('featureModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
 
 </body>
 </html>
