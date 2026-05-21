@@ -3,21 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>舆情监测项目介绍 — 运营活动客户舆情雷达</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>运营活动客户舆情雷达 — 使用介绍</title>
 <style>
-/* ════════════════════════════════════════════════
-   舆情监测项目介绍页 — 演示汇报风格
-   深色金融终端 + 清晰信息层级
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-
 :root {
   --bg: #0b1220;
-  --bg-elevated: #111a2b;
   --bg-card: #111d2e;
-  --bg-card-hover: #162438;
+  --bg-elevated: #162438;
   --border: #2b3a57;
   --border-light: #3a4f75;
   --text: #f3f6ff;
@@ -25,21 +16,16 @@
   --text-dim: #88a0c7;
   --accent: #57b3ff;
   --accent-light: #8cc8ff;
-  --accent-glow: rgba(87, 179, 255, 0.15);
-  --gold: #f6b84b;
   --green: #37c486;
+  --gold: #f6b84b;
   --orange: #ff9800;
   --bad: #ef6678;
   --purple: #a78bfa;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --radius: 12px;
-  --radius-sm: 8px;
+  --font-body: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -47,385 +33,208 @@ body {
   line-height: 1.7;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-/* ── Background ── */
-.bg-gradient {
-  position: fixed; inset: 0; z-index: -2;
-  background: radial-gradient(ellipse 80% 60% at 20% 10%, #132240 0%, transparent 60%),
-              radial-gradient(ellipse 60% 50% at 80% 90%, #1a1030 0%, transparent 50%),
-              var(--bg);
-}
+.container { max-width: 960px; margin: 0 auto; padding: 0 28px; }
+section { padding: 60px 0; }
+section + section { border-top: 1px solid var(--border); }
 
-.bg-grid {
-  position: fixed; inset: 0; z-index: -1;
-  background-image:
-    linear-gradient(rgba(87,179,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(87,179,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
-}
+h1 { font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+h2 { font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+p { color: var(--text-muted); }
 
-/* ── Animation ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(55,196,134,0.1); border: 1px solid rgba(55,196,134,0.3);
+  border-radius: 100px; padding: 4px 14px;
+  font-size: 12px; color: var(--green); margin-bottom: 20px;
 }
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes slideRight {
-  from { width: 0; }
-  to   { width: var(--target-width); }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.animate { opacity: 0; animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-.animate-d1 { animation-delay: 0.1s; }
-.animate-d2 { animation-delay: 0.2s; }
-.animate-d3 { animation-delay: 0.3s; }
-.animate-d4 { animation-delay: 0.4s; }
-.animate-d5 { animation-delay: 0.5s; }
-
-/* ── Layout ── */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-
-section { padding: 80px 0; position: relative; }
-section + section::before {
-  content: '';
-  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 200px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-light), transparent);
-}
-
-/* ── Typography ── */
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.25;
-}
-h1 { font-size: 48px; letter-spacing: -0.02em; }
-h2 { font-size: 32px; margin-bottom: 16px; }
-h3 { font-size: 20px; margin-bottom: 12px; }
-
-.section-label {
-  display: inline-block;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent); border-radius: 100px;
-  padding: 4px 14px;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  color: var(--text-muted);
-  font-size: 17px;
-  max-width: 600px;
-  margin-bottom: 48px;
-}
-
-/* ── Hero ── */
-.hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center;
-  padding: 120px 32px 80px;
-}
-
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(87,179,255,0.08);
-  border: 1px solid rgba(87,179,255,0.2);
-  border-radius: 100px;
-  padding: 6px 18px;
-  font-size: 13px; color: var(--accent-light);
-  margin-bottom: 32px;
-}
-.hero-badge .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 8px var(--green);
-  animation: pulse 2s infinite;
-}
-
-.hero h1 { margin-bottom: 20px; }
-.hero h1 span { color: var(--accent); }
-
-.hero-subtitle {
-  font-size: 19px; color: var(--text-muted);
-  max-width: 560px; margin: 0 auto 48px;
-}
-
-.hero-cta {
-  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 6px var(--green);
 }
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 28px; border-radius: var(--radius-sm);
+  padding: 12px 24px; border-radius: 8px;
   font-size: 14px; font-weight: 500;
-  text-decoration: none; cursor: pointer; transition: all 0.3s;
-  border: none;
+  text-decoration: none; transition: all 0.3s;
 }
 .btn-primary {
   background: var(--accent); color: var(--bg);
-  box-shadow: 0 4px 20px rgba(87,179,255,0.3);
+  box-shadow: 0 4px 16px rgba(87,179,255,0.3);
 }
 .btn-primary:hover {
   background: var(--accent-light);
-  box-shadow: 0 6px 30px rgba(87,179,255,0.4);
   transform: translateY(-2px);
 }
 .btn-secondary {
   background: transparent; color: var(--text-muted);
   border: 1px solid var(--border);
 }
-.btn-secondary:hover {
-  border-color: var(--accent); color: var(--text);
-  background: rgba(87,179,255,0.05);
-}
+.btn-secondary:hover { border-color: var(--accent); color: var(--text); }
 
+/* ── Hero ── */
+.hero {
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.hero h1 span { color: var(--accent); }
+.hero-subtitle {
+  font-size: 17px; color: var(--text-muted);
+  max-width: 520px; margin: 0 auto 32px;
+}
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .hero-stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-  max-width: 800px; width: 100%;
-  margin-top: 64px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  max-width: 720px; margin: 48px auto 0;
 }
 .stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  text-align: center;
-  transition: all 0.3s;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px 16px; text-align: center;
 }
-.stat-card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-.stat-value {
-  font-family: var(--font-display);
-  font-size: 32px; font-weight: 700; color: var(--accent);
-  margin-bottom: 4px;
-}
-.stat-label {
-  font-size: 13px; color: var(--text-dim);
-}
+.stat-value { font-size: 28px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
 
 /* ── Cards ── */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px; margin-top: 28px;
 }
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
   transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
 }
-.card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--purple));
-  opacity: 0; transition: opacity 0.3s;
-}
-.card:hover::before { opacity: 1; }
-.card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-}
-
+.card:hover { border-color: var(--border-light); transform: translateY(-3px); }
 .card-icon {
-  width: 48px; height: 48px; border-radius: var(--radius-sm);
+  width: 44px; height: 44px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px; margin-bottom: 16px;
+  font-size: 20px; margin-bottom: 14px;
   background: rgba(87,179,255,0.08);
   border: 1px solid rgba(87,179,255,0.15);
 }
-.card h3 { font-size: 18px; margin-bottom: 10px; }
-.card p { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
+.card h3 { font-size: 16px; }
+.card p { font-size: 13px; line-height: 1.7; color: var(--text-muted); }
 
-/* ── Flow / Architecture ── */
-.flow-container {
-  display: flex; align-items: center; justify-content: center;
-  gap: 16px; flex-wrap: wrap;
-  margin: 40px 0;
-}
-.flow-step {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  min-width: 160px;
-  text-align: center;
-  position: relative;
-}
-.flow-step .num {
-  display: inline-block;
-  width: 28px; height: 28px; border-radius: 50%;
-  background: var(--accent); color: var(--bg);
-  font-size: 13px; font-weight: 700; line-height: 28px;
-  margin-bottom: 10px;
-}
-.flow-step h4 { font-size: 15px; margin-bottom: 6px; }
-.flow-step p { font-size: 12px; color: var(--text-dim); }
-
-.flow-arrow {
-  color: var(--accent);
-  font-size: 20px;
-  opacity: 0.5;
-}
-
-/* ── Coverage Table ── */
-.coverage-table {
-  width: 100%; border-collapse: collapse;
-  margin-top: 24px;
-}
-.coverage-table th,
-.coverage-table td {
-  padding: 14px 18px; text-align: left;
+/* ── Steps ── */
+.step-list { margin-top: 28px; }
+.step {
+  display: flex; gap: 20px; padding: 20px 0;
   border-bottom: 1px solid var(--border);
 }
-.coverage-table th {
-  font-size: 12px; font-weight: 600; color: var(--text-dim);
-  text-transform: uppercase; letter-spacing: 0.08em;
-  background: rgba(17,26,43,0.5);
+.step:last-child { border-bottom: none; }
+.step-num {
+  flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
 }
-.coverage-table td { font-size: 14px; color: var(--text-muted); }
-.coverage-table tr:hover td { color: var(--text); background: rgba(87,179,255,0.03); }
-
-.tag {
-  display: inline-block; padding: 3px 10px; border-radius: 100px;
-  font-size: 12px; font-weight: 500;
+.step-body h3 { font-size: 16px; margin-bottom: 6px; }
+.step-body p { font-size: 14px; color: var(--text-muted); }
+.step-tip {
+  display: inline-block; margin-top: 8px;
+  background: rgba(87,179,255,0.06); border: 1px solid rgba(87,179,255,0.12);
+  border-radius: 6px; padding: 6px 12px;
+  font-size: 12px; color: var(--text-dim);
 }
-.tag-blue   { background: rgba(87,179,255,0.1);  color: var(--accent); }
-.tag-green  { background: rgba(55,196,134,0.1);  color: var(--green); }
-.tag-orange { background: rgba(255,152,0,0.1);   color: var(--orange); }
-.tag-purple { background: rgba(167,139,250,0.1);  color: var(--purple); }
-.tag-red    { background: rgba(239,102,120,0.1); color: var(--bad); }
 
-/* ── Dashboard Preview ── */
+/* ── Preview ── */
 .preview-frame {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-top: 40px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-top: 28px;
 }
 .preview-header {
-  display: flex; align-items: center; gap: 8px;
-  padding: 12px 16px;
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 14px;
   background: rgba(17,26,43,0.8);
   border-bottom: 1px solid var(--border);
 }
-.preview-dot { width: 10px; height: 10px; border-radius: 50%; }
+.preview-dot { width: 8px; height: 8px; border-radius: 50%; }
 .preview-dot.red { background: #ef6678; }
 .preview-dot.yellow { background: #f6b84b; }
 .preview-dot.green { background: #37c486; }
-.preview-title { font-size: 13px; color: var(--text-dim); margin-left: 8px; }
+.preview-title { font-size: 12px; color: var(--text-dim); margin-left: 6px; }
 
 .preview-body {
-  padding: 32px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); gap: 20px;
+  padding: 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
 }
 .preview-card {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 20px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: 8px; padding: 16px;
 }
-.preview-card .label { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; }
-.preview-card .value { font-size: 24px; font-weight: 700; color: var(--text); }
+.preview-card .label { font-size: 11px; color: var(--text-dim); margin-bottom: 6px; }
+.preview-card .value { font-size: 22px; font-weight: 700; }
 .preview-card .value.accent { color: var(--accent); }
-.preview-card .value.good { color: var(--green); }
-.preview-card .value.warn { color: var(--orange); }
-
+.preview-card .value.bad { color: var(--bad); }
 .preview-chart {
   grid-column: 1 / -1;
-  display: flex; align-items: flex-end; gap: 12px;
-  height: 120px; padding: 20px 0;
+  display: flex; align-items: flex-end; gap: 8px;
+  height: 80px; padding: 12px 0;
 }
 .chart-bar {
-  flex: 1;
-  background: linear-gradient(to top, var(--accent), rgba(87,179,255,0.3));
-  border-radius: 4px 4px 0 0;
-  min-height: 20px;
-  position: relative;
-  transition: all 0.3s;
-}
-.chart-bar:hover { filter: brightness(1.3); }
-.chart-bar::after {
-  content: attr(data-label);
-  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
-  font-size: 11px; color: var(--text-dim); white-space: nowrap;
+  flex: 1; background: linear-gradient(to top, var(--accent), rgba(87,179,255,0.3));
+  border-radius: 3px 3px 0 0; min-height: 12px;
 }
 
-/* ── Timeline ── */
-.timeline {
-  position: relative; padding-left: 32px;
+/* ── Table ── */
+.coverage-table {
+  width: 100%; border-collapse: collapse; margin-top: 20px;
+  font-size: 14px;
 }
-.timeline::before {
-  content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px;
-  width: 2px; background: var(--border);
+.coverage-table th, .coverage-table td {
+  padding: 12px 14px; text-align: left;
+  border-bottom: 1px solid var(--border);
 }
-.timeline-item {
-  position: relative; margin-bottom: 28px;
+.coverage-table th {
+  font-size: 11px; font-weight: 600; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  background: rgba(17,26,43,0.5);
 }
-.timeline-item::before {
-  content: ''; position: absolute; left: -28px; top: 6px;
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--accent); border: 2px solid var(--bg);
-  box-shadow: 0 0 0 3px rgba(87,179,255,0.2);
+.coverage-table td { color: var(--text-muted); }
+
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 500;
 }
-.timeline-item.done::before { background: var(--green); box-shadow: 0 0 0 3px rgba(55,196,134,0.2); }
-.timeline-item.current::before { background: var(--gold); box-shadow: 0 0 0 3px rgba(246,184,75,0.2); }
-.timeline-date {
-  font-size: 12px; color: var(--text-dim); font-weight: 500;
-  margin-bottom: 4px;
+.tag-blue { background: rgba(87,179,255,0.1); color: var(--accent); }
+.tag-green { background: rgba(55,196,134,0.1); color: var(--green); }
+.tag-red { background: rgba(239,102,120,0.1); color: var(--bad); }
+.tag-orange { background: rgba(255,152,0,0.1); color: var(--orange); }
+
+/* ── Roadmap ── */
+.roadmap-note {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px 24px;
+  margin-top: 28px;
 }
-.timeline-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-.timeline-desc { font-size: 14px; color: var(--text-muted); }
+.roadmap-note h4 { font-size: 14px; margin-bottom: 8px; color: var(--text); }
+.roadmap-note ul { list-style: none; }
+.roadmap-note li {
+  font-size: 13px; color: var(--text-muted);
+  padding: 6px 0; padding-left: 20px; position: relative;
+}
+.roadmap-note li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-weight: 700;
+}
 
 /* ── Footer ── */
 footer {
-  text-align: center; padding: 60px 32px;
+  text-align: center; padding: 48px 28px;
   border-top: 1px solid var(--border);
   color: var(--text-dim); font-size: 13px;
 }
 footer a { color: var(--accent); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* ── Scroll indicator ── */
-.scroll-hint {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: var(--text-dim); font-size: 12px;
-  animation: float 3s ease-in-out infinite;
-}
-.scroll-hint svg { opacity: 0.5; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 24px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .flow-container { flex-direction: column; }
-  .flow-arrow { transform: rotate(90deg); }
   .preview-body { grid-template-columns: 1fr; }
   .preview-chart { grid-column: 1; }
 }
@@ -433,508 +242,342 @@ footer a:hover { text-decoration: underline; }
 </head>
 <body>
 
-<div class="bg-gradient"></div>
-<div class="bg-grid"></div>
-
 <!-- ════════════════════════════════════════════════
-     HERO
+     第一屏：价值主张
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="hero">
-  <div class="hero-badge animate">
-    <span class="dot"></span>
-    <span>系统运行中 · 每日自动更新</span>
-  </div>
-  <h1 class="animate animate-d1">
-    运营活动客户<br><span>舆情监测雷达</span>
-  </h1>
-  <p class="hero-subtitle animate animate-d2">
-    全天候追踪微博、小红书、投诉平台等公开渠道，<strong>每日两次</strong>自动采集客户对「升金有礼」「i豆」等运营活动的反馈与情绪，助力业务提前识别风险、优化活动体验。
-  </p>
-  <div class="hero-cta animate animate-d3">
-    <a href="#overview" class="btn btn-primary">了解项目详情</a>
-    <a href="dashboard.html" class="btn btn-secondary">查看最新看板 →</a>
-  </div>
+  <div class="container">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      系统运行中 · 每日自动更新
+    </div>
+    <h1>
+      运营活动客户<br><span>舆情监测雷达</span>
+    </h1>
+    <p class="hero-subtitle">
+      每天自动采集微博、小红书、投诉平台的客户声音，去重、分析、汇总到一张看板。业务同学打开网页，一眼掌握今日舆情。
+    </p>
+    <div class="hero-cta">
+      <a href="dashboard.html" class="btn btn-primary">📊 直接打开看板</a>
+      <a href="#how-to-use" class="btn btn-secondary">📖 先看使用说明</a>
+    </div>
 
-  <div class="hero-stats animate animate-d4">
-    <div class="stat-card">
-      <div class="stat-value">3+</div>
-      <div class="stat-label">监测渠道</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">8</div>
-      <div class="stat-label">搜索关键词</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">2次/日</div>
-      <div class="stat-label">更新频率</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">30天</div>
-      <div class="stat-label">趋势回溯</div>
-    </div>
-  </div>
-
-  <div class="scroll-hint">
-    <span>向下滚动</span>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
-</section>
-
-<div class="container">
-
-<!-- ════════════════════════════════════════════════
-     项目概述
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="overview">
-  <div class="section-label animate">项目概述</div>
-  <h2 class="animate animate-d1">我们解决了什么问题</h2>
-  <p class="section-desc animate animate-d2">
-    运营活动上线后，客户反馈分散在微博、小红书、投诉平台等公开渠道，人工巡查成本高、滞后性强。本项目通过自动化采集 + 智能分析，实现「分钟级发现、小时级汇总、日级报告」。
-  </p>
-
-  <div class="card-grid">
-    <div class="card animate animate-d2">
-      <div class="card-icon">🔍</div>
-      <h3>分散信息聚合</h3>
-      <p>自动采集微博、小红书、<strong>投诉平台</strong>等<strong>3+ 公开渠道</strong>的客户声音，统一归档到一张看板，告别多平台手动切换。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <div class="card-icon">⚡</div>
-      <h3>风险提前预警</h3>
-      <p>基于情感分析和关键词命中，自动标记负面舆情与高风险事件。投诉类、热搜类舆情优先置顶，不让火苗变成大火。</p>
-    </div>
-    <div class="card animate animate-d4">
-      <div class="card-icon">📊</div>
-      <h3>数据驱动决策</h3>
-      <p><strong>30 天趋势</strong>、热词云、渠道分布、产品分布等多维统计，帮助业务团队量化活动口碑，精准定位改进方向。</p>
-    </div>
-    <div class="card animate animate-d5">
-      <div class="card-icon">🤖</div>
-      <h3>全自动运行</h3>
-      <p>每日 07:00 + 12:00 两次自动采集、去重、分析、生成报告并推送 GitHub。零人工干预，业务同学打开网页即看。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════
-     核心能力
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="capabilities">
-  <div class="section-label animate">核心能力</div>
-  <h2 class="animate animate-d1">从采集到呈现，全流程覆盖</h2>
-  <p class="section-desc animate animate-d2">
-    四大环节闭环运作：智能采集 → 语义分析 → 风险分级 → 可视化呈现。
-  </p>
-
-  <div class="flow-container animate animate-d3">
-    <div class="flow-step">
-      <div class="num">1</div>
-      <h4>智能采集</h4>
-      <p>微博 MCP / 小红书 MCP<br>黑猫投诉 / 论坛爬虫</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step">
-      <div class="num">2</div>
-      <h4>语义分析</h4>
-      <p>情感倾向判定<br>关键词提取 / 产品归类</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step">
-      <div class="num">3</div>
-      <h4>风险分级</h4>
-      <p>高 / 中 / 低 三级<br>负面 + 发酵度 + 来源权重</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step">
-      <div class="num">4</div>
-      <h4>可视化呈现</h4>
-      <p>日报 Markdown / 看板页面<br>JSON API 供下游调用</p>
-    </div>
-  </div>
-
-  <div class="card-grid" style="margin-top: 40px;">
-    <div class="card animate">
-      <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">🎯</div>
-      <h3>精准去重</h3>
-      <p>三层去重机制：URL 去重 → 标题相似度去重 → 跨天历史去重。同一舆情在微博、小红书被多次提及时自动合并，避免重复计数。</p>
-    </div>
-    <div class="card animate animate-d2">
-      <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">🔥</div>
-      <h3>热度计算</h3>
-      <p>综合点赞、评论、转发/收藏量计算热度分，高热度负面舆情自动上浮。默认排序：负面优先 → 热度降序 → 时间倒序。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">🧹</div>
-      <h3>噪音过滤</h3>
-      <p>自动过滤互助帖、广告推广、非工行内容、员工内部吐槽等低价值信息，确保看板只呈现与客户相关的有效舆情。</p>
-    </div>
-    <div class="card animate animate-d4">
-      <div class="card-icon" style="background: rgba(239,102,120,0.08); border-color: rgba(239,102,120,0.15);">⚡</div>
-      <h3>"需关注"弹窗</h3>
-      <p>点击"需关注"汇总卡片，可直接弹出负面舆情完整列表，无需在全部记录中手动翻找，快速定位风险。</p>
-    </div>
-    <div class="card animate animate-d5">
-      <div class="card-icon" style="background: rgba(87,179,255,0.08); border-color: rgba(87,179,255,0.15);">📈</div>
-      <h3>热词趋势</h3>
-      <p>点击热词云中的任意关键词，即可查看该词在<strong>近30天内的出现频率变化趋势</strong>。直观感知客户关注点的演进，比如「i豆」「立减金」等关键词的波动。</p>
-    </div>
-    <div class="card animate animate-d6">
-      <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">📋</div>
-      <h3>每日简报</h3>
-      <p>看板顶部自动生成当日舆情摘要：采集了多少条、新增多少、负面几条、主要热词是什么。一眼掌握当日舆情全貌。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════
-     覆盖范围
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="coverage">
-  <div class="section-label animate">覆盖范围</div>
-  <h2 class="animate animate-d1">监测什么、覆盖哪里</h2>
-  <p class="section-desc animate animate-d2">
-    聚焦工行运营活动相关的客户声音，覆盖主流社交平台与投诉渠道。
-  </p>
-
-  <table class="coverage-table animate animate-d3">
-    <thead>
-      <tr>
-        <th>渠道</th>
-        <th>数据来源</th>
-        <th>采集方式</th>
-        <th>更新频率</th>
-        <th>状态</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="tag tag-blue">微博</span></td>
-        <td>微博搜索 API（访客模式）</td>
-        <td>MCP Server 实时搜索</td>
-        <td>每日 07:00 + 12:00</td>
-        <td><span class="tag tag-green">运行中</span></td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-red">小红书</span></td>
-        <td>小红书搜索 + GitHub 数据仓库</td>
-        <td>MCP Adapter / 定时拉取</td>
-        <td>每日 07:00 + 12:00</td>
-        <td><span class="tag tag-green">运行中</span></td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-orange">黑猫投诉</span></td>
-        <td>黑猫投诉平台</td>
-        <td>网页爬虫 + 人工录入</td>
-        <td>按需更新</td>
-        <td><span class="tag tag-green">运行中</span></td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-purple">论坛/社区</span></td>
-        <td>什么值得买、赚客吧、飞客等</td>
-        <td>网页爬虫 + 人工录入</td>
-        <td>按需更新</td>
-        <td><span class="tag tag-green">运行中</span></td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-blue">微博热搜</span></td>
-        <td>微博热搜榜单</td>
-        <td>API 定时抓取</td>
-        <td>每日 08:30 自动</td>
-        <td><span class="tag tag-green">运行中</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div style="margin-top: 32px;">
-    <h3 style="font-size: 16px; margin-bottom: 12px;">监测关键词（示例）</h3>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      <span class="tag tag-blue">升金有礼</span>
-      <span class="tag tag-blue">工银 i豆</span>
-      <span class="tag tag-blue">i豆乐园</span>
-      <span class="tag tag-blue">心动有礼</span>
-      <span class="tag tag-blue">立减金</span>
-      <span class="tag tag-orange">工行投诉</span>
-      <span class="tag tag-orange">工行维权</span>
-      <span class="tag tag-orange">工行活动 坑</span>
-      <span class="tag tag-orange">谢谢参与</span>
-      <span class="tag tag-orange">积分清零</span>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════
-     看板预览
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="preview">
-  <div class="section-label animate">看板预览</div>
-  <h2 class="animate animate-d1">打开网页，一目了然</h2>
-  <p class="section-desc animate animate-d2">
-    深色金融终端风格设计，适配大屏展示与日常办公场景。支持按来源、情感、风险等级、产品类别多维筛选。
-  </p>
-
-  <div class="preview-frame animate animate-d3">
-    <div class="preview-header">
-      <div class="preview-dot red"></div>
-      <div class="preview-dot yellow"></div>
-      <div class="preview-dot green"></div>
-      <span class="preview-title">运营活动客户舆情雷达 — 2026-05-19</span>
-    </div>
-    <div class="preview-body">
-      <div class="preview-card">
-        <div class="label">舆情总数</div>
-        <div class="value">78</div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-value">3+</div>
+        <div class="stat-label">监测渠道</div>
       </div>
-      <div class="preview-card">
-        <div class="label">24h 内新增</div>
-        <div class="value accent">3</div>
+      <div class="stat-card">
+        <div class="stat-value">30天</div>
+        <div class="stat-label">趋势回溯</div>
       </div>
-      <div class="preview-card">
-        <div class="label">负面舆情</div>
-        <div class="value good">0</div>
+      <div class="stat-card">
+        <div class="stat-value">2次</div>
+        <div class="stat-label">每日更新</div>
       </div>
-      <div class="preview-card" style="grid-column: 1 / -1;">
-        <div class="label">30 天趋势</div>
-        <div class="preview-chart">
-          <div class="chart-bar" style="height: 15%;" data-label="05-13"></div>
-          <div class="chart-bar" style="height: 5%;" data-label="05-14"></div>
-          <div class="chart-bar" style="height: 40%;" data-label="05-15"></div>
-          <div class="chart-bar" style="height: 20%;" data-label="05-16"></div>
-          <div class="chart-bar" style="height: 10%;" data-label="05-17"></div>
-          <div class="chart-bar" style="height: 5%;" data-label="05-18"></div>
-          <div class="chart-bar" style="height: 35%;" data-label="05-19"></div>
+      <div class="stat-card">
+        <div class="stat-value">0</div>
+        <div class="stat-label">人工巡查成本</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     第二屏：解决什么问题
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section>
+  <div class="container">
+    <h2>能解决什么问题</h2>
+    <p>运营活动上线后，客户反馈分散在各个平台，人工巡查成本高、反应慢。本项目帮你自动搞定。</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon" style="background: rgba(87,179,255,0.08);">🤔</div>
+        <h3>不知道客户在说什么</h3>
+        <p>活动上线后，微博、小红书、投诉平台每天都有大量客户讨论。人工逐个平台看，费时费力还看不全。</p>
+        <p style="margin-top:8px;"><strong style="color:var(--green);">→ 每天自动采集汇总到一张看板</strong></p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(239,102,120,0.08);">😠</div>
+        <h3>负面帖子散落各处</h3>
+        <p>负面舆情往往先在小众平台发酵，等到上了热搜才发现，已经错过了最佳处理时机。</p>
+        <p style="margin-top:8px;"><strong style="color:var(--green);">→ 负面自动标记，一眼看到风险</strong></p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(246,184,75,0.08);">📈</div>
+        <h3>缺乏数据支撑决策</h3>
+        <p>业务部门想知道"这次活动口碑怎么样"，只能凭感觉回答，缺少量化的数据支撑。</p>
+        <p style="margin-top:8px;"><strong style="color:var(--green);">→ 30天趋势 + 情感分析 + 热词统计</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     第三屏：打开看板能看到什么
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section>
+  <div class="container">
+    <h2>打开看板能看到什么</h2>
+    <p>深色金融终端风格，数据一目了然。支持 PC、平板、手机访问。</p>
+
+    <div class="preview-frame">
+      <div class="preview-header">
+        <div class="preview-dot red"></div>
+        <div class="preview-dot yellow"></div>
+        <div class="preview-dot green"></div>
+        <span class="preview-title">运营活动客户舆情雷达 — 2026-05-20</span>
+      </div>
+      <div class="preview-body">
+        <div class="preview-card">
+          <div class="label">📋 舆情总数</div>
+          <div class="value">78</div>
+        </div>
+        <div class="preview-card">
+          <div class="label">➕ 今日新增</div>
+          <div class="value accent">12</div>
+        </div>
+        <div class="preview-card">
+          <div class="label">😠 负面舆情</div>
+          <div class="value bad">3</div>
+        </div>
+        <div class="preview-card" style="grid-column: 1 / -1;">
+          <div class="label">📈 30天趋势</div>
+          <div class="preview-chart">
+            <div class="chart-bar" style="height: 20%;"></div>
+            <div class="chart-bar" style="height: 35%;"></div>
+            <div class="chart-bar" style="height: 15%;"></div>
+            <div class="chart-bar" style="height: 60%;"></div>
+            <div class="chart-bar" style="height: 45%;"></div>
+            <div class="chart-bar" style="height: 80%;"></div>
+            <div class="chart-bar" style="height: 55%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top: 28px;">
+      <div class="card">
+        <div class="card-icon" style="background: rgba(87,179,255,0.08);">📊</div>
+        <h3>数字卡片区</h3>
+        <p>顶部 4 张数字卡片：舆情总数、今日新增、负面数量、需关注数量。快速了解今日概况。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(55,196,134,0.08);">📈</div>
+        <h3>趋势图表区</h3>
+        <p>30 天舆情走势折线图、情感分布饼图、渠道来源柱状图。量化口碑变化趋势。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(246,184,75,0.08);">🔥</div>
+        <h3>热词云</h3>
+        <p>今天客户讨论最多的关键词，字号越大表示出现频率越高。点击任意词可查看 30 天趋势。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(167,139,250,0.08);">📋</div>
+        <h3>帖子列表</h3>
+        <p>每条舆情完整展示：标题、内容、来源、情感、热度、互动数据。点击展开查看详情和原文链接。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     第四屏：具体怎么用（核心）
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="how-to-use">
+  <div class="container">
+    <h2>具体怎么用</h2>
+    <p>不需要培训，打开网页按这 6 步走即可。</p>
+
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>打开看板，看今日简报</h3>
+          <p>访问看板链接，页面自动加载今日数据。顶部数字卡片显示：今天采了多少条、新增几条、负面几条。一眼判断今天舆情是否平静。</p>
+          <span class="step-tip">💡 每天早上打开看板先看这 4 个数字，30 秒掌握全局</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>看热词云，了解讨论焦点</h3>
+          <p>热词云展示今天客户讨论最多的关键词。如果"i豆""立减金""谢谢参与"字号特别大，说明这些是当前热点话题。</p>
+          <span class="step-tip">💡 点击热词云中的任意词，可查看该词近 30 天的出现频率变化趋势</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>筛选负面，重点关注风险</h3>
+          <p>顶部筛选栏支持「只看负面」「只看高风险」快速切换。负面帖子独立展示，按热度排序，高互动量的负面舆情优先置顶。</p>
+          <span class="step-tip">💡 点击"需关注"数字卡片，可直接弹出负面舆情完整列表</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>点击帖子，查看详情和原文</h3>
+          <p>帖子列表中点击任意舆情，展开详情面板：完整内容、原文链接（可直接跳转微博/小红书查看）、互动数据（点赞/评论/转发）。判断是否需要进一步跟进。</p>
+          <span class="step-tip">💡 优先关注「来源：黑猫投诉」+「情感：负面」的帖子，通常涉及具体客诉</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>组合筛选，定位关心的舆情</h3>
+          <p>支持多维度组合筛选：来源（微博/小红书/投诉平台）+ 情感（正面/中性/负面）+ 风险等级（需关注/正常）+ 时间范围（24h内/3天内/7天内/30天内）。</p>
+          <span class="step-tip">💡 例如：只看「微博」+「负面」+「24h内」的帖子，了解最新风险动态</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <h3>导出 CSV，同步给相关同事</h3>
+          <p>表格区点击「导出 CSV」按钮，将当前筛选结果导出为 Excel 可打开的表格文件。包含日期、来源、标题、内容、情感、热度、链接等字段，方便内部流转与逐条跟进处理。</p>
+          <span class="step-tip">💡 建议每周五导出本周全部负面舆情，发给相关活动负责人统一跟进</span>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="card-grid" style="margin-top: 32px;">
-    <div class="card animate">
-      <h3>📍 风险分级</h3>
-      <p>高风险（红色）自动置顶：投诉平台负面 + 微博热搜命中。<br>中风险（橙色）：普通负面 + 互动量较高。<br>低风险（绿色）：中性/正面内容。</p>
-    </div>
-    <div class="card animate animate-d2">
-      <h3>🎚️ 多维筛选</h3>
-      <p>支持按「来源渠道」「情感倾向」「风险等级」「产品类别」「时效性」组合筛选，快速定位关心的舆情类型。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <h3>📥 一键导出</h3>
-      <p>支持将当前筛选结果导出为 CSV 表格，方便进一步分析或同步给相关团队跟进处理。</p>
-    </div>
-  </div>
 </section>
 
 <!-- ════════════════════════════════════════════════
-     成果数据
+     第五屏：覆盖渠道
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="results">
-  <div class="section-label animate">成果数据</div>
-  <h2 class="animate animate-d1">项目运行至今，我们发现了什么</h2>
-  <p class="section-desc animate animate-d2">
-    2025 年 3 月上线以来，累计监测运营活动相关舆情 2,000+ 条，识别负面风险事件 30+ 起，帮助业务团队提前介入客户投诉与活动规则优化。
-  </p>
+<section>
+  <div class="container">
+    <h2>覆盖哪些渠道</h2>
+    <p>聚焦工行运营活动相关的客户声音，当前覆盖以下平台。</p>
 
-  <div class="card-grid">
-    <div class="card animate">
-      <div style="font-size: 36px; font-weight: 700; color: var(--accent); margin-bottom: 8px;">2,000+</div>
-      <h3>累计监测舆情</h3>
-      <p>覆盖微博、小红书、投诉平台等渠道，涵盖升金有礼、i豆、心动有礼等全部重点活动。</p>
-    </div>
-    <div class="card animate animate-d2">
-      <div style="font-size: 36px; font-weight: 700; color: var(--bad); margin-bottom: 8px;">30+</div>
-      <h3>负面风险识别</h3>
-      <p>提前发现「抽奖空奖」「奖励缩水」「积分清零」等客户集中反馈，推动活动规则调整。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <div style="font-size: 36px; font-weight: 700; color: var(--green); margin-bottom: 8px;">0</div>
-      <h3>人工巡查成本</h3>
-      <p>全自动采集与分析，业务同学每日只需打开看板即可掌握最新舆情动态，无需人工盯平台。</p>
-    </div>
-  </div>
+    <table class="coverage-table">
+      <thead>
+        <tr>
+          <th>渠道</th>
+          <th>数据类型</th>
+          <th>更新频率</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">微博</span></td>
+          <td>帖子、评论、热搜</td>
+          <td>每日 07:00 + 12:00</td>
+          <td><span class="tag tag-green">运行中</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-red">小红书</span></td>
+          <td>笔记、评论</td>
+          <td>每日 07:00 + 12:00</td>
+          <td><span class="tag tag-green">运行中</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">黑猫投诉</span></td>
+          <td>投诉工单</td>
+          <td>按需更新</td>
+          <td><span class="tag tag-green">运行中</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">论坛/社区</span></td>
+          <td>什么值得买、赚客吧等</td>
+          <td>按需更新</td>
+          <td><span class="tag tag-green">运行中</span></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <div style="margin-top: 48px;">
-    <h3 style="margin-bottom: 16px;">典型风险事件回顾</h3>
-    <div class="timeline animate">
-      <div class="timeline-item done">
-        <div class="timeline-date">2026-03</div>
-        <div class="timeline-title">「升金有礼」奖励标准下调</div>
-        <div class="timeline-desc">客户反馈 3 月活动奖励相比 2 月缩水，什么值得买、赚客吧出现集中讨论。舆情监测及时捕捉到趋势，推动业务部门评估活动力度。</div>
-      </div>
-      <div class="timeline-item done">
-        <div class="timeline-date">2026-03</div>
-        <div class="timeline-title">长辈客户「抽奖空奖」投诉</div>
-        <div class="timeline-desc">黑猫投诉平台出现长辈客户集中投诉：宣传「提升 100 万资产可得 300 元立减金」，实际仅允许抽奖且为空奖。触发高风险告警。</div>
-      </div>
-      <div class="timeline-item done">
-        <div class="timeline-date">2026-04</div>
-        <div class="timeline-title">「谢谢参与」集中吐槽</div>
-        <div class="timeline-desc">微博、小红书出现大量「谢谢参与」截图吐槽，客户对抽奖机制公平性产生质疑。监测到情感从「失望」向「愤怒」迁移。</div>
-      </div>
-      <div class="timeline-item current">
-        <div class="timeline-date">2026-05</div>
-        <div class="timeline-title">i豆兑换体验持续追踪</div>
-        <div class="timeline-desc">当前监测重心转向 i豆兑换、i豆乐园等持续性活动，持续跟踪客户对兑换流程、商品库存、到账时效的反馈。</div>
+    <div style="margin-top: 24px;">
+      <h3 style="font-size: 14px; margin-bottom: 10px;">监测关键词（示例）</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <span class="tag tag-blue">升金有礼</span>
+        <span class="tag tag-blue">工银 i豆</span>
+        <span class="tag tag-blue">i豆乐园</span>
+        <span class="tag tag-blue">心动有礼</span>
+        <span class="tag tag-blue">立减金</span>
+        <span class="tag tag-orange">投诉</span>
+        <span class="tag tag-orange">维权</span>
+        <span class="tag tag-orange">谢谢参与</span>
+        <span class="tag tag-orange">积分清零</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════════
-     使用指南
+     第六屏：数据可靠性说明
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="guide">
-  <div class="section-label animate">使用指南</div>
-  <h2 class="animate animate-d1">如何开始使用</h2>
-  <p class="section-desc animate animate-d2">
-    无需安装、无需登录，打开浏览器即可查看。支持 PC、平板、手机自适应。
-  </p>
+<section>
+  <div class="container">
+    <h2>数据怎么保证可靠</h2>
+    <p>业务方最关心的问题：数据从哪里来？会不会重复？会不会漏掉？</p>
 
-  <div class="card-grid">
-    <div class="card animate">
-      <div class="card-icon" style="background: rgba(87,179,255,0.08); border-color: rgba(87,179,255,0.15);">1️⃣</div>
-      <h3>打开看板</h3>
-      <p>访问 <a href="dashboard.html" style="color: var(--accent);">在线看板</a>，自动加载最新数据。每日 07:00 + 12:00 自动更新，看板右上角显示最后更新时间（北京时间）。启动时会有加载动画提示进度。</p>
-    </div>
-    <div class="card animate animate-d2">
-      <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">2️⃣</div>
-      <h3>筛选关注</h3>
-      <p>顶部筛选栏支持按「来源」「情感」「风险等级」「产品类别」「时效性」组合筛选。例如：只看「微博」+「负面」+「24h内」的舆情。点击"需关注"卡片可直接查看负面舆情列表。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">3️⃣</div>
-      <h3>查看详情</h3>
-      <p>点击任意舆情卡片展开详情，查看完整内容、原文链接、互动数据（点赞/评论/收藏/分享）及情感分析依据。</p>
-    </div>
-    <div class="card animate animate-d4">
-      <div class="card-icon" style="background: rgba(239,102,120,0.08); border-color: rgba(239,102,120,0.15);">4️⃣</div>
-      <h3>热词趋势</h3>
-      <p>点击<strong>热词云</strong>中的任意关键词，弹出该词在近<strong>30天</strong>内的出现频率趋势图。直观感知客户关注热点的变化，如「i豆」「立减金」「谢谢参与」等关键词的波动规律。</p>
-    </div>
-    <div class="card animate animate-d5">
-      <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">5️⃣</div>
-      <h3>导出跟进</h3>
-      <p>筛选出需要跟进的舆情后，点击「导出 CSV」按钮下载表格，包含标题、来源、链接、风险等级等字段，方便同步给客服或运营团队。</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon" style="background: rgba(55,196,134,0.08);">🎯</div>
+        <h3>三层去重机制</h3>
+        <p>同一舆情在微博、小红书被多次提及时，通过 URL 去重 → 标题相似度去重 → 跨天历史去重，自动合并为一条，避免重复计数。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(246,184,75,0.08);">🧹</div>
+        <h3>自动噪音过滤</h3>
+        <p>自动过滤互助帖、广告推广、非工行内容、员工内部吐槽等低价值信息，确保看板只呈现与客户相关的有效舆情。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(87,179,255,0.08);">🤖</div>
+        <h3>情感自动判定</h3>
+        <p>基于关键词匹配 + 情感词典，自动判定每条舆情的情感倾向（正面 / 中性 / 负面）。负面帖子自动标记，优先展示。</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════════
-     技术架构
+     第七屏：下一步计划
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="architecture">
-  <div class="section-label animate">技术架构</div>
-  <h2 class="animate animate-d1">稳定、可扩展的技术底座</h2>
-  <p class="section-desc animate animate-d2">
-    基于 Node.js + 定时任务 + GitHub Pages 构建，零服务器成本，高可用、易维护。
-  </p>
+<section>
+  <div class="container">
+    <h2>下一步优化方向</h2>
+    <p>当前系统已覆盖核心的采集、分析、呈现能力，下一阶段重点从"展示"升级为"洞察"与"闭环"。</p>
 
-  <div class="flow-container animate animate-d3" style="flex-wrap: nowrap; overflow-x: auto;">
-    <div class="flow-step" style="min-width: 140px;">
-      <h4>🌐 数据源</h4>
-      <p>微博 MCP Server<br>小红书 GitHub 仓库<br></p>
+    <div class="roadmap-note">
+      <h4>近期计划（1-2 个月）</h4>
+      <ul>
+        <li><strong>图表联动下钻</strong>：点击情感饼图/来源柱状图/热词云，表格自动过滤对应明细，从"看比例"穿透到"查具体"</li>
+        <li><strong>负面舆情跟踪池</strong>：负面帖子独立汇聚，支持标记处理状态（待跟进/已关注/已解决），生成周度闭环报表</li>
+        <li><strong>竞品对标监测</strong>：同步监测建行、农行、招行同类活动舆情，识别"行业共性"vs"工行特有"问题</li>
+      </ul>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step" style="min-width: 140px;">
-      <h4>⚙️ 采集层</h4>
-      <p>Node.js 脚本<br>定时任务触发<br>MCP Adapter<br>HTTP API</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step" style="min-width: 140px;">
-      <h4>🧠 分析层</h4>
-      <p>去重合并<br>情感推断<br>风险分级<br>热度计算</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step" style="min-width: 140px;">
-      <h4>💾 存储层</h4>
-      <p>JSON 数据文件<br>Markdown 报告<br>GitHub 仓库<br>版本历史</p>
-    </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step" style="min-width: 140px;">
-      <h4>📺 呈现层</h4>
-      <p>GitHub Pages<br>静态 HTML<br>每日更新看板<br>CSV 导出</p>
-    </div>
-  </div>
 
-  <div style="margin-top: 32px; text-align: center; color: var(--text-dim); font-size: 13px;">
-    <p>💡 技术栈：Node.js · JavaScript · GitHub Actions · GitHub Pages · MCP Protocol</p>
-    <p style="margin-top: 8px;">主仓库 <a href="https://github.com/Morning/bank-activities" target="_blank" style="color: var(--accent);">Morning/bank-activities</a> · 看板仓库 <a href="https://github.com/ytz33233/icbc-sentiment-dashboard" target="_blank" style="color: var(--accent);">ytz33233/icbc-sentiment-dashboard</a></p>
-  </div>
-</section>
-
-</div>
-
-<!-- ════════════════════════════════════════════════
-     下一步优化方向
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="roadmap">
-  <div class="section-label animate">下一步优化方向</div>
-  <h2 class="animate animate-d1">当前局限与下一阶段重点</h2>
-  <p class="section-desc animate animate-d2">
-    系统已实现自动化采集、情感分析、多维度呈现等核心能力，但距离成熟的舆情监测平台仍有提升空间。以下为已识别的关键优化方向。
-  </p>
-
-  <div class="card-grid">
-    <div class="card animate">
-      <div class="card-icon" style="background: rgba(157,101,255,0.08); border-color: rgba(157,101,255,0.15);">📊</div>
-      <h3>交互式下钻分析</h3>
-      <p>点击情感饼图、来源柱状图或热词云中的任意区块，表格自动过滤并展示对应明细。从"看比例"一键穿透到"查具体"，告别在全部记录中手动翻找。</p>
-    </div>
-    <div class="card animate animate-d2">
-      <div class="card-icon" style="background: rgba(239,102,120,0.08); border-color: rgba(239,102,120,0.15);">🚨</div>
-      <h3>负面舆情跟踪池</h3>
-      <p>负面舆情独立汇聚视图，支持标记处理状态（待跟进 / 已关注 / 已解决），记录处理人与处理结果。自动生成周度闭环报表，让每条负面舆情都有落地、有回音。</p>
-    </div>
-    <div class="card animate animate-d3">
-      <div class="card-icon" style="background: rgba(87,179,255,0.08); border-color: rgba(87,179,255,0.15);">⚖️</div>
-      <h3>竞品对标监测</h3>
-      <p>同步监测建行、农行、招行同类运营活动（升金 / 积分 / 权益）的客户舆情，生成分行对比看板。快速识别"行业共性问题"与"工行特有问题"，避免盲目整改。</p>
-    </div>
-    <div class="card animate animate-d4">
-      <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">🤖</div>
-      <h3>AI 智能日报生成</h3>
-      <p>基于 LLM 自动生成结构化日报：今日核心争议、情绪走势、新出现风险点、建议关注动作。管理层 30 秒读完，无需逐条浏览。</p>
-    </div>
-    <div class="card animate animate-d5">
-      <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">📡</div>
-      <h3>分级告警与主动推送</h3>
-      <p>高风险 / 负面激增时自动推送至飞书 / 企业微信。分级机制：一般（日报汇总）、严重（2 小时内推送）、紧急（实时推送 + @相关人）。</p>
-    </div>
-    <div class="card animate animate-d6">
-      <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">📱</div>
-      <h3>多渠道覆盖扩展</h3>
-      <p>当前仅覆盖微博 + 小红书。计划扩展黑猫投诉（投诉核心来源）、抖音评论、应用商店评价等渠道，消除数据盲区。</p>
+    <div class="roadmap-note" style="margin-top: 16px;">
+      <h4>中期计划（3-6 个月）</h4>
+      <ul>
+        <li><strong>AI 智能日报</strong>：基于 LLM 自动生成结构化日报，管理层 30 秒读完当日舆情要点</li>
+        <li><strong>分级告警推送</strong>：高风险/负面激增时自动推送至飞书/企业微信，从"人找数据"变成"数据找人"</li>
+        <li><strong>多渠道扩展</strong>：补充黑猫投诉 API、抖音评论、应用商店评价等渠道，消除数据盲区</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════════
-     FOOTER
+     Footer
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <footer>
   <p>运营活动客户舆情雷达 · 自动化监测项目</p>
   <p style="margin-top: 8px;">
-    <a href="dashboard.html">访问舆情看板</a> ·
+    <a href="dashboard.html">📊 打开看板</a> ·
     <a href="https://github.com/Morning/bank-activities" target="_blank">主仓库</a> ·
     <a href="https://github.com/ytz33233/icbc-sentiment-dashboard" target="_blank">看板仓库</a>
   </p>
-  <p style="margin-top: 16px; opacity: 0.6;">© 2026 · 持续迭代中</p>
+  <p style="margin-top: 16px; opacity: 0.6;">© 2026 · 每日 07:00 + 12:00 自动更新</p>
 </footer>
-
-<!-- ── Intersection Observer for scroll animations ── -->
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.animate').forEach(el => {
-  el.style.opacity = '0';
-  observer.observe(el);
-});
-</script>
 
 </body>
 </html>
