@@ -327,33 +327,10 @@ footer a { color: var(--accent); text-decoration: none; }
         <div class="preview-dot red"></div>
         <div class="preview-dot yellow"></div>
         <div class="preview-dot green"></div>
-        <span class="preview-title">运营活动客户舆情雷达 — 2026-05-20</span>
+        <span class="preview-title">运营活动客户舆情雷达 — 2026-05-21 真实数据</span>
       </div>
-      <div class="preview-body">
-        <div class="preview-card">
-          <div class="label">📋 舆情总数</div>
-          <div class="value">78</div>
-        </div>
-        <div class="preview-card">
-          <div class="label">➕ 今日新增</div>
-          <div class="value accent">12</div>
-        </div>
-        <div class="preview-card">
-          <div class="label">😠 负面舆情</div>
-          <div class="value bad">3</div>
-        </div>
-        <div class="preview-card" style="grid-column: 1 / -1;">
-          <div class="label">📈 30天趋势</div>
-          <div class="preview-chart">
-            <div class="chart-bar" style="height: 20%;"></div>
-            <div class="chart-bar" style="height: 35%;"></div>
-            <div class="chart-bar" style="height: 15%;"></div>
-            <div class="chart-bar" style="height: 60%;"></div>
-            <div class="chart-bar" style="height: 45%;"></div>
-            <div class="chart-bar" style="height: 80%;"></div>
-            <div class="chart-bar" style="height: 55%;"></div>
-          </div>
-        </div>
+      <div style="line-height:0;">
+        <img src="images/dashboard-kpi.png" alt="看板顶部数字卡片与每日简报" style="width:100%; display:block;">
       </div>
     </div>
 
@@ -361,22 +338,34 @@ footer a { color: var(--accent); text-decoration: none; }
       <div class="card">
         <div class="card-icon" style="background: rgba(87,179,255,0.08);">📊</div>
         <h3>数字卡片区</h3>
-        <p>顶部 4 张数字卡片：舆情总数、今日新增、负面数量、需关注数量。快速了解今日概况。</p>
+        <p>顶部数字卡片：舆情总量、24H内新增、需关注数量。一眼判断今天舆情是否平静。</p>
+        <div style="margin-top:12px; border-radius:8px; overflow:hidden; border:1px solid var(--border);">
+          <img src="images/dashboard-kpi.png" alt="数字卡片" style="width:100%; display:block;">
+        </div>
       </div>
       <div class="card">
         <div class="card-icon" style="background: rgba(55,196,134,0.08);">📈</div>
         <h3>趋势图表区</h3>
-        <p>30 天舆情走势折线图、情感分布饼图、渠道来源柱状图。量化口碑变化趋势。</p>
+        <p>30 天舆情走势、情感分布饼图、渠道来源柱状图。量化口碑变化趋势。</p>
+        <div style="margin-top:12px; border-radius:8px; overflow:hidden; border:1px solid var(--border);">
+          <img src="images/dashboard-charts.png" alt="趋势图表" style="width:100%; display:block;">
+        </div>
       </div>
       <div class="card">
         <div class="card-icon" style="background: rgba(246,184,75,0.08);">🔥</div>
         <h3>热词云</h3>
-        <p>今天客户讨论最多的关键词，字号越大表示出现频率越高。点击任意词可查看 30 天趋势。</p>
+        <p>今天客户讨论最多的关键词，字号越大频率越高。点击可查看 30 天趋势。</p>
+        <div style="margin-top:12px; border-radius:8px; overflow:hidden; border:1px solid var(--border);">
+          <img src="images/dashboard-wordcloud.png" alt="热词云" style="width:100%; display:block;">
+        </div>
       </div>
       <div class="card">
         <div class="card-icon" style="background: rgba(167,139,250,0.08);">📋</div>
         <h3>帖子列表</h3>
-        <p>每条舆情完整展示：标题、内容、来源、情感、热度、互动数据。点击展开查看详情和原文链接。</p>
+        <p>每条舆情展示标题、来源、情感、热度、互动数据。点击展开详情和原文链接。</p>
+        <div style="margin-top:12px; border-radius:8px; overflow:hidden; border:1px solid var(--border);">
+          <img src="images/dashboard-table.png" alt="帖子列表" style="width:100%; display:block;">
+        </div>
       </div>
     </div>
   </div>
