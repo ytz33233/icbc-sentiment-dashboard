@@ -613,23 +613,13 @@ footer a { color: var(--accent); text-decoration: none; }
       </div>
       <div class="card">
         <div class="card-icon" style="background: rgba(167,139,250,0.08);">⚡</div>
-        <h3>采集稳定性依赖接口</h3>
-        <p>微博采用访客模式采集，受平台反爬策略影响，可能出现短期无数据返回（如今天下午批次微博返回 0 条）。小红书依赖上游仓库更新，非直接 API 抓取。</p>
+        <h3>微博、小红书易受到反爬机制影响</h3>
+        <p>微博采用访客模式采集，小红书依赖上游数据仓库，两者均可能因平台反爬策略调整而出现数据波动或短期无数据返回，采集稳定性不如官方 API。</p>
       </div>
       <div class="card">
         <div class="card-icon" style="background: rgba(87,179,255,0.08);">🎯</div>
         <h3>情感判定偏规则化</h3>
         <p>当前情感分析基于<strong>关键词匹配 + 情感词典</strong>，对讽刺、反语、语境依赖型表达识别能力弱。"谢谢参与"在抽奖场景可能是正面，在抱怨场景可能是负面，规则难以覆盖。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon" style="background: rgba(55,196,134,0.08);">📊</div>
-        <h3>30 天数据留存有限</h3>
-        <p>看板默认仅展示 <strong>近 30 天</strong> 的舆情数据。如需做季度复盘、年度趋势对比，历史数据已归档在 GitHub 仓库，但看板端无法直接回溯。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon" style="background: rgba(246,184,75,0.08);">🔒</div>
-        <h3>无权限与分级管理</h3>
-        <p>当前看板为公开静态页面，<strong>无登录、无权限控制</strong>。任何人拿到链接即可查看全部数据，敏感舆情（如投诉、负面）缺乏分级可见机制。</p>
       </div>
     </div>
   </div>
