@@ -593,6 +593,49 @@ footer a { color: var(--accent); text-decoration: none; }
 </section>
 
 <!-- ════════════════════════════════════════════════
+     第六屏-B：当前系统局限性
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section>
+  <div class="container">
+    <h2>当前系统局限性</h2>
+    <p>为了在使用中保持预期一致，以下是当前系统仍需持续优化的几个已知局限。</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon" style="background: rgba(239,102,120,0.08);">⏱️</div>
+        <h3>采集频率有限</h3>
+        <p>目前每日仅采集 <strong>2 次</strong>（09:00、12:00），非实时监测。舆情在两次采集之间出现、发酵、平息均可能错过，做不到分钟级预警。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(255,152,0,0.08);">🔍</div>
+        <h3>非全量覆盖</h3>
+        <p>当前仅覆盖 <strong>微博、小红书、网页</strong> 三个渠道。微信公众号、抖音短视频、黑猫投诉、应用商店评论等常见客户发声渠道尚未接入，存在数据盲区。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(167,139,250,0.08);">⚡</div>
+        <h3>采集稳定性依赖接口</h3>
+        <p>微博采用访客模式采集，受平台反爬策略影响，可能出现短期无数据返回（如今天下午批次微博返回 0 条）。小红书依赖上游仓库更新，非直接 API 抓取。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(87,179,255,0.08);">🎯</div>
+        <h3>情感判定偏规则化</h3>
+        <p>当前情感分析基于<strong>关键词匹配 + 情感词典</strong>，对讽刺、反语、语境依赖型表达识别能力弱。"谢谢参与"在抽奖场景可能是正面，在抱怨场景可能是负面，规则难以覆盖。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(55,196,134,0.08);">📊</div>
+        <h3>30 天数据留存有限</h3>
+        <p>看板默认仅展示 <strong>近 30 天</strong> 的舆情数据。如需做季度复盘、年度趋势对比，历史数据已归档在 GitHub 仓库，但看板端无法直接回溯。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background: rgba(246,184,75,0.08);">🔒</div>
+        <h3>无权限与分级管理</h3>
+        <p>当前看板为公开静态页面，<strong>无登录、无权限控制</strong>。任何人拿到链接即可查看全部数据，敏感舆情（如投诉、负面）缺乏分级可见机制。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
      第七屏：智能分析能力全景（卡片式）
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section>
