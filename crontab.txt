@@ -1,2 +1,3 @@
-0 7 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh morning >> /tmp/sentiment-morning.log 2>&1
-0 12 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh afternoon >> /tmp/sentiment-afternoon.log 2>&1
+# 采集时间对齐数据源更新节奏：小红书仓库 21:00 更新，上午批次推迟到 09:00
+0 9 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh morning >> /tmp/sentiment-morning.log 2>&1
+0 15 * * * bash /root/.openclaw/workspace/sentiment_monitor/scripts/run-daily-sentiment.sh afternoon >> /tmp/sentiment-afternoon.log 2>&1

@@ -59,6 +59,12 @@ function parseDateFromText(text) {
     // YYYY年
     m = t.match(/(\d{4})年/);
     if (m) return `${m[1]}-01-01`;
+    // 微博/黑猫投诉 RFC 2822 格式：Wed Mar 05 14:03:30 +0800 2025
+    const d = new Date(t);
+    if (!isNaN(d.getTime()) && /\d{4}/.test(t)) {
+        // 用 UTC 日期避免时区漂移
+        return d.toISOString().slice(0, 10);
+    }
     return null;
 }
 
