@@ -234,6 +234,20 @@ p { color: var(--text-muted); }
   cursor: pointer;
 }
 
+.status-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 500; margin-bottom: 10px;
+}
+.status-done {
+  background: rgba(55,196,134,0.1); color: var(--green); border: 1px solid rgba(55,196,134,0.2);
+}
+.status-plan {
+  background: rgba(87,179,255,0.1); color: var(--accent); border: 1px solid rgba(87,179,255,0.2);
+}
+.status-future {
+  background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2);
+}
+
 /* ── Table ── */
 .coverage-table {
   width: 100%; border-collapse: collapse; margin-top: 20px;
@@ -582,38 +596,77 @@ footer a { color: var(--accent); text-decoration: none; }
 </section>
 
 <!-- ════════════════════════════════════════════════
-     第七屏：下一步计划
+     第七屏：智能分析能力全景（卡片式）
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section>
   <div class="container">
-    <h2>下一步优化方向</h2>
-    <p>当前系统已覆盖核心的采集、分析、呈现能力，下一阶段重点从"展示"升级为"洞察"与"闭环"。</p>
+    <h2>智能分析能力全景</h2>
+    <p>当前已实现舆情监测的基础分析能力，下一阶段将逐步补齐高阶智能分析模块。</p>
 
-    <div class="roadmap-note">
-      <h4>近期计划（1-2 个月）</h4>
-      <ul>
-        <li><strong>热点聚类（舆情事件化）</strong>：将讨论同一件事的帖子自动聚合为一个舆情事件，如"i豆兑换不到账"可能涉及 5 条帖子。不用逐条翻，直接看事件全貌</li>
-        <li><strong>传播分析</strong>：追踪首发来源、扩散路径、转载层级，识别关键传播账号。判断舆情是自发讨论还是大 V 带动，评估发酵风险</li>
-        <li><strong>画像分析</strong>：识别发布账号属性（KOL / 普通用户 / 媒体号）、粉丝量级、账号影响力。大 V 发的负面帖应优先处理</li>
-      </ul>
+    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--green);">✅ 已实现（3项）</h3>
+    <div class="card-grid">
+      <div class="card">
+        <span class="status-tag status-done">已上线</span>
+        <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">😊</div>
+        <h3>情感分析</h3>
+        <p>基于关键词匹配 + 情感词典，自动判定每条舆情的正面 / 中性 / 负面。负面帖子自动标记红色，优先置顶展示。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-done">已上线</span>
+        <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">🔥</div>
+        <h3>热度分析</h3>
+        <p>综合点赞、评论、转发、收藏量计算热度分。高热度负面舆情自动上浮，确保高热风险不被淹没。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-done">已上线</span>
+        <div class="card-icon" style="background: rgba(255,152,0,0.08); border-color: rgba(255,152,0,0.15);">☁️</div>
+        <h3>词云 & 热词提取</h3>
+        <p>自动提取高频关键词，字号越大频率越高。点击任意词可查看近 30 天的出现频率变化趋势，感知热点演进。</p>
+      </div>
     </div>
 
-    <div class="roadmap-note" style="margin-top: 16px;">
-      <h4>已实现的基础能力</h4>
-      <ul>
-        <li><strong>情感分析</strong>：基于关键词匹配 + 情感词典，自动判定正面 / 中性 / 负面。负面帖子自动标记，优先展示</li>
-        <li><strong>热度分析</strong>：综合点赞、评论、转发、收藏量计算热度分，高热度负面舆情自动上浮</li>
-        <li><strong>词云 & 热词提取</strong>：自动提取高频关键词，字号越大频率越高。点击任意词可查看近 30 天趋势变化</li>
-      </ul>
+    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--accent);">📋 近期规划（1-2 个月 · 3项）</h3>
+    <div class="card-grid">
+      <div class="card">
+        <span class="status-tag status-plan">规划中</span>
+        <div class="card-icon" style="background: rgba(87,179,255,0.08); border-color: rgba(87,179,255,0.15);">📦</div>
+        <h3>热点聚类（舆情事件化）</h3>
+        <p>将讨论同一件事的帖子自动聚合为一个舆情事件。如"i豆兑换不到账"涉及 5 条帖子，不用逐条翻，直接看事件全貌和发酵趋势。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-plan">规划中</span>
+        <div class="card-icon" style="background: rgba(239,102,120,0.08); border-color: rgba(239,102,120,0.15);">📡</div>
+        <h3>传播分析</h3>
+        <p>追踪首发来源、扩散路径、转载层级，识别关键传播账号。判断舆情是自发讨论还是大 V 带动，评估发酵风险等级。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-plan">规划中</span>
+        <div class="card-icon" style="background: rgba(157,101,255,0.08); border-color: rgba(157,101,255,0.15);">👤</div>
+        <h3>画像分析</h3>
+        <p>识别发布账号属性（KOL / 普通用户 / 媒体号）、粉丝量级、账号影响力。大 V 发的负面帖应优先处理，普通吐槽可批量跟进。</p>
+      </div>
     </div>
 
-    <div class="roadmap-note" style="margin-top: 16px;">
-      <h4>中期计划（3-6 个月）</h4>
-      <ul>
-        <li><strong>AI 智能日报</strong>：基于 LLM 自动生成结构化日报，管理层 30 秒读完当日舆情要点</li>
-        <li><strong>分级告警推送</strong>：高风险/负面激增时自动推送至飞书/企业微信，从"人找数据"变成"数据找人"</li>
-        <li><strong>多渠道扩展</strong>：补充黑猫投诉 API、抖音评论、应用商店评价等渠道，消除数据盲区</li>
-      </ul>
+    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--purple);">🔮 中期规划（3-6 个月 · 3项）</h3>
+    <div class="card-grid">
+      <div class="card">
+        <span class="status-tag status-future">远期</span>
+        <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">🤖</div>
+        <h3>AI 智能日报</h3>
+        <p>基于 LLM 自动生成结构化日报：今日核心争议、情绪走势、新出现风险点、建议关注动作。管理层 30 秒读完。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-future">远期</span>
+        <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">🚨</div>
+        <h3>分级告警推送</h3>
+        <p>高风险 / 负面激增时自动推送至飞书/企业微信。分级：一般（日报汇总）、严重（2小时内推送）、紧急（实时推送）。</p>
+      </div>
+      <div class="card">
+        <span class="status-tag status-future">远期</span>
+        <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">📱</div>
+        <h3>多渠道覆盖扩展</h3>
+        <p>补充黑猫投诉 API、抖音评论、应用商店评价等渠道。当前仅覆盖微博+小红书，存在明显数据盲区。</p>
+      </div>
     </div>
   </div>
 </section>
