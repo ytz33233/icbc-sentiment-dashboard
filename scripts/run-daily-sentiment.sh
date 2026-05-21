@@ -20,7 +20,7 @@ echo "========================================"
 
 # 1. 检查微博 MCP Adapter 是否运行
 echo ""
-echo "🔍 [1/6] 检查微博 MCP Adapter..."
+echo "🔍 [1/7] 检查微博 MCP Adapter..."
 if ! curl -s http://127.0.0.1:4201/health > /dev/null 2>&1; then
     echo "⚠️ Adapter 未运行，启动中..."
     cd "$WORKSPACE/skills/xiaohongshu-mcp" && nohup node weibo-mcp-adapter.js >> /tmp/weibo_adapter.log 2>&1 &
@@ -32,28 +32,33 @@ fi
 
 # 2. 微博采集
 echo ""
-echo "🔍 [2/6] 微博舆情采集..."
+echo "🔍 [2/7] 微博舆情采集..."
 cd "$SCRIPTS"
 node fetch-weibo-mcp.js "$DATE"
 
 # 3. 小红书采集
 echo ""
-echo "🔍 [3/6] 小红书舆情采集..."
+echo "🔍 [3/7] 小红书舆情采集..."
 node fetch-xhs-repo.js "$DATE"
 
 # 4. 生成看板数据
 echo ""
-echo "📊 [4/6] 生成看板数据..."
+echo "📊 [4/7] 生成看板数据..."
 node generate-dashboard-data.js "$DATE"
 
-# 5. 更新 fallback（看板内嵌数据）
+# 5. LLM 情感增强（混合策略）
 echo ""
-echo "📊 [5/6] 更新 fallback 数据..."
+echo "🧠 [5/7] LLM 情感增强..."
+node llm-sentiment-enhance.js "$DATE"
+
+# 6. 更新 fallback（看板内嵌数据）
+echo ""
+echo "📊 [6/7] 更新 fallback 数据..."
 node update-fallback.js "$DATE"
 
-# 6. 推送到 GitHub
+# 7. 推送到 GitHub
 echo ""
-echo "🚀 [6/6] 推送到 GitHub..."
+echo "🚀 [7/7] 推送到 GitHub..."
 bash "$SCRIPTS/auto-push.sh" "$DATE" "$BATCH"
 
 echo ""
