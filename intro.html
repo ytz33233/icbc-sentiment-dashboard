@@ -244,9 +244,6 @@ p { color: var(--text-muted); }
 .status-plan {
   background: rgba(87,179,255,0.1); color: var(--accent); border: 1px solid rgba(87,179,255,0.2);
 }
-.status-future {
-  background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.2);
-}
 
 /* ── Table ── */
 .coverage-table {
@@ -625,7 +622,7 @@ footer a { color: var(--accent); text-decoration: none; }
       </div>
     </div>
 
-    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--accent);">📋 近期规划（1-2 个月 · 3项）</h3>
+    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--accent);">📋 规划中（3项）</h3>
     <div class="card-grid">
       <div class="card">
         <span class="status-tag status-plan">规划中</span>
@@ -645,24 +642,20 @@ footer a { color: var(--accent); text-decoration: none; }
         <h3>画像分析</h3>
         <p>识别发布账号属性（KOL / 普通用户 / 媒体号）、粉丝量级、账号影响力。大 V 发的负面帖应优先处理，普通吐槽可批量跟进。</p>
       </div>
-    </div>
-
-    <h3 style="font-size: 16px; margin: 32px 0 16px; color: var(--purple);">🔮 中期规划（3-6 个月 · 3项）</h3>
-    <div class="card-grid">
       <div class="card">
-        <span class="status-tag status-future">远期</span>
+        <span class="status-tag status-plan">规划中</span>
         <div class="card-icon" style="background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15);">🤖</div>
         <h3>AI 智能日报</h3>
         <p>基于 LLM 自动生成结构化日报：今日核心争议、情绪走势、新出现风险点、建议关注动作。管理层 30 秒读完。</p>
       </div>
       <div class="card">
-        <span class="status-tag status-future">远期</span>
+        <span class="status-tag status-plan">规划中</span>
         <div class="card-icon" style="background: rgba(246,184,75,0.08); border-color: rgba(246,184,75,0.15);">🚨</div>
         <h3>分级告警推送</h3>
         <p>高风险 / 负面激增时自动推送至飞书/企业微信。分级：一般（日报汇总）、严重（2小时内推送）、紧急（实时推送）。</p>
       </div>
       <div class="card">
-        <span class="status-tag status-future">远期</span>
+        <span class="status-tag status-plan">规划中</span>
         <div class="card-icon" style="background: rgba(55,196,134,0.08); border-color: rgba(55,196,134,0.15);">📱</div>
         <h3>多渠道覆盖扩展</h3>
         <p>补充黑猫投诉 API、抖音评论、应用商店评价等渠道。当前仅覆盖微博+小红书，存在明显数据盲区。</p>
