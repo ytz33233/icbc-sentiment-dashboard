@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-22",
-  "generatedAt": "2026-05-22 07:00",
+  "generatedAt": "2026-05-22 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -61,7 +61,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-22）采集到 79 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-05-22",
-    "generatedAt": "2026-05-21T23:00:21.083Z"
+    "generatedAt": "2026-05-22T04:00:18.805Z"
   },
   "records": [
     {
@@ -788,7 +788,7 @@
       "title": "5.21 工行 开了！小满 300i豆+66i豆",
       "content": "5.21 工行 开了！小满 300i豆+66i豆",
       "url": "https://www.xiaohongshu.com/explore/6a0e4f9a0000000036030ef1",
-      "author": "叫我���安喜乐",
+      "author": "叫我平安喜乐",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
@@ -989,7 +989,7 @@
       "sentiment": "neutral",
       "riskLevel": "medium",
       "title": "工行i豆商城咖啡机没货",
-      "content": "工行i豆商城咖啡��没货",
+      "content": "工行i豆商城咖啡机没货",
       "url": "https://www.xiaohongshu.com/explore/696b1ec80000000022023f2d",
       "author": "燕子爱啃大西瓜",
       "status": "已发布",
@@ -1056,7 +1056,7 @@
       "sentiment": "neutral",
       "riskLevel": "medium",
       "title": "工行i豆商城换哪个",
-      "content": "���行i豆商城换哪个",
+      "content": "工行i豆商城换哪个",
       "url": "https://www.xiaohongshu.com/explore/69eefa450000000038023b45",
       "author": "故事与酒",
       "status": "已发布",
@@ -1123,7 +1123,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "工���i豆商城也是成功换到了",
+      "title": "工商i豆商城也是成功换到了",
       "content": "工商i豆商城也是成功换到了",
       "url": "https://www.xiaohongshu.com/explore/69f6d4ed000000001f003d48",
       "author": "平凡的福球",
@@ -1555,7 +1555,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工商银行换外币业务办理流程",
-      "content": "工商银���换外币业务办理流程",
+      "content": "工商银行换外币业务办理流程",
       "url": "https://www.xiaohongshu.com/explore/69fd52130000000036001511",
       "author": "醒儿",
       "status": "已发布",
@@ -1919,7 +1919,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "「工行」10W豆✅点击即送",
-      "content": "「工行」10W豆✅点击即送",
+      "content": "「工行」10W豆��点击即送",
       "url": "https://www.xiaohongshu.com/explore/6944c2c1000000001e02ced9",
       "author": "龙猫猫",
       "status": "已发布",

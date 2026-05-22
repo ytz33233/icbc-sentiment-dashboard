@@ -1,6 +1,6 @@
 {
   "date": "2026-05-22",
-  "generatedAt": "2026-05-22T00:53:33.424Z",
+  "generatedAt": "2026-05-22T04:02:37.841Z",
   "totalRecords": 23,
   "beforeStats": {
     "positive": 1,
@@ -8,74 +8,67 @@
     "negative": 0
   },
   "afterStats": {
-    "positive": 8,
-    "neutral": 13,
+    "positive": 7,
+    "neutral": 14,
     "negative": 2
   },
-  "diffCount": 9,
+  "diffCount": 8,
   "changes": [
     {
       "title": "工商银行你背刺我！",
       "before": "neutral",
       "after": "negative",
       "method": "llm",
-      "reason": "使用了'背刺'一词，表达了作者对工商银行的不满和愤怒。"
-    },
-    {
-      "title": "5.21工行小满🧧",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中使用了🧧表情符号，表示红包，暗示工商银行小满活动有福利，作者对此持积极态度。"
+      "reason": "使用了“背刺”一词，表达了作者对工商银行的不满和愤怒。"
     },
     {
       "title": "5.21-工行-小满有礼！",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题中的'小满有礼'暗示了工商银行在小满节气有礼品赠送的活动，给人一种积极、期待的感觉。"
+      "reason": "标题中的'小满有礼'暗示了工商银行提供的某种优惠或礼物，通常与积极、满意的情感相关联。"
     },
     {
       "title": "工行月月享好礼活动",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题中的'月月享好礼'暗示了工商银行每月都有礼品赠送的活动，给人一种积极、期待的感觉。"
+      "reason": "标题中的'月月享好礼'暗示了工商银行提供的持续优惠或礼物，通常与积极、满意的情感相关联。"
     },
     {
       "title": "工行星座卡新客礼怎么进不去活动页面",
       "before": "neutral",
       "after": "negative",
       "method": "llm",
-      "reason": "作者表达了无法进入活动页面的困惑和不满。"
+      "reason": "帖子提到无法进入活动页面，表达了作者的不满和失望。"
     },
     {
       "title": "工行visa卡❗️超顺利的",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "使用了感叹号❗️和“超顺利的”表达了作者对工行visa卡的积极评价和满意。"
+      "reason": "帖子使用了感叹号和“超顺利的”等积极词汇，表达了作者对工行visa卡的满意和开心。"
     },
     {
       "title": "刚中工行92.82元，友友中19，概率有大",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "作者分享了自己中奖92.82元的好消息，表达了积极和开心的情感态度。"
+      "reason": "帖子提到中奖金额，表达了作者的惊喜和开心。"
     },
     {
       "title": "5.15工行  0.3🧧🧧🧧",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "作者使用了多个红包表情符号🧧🧧🧧，这通常表示对收到红包或优惠的积极反应和满意。"
+      "reason": "作者通过重复使用红包表情符号🧧🧧🧧来表达对工行活动的积极情感和满意度。"
     },
     {
       "title": "我也爱工行！",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "作者直接表达了对工商银行的喜爱，使用了感叹号来强调自己的积极情感。"
+      "reason": "作者直接表达了对工行的喜爱，使用了感叹号来强调自己的积极情感。"
     }
   ]
 }

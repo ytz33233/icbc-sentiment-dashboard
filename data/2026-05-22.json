@@ -1,15 +1,15 @@
 {
   "reportDate": "2026-05-22",
-  "generatedAt": "2026-05-22 11:31",
+  "generatedAt": "2026-05-22 12:02",
   "fromHistory": false,
   "summary": {
     "total": 23,
     "recentCount": 0,
     "historyCount": 23,
-    "negativeCount": 0,
-    "negativePct": 0,
-    "positiveCount": 1,
-    "neutralCount": 22,
+    "negativeCount": 2,
+    "negativePct": "8.7",
+    "positiveCount": 7,
+    "neutralCount": 14,
     "channelCount": 1,
     "highRiskCount": 0
   },
@@ -17,8 +17,9 @@
     "xiaohongshu": 23
   },
   "bySentiment": {
-    "neutral": 22,
-    "positive": 1
+    "positive": 7,
+    "neutral": 14,
+    "negative": 2
   },
   "byRisk": {
     "low": 23
@@ -98,11 +99,57 @@
   ],
   "hotTopics": [
     {
-      "topic": "工行信用卡",
-      "summary": "工行信用卡相关讨论",
-      "postCount": 4,
+      "topic": "工行活动优惠",
+      "summary": "工行各类优惠活动讨论",
+      "postCount": 6,
       "postIndices": [
         1,
+        3,
+        13,
+        15,
+        19,
+        20
+      ],
+      "keywords": [
+        "工行",
+        "活动",
+        "优惠"
+      ],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 5,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 6
+      },
+      "totalHeat": 2493,
+      "topPosts": [
+        {
+          "id": "20260522-04",
+          "title": "工行活动期间到期卡换普卡免费",
+          "heatScore": 1321,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260522-02",
+          "title": "工商银行你背刺我！",
+          "heatScore": 880,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260522-20",
+          "title": "刚中工行92.82元，友友中19，概率有大",
+          "heatScore": 241,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行信用卡",
+      "summary": "工行信用卡相关讨论",
+      "postCount": 3,
+      "postIndices": [
         10,
         12,
         18
@@ -113,20 +160,14 @@
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 4,
+        "neutral": 3,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 4
+        "xiaohongshu": 3
       },
-      "totalHeat": 1827,
+      "totalHeat": 947,
       "topPosts": [
-        {
-          "id": "20260522-02",
-          "title": "工商银行你背刺我！",
-          "heatScore": 880,
-          "sentiment": "neutral"
-        },
         {
           "id": "20260522-19",
           "title": "工行visa卡❗️超顺利的",
@@ -138,50 +179,11 @@
           "title": "武汉工行是信用卡旱地吗",
           "heatScore": 171,
           "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "topic": "工行活动优惠",
-      "summary": "工行优惠活动讨论",
-      "postCount": 4,
-      "postIndices": [
-        3,
-        13,
-        19,
-        20
-      ],
-      "keywords": [
-        "工行",
-        "活动",
-        "优惠"
-      ],
-      "sentiment": {
-        "positive": 1,
-        "neutral": 3,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 4
-      },
-      "totalHeat": 1601,
-      "topPosts": [
-        {
-          "id": "20260522-04",
-          "title": "工行活动期间到期卡换普卡免费",
-          "heatScore": 1321,
-          "sentiment": "neutral"
         },
         {
-          "id": "20260522-20",
-          "title": "刚中工行92.82元，友友中19，概率有大",
-          "heatScore": 241,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260522-14",
-          "title": "工行月月享好礼活动",
-          "heatScore": 31,
+          "id": "20260522-13",
+          "title": "工行学生信用卡提额",
+          "heatScore": 38,
           "sentiment": "neutral"
         }
       ]
@@ -231,44 +233,13 @@
       ]
     },
     {
-      "topic": "工行高铁优惠",
-      "summary": "工行高铁优惠教程",
-      "postCount": 1,
-      "postIndices": [
-        5
-      ],
-      "keywords": [
-        "工行",
-        "高铁",
-        "优惠"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 1,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 1
-      },
-      "totalHeat": 742,
-      "topPosts": [
-        {
-          "id": "20260522-06",
-          "title": "工行高铁火车立减30的教程",
-          "heatScore": 742,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "topic": "工行小满活动",
       "summary": "工行小满节日相关活动",
-      "postCount": 4,
+      "postCount": 3,
       "postIndices": [
         0,
         9,
-        11,
-        15
+        11
       ],
       "keywords": [
         "工行",
@@ -276,13 +247,13 @@
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 4,
+        "neutral": 3,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 4
+        "xiaohongshu": 3
       },
-      "totalHeat": 162,
+      "totalHeat": 150,
       "topPosts": [
         {
           "id": "20260522-10",
@@ -305,30 +276,37 @@
       ]
     },
     {
-      "topic": "工行外币业务",
-      "summary": "工行外币业务办理流程",
-      "postCount": 1,
+      "topic": "工行业务办理",
+      "summary": "工行业务办理流程讨论",
+      "postCount": 2,
       "postIndices": [
-        4
+        4,
+        16
       ],
       "keywords": [
-        "工商银行",
-        "外币业务"
+        "工行",
+        "业务办理"
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 1,
+        "neutral": 2,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 1
+        "xiaohongshu": 2
       },
-      "totalHeat": 128,
+      "totalHeat": 134,
       "topPosts": [
         {
           "id": "20260522-05",
           "title": "工商银行换外币业务办理流程",
           "heatScore": 128,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260522-17",
+          "title": "工行星座卡新客礼怎么进不去活动页面",
+          "heatScore": 6,
           "sentiment": "neutral"
         }
       ]
@@ -370,26 +348,33 @@
       ]
     },
     {
-      "topic": "工行月月花",
-      "summary": "工行月月花活动讨论",
-      "postCount": 1,
+      "topic": "工行月月活动",
+      "summary": "工行月月活动讨论",
+      "postCount": 2,
       "postIndices": [
+        13,
         20
       ],
       "keywords": [
         "工行",
-        "月月花"
+        "月月"
       ],
       "sentiment": {
         "positive": 1,
-        "neutral": 0,
+        "neutral": 1,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 1
+        "xiaohongshu": 2
       },
-      "totalHeat": 8,
+      "totalHeat": 39,
       "topPosts": [
+        {
+          "id": "20260522-14",
+          "title": "工行月月享好礼活动",
+          "heatScore": 31,
+          "sentiment": "neutral"
+        },
         {
           "id": "20260522-21",
           "title": "工行月月花活动已经打满，这个月运气超棒",
@@ -399,44 +384,14 @@
       ]
     },
     {
-      "topic": "工行星座卡",
-      "summary": "工行星座卡活动问题",
-      "postCount": 1,
-      "postIndices": [
-        16
-      ],
-      "keywords": [
-        "工行",
-        "星座卡"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 1,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 1
-      },
-      "totalHeat": 6,
-      "topPosts": [
-        {
-          "id": "20260522-17",
-          "title": "工行星座卡新客礼怎么进不去活动页面",
-          "heatScore": 6,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "topic": "工行用户情感",
-      "summary": "用户对工行的情感表达",
+      "topic": "工行其他讨论",
+      "summary": "其他与工行相关的讨论",
       "postCount": 1,
       "postIndices": [
         22
       ],
       "keywords": [
-        "工行",
-        "爱"
+        "工行"
       ],
       "sentiment": {
         "positive": 0,
@@ -464,8 +419,7 @@
         17
       ],
       "keywords": [
-        "工行",
-        "豆豆"
+        "工行豆豆"
       ],
       "sentiment": {
         "positive": 0,
@@ -489,7 +443,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-22）共采集 23 条舆情，正面 1 条。热词包括「信用卡、i豆、积分」。",
     "date": "2026-05-22",
-    "generatedAt": "2026-05-22T03:31:04.334Z"
+    "generatedAt": "2026-05-22T04:02:14.846Z"
   },
   "records": [
     {
@@ -525,7 +479,10 @@
       "favorites": 5,
       "shares": 17,
       "category": "i豆兑换",
-      "heatScore": 20
+      "heatScore": 20,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-02",
@@ -533,7 +490,7 @@
       "publishTime": "2026-05-07",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "negative",
       "riskLevel": "low",
       "title": "工商银行你背刺我！",
       "content": "工商银行你背刺我！",
@@ -558,7 +515,10 @@
       "favorites": 65,
       "shares": 140,
       "category": "其他",
-      "heatScore": 880
+      "heatScore": 880,
+      "llmSentiment": "negative",
+      "llmReason": "使用了“背刺”一词，表达了作者对工商银行的不满和愤怒。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-03",
@@ -593,7 +553,10 @@
       "favorites": 0,
       "shares": 0,
       "category": "i豆兑换",
-      "heatScore": 37
+      "heatScore": 37,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-04",
@@ -626,7 +589,10 @@
       "favorites": 324,
       "shares": 369,
       "category": "其他",
-      "heatScore": 1321
+      "heatScore": 1321,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-05",
@@ -637,7 +603,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工商银行换外币业务办理流程",
-      "content": "工商银���换外币业务办理流程",
+      "content": "工商银行换外币业务办理流程",
       "url": "https://www.xiaohongshu.com/explore/69fd52130000000036001511",
       "author": "小红书",
       "status": "未处理",
@@ -659,7 +625,10 @@
       "favorites": 32,
       "shares": 43,
       "category": "其他",
-      "heatScore": 128
+      "heatScore": 128,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-06",
@@ -692,7 +661,10 @@
       "favorites": 243,
       "shares": 140,
       "category": "其他",
-      "heatScore": 742
+      "heatScore": 742,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了一个教程的信息，没有表达作者的个人情感或态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-07",
@@ -725,7 +697,10 @@
       "favorites": 68,
       "shares": 152,
       "category": "其他",
-      "heatScore": 520
+      "heatScore": 520,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了一个活动的信息，没有表达作者的个人情感或态度。表情符号🧧通常表示红包或奖励，但在这里没有明确的情感倾向。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-08",
@@ -758,7 +733,10 @@
       "favorites": 19,
       "shares": 89,
       "category": "其他",
-      "heatScore": 207
+      "heatScore": 207,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了一个活动的信息，没有表达作者的个人情感或态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-09",
@@ -791,7 +769,10 @@
       "favorites": 12,
       "shares": 31,
       "category": "其他",
-      "heatScore": 129
+      "heatScore": 129,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了一个活动的信息，没有表达作者的个人情感或态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-10",
@@ -824,7 +805,10 @@
       "favorites": 33,
       "shares": 28,
       "category": "其他",
-      "heatScore": 115
+      "heatScore": 115,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了一个活动的信息，没有表达作者的个人情感或态度。表情符号🧧通常表示红包或奖励，但在这里没有明确的情感倾向。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-11",
@@ -859,7 +843,10 @@
       "favorites": 6,
       "shares": 6,
       "category": "其他",
-      "heatScore": 171
+      "heatScore": 171,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单的提问，没有表达出作者的任何情感倾向。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-12",
@@ -867,7 +854,7 @@
       "publishTime": "昨天 10:28",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "5.21-工行-小满有礼！",
       "content": "5.21-工行-小满有礼！",
@@ -892,7 +879,10 @@
       "favorites": 4,
       "shares": 11,
       "category": "其他",
-      "heatScore": 15
+      "heatScore": 15,
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'小满有礼'暗示了工商银行提供的某种优惠或礼物，通常与积极、满意的情感相关联。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-13",
@@ -927,7 +917,10 @@
       "favorites": 5,
       "shares": 0,
       "category": "其他",
-      "heatScore": 38
+      "heatScore": 38,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-14",
@@ -935,7 +928,7 @@
       "publishTime": "2026-05-10",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "工行月月享好礼活动",
       "content": "工行月月享好礼活动",
@@ -960,7 +953,10 @@
       "favorites": 0,
       "shares": 0,
       "category": "其他",
-      "heatScore": 31
+      "heatScore": 31,
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'月月享好礼'暗示了工商银行提供的持续优惠或礼物，通常与积极、满意的情感相关联。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-15",
@@ -993,7 +989,10 @@
       "favorites": 0,
       "shares": 1,
       "category": "其他",
-      "heatScore": 28
+      "heatScore": 28,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-16",
@@ -1026,7 +1025,10 @@
       "favorites": 3,
       "shares": 1,
       "category": "其他",
-      "heatScore": 12
+      "heatScore": 12,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子仅包含标题和表情符号，没有具体内容描述，无法判断作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-17",
@@ -1034,7 +1036,7 @@
       "publishTime": "2026-05-18",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "negative",
       "riskLevel": "low",
       "title": "工行星座卡新客礼怎么进不去活动页面",
       "content": "工行星座卡新客礼怎么进不去活动页面",
@@ -1059,7 +1061,10 @@
       "favorites": 0,
       "shares": 0,
       "category": "其他",
-      "heatScore": 6
+      "heatScore": 6,
+      "llmSentiment": "negative",
+      "llmReason": "帖子提到无法进入活动页面，表达了作者的不满和失望。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-18",
@@ -1092,7 +1097,10 @@
       "favorites": 0,
       "shares": 0,
       "category": "其他",
-      "heatScore": 0
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子仅包含标题，没有具体内容描述，无法判断作者的情感态度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-19",
@@ -1100,7 +1108,7 @@
       "publishTime": "2026-04-23",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "工行visa卡❗️超顺利的",
       "content": "工行visa卡❗️超顺利的",
@@ -1125,7 +1133,10 @@
       "favorites": 184,
       "shares": 67,
       "category": "其他",
-      "heatScore": 738
+      "heatScore": 738,
+      "llmSentiment": "positive",
+      "llmReason": "帖子使用了感叹号和“超顺利的”等积极词汇，表达了作者对工行visa卡的满意和开心。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-20",
@@ -1133,7 +1144,7 @@
       "publishTime": "2026-05-06",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "刚中工行92.82元，友友中19，概率有大",
       "content": "刚中工行92.82元，友友中19，概率有大",
@@ -1158,7 +1169,10 @@
       "favorites": 27,
       "shares": 40,
       "category": "其他",
-      "heatScore": 241
+      "heatScore": 241,
+      "llmSentiment": "positive",
+      "llmReason": "帖子提到中奖金额，表达了作者的惊喜和开心。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-21",
@@ -1191,7 +1205,10 @@
       "favorites": 0,
       "shares": 1,
       "category": "其他",
-      "heatScore": 8
+      "heatScore": 8,
+      "llmSentiment": "positive",
+      "llmReason": "作者表达了对工行月月花活动的满意和好运，使用了积极的词汇和感叹号来强调自己的积极情感。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-22",
@@ -1199,7 +1216,7 @@
       "publishTime": "2026-05-16",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "5.15工行  0.3🧧🧧🧧",
       "content": "5.15工行  0.3🧧🧧🧧",
@@ -1224,7 +1241,10 @@
       "favorites": 1,
       "shares": 3,
       "category": "其他",
-      "heatScore": 6
+      "heatScore": 6,
+      "llmSentiment": "positive",
+      "llmReason": "作者通过重复使用红包表情符号🧧🧧🧧来表达对工行活动的积极情感和满意度。",
+      "sentimentMethod": "llm"
     },
     {
       "id": "20260522-23",
@@ -1232,7 +1252,7 @@
       "publishTime": "2026-05-20",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "我也爱工行！",
       "content": "我也爱工行！",
@@ -1257,7 +1277,12 @@
       "favorites": 0,
       "shares": 0,
       "category": "其他",
-      "heatScore": 6
+      "heatScore": 6,
+      "llmSentiment": "positive",
+      "llmReason": "作者直接表达了对工行的喜爱，使用了感叹号来强调自己的积极情感。",
+      "sentimentMethod": "llm"
     }
-  ]
+  ],
+  "llmEnhancedAt": "2026-05-22T04:02:37.840Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
