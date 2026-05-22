@@ -1,0 +1,46 @@
+{
+  "date": "2026-05-23",
+  "generatedAt": "2026-05-22T23:01:29.580Z",
+  "totalRecords": 16,
+  "beforeStats": {
+    "positive": 3,
+    "neutral": 12,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 3,
+    "neutral": 12,
+    "negative": 1
+  },
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "坐地铁白嫖工银i豆商城？！上海真的很香",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "5月升金礼",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'白嫖'和'真的很香'表达了作者对工商银行运营活动的积极态度和满意情绪。"
+    },
+    {
+      "title": "工行羊毛",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题仅是活动名称，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工行月月花谢谢参与",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容提到了工行5月18日的答题和任务活动，但未包含作者的个人情感或态度。"
+    }
+  ]
+}
