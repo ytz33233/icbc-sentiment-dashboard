@@ -8066,7 +8066,8 @@ document.addEventListener('DOMContentLoaded', function() {
       byRisk: stats.byRisk,
       byProduct: stats.byProduct,
       trend7d: computeTrend(monthRecords, daysAgoStr, todayStr),
-      hotKeywords: computeHotKeywords(monthRecords)
+      hotKeywords: computeHotKeywords(monthRecords),
+      hotTopics: fallbackData.hotTopics || []
     };
   } else {
     loadedData = fallbackData;
