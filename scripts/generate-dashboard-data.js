@@ -13,6 +13,7 @@ const fs = require('fs');
 const path = require('path');
 const dedup = require('./dedup-utils.js');
 const { semanticProcess } = require('./llm-semantic-processing');
+const { topicCluster } = require('./llm-topic-cluster');
 const { filterBatch } = require('./filter-rules.js');
 
 const WORKSPACE = '/root/.openclaw/workspace';
@@ -1014,6 +1015,10 @@ async function main() {
     const stats = computeStats(finalRecords);
     const hotKeywords = computeHotKeywords(finalRecords);
 
+    // 6.5 LLM 语义话题聚类
+    const clusterResult = await topicCluster(finalRecords);
+    const hotTopics = clusterResult.topics || [];
+
     // 7. 趋势计算：合并今日记录 + 历史记录（用于7天趋势）
     const historicalForTrend = loadHistoricalRecords(dateStr);
     const allForTrend = [...historicalForTrend, ...finalRecords];
@@ -1035,6 +1040,7 @@ async function main() {
         byCategory: stats.byCategory,
         trend7d,
         hotKeywords,
+        hotTopics,
         dailyBrief,
         records: finalRecords
     };

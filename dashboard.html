@@ -945,6 +945,85 @@ body {
 }
 
 /* ── Word Cloud ── */
+.hot-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.hot-topic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+.hot-topic-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+}
+.hot-topic-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.hot-topic-rank {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  min-width: 28px;
+}
+.hot-topic-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.hot-topic-heat {
+  font-size: 12px;
+  color: var(--orange);
+  font-weight: 500;
+}
+.hot-topic-summary {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.hot-topic-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.hot-topic-sentiment-bar {
+  display: flex;
+  height: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.sentiment-bar-pos { background: var(--green); }
+.sentiment-bar-neu { background: var(--text-dim); }
+.sentiment-bar-neg { background: var(--bad); }
+.hot-topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.hot-topic-src, .hot-topic-kw {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(87,179,255,0.08);
+  color: var(--accent-light);
+  border: 1px solid rgba(87,179,255,0.15);
+}
+.hot-topic-kw {
+  background: rgba(246,184,75,0.08);
+  color: var(--gold);
+  border-color: rgba(246,184,75,0.15);
+}
+
 .word-cloud-dark {
   display: flex;
   flex-wrap: wrap;
@@ -2147,6 +2226,13 @@ tr:hover {
     <div class="chart-panel wide" data-delay="9">
       <div class="panel-header">
         <span class="panel-number">04</span>
+        <h3>今日热点话题</h3>
+      </div>
+      <div class="panel-body" id="hot-topics" style="padding:16px;"></div>
+    </div>
+    <div class="chart-panel wide" data-delay="10">
+      <div class="panel-header">
+        <span class="panel-number">05</span>
         <h3>热词云</h3>
       </div>
       <div class="panel-body" id="word-cloud" style="padding:0;"></div>
@@ -5016,6 +5102,7 @@ function updateUI() {
   renderSentimentDonut();
   renderSourceBars();
   renderTrendLine();
+  renderHotTopics();
   renderWordCloud();
   renderCategoryBar();
   renderTable();
@@ -5498,6 +5585,80 @@ function hideWordCloudTooltip() {
   var container = document.getElementById('word-cloud');
   var tooltip = container.querySelector('.word-cloud-tooltip');
   if (tooltip) tooltip.style.opacity = '0';
+}
+
+function renderHotTopics() {
+  const container = document.getElementById('hot-topics');
+  if (!container) return;
+
+  const topics = (loadedData.hotTopics || []);
+  if (topics.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-dim);text-align:center;padding:24px;">暂无热点话题数据</div>';
+    return;
+  }
+
+  const sourceLabel = {
+    xiaohongshu: '小红书',
+    social: '微博',
+    news: '新闻',
+    complaint: '投诉',
+    forum: '论坛',
+    official: '官方'
+  };
+
+  let html = '<div class="hot-topics-grid">';
+  topics.forEach((t, i) => {
+    const sent = t.sentiment || {};
+    const pos = sent.positive || 0;
+    const neu = sent.neutral || 0;
+    const neg = sent.negative || 0;
+    const total = t.postCount || 0;
+    const heat = t.totalHeat || 0;
+
+    // 情感条
+    const posPct = total > 0 ? Math.round((pos / total) * 100) : 0;
+    const negPct = total > 0 ? Math.round((neg / total) * 100) : 0;
+    const neuPct = 100 - posPct - negPct;
+
+    // 来源标签
+    const srcTags = Object.entries(t.sources || {}).map(([k, v]) =>
+      `<span class="hot-topic-src">${sourceLabel[k] || k} ${v}</span>`
+    ).join('');
+
+    // 关键词
+    const kwTags = (t.keywords || []).slice(0, 4).map(kw =>
+      `<span class="hot-topic-kw">${kw}</span>`
+    ).join('');
+
+    // 排名
+    const rankColor = i === 0 ? '#ef6678' : i === 1 ? '#ff9800' : i === 2 ? '#57b3ff' : 'var(--text-dim)';
+
+    html += `
+      <div class="hot-topic-card">
+        <div class="hot-topic-header">
+          <span class="hot-topic-rank" style="color:${rankColor}">#${i + 1}</span>
+          <span class="hot-topic-name">${t.topic}</span>
+          <span class="hot-topic-heat">🔥 ${heat}</span>
+        </div>
+        <div class="hot-topic-summary">${t.summary || ''}</div>
+        <div class="hot-topic-meta">
+          <span>${total}条 · </span>
+          <span style="color:var(--green)">+${pos}</span>
+          <span style="color:var(--text-dim)">=${neu}</span>
+          <span style="color:var(--bad)">-${neg}</span>
+        </div>
+        <div class="hot-topic-sentiment-bar">
+          <div class="sentiment-bar-pos" style="width:${posPct}%"></div>
+          <div class="sentiment-bar-neu" style="width:${neuPct}%"></div>
+          <div class="sentiment-bar-neg" style="width:${negPct}%"></div>
+        </div>
+        <div class="hot-topic-tags">${srcTags}${kwTags}</div>
+      </div>
+    `;
+  });
+  html += '</div>';
+
+  container.innerHTML = html;
 }
 
 function renderWordCloud() {
