@@ -11,6 +11,8 @@ startDate.setDate(startDate.getDate() - 6);
 
 let allRecords = [];
 let allHotKeywords = [];
+let latestHotTopics = [];
+let latestDataFile = null;
 
 for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
     const ds = d.toISOString().slice(0, 10);
@@ -33,6 +35,11 @@ for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
                     allHotKeywords.push({ word: k.word, count: k.count });
                 }
             });
+        }
+        // 使用最新日期的 hotTopics
+        if (data.hotTopics && data.hotTopics.length > 0) {
+            latestHotTopics = data.hotTopics;
+            latestDataFile = ds;
         }
         console.log(`加载: ${ds}.json (${data.records?.length || 0} 条)`);
     } catch (e) {
@@ -141,6 +148,7 @@ const fallbackData = {
     byCategory: stats.byCategory,
     trend7d: trend,
     hotKeywords: hotKeywords,
+    hotTopics: latestHotTopics,
     dailyBrief: {
         text: `当前展示 ${uniqueRecords.length} 条历史舆情数据（${startDate.toISOString().slice(0, 10)} 至 ${endDateStr}）。`,
         date: endDateStr,
