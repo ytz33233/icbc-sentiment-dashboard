@@ -178,7 +178,22 @@ function filterOldRecords(records, fetchDateStr) {
     const fetchDate = new Date(fetchDateStr);
     const maxAgeDays = 30;
     return records.filter(r => {
-        const pubDate = new Date(r.date || fetchDateStr);
+        let pubDate;
+        try {
+            pubDate = new Date(r.date || fetchDateStr);
+        } catch (e) {
+            pubDate = new Date(fetchDateStr);
+        }
+        // 处理无效日期（如 "昨天 06:02"）
+        if (isNaN(pubDate.getTime())) {
+            // 相对时间兜底：如果日期字符串包含"昨天/今天/前天"，视为有效
+            const dateStr = (r.date || '').toLowerCase();
+            if (dateStr.includes('今天') || dateStr.includes('昨天') || dateStr.includes('前天') || dateStr.includes('小时前') || dateStr.includes('分钟前')) {
+                return true;
+            }
+            // 否则使用 fetchDateStr
+            pubDate = new Date(fetchDateStr);
+        }
         const daysDiff = (fetchDate - pubDate) / (1000 * 60 * 60 * 24);
         return daysDiff <= maxAgeDays;
     });
@@ -962,13 +977,9 @@ async function main() {
         console.log(`🧠 LLM语义过滤: 移除${llmSemanticResult.stats.removed}条`);
     }
 
-    // 3. 活动相关筛选（LLM已处理，保留作为兜底）
-    const activityRecords = allRecords.filter(isActivityRelated);
-    const filteredOut = allRecords.length - activityRecords.length;
-    if (filteredOut > 0) {
-        console.log(`🏷️  活动筛选兜底: 再过滤${filteredOut}条`);
-    }
-    console.log(`🏷️  活动筛选后: ${activityRecords.length}条`);
+    // 3. 活动筛选已改为LLM语义处理，此处跳过兜底过滤
+    const activityRecords = allRecords;
+    console.log(`🏷️  LLM语义筛选后: ${activityRecords.length}条`);
 
     // 3.5 过滤过旧记录（超过30天）
     const recentActivityRecords = filterOldRecords(activityRecords, dateStr);
@@ -982,10 +993,9 @@ async function main() {
     let fromHistory = false;
 
     if (recentActivityRecords.length === 0) {
-        console.log('⚠️  今日无新活动舆情，从历史数据回填...');
+        console.log('⚠️  今日无新舆情，从历史数据回填...');
         const historical = loadHistoricalRecords(dateStr);
-        const historicalActivity = historical.filter(isActivityRelated);
-        const recentHistorical = filterOldRecords(historicalActivity, dateStr);
+        const recentHistorical = filterOldRecords(historical, dateStr);
         if (recentHistorical.length > 0) {
             finalRecords = recentHistorical.slice(0, 30);
             fromHistory = true;
