@@ -2142,7 +2142,7 @@ tr:hover {
   <!-- ═══ INFO PANEL ═══ -->
   <div class="info-panel" id="info-panel">
     <span><strong>数据来源</strong> 微博、小红书、网页</span>
-    <span><strong>监测范围</strong> 升金有礼、i豆、资产达标、工行活动等</span>
+    <span><strong>监测范围</strong> 工行相关全部内容（活动/信用卡/积分/答题/羊毛/投诉等）</span>
     <span><strong>更新频率</strong> 每日 07:00 + 12:00</span>
     <span><strong>数据说明</strong> 由智能体搜索捕捉，非全量覆盖，结果仅供参考，使用时应交叉核实</span>
     <span><strong>智能标注</strong> 情感倾向与风险等级由 AI 辅助判定，建议人工复核关键舆情</span>
@@ -2152,20 +2152,19 @@ tr:hover {
   <div class="version-panel" id="version-panel">
     <div class="version-panel-grid">
       <div class="version-section">
-        <div class="version-title">v2.3.0 · 2026-05-18</div>
+        <div class="version-title">v2.4.0 · 2026-05-22</div>
         <ul class="version-list">
-          <li>"需关注"卡片支持点击查看负面舆情列表</li>
-          <li>数据加载动画：看板启动时显示加载进度提示</li>
-          <li>默认排序优化：负面优先 → 热度降序 → 时间倒序</li>
-          <li>互动数据修复：点赞/评论/收藏/分享数正常显示</li>
-          <li>每日简报逻辑修复：统一 "24H内新增" 口径</li>
-          <li>定时任务精简：早7午12各采集一次，统一流水线</li>
+          <li>新增「今日热点话题」聚类：LLM 语义自动归纳讨论话题，展示排名/热度/情感/来源</li>
+          <li>监测范围扩大：从"特定活动"扩展到"所有工行相关内容"（信用卡/答题/羊毛/投诉等）</li>
+          <li>过滤规则修复：相对时间解析（"昨天""2小时前"等）不再被错误过滤</li>
+          <li>去掉 intro 页面中"情感判定偏规则化"的过时说明</li>
         </ul>
       </div>
       <div class="version-section">
         <div class="version-title">近期更新</div>
         <ul class="version-list">
-          <li>v2.2.0 · "需关注"卡片支持点击查看负面列表、热词云趋势图固定30天坐标轴</li>
+          <li>v2.3.0 · "需关注"卡片支持点击查看负面列表、加载动画、默认排序优化</li>
+          <li>v2.2.0 · 热词云趋势图固定30天坐标轴</li>
           <li>v2.1.0 · 移动端词云趋势面板、表格排序</li>
           <li>v2.0.0 · 每日简报自动生成、热搜盯盘</li>
         </ul>
