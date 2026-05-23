@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-23",
-  "generatedAt": "2026-05-23 07:00",
+  "generatedAt": "2026-05-23 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -60,7 +60,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-23）采集到 89 条小红书舆情，负面 0 条，高风险 0 条。",
     "date": "2026-05-23",
-    "generatedAt": "2026-05-22T23:00:18.605Z"
+    "generatedAt": "2026-05-23T04:00:18.057Z"
   },
   "records": [
     {
@@ -956,7 +956,7 @@
       "title": "坐地铁白嫖工银i豆商城？！上海真的很香",
       "content": "坐地铁白嫖工银i豆商城？！上海真的很香",
       "url": "https://www.xiaohongshu.com/explore/69fdaac7000000001a0369f7",
-      "author": "沪碳行-绿��金科",
+      "author": "沪碳行-绿球金科",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
@@ -1089,7 +1089,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工商i豆商城也是成功换到了",
-      "content": "工商i豆商城也是成功���到了",
+      "content": "工商i豆商城也是成功换到了",
       "url": "https://www.xiaohongshu.com/explore/69f6d4ed000000001f003d48",
       "author": "平凡的福球",
       "status": "已发布",
@@ -1942,7 +1942,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工银豆兑换什��最合算",
+      "title": "工银豆兑换什么最合算",
       "content": "工银豆兑换什么最合算",
       "url": "https://www.xiaohongshu.com/explore/69b03143000000001b014aa3",
       "author": "知行至境",

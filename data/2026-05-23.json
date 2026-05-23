@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-23",
-  "generatedAt": "2026-05-23 07:01",
+  "generatedAt": "2026-05-23 12:01",
   "fromHistory": false,
   "summary": {
     "total": 16,
@@ -101,54 +101,8 @@
   ],
   "hotTopics": [
     {
-      "topic": "工行会员活动",
-      "summary": "工行针对会员的特别活动",
-      "postCount": 4,
-      "postIndices": [
-        1,
-        4,
-        8,
-        10
-      ],
-      "keywords": [
-        "升金礼",
-        "好品风物集",
-        "大莱Gold",
-        "月月花"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 3,
-        "negative": 1
-      },
-      "sources": {
-        "xiaohongshu": 4
-      },
-      "totalHeat": 532,
-      "topPosts": [
-        {
-          "id": "20260523-05",
-          "title": "工行北京好品风物集1换2",
-          "heatScore": 380,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260523-09",
-          "title": "工行大莱Gold",
-          "heatScore": 85,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260523-11",
-          "title": "工行月月花谢谢参与",
-          "heatScore": 67,
-          "sentiment": "negative"
-        }
-      ]
-    },
-    {
       "topic": "工行答题活动",
-      "summary": "工行举办的答题赢奖励活动",
+      "summary": "讨论工行答题赢奖励的活动",
       "postCount": 5,
       "postIndices": [
         3,
@@ -191,44 +145,120 @@
       ]
     },
     {
-      "topic": "工行每周活动",
-      "summary": "工行每周举办的常规活动",
-      "postCount": 2,
+      "topic": "工行北京活动",
+      "summary": "工行北京地区的特色活动",
+      "postCount": 1,
       "postIndices": [
-        5,
-        12
+        4
       ],
       "keywords": [
-        "周五活动",
-        "每周一测"
+        "北京好品风物集"
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 2,
+        "neutral": 1,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 2
+        "xiaohongshu": 1
       },
-      "totalHeat": 163,
+      "totalHeat": 380,
+      "topPosts": [
+        {
+          "id": "20260523-05",
+          "title": "工行北京好品风物集1换2",
+          "heatScore": 380,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行周五活动",
+      "summary": "工行每周五的特定活动",
+      "postCount": 1,
+      "postIndices": [
+        5
+      ],
+      "keywords": [
+        "周五活动"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 153,
       "topPosts": [
         {
           "id": "20260523-06",
           "title": "工行~周五活动",
           "heatScore": 153,
           "sentiment": "neutral"
-        },
+        }
+      ]
+    },
+    {
+      "topic": "工行大莱Gold",
+      "summary": "工行大莱Gold相关讨论",
+      "postCount": 1,
+      "postIndices": [
+        8
+      ],
+      "keywords": [
+        "大莱Gold"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 85,
+      "topPosts": [
         {
-          "id": "20260523-13",
-          "title": "工行每周一测及热门活动（5.18）",
-          "heatScore": 10,
+          "id": "20260523-09",
+          "title": "工行大莱Gold",
+          "heatScore": 85,
           "sentiment": "neutral"
         }
       ]
     },
     {
+      "topic": "工行月月花活动",
+      "summary": "工行月月花参与反馈",
+      "postCount": 1,
+      "postIndices": [
+        10
+      ],
+      "keywords": [
+        "月月花"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 67,
+      "topPosts": [
+        {
+          "id": "20260523-11",
+          "title": "工行月月花谢谢参与",
+          "heatScore": 67,
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
       "topic": "工行节日活动",
-      "summary": "工行在特定节日举办的活动",
+      "summary": "工行节日相关的促销活动",
       "postCount": 1,
       "postIndices": [
         7
@@ -256,7 +286,7 @@
     },
     {
       "topic": "工行羊毛活动",
-      "summary": "工行的优惠活动和羊毛信息",
+      "summary": "分享工行的羊毛活动信息",
       "postCount": 3,
       "postIndices": [
         2,
@@ -295,12 +325,68 @@
           "sentiment": "positive"
         }
       ]
+    },
+    {
+      "topic": "工行每周一测",
+      "summary": "工行每周一的测试活动",
+      "postCount": 1,
+      "postIndices": [
+        12
+      ],
+      "keywords": [
+        "每周一测"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 10,
+      "topPosts": [
+        {
+          "id": "20260523-13",
+          "title": "工行每周一测及热门活动（5.18）",
+          "heatScore": 10,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行升金礼",
+      "summary": "工行升金会员的礼遇",
+      "postCount": 1,
+      "postIndices": [
+        1
+      ],
+      "keywords": [
+        "升金礼"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 0,
+      "topPosts": [
+        {
+          "id": "20260523-02",
+          "title": "5月升金礼",
+          "heatScore": 0,
+          "sentiment": "neutral"
+        }
+      ]
     }
   ],
   "dailyBrief": {
     "text": "今日（2026-05-23）共采集 16 条舆情，其中负面 1 条，正面 3 条。热词包括「i豆、商城、谢谢参与」。",
     "date": "2026-05-23",
-    "generatedAt": "2026-05-22T23:01:17.650Z"
+    "generatedAt": "2026-05-23T04:01:34.883Z"
   },
   "records": [
     {
@@ -375,7 +461,7 @@
       "category": "i豆兑换",
       "heatScore": 19,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'白嫖'和'真的很香'表达了作者对工商银行运营活动的积极态度和满意情绪。",
+      "llmReason": "标题中的“坐地铁白嫖工银i豆商城？！上海真的很香”使用了感叹号和“白嫖”、“香”等词汇，表达了作者对工商银行活动的积极和满意的态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -411,7 +497,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题仅是活动名称，没有表达作者的情感态度。",
+      "llmReason": "标题“5月升金礼”只是简单地陈述了一个活动名称，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -447,7 +533,7 @@
       "category": "薅羊毛",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "标题仅是活动名称，没有表达作者的情感态度。",
+      "llmReason": "标题“工行羊毛”只是简单地陈述了一个活动名称，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -483,7 +569,7 @@
       "category": "其他",
       "heatScore": 341,
       "llmSentiment": "neutral",
-      "llmReason": "标题仅是活动日期和奖励金额，没有表达作者的情感态度。",
+      "llmReason": "标题“05.22 工行答题0.2”只是简单地陈述了一个活动的时间和奖励，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -519,7 +605,7 @@
       "category": "其他",
       "heatScore": 380,
       "llmSentiment": "neutral",
-      "llmReason": "标题仅是活动名称和兑换比例，没有表达作者的情感态度。",
+      "llmReason": "标题“工行北京好品风物集1换2”只是简单地陈述了一个活动名称和规则，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -555,7 +641,7 @@
       "category": "其他",
       "heatScore": 153,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行周五活动的简单提及，没有表达出作者的个人情感态度。",
+      "llmReason": "标题和内容仅提及了工行的一个活动，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -591,7 +677,7 @@
       "category": "其他",
       "heatScore": 86,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅提及了工行答题活动和奖励金额，没有包含作者的个人情感或评价。",
+      "llmReason": "标题和内容仅提及了工行的一个活动和具体日期，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -627,7 +713,7 @@
       "category": "其他",
       "heatScore": 57,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容提到了工行的小满节气活动和奖励豆数，但未表达作者的个人情感或态度。",
+      "llmReason": "标题和内容仅提及了工行的一个活动和奖励，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -663,7 +749,7 @@
       "category": "其他",
       "heatScore": 85,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅提到了工行大莱Gold，没有提供任何情感色彩或评价。",
+      "llmReason": "标题和内容仅提及了工行的一个产品名称，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -699,7 +785,7 @@
       "category": "其他",
       "heatScore": 48,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容提到了工行5月18日的答题和任务活动，但未包含作者的个人情感或态度。",
+      "llmReason": "标题和内容仅提及了工行的一个活动和具体日期，没有表情符号或明显的个人情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -735,7 +821,7 @@
       "category": "其他",
       "heatScore": 31,
       "llmSentiment": "positive",
-      "llmReason": "标题中的“好惊喜哟”表达了作者对工行活动的积极和满意态度。",
+      "llmReason": "作者使用了'好惊喜哟'这样的表达，显示出对工商银行运营活动的积极和满意态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -771,7 +857,7 @@
       "category": "其他",
       "heatScore": 10,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工行活动的客观陈述，没有明显的情感倾向。",
+      "llmReason": "这是一个关于工行每周一测及热门活动的标题，没有明显的情感倾向，只是客观陈述。",
       "sentimentMethod": "llm"
     },
     {
@@ -807,7 +893,7 @@
       "category": "其他",
       "heatScore": 8,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工行活动的客观陈述，没有明显的情感倾向。",
+      "llmReason": "这是一个关于工行答题大包的标题，没有明显的情感倾向，只是客观陈述。",
       "sentimentMethod": "llm"
     },
     {
@@ -843,7 +929,7 @@
       "category": "其他",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工行活动的客观陈述，没有明显的情感倾向。",
+      "llmReason": "这是一个关于工行答题金额的标题，没有明显的情感倾向，只是客观陈述。",
       "sentimentMethod": "llm"
     },
     {
@@ -879,10 +965,10 @@
       "category": "薅羊毛",
       "heatScore": 0,
       "llmSentiment": "positive",
-      "llmReason": "标题中的“薅羊毛日记”和“💰”表情符号表达了作者对工行活动的积极和满意态度，分享自己的收益情况。",
+      "llmReason": "作者使用了'薅羊毛日记'这样的表达，并且提到了具体的金额62.16，显示出对工商银行运营活动的积极和满意态度。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-22T23:01:29.579Z",
+  "llmEnhancedAt": "2026-05-23T04:01:47.518Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
