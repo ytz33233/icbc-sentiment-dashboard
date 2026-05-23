@@ -5728,9 +5728,9 @@ const fallbackData = {
   "dailyBrief": {
     "text": "当前展示 85 条历史舆情数据（2026-05-17 至 2026-05-23）。",
     "date": "2026-05-23",
-    "generatedAt": "2026-05-23T04:01:47.549Z"
+    "generatedAt": "2026-05-23T23:10:52.582Z"
   }
-};;;;;;;;;;;;;;;;;;;;;;;
+};;;;;;;;;;;;;;;;;;;;;;;;
 
 const CONFIG = {
   dataDir: 'data/',
@@ -5940,7 +5940,7 @@ async function loadByRange(startStr, endStr) {
     byProduct: stats.byProduct,
     trend7d: trend,
     hotKeywords: allHotKeywords,
-    hotTopics: latestData?.hotTopics || [],
+    hotTopics: (latestData?.hotTopics?.length ? latestData.hotTopics : fallbackData.hotTopics) || [],
     dailyBrief: dailyBrief
   };
 
