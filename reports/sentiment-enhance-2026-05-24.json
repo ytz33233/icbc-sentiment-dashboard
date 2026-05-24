@@ -1,6 +1,6 @@
 {
   "date": "2026-05-24",
-  "generatedAt": "2026-05-24T04:02:56.130Z",
+  "generatedAt": "2026-05-24T04:32:22.210Z",
   "totalRecords": 10,
   "beforeStats": {
     "positive": 1,
@@ -19,7 +19,7 @@
       "before": "neutral",
       "after": "negative",
       "method": "llm",
-      "reason": "使用了'天塌了'这样的夸张表达，暗示作者对工行月月花5月抽奖活动感到失望或不满。"
+      "reason": "使用了'天塌了'这样的夸张表达，通常用来表达失望或不满，因此可以判断作者对工行月月花5月抽奖活动有负面情绪。"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-24",
-  "generatedAt": "2026-05-24 12:02",
+  "generatedAt": "2026-05-24 12:30",
   "fromHistory": false,
   "summary": {
     "total": 10,
@@ -113,13 +113,14 @@
   "hotTopics": [
     {
       "topic": "工行积分与优惠",
-      "summary": "讨论工行积分和相关优惠",
-      "postCount": 4,
+      "summary": "讨论工行积分积累和使用优惠",
+      "postCount": 5,
       "postIndices": [
         0,
         1,
         2,
-        5
+        5,
+        8
       ],
       "keywords": [
         "工行",
@@ -128,13 +129,13 @@
       ],
       "sentiment": {
         "positive": 1,
-        "neutral": 3,
+        "neutral": 4,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 4
+        "xiaohongshu": 5
       },
-      "totalHeat": 261,
+      "totalHeat": 297,
       "topPosts": [
         {
           "id": "20260524-06",
@@ -149,16 +150,16 @@
           "sentiment": "positive"
         },
         {
-          "id": "20260524-03",
-          "title": "攒工行积分",
-          "heatScore": 7,
+          "id": "20260524-09",
+          "title": "工银亚洲这两个活动需要怎么刷",
+          "heatScore": 36,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "topic": "工行抽奖活动",
-      "summary": "关于工行抽奖活动的讨论",
+      "topic": "工行月月花抽奖",
+      "summary": "工行月月花活动抽奖相关讨论",
       "postCount": 2,
       "postIndices": [
         6,
@@ -166,6 +167,7 @@
       ],
       "keywords": [
         "工行",
+        "月月花",
         "抽奖"
       ],
       "sentiment": {
@@ -193,8 +195,8 @@
       ]
     },
     {
-      "topic": "工行信用卡",
-      "summary": "关于工行信用卡的讨论",
+      "topic": "工行大白金卡",
+      "summary": "关于工行大白金信用卡的讨论",
       "postCount": 1,
       "postIndices": [
         4
@@ -222,44 +224,15 @@
       ]
     },
     {
-      "topic": "工行亚洲活动",
-      "summary": "讨论工行亚洲的活动",
-      "postCount": 1,
-      "postIndices": [
-        8
-      ],
-      "keywords": [
-        "工行亚洲",
-        "活动"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 1,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 1
-      },
-      "totalHeat": 36,
-      "topPosts": [
-        {
-          "id": "20260524-09",
-          "title": "工银亚洲这两个活动需要怎么刷",
-          "heatScore": 36,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "topic": "工行数币硬钱包",
-      "summary": "讨论工行数币硬钱包",
+      "topic": "工行硬钱包",
+      "summary": "关于工行数币硬钱包的讨论",
       "postCount": 1,
       "postIndices": [
         3
       ],
       "keywords": [
         "工行",
-        "数币硬钱包"
+        "硬钱包"
       ],
       "sentiment": {
         "positive": 0,
@@ -281,14 +254,15 @@
     },
     {
       "topic": "工行新户立减金",
-      "summary": "关于工行新户立减金的讨论",
+      "summary": "工行新户立减金办理讨论",
       "postCount": 1,
       "postIndices": [
         9
       ],
       "keywords": [
         "工行",
-        "新户立减金"
+        "新户",
+        "立减金"
       ],
       "sentiment": {
         "positive": 0,
@@ -312,7 +286,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-24）共采集 10 条舆情，其中24H内新增 1 条，正面 1 条。主要集中在「其他」等产品，来源以小红书为主，热词包括「i豆、立减金、抽奖」。",
     "date": "2026-05-24",
-    "generatedAt": "2026-05-24T04:02:42.694Z"
+    "generatedAt": "2026-05-24T04:30:28.345Z"
   },
   "records": [
     {
@@ -350,7 +324,7 @@
       "category": "i豆兑换",
       "heatScore": 71,
       "llmSentiment": "positive",
-      "llmReason": "标题中使用了'开心'一词，表达了作者对于工行i豆增加的积极情感。",
+      "llmReason": "标题中包含'开心'一词，表达了作者对工行i豆增加500的积极情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -426,7 +400,7 @@
       "category": "i豆兑换",
       "heatScore": 7,
       "llmSentiment": "neutral",
-      "llmReason": "标题是简单的动作描述，没有包含任何情感色彩。",
+      "llmReason": "标题是简单的信息分享，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -462,7 +436,7 @@
       "category": "其他",
       "heatScore": 31,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工商银行某项服务的客观介绍，没有表达作者的个人情感。",
+      "llmReason": "标题是客观陈述，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -498,7 +472,7 @@
       "category": "其他",
       "heatScore": 176,
       "llmSentiment": "neutral",
-      "llmReason": "标题是一个疑问句，没有表达作者的个人情感，内容部分缺失，无法判断情感态度。",
+      "llmReason": "标题是提问，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -538,7 +512,7 @@
       "category": "i豆兑换",
       "heatScore": 181,
       "llmSentiment": "neutral",
-      "llmReason": "该帖子仅是一个询问，没有表达出作者对工商银行运营活动的情感态度，只是单纯地询问信息。",
+      "llmReason": "该帖子仅是一个询问，没有表达出作者的任何情感倾向，只是在询问一个事实情况。",
       "sentimentMethod": "llm"
     },
     {
@@ -576,7 +550,7 @@
       "category": "薅羊毛",
       "heatScore": 138,
       "llmSentiment": "negative",
-      "llmReason": "使用了'天塌了'这样的夸张表达，暗示作者对工行月月花5月抽奖活动感到失望或不满。",
+      "llmReason": "使用了'天塌了'这样的夸张表达，通常用来表达失望或不满，因此可以判断作者对工行月月花5月抽奖活动有负面情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -614,7 +588,7 @@
       "category": "薅羊毛",
       "heatScore": 113,
       "llmSentiment": "neutral",
-      "llmReason": "帖子内容只是简单地提到了工行月月花抽奖，没有表达出作者的任何情感态度，只是陈述了一个事实。",
+      "llmReason": "帖子内容简洁，仅提及了工行月月花抽奖，没有表达出作者的任何情感倾向，只是在陈述一个活动。",
       "sentimentMethod": "llm"
     },
     {
@@ -650,7 +624,7 @@
       "category": "其他",
       "heatScore": 36,
       "llmSentiment": "neutral",
-      "llmReason": "帖子询问如何参与工银亚洲的活动，没有表达出作者对活动的情感态度，只是寻求信息。",
+      "llmReason": "帖子是在询问如何参与工银亚洲的活动，没有表达出作者的任何情感倾向，只是在寻求信息。",
       "sentimentMethod": "llm"
     },
     {
@@ -688,10 +662,10 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "帖子询问工行新户立减金的办理方法，没有表达出作者对工商银行运营活动的情感态度，只是单纯地询问信息。",
+      "llmReason": "帖子是在询问工行新户立减金的处理方式，没有表达出作者的任何情感倾向，只是在寻求帮助或信息。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-24T04:02:56.130Z",
+  "llmEnhancedAt": "2026-05-24T04:32:22.209Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

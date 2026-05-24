@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-24",
-  "generatedAt": "2026-05-24 12:00",
+  "generatedAt": "2026-05-24 12:29",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -60,7 +60,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-24）采集到 80 条小红书舆情，负面 0 条，高风险 0 条。",
     "date": "2026-05-24",
-    "generatedAt": "2026-05-24T04:00:19.334Z"
+    "generatedAt": "2026-05-24T04:29:10.688Z"
   },
   "records": [
     {
@@ -547,7 +547,7 @@
       "sentiment": "neutral",
       "riskLevel": "medium",
       "title": "5月工行i豆乐园活动攻略来咯！",
-      "content": "5月工行i豆乐园活动攻略来咯！",
+      "content": "5月工行i豆乐园��动攻略来咯！",
       "url": "https://www.xiaohongshu.com/explore/69f958d90000000036019bf3",
       "author": "栗栗明星同款",
       "status": "已发布",
