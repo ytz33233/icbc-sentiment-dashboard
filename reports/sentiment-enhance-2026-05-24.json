@@ -1,81 +1,25 @@
 {
   "date": "2026-05-24",
-  "generatedAt": "2026-05-23T23:10:52.552Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-05-24T04:02:56.130Z",
+  "totalRecords": 10,
   "beforeStats": {
-    "positive": 5,
-    "neutral": 23,
-    "negative": 2
+    "positive": 1,
+    "neutral": 9,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 3,
-    "neutral": 25,
-    "negative": 2
+    "positive": 1,
+    "neutral": 8,
+    "negative": 1
   },
-  "diffCount": 9,
+  "diffCount": 1,
   "changes": [
     {
-      "title": "坐地铁白嫖工银i豆商城？！上海真的很香",
-      "before": "positive",
+      "title": "天塌了，工行月月花5月抽奖",
+      "before": "neutral",
       "after": "negative",
-      "method": "rule-negative",
-      "reason": "使用了“背刺”一词，表达了作者对工商银行的不满和愤怒。"
-    },
-    {
-      "title": "5月升金礼",
-      "before": "neutral",
-      "after": "positive",
       "method": "llm",
-      "reason": "标题中的“白嫖”和“香”表达了作者对工商银行i豆商城活动的积极态度和满意情绪。"
-    },
-    {
-      "title": "工行你还搞这种，好惊喜哟",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容仅提供了活动信息，没有表达作者的个人情感或态度。"
-    },
-    {
-      "title": "工行每周一测及热门活动（5.18）",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的“好惊喜哟”表达了作者对工行活动的积极和满意态度。"
-    },
-    {
-      "title": "薅羊毛日记Day97💰62.16（5月22日）",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容都是客观陈述工行的活动信息，没有明显的情感倾向。"
-    },
-    {
-      "title": "5.21 工行 开了！小满 300i豆+66i豆",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的“薅羊毛日记”和“💰”表情符号表达了作者对工行活动的积极和满意态度，分享自己的收益情况。"
-    },
-    {
-      "title": "工商银行你背刺我！",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是简单陈述工商银行的活动信息，没有表达作者的个人情感。"
-    },
-    {
-      "title": "5.21-工行-小满有礼！",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题仅提供了活动名称，没有表达作者的个人情感或态度，属于客观陈述。"
-    },
-    {
-      "title": "工行月月享好礼活动",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题仅提供了活动名称，没有表达作者的个人情感或态度，属于客观陈述。"
+      "reason": "使用了'天塌了'这样的夸张表达，暗示作者对工行月月花5月抽奖活动感到失望或不满。"
     }
   ]
 }
