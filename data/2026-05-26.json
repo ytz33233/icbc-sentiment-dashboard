@@ -1,0 +1,222 @@
+{
+  "reportDate": "2026-05-26",
+  "generatedAt": "2026-05-26 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 0,
+    "historyCount": 2,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 2,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "i豆活动": 2
+  },
+  "byCategory": {
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-20",
+      "total": 12,
+      "recent": 1,
+      "history": 11,
+      "negative": 2
+    },
+    {
+      "date": "2026-05-21",
+      "total": 10,
+      "recent": 5,
+      "history": 5,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-22",
+      "total": 9,
+      "recent": 0,
+      "history": 9,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-23",
+      "total": 7,
+      "recent": 0,
+      "history": 7,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-24",
+      "total": 4,
+      "recent": 1,
+      "history": 3,
+      "negative": 1
+    },
+    {
+      "date": "2026-05-25",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 1
+    },
+    {
+      "date": "2026-05-26",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    },
+    {
+      "word": "兑换",
+      "count": 1
+    },
+    {
+      "word": "贬值",
+      "count": 1
+    },
+    {
+      "word": "积分",
+      "count": 1
+    }
+  ],
+  "hotTopics": [
+    {
+      "topic": "工行消费季活动",
+      "summary": "讨论工行消费季的优惠",
+      "postCount": 2,
+      "postIndices": [
+        0,
+        1
+      ],
+      "keywords": [
+        "工行消费季",
+        "i豆",
+        "立减金"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "sources": {
+        "social": 2
+      },
+      "totalHeat": 41,
+      "topPosts": [
+        {
+          "id": "20260526-01",
+          "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+          "heatScore": 30,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260526-02",
+          "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
+          "heatScore": 11,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-26）共采集 2 条舆情。热词包括「i豆、立减金、兑换」。",
+    "date": "2026-05-26",
+    "generatedAt": "2026-05-25T23:10:51.302Z"
+  },
+  "records": [
+    {
+      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+      "content": "️工.行app搜：工行消费季 <br />周五六日可抽i豆 <br />部分人还刷新了50-5ljj <br />- <br />2⃣️限广东工`行（除深圳 ） <br />打卡抽1.28立减J <br />#小程序://工行服务/yyhiICM2aE0t4NI",
+      "source": "佩奇线报",
+      "publishTime": "Fri May 22 09:00:13 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5301298897358393",
+      "likes": 6,
+      "comments": 12,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-22",
+      "fetchTime": "2026-05-26",
+      "author": "佩奇线报",
+      "id": "20260526-01",
+      "category": "i豆兑换",
+      "heatScore": 30,
+      "llmSentiment": "neutral",
+      "llmReason": "该帖子主要是在分享工商银行app中的一个活动信息，包括抽奖和立减金等优惠，没有表达作者的个人情感态度，而是客观陈述活动内容。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
+      "source": "扒羊毛 / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Fri May 22 09:20:20 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5301303957784302",
+      "likes": 5,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "立减金",
+        "兑换",
+        "贬值",
+        "积分"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-22",
+      "fetchTime": "2026-05-26",
+      "author": "扒羊毛",
+      "id": "20260526-02",
+      "category": "i豆兑换",
+      "heatScore": 11,
+      "llmSentiment": "neutral",
+      "llmReason": "该帖子同样在分享工商银行app中的活动信息，提到受邀用户可以享受立减金和抽奖等优惠，但没有表达作者的个人情感态度，而是客观陈述活动内容。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-05-25T23:10:53.371Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

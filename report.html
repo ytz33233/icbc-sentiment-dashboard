@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舆情监测智能化升级项目汇报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --primary-light: #4285f4;
+            --secondary: #00bcd4;
+            --accent: #7c4dff;
+            --dark: #0d1117;
+            --dark-card: #161b22;
+            --dark-border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --success: #3fb950;
+            --warning: #d29922;
+            --danger: #f85149;
+            --gradient-1: linear-gradient(135deg, #1a73e8 0%, #00bcd4 100%);
+            --gradient-2: linear-gradient(135deg, #7c4dff 0%, #1a73e8 100%);
+            --gradient-3: linear-gradient(135deg, #f85149 0%, #d29922 100%);
+            --gradient-success: linear-gradient(135deg, #3fb950 0%, #00bcd4 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 粒子背景 */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 导航 */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dark-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-dot.active {
+            background: var(--primary);
+            border-color: var(--primary-light);
+            box-shadow: 0 0 12px rgba(26, 115, 232, 0.5);
+        }
+
+        .nav-dot:hover {
+            background: var(--primary-light);
+        }
+
+        /* 页面通用样式 */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .section-number {
+            font-size: 120px;
+            font-weight: 800;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--dark-border);
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary-light);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* 首页 */
+        .hero {
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(26, 115, 232, 0.15);
+            border: 1px solid rgba(26, 115, 232, 0.3);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: var(--primary-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-success);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* 卡片布局 */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: rgba(26, 115, 232, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .card ul li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* 痛点卡片 */
+        .pain-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .pain-card:hover {
+            border-color: var(--danger);
+            transform: translateY(-4px);
+        }
+
+        .pain-card .pain-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--danger);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .pain-card .pain-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 解决方案卡片 */
+        .solution-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            border-color: var(--success);
+            transform: translateY(-4px);
+        }
+
+        .solution-card .solution-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--success);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .solution-card .solution-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 箭头连接 */
+        .arrow-down {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+        }
+
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gradient-1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+            padding: 24px;
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 28px;
+            width: 14px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--dark);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary-light);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 数据展示 */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 2rem;
+        }
+
+        .metric-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .metric-card .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-success);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .metric-card .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .metric-card .metric-change {
+            font-size: 0.85rem;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .metric-change.up {
+            color: var(--success);
+        }
+
+        .metric-change.down {
+            color: var(--danger);
+        }
+
+        /* 高亮框 */
+        .highlight-box {
+            background: var(--gradient-1);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 32px 0;
+            color: white;
+        }
+
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .highlight-box p {
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+
+        /* 两列布局 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* 对比表格 */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .compare-table th {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .compare-table td {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .compare-table tr:hover td {
+            background: rgba(26, 115, 232, 0.05);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag-old {
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--danger);
+        }
+
+        .tag-new {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--success);
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 60px 40px;
+            border-top: 1px solid var(--dark-border);
+        }
+
+        .footer h2 {
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 24px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.4);
+        }
+
+        /* 滚动提示 */
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-hint svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* 进度条 */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .metrics-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-dots {
+                display: none;
+            }
+
+            .section-number {
+                font-size: 60px;
+            }
+        }
+
+        /* 动画 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 模态框 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-box {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 20px;
+            max-width: 720px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--dark-border);
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        .modal-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* 图示样式 */
+        .diagram-wrap {
+            margin: 24px 0;
+        }
+
+        .diagram-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .diagram-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 24px;
+            background: rgba(13, 17, 23, 0.6);
+            border-radius: 16px;
+            border: 1px solid var(--dark-border);
+        }
+
+        .diagram-node {
+            background: var(--dark);
+            border: 2px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: center;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .diagram-node.highlight {
+            border-color: var(--danger);
+            background: rgba(248, 81, 73, 0.1);
+        }
+
+        .diagram-node.fix {
+            border-color: var(--success);
+            background: rgba(63, 185, 80, 0.1);
+        }
+
+        .diagram-node .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .diagram-node .label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .diagram-node .sublabel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .diagram-arrow {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .diagram-result {
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--danger);
+            border: 2px dashed var(--danger);
+        }
+
+        .diagram-result.correct {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--success);
+            border: 2px dashed var(--success);
+        }
+
+        .diagram-caption {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .diagram-vs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .diagram-vs::before,
+        .diagram-vs::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--dark-border);
+            margin: 0 12px;
+        }
+
+        .diagram-legend {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .diagram-legend span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.red {
+            background: var(--danger);
+        }
+
+        .legend-dot.green {
+            background: var(--success);
+        }
+
+        @media (max-width: 600px) {
+            .modal-box {
+                padding: 24px;
+            }
+
+            .diagram-flow {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .diagram-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="0"></div>
+        <div class="nav-dot" data-section="1"></div>
+        <div class="nav-dot" data-section="2"></div>
+        <div class="nav-dot" data-section="3"></div>
+        <div class="nav-dot" data-section="4"></div>
+        <div class="nav-dot" data-section="5"></div>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- 第0页：封面 -->
+        <section class="section" id="section-0">
+            <div class="section-content hero">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    <span>业务部门汇报</span>
+                </div>
+                <h1>舆情监测智能化<br>升级项目汇报</h1>
+                <p class="subtitle">
+                    借助前沿AI能力，实现舆情监测从"人工巡查"到"智能守护"的跨越<br>
+                    让业务团队从繁琐的信息收集中解放，专注于决策与应对
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">95%+</div>
+                        <div class="stat-label">信息覆盖提升</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10倍</div>
+                        <div class="stat-label">效率提升</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">分钟级</div>
+                        <div class="stat-label">风险响应速度</div>
+                    </div>
+                </div>
+                <div class="scroll-hint">
+                    <span>向下滚动查看汇报内容</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第1页：业务痛点 -->
+        <section class="section" id="section-1">
+            <div class="section-number">01</div>
+            <div class="section-content">
+                <h2>业务痛点：传统舆情监测面临的挑战</h2>
+                <p class="subtitle">在日常业务运营中，舆情监测工作存在以下核心痛点</p>
+
+                <div class="highlight-box" style="margin-bottom: 40px;">
+                    <h3>💡 传统方案 vs 智能体方案</h3>
+                    <p>市面上不乏舆情监测系统，但通常需要<strong>高额采购费用</strong>，功能大而全却未必贴合实际业务场景，定制化困难、上线周期长。而AI智能体带来的最大价值是：<strong>根据业务需求，定制小而美的软件和能力，轻量化解决特定问题，极大降低成本。</strong></p>
+                </div>
+
+                <h3 style="margin-top: 40px;">🚫 业务痛点：日常运营中的三大困境</h3>
+                <div class="cards-grid">
+                    <div class="pain-card fade-in">
+                        <div class="pain-title">
+                            <span>💬</span>
+                            不知道客户在说什么
+                        </div>
+                        <div class="pain-desc">
+                            客户的反馈、投诉、建议散落在微博、小红书、评论区等各个地方，没有一个统一的入口能看到全貌。业务团队想了解客户真实声音，只能靠人工逐个翻找，费时费力还容易遗漏。
+                        </div>
+                    </div>
+
+                    <div class="pain-card fade-in">
+                        <div class="pain-title">
+                            <span>🌐</span>
+                            帖子散落各处
+                        </div>
+                        <div class="pain-desc">
+                            微博、小红书、论坛、新闻网站……信息分散在不同平台，形成一个个信息孤岛。想看全貌需要逐个登录、逐个搜索，没有一站式的汇聚视图，重要的声音可能被淹没在信息洪流中。
+                        </div>
+                    </div>
+
+                    <div class="pain-card fade-in">
+                        <div class="pain-title">
+                            <span>📉</span>
+                            看不到舆情趋势
+                        </div>
+                        <div class="pain-desc">
+                            手头只有零散的帖子链接和截图，看不到整体的情绪走向、热点演变和传播路径。缺乏数据化的趋势分析，难以判断一个话题是在发酵还是已经平息，决策缺乏依据。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow-down">⬇</div>
+
+                <h3 style="margin-top: 20px;">✅ 智能体方案：小而美、轻量化、按需定制</h3>
+                <div class="cards-grid">
+                    <div class="solution-card fade-in">
+                        <div class="solution-title">
+                            <span>🎯</span>
+                            按需定制，贴合业务
+                        </div>
+                        <div class="solution-desc">
+                            不需要采购大而全的系统。智能体可以根据<strong>具体业务场景</strong>快速搭建专属能力——只采集关心的平台、只分析关心的关键词、只呈现关心的维度。用多少做多少，不做功能冗余。
+                        </div>
+                    </div>
+
+                    <div class="solution-card fade-in">
+                        <div class="solution-title">
+                            <span>⚡</span>
+                            轻量灵活，快速上线
+                        </div>
+                        <div class="solution-desc">
+                            不需要漫长的采购流程和系统部署。从需求提出到<strong>第一个可用版本</strong>，可能只需要几天甚至几小时。需求变了随时调整，不像采购系统那样改动一次要排队等排期。
+                        </div>
+                    </div>
+
+                    <div class="solution-card fade-in">
+                        <div class="solution-title">
+                            <span>💰</span>
+                            成本极低，按需付费
+                        </div>
+                        <div class="solution-desc">
+                            无需一次性投入高额采购费用。智能体方案<strong>按实际使用量</strong>灵活计费，小规模试用几乎零成本。功能按需叠加，不做无用功，每一笔投入都花在刀刃上，极大降低舆情监测的整体门槛。
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- 第2页：业务能力提升 -->
+        <section class="section" id="section-2">
+            <div class="section-number">02</div>
+            <div class="section-content">
+                <h2>业务能力提升：从"人力驱动"到"智能驱动"</h2>
+                <p class="subtitle">智能化升级后，各项业务指标实现质的飞跃</p>
+
+                <div class="metrics-row fade-in">
+                    <div class="metric-card">
+                        <div class="metric-number">95%+</div>
+                        <div class="metric-label">信息覆盖率</div>
+                        <div class="metric-change up">↑ 提升约35个百分点</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">10倍</div>
+                        <div class="metric-label">工作效率提升</div>
+                        <div class="metric-change up">↑ 从4-6小时/天降至30分钟</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">&lt;5分钟</div>
+                        <div class="metric-label">风险响应时间</div>
+                        <div class="metric-change up">↓ 从数小时缩短到分钟级</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">3+</div>
+                        <div class="metric-label">数据源接入</div>
+                        <div class="metric-change up">↑ 微博、小红书等多平台</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <h3>💡 核心价值：把时间还给业务</h3>
+                    <p>传统模式下，业务人员每天花费2-3小时在信息收集上。智能化升级后，这部分工作交由系统自动化完成，业务人员只需花费10-20分钟审核关键信息，将精力集中在<strong>风险研判、策略制定、危机应对</strong>等高价值工作上。</p>
+                </div>
+
+                <h3 style="margin-top: 40px;">📋 具体业务场景改善</h3>
+                <div class="cards-grid">
+                    <div class="card fade-in">
+                        <div class="card-icon">🌅</div>
+                        <h3>早间信息汇总</h3>
+                        <p>以前：上班后花1小时浏览各平台整理 overnight 舆情。</p>
+                        <p style="margin-top: 8px;"><strong>现在：</strong>系统自动生成早间简报，包含夜间所有重要舆情，业务人员5分钟浏览即可。</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="card-icon">🔥</div>
+                        <h3>突发舆情应对</h3>
+                        <p>以前：从舆情爆发到被发现可能间隔数小时，错过最佳应对窗口。</p>
+                        <p style="margin-top: 8px;"><strong>现在：</strong>热度异常自动触发告警，业务人员第一时间收到通知，即时启动应对流程。</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="card-icon">📑</div>
+                        <h3>定期报告产出</h3>
+                        <p>以前：日报/周报需手动整理数据、制作图表、撰写分析，耗时2-3小时。</p>
+                        <p style="margin-top: 8px;"><strong>现在：</strong>报告框架自动生成，数据图表自动更新，业务人员只需审核和补充判断。</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="card-icon">🔍</div>
+                        <h3>深度专题追踪</h3>
+                        <p>以前：想追踪某个话题的发酵过程，需要手动翻查历史记录，费时费力。</p>
+                        <p style="margin-top: 8px;"><strong>现在：</strong>话题自动聚类，传播路径可视化呈现，历史数据一键回溯。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第3页：工作方式改变 -->
+        <section class="section" id="section-3">
+            <div class="section-number">03</div>
+            <div class="section-content">
+                <h2>工作方式的改变：业务人员日常工作体验的变化</h2>
+                <p class="subtitle">智能化升级不是替代人，而是让人的工作更有价值</p>
+
+                <table class="compare-table fade-in">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%">工作环节</th>
+                            <th style="width: 42%">以前的工作方式</th>
+                            <th style="width: 42%">现在的工作方式</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>信息获取</strong></td>
+                            <td>
+                                <span class="tag tag-old">被动</span>
+                                人工逐个打开微博、小红书，翻阅查找与品牌相关的内容。像"大海捞针"，耗时且容易遗漏。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">主动推送</span>
+                                系统自动抓取，经过筛选后主动推送摘要。业务人员只需看"精选内容"，像看定制新闻。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>内容判断</strong></td>
+                            <td>
+                                <span class="tag tag-old">凭经验</span>
+                                阅读内容后凭个人感觉判断重要程度、情感好坏。标准因人而异，新人难以上手。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">有辅助</span>
+                                系统给出初步判断建议（风险等级、情感倾向），业务人员在此基础上做最终决策，有据可依。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>风险响应</strong></td>
+                            <td>
+                                <span class="tag tag-old">事后</span>
+                                通常是客户或领导先看到负面信息，业务部门被动应对，处于"救火"状态。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">事前</span>
+                                风险刚出现即收到告警，业务部门主动出击，有充足时间制定应对策略，变"救火"为"防火"。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>报告撰写</strong></td>
+                            <td>
+                                <span class="tag tag-old">从零开始</span>
+                                从原始数据到最终报告，全部手工完成。复制粘贴、调格式、做图表，重复性劳动多。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">审核完善</span>
+                                报告框架、数据图表自动生成。业务人员专注于分析结论和策略建议的撰写，产出质量更高。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>知识传承</strong></td>
+                            <td>
+                                <span class="tag tag-old">人带人</span>
+                                历史案例、判断经验分散在个人头脑中，人员变动后知识流失，新人培养周期长。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">系统沉淀</span>
+                                历史数据、判断记录、处置结果全部留痕沉淀。新人可通过系统快速学习历史案例。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>工作时段</strong></td>
+                            <td>
+                                <span class="tag tag-old">朝九晚六</span>
+                                监测工作仅限于上班时间，非工作时间的舆情完全盲区，周一早上才发现周末的负面。
+                            </td>
+                            <td>
+                                <span class="tag tag-new">全天候</span>
+                                系统7×24小时运转，重要信息随时推送。业务人员无需时刻盯着，但关键信息不会遗漏。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <h3>🎯 本质变化：从"操作员"到"分析师"</h3>
+                    <p>智能化升级让业务人员从繁琐的"信息搬运"工作中解放出来，角色定位从<strong>"舆情收集员"</strong>转变为<strong>"舆情分析师"</strong>和<strong>"风险决策者"</strong>。工作重心从"做"（收集、整理、制表）转向"想"（判断、分析、决策）。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第4页：认知转变 -->
+        <section class="section" id="section-4">
+            <div class="section-number">04</div>
+            <div class="section-content">
+                <h2>对智能化工具的认知转变</h2>
+                <p class="subtitle">动手用起来才发现，很多"听说"和"实际"并不一样</p>
+
+                <div class="highlight-box" style="margin-bottom: 40px;">
+                    <h3>🚀 动手用起来，打破认知差</h3>
+                    <p>包括我们在内，很多人过去对AI的经验还停留在"算数不准""材料里很多数据是杜撰的""生成的内容根本没法直接用"这类印象上。但实际上，AI的发展早已超越了这个阶段。真正动手用了一个月后发现，<strong>那些担忧大多是对工具的误读，或者是把"初版效果"当成了"最终交付"</strong>。最大的收获不是技术本身，而是打破了这些认知差，让工具真正为业务所用。</p>
+                </div>
+
+                <h3 style="margin-top: 40px;">🚫 需要打破的6大认知差</h3>
+                <div class="cards-grid">
+                    <div class="card fade-in" style="cursor:pointer;" onclick="openModal('math-modal')">
+                        <div class="card-icon">🧮</div>
+                        <h3>"AI算数不准，数据工作不能信"</h3>
+                        <p><strong>为什么算错：</strong>大语言模型的本质是一个<strong>"文字预测器"</strong>，它通过概率来猜测下一个字该写什么，而不是像计算器一样进行精确运算。让它做多位数乘法，相当于逼一个文学家硬算数学题，出错并不奇怪。</p>
+                        <p style="margin-top: 8px;"><strong>怎么解决：</strong>现在通过<strong>"工具调用"</strong>机制，AI遇到数字运算会自动调用编程工具（如Python）来执行精确计算，再把结果填入报告。AI负责"理解需求"和"组装逻辑"，计算器负责"算出准确数字"。分工明确，各取所长。</p>
+                        <div style="margin-top:12px; color:var(--primary-light); font-size:0.85rem;">👆 点击卡片查看图示详解</div>
+                    </div>
+
+                    <div class="card fade-in" style="cursor:pointer;" onclick="openModal('hallucination-modal')">
+                        <div class="card-icon">👻</div>
+                        <h3>"AI会幻觉，编造虚假信息"</h3>
+                        <p><strong>为什么"幻觉"：</strong>大模型在训练时学习了海量文本，当遇到不确定的问题时，它会基于概率"脑补"一个看似合理的答案，而不是诚实地说"我不知道"。这种"一本正经地胡说八道"就是幻觉。</p>
+                        <p style="margin-top: 8px;"><strong>怎么规避：</strong>在<strong>"基于已有材料做归纳"</strong>的场景（如舆情分析），AI只对我们提供的原始内容做总结分类，不"无中生有"。给它明确的边界和素材，幻觉率大幅降低。</p>
+                        <div style="margin-top:12px; color:var(--primary-light); font-size:0.85rem;">👆 点击卡片查看图示详解</div>
+                    </div>
+
+                    <div class="card fade-in" style="cursor:pointer;" onclick="openModal('ppt-modal')">
+                        <div class="card-icon">📊</div>
+                        <h3>"AI做的PPT/报告没法用"</h3>
+                        <p><strong>为什么觉得"没法用"：</strong>很多人把AI的<strong>"初版产出"</strong>当成了<strong>"最终交付"</strong>，看到格式不完美、数据需要核对就直接否定了。其实AI的真正价值是快速搭出框架，而不是一步到位。</p>
+                        <p style="margin-top: 8px;"><strong>怎么高效使用：</strong>现在的工作流是：AI生成初版（5分钟）→ 人工审核修改（25分钟）。效率大幅提升，且框架质量有保障。</p>
+                        <div style="margin-top:12px; color:var(--primary-light); font-size:0.85rem;">👆 点击卡片查看图示详解</div>
+                    </div>
+
+                    <div class="card fade-in" style="cursor:pointer;" onclick="openModal('coding-modal')">
+                        <div class="card-icon">🎓</div>
+                        <h3>"用AI需要懂技术、会编程"</h3>
+                        <p><strong>为什么有这个印象：</strong>早期的AI工具确实需要写Prompt、调参数，给人一种"技术门槛很高"的感觉。再加上各种技术报道里的专业术语，让业务部门望而生畏。</p>
+                        <p style="margin-top: 8px;"><strong>实际有多简单：</strong>现在完全是<strong>"说人话"</strong>的模式。"帮我汇总今天微博的负面信息"——这句话就是完整的指令。AI理解意图后自己规划步骤、调用工具、生成结果。业务人员零技术门槛即可使用。</p>
+                        <div style="margin-top:12px; color:var(--primary-light); font-size:0.85rem;">👆 点击卡片查看图示详解</div>
+                    </div>
+                </div>
+
+                <div class="two-col" style="margin-top: 48px;">
+                    <div>
+                        <h3>💡 实践中的新发现</h3>
+                        <div class="timeline">
+                            <div class="timeline-item fade-in">
+                                <h4>"快"比"完美"重要</h4>
+                                <p>以前追求一次到位的完美报告。现在AI快速出初版，边看边改，"先看到全貌再精修细节"，反而效率更高。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>自然语言是最强的"操作指令"</h4>
+                                <p>不需要学软件、记快捷键。想要什么都直接说，"我要近7天负面趋势图"，系统就能理解并生成。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>越用越默契</h4>
+                                <p>系统记住常用操作和偏好后，像一个熟悉业务的老同事。这种"默契"是传统工具给不了的。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>数据驱动决策更有底气</h4>
+                                <p>以前凭经验判断舆情走势，现在有趋势曲线、历史对比、传播路径等客观依据支撑，决策更自信。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>🎯 思维方式的转变</h3>
+                        <div class="cards-grid" style="grid-template-columns: 1fr;">
+                            <div class="card fade-in">
+                                <div class="card-icon">🗣️</div>
+                                <h3>从"精确指令"到"意图表达"</h3>
+                                <p>以前想要什么功能，得说清楚每一步操作。现在只需要描述"想要什么结果"，AI理解意图后自主规划路径。</p>
+                            </div>
+
+                            <div class="card fade-in">
+                                <div class="card-icon">🤝</div>
+                                <h3>从"单兵作战"到"人机协作"</h3>
+                                <p>机器做广度（大面积扫描、初步筛选），人做深度（关键判断、策略制定）。各司其职，优势互补。</p>
+                            </div>
+
+                            <div class="card fade-in">
+                                <div class="card-icon">🎨</div>
+                                <h3>从"代码思维"到"产品思维"</h3>
+                                <p>不需要懂开发，直接描述想要的产品形态。技术实现不再阻塞创意，想法到原型的时间大幅缩短。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第5页：总结与展望 -->
+        <section class="section" id="section-5">
+            <div class="section-number">05</div>
+            <div class="section-content">
+                <h2>总结与展望</h2>
+                <p class="subtitle">智能化升级不是终点，而是新的起点</p>
+
+                <div class="two-col">
+                    <div>
+                        <h3>✅ 项目成果回顾</h3>
+                        <div class="timeline">
+                            <div class="timeline-item fade-in">
+                                <h4>建立全天候监测体系</h4>
+                                <p>实现7×24小时多平台自动化采集，信息覆盖率从约60%提升至95%以上，消除非工作时间盲区。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>构建智能分析能力</h4>
+                                <p>自动完成情感判断、风险分级、热点聚类，减少主观判断差异，为决策提供客观依据。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>打造实时预警机制</h4>
+                                <p>风险信号分钟级触达，业务部门从被动应对转为主动防控，赢得宝贵应对时间。</p>
+                            </div>
+                            <div class="timeline-item fade-in">
+                                <h4>形成可视化决策支持</h4>
+                                <p>数据看板实时呈现舆情全貌，历史趋势、热点追踪、传播分析一目了然，支撑快速决策。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>🚀 下一步规划</h3>
+                        <div class="cards-grid" style="grid-template-columns: 1fr;">
+                            <div class="card fade-in">
+                                <div class="card-icon">🔮</div>
+                                <h3>预测性监测</h3>
+                                <p>从"监测已发生"进化到"预警可能发生"。通过历史模式识别，提前发现潜在舆情风险点，实现防患于未然。</p>
+                            </div>
+
+                            <div class="card fade-in">
+                                <div class="card-icon">📱</div>
+                                <h3>渠道扩展</h3>
+                                <p>继续扩展监测范围，覆盖短视频平台、论坛、评论区等更多用户触点，实现真正意义上的全网监测。</p>
+                            </div>
+
+                            <div class="card fade-in">
+                                <div class="card-icon">🎯</div>
+                                <h3>策略闭环</h3>
+                                <p>从"发现问题"延伸到"辅助解决"。在识别风险的基础上，智能推荐历史相似案例和应对策略，形成完整闭环。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer" style="margin-top: 60px;">
+                    <h2>让智能服务于业务，让效率创造价值</h2>
+                    <p style="color: var(--text-secondary); max-width: 700px; margin: 16px auto 0; font-size: 1.05rem;">
+                        本项目的实践证明：先进的智能化技术已经能够为业务场景带来切实的效率提升和价值创造。<br><br>
+                        核心收获不是"AI有多强"，而是<strong>"人+AI"的组合远超单独的一方</strong>。<br>
+                        人的判断力 + AI的执行力 = 更高效的业务运营。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 模态框：AI算数原理详解 -->
+    <div class="modal-overlay" id="math-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>🧮 为什么AI会算错数？怎么解决？</h3>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">❌ 问题：大模型是"文字预测器"，不是计算器</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">用户提问</div>
+                        <div class="sublabel">123 × 456 = ?</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node highlight">
+                        <div class="icon">🧠</div>
+                        <div class="label">大模型（LLM）</div>
+                        <div class="sublabel">文字预测器</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result">56,088<br><span style="font-size:0.75rem;font-weight:normal;">可能正确...也可能错</span></div>
+                </div>
+                <div class="diagram-caption">大模型通过概率"猜测"下一个字，多位数乘法容易猜错</div>
+            </div>
+
+            <div class="diagram-vs">解决方案</div>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">✅ 解决：AI识别需求 → 调用计算工具 → 返回精确结果</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">用户提问</div>
+                        <div class="sublabel">123 × 456 = ?</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🧠</div>
+                        <div class="label">AI识别</div>
+                        <div class="sublabel">"这是计算任务"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🔧</div>
+                        <div class="label">Python / 计算器</div>
+                        <div class="sublabel">精确运算</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result correct">56,088<br><span style="font-size:0.75rem;font-weight:normal;">100% 准确</span></div>
+                </div>
+                <div class="diagram-caption">AI负责"理解要什么"，计算器负责"算出准确数字"，各司其职</div>
+            </div>
+
+            <div class="diagram-legend">
+                <span><span class="legend-dot red"></span> 容易出错的环节</span>
+                <span><span class="legend-dot green"></span> 精确可靠的环节</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框：AI幻觉详解 -->
+    <div class="modal-overlay" id="hallucination-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>👻 AI"幻觉"是怎么回事？在业务场景中如何规避？</h3>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">❌ 容易幻觉的场景：让AI"无中生有"</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">用户提问</div>
+                        <div class="sublabel">"讲一个历史故事"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node highlight">
+                        <div class="icon">🧠</div>
+                        <div class="label">大模型</div>
+                        <div class="sublabel">训练记忆中的碎片</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result">流畅的故事<br><span style="font-size:0.75rem;font-weight:normal;">但细节可能是编的</span></div>
+                </div>
+                <div class="diagram-caption">AI基于概率"脑补"内容，没有素材约束时容易一本正经地胡说八道</div>
+            </div>
+
+            <div class="diagram-vs">我们的解决方案</div>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">✅ 不易幻觉的场景：让AI"基于素材归纳"</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node fix">
+                        <div class="icon">📄</div>
+                        <div class="label">原始素材</div>
+                        <div class="sublabel">100条微博帖子</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🧠</div>
+                        <div class="label">AI分析</div>
+                        <div class="sublabel">只总结这100条内容</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result correct">分类汇总报告<br><span style="font-size:0.75rem;font-weight:normal;">内容来自素材，有据可查</span></div>
+                </div>
+                <div class="diagram-caption">舆情分析中，AI只对我们采集的原始内容做归纳，不"无中生有"</div>
+            </div>
+
+            <div class="diagram-legend">
+                <span><span class="legend-dot red"></span> 高风险场景（开放创作）</span>
+                <span><span class="legend-dot green"></span> 低风险场景（素材归纳）</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框：AI做报告详解 -->
+    <div class="modal-overlay" id="ppt-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>📊 AI生成的报告"没法用"？问题出在期望值上</h3>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">❌ 旧认知：AI应该一步到位</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">提出需求</div>
+                        <div class="sublabel">"帮我写一份日报"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node highlight">
+                        <div class="icon">🤖</div>
+                        <div class="label">AI生成初版</div>
+                        <div class="sublabel">格式不完美、数据待核对</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result">❌ 直接否定<br><span style="font-size:0.75rem;font-weight:normal;">"AI做的果然不行"</span></div>
+                </div>
+                <div class="diagram-caption">把AI的"初版"当成"终稿"来评判，自然觉得不合格</div>
+            </div>
+
+            <div class="diagram-vs">正确的工作流</div>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">✅ 现在：AI搭框架，人做精修</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">提出需求</div>
+                        <div class="sublabel">"帮我写一份日报"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🤖</div>
+                        <div class="label">AI生成初版</div>
+                        <div class="sublabel">5分钟出框架</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">✍️</div>
+                        <div class="label">人指令AI修改</div>
+                        <div class="sublabel">核对数据、补充判断</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result correct">✅ 高质量终稿</div>
+                </div>
+                <div class="diagram-caption">AI负责"快出框架"，人负责"精修把关"。修改AI初版比从零开始做快10倍</div>
+            </div>
+
+            <div class="diagram-legend">
+                <span><span class="legend-dot red"></span> 错误期待：AI一步到位</span>
+                <span><span class="legend-dot green"></span> 正确用法：人机协作迭代</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框：AI使用门槛详解 -->
+    <div class="modal-overlay" id="coding-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>🎓 用AI真的需要懂编程吗？</h3>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">❌ 旧印象：技术门槛高</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">业务人员</div>
+                        <div class="sublabel">"我想分析舆情"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node highlight">
+                        <div class="icon">🔧</div>
+                        <div class="label">想象中的AI</div>
+                        <div class="sublabel">要写代码、调参数</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result">❌ 望而却步<br><span style="font-size:0.75rem;font-weight:normal;">"这活儿得找技术同事"</span></div>
+                </div>
+                <div class="diagram-caption">受早期AI工具和技术报道影响，以为AI是程序员的专属工具</div>
+            </div>
+
+            <div class="diagram-vs">实际体验</div>
+
+            <div class="diagram-wrap">
+                <div class="diagram-title">✅ 现在：说人话就行，AI自己搞定</div>
+                <div class="diagram-flow">
+                    <div class="diagram-node">
+                        <div class="icon">👤</div>
+                        <div class="label">业务人员</div>
+                        <div class="sublabel">"汇总今天微博负面信息"</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🧠</div>
+                        <div class="label">AI理解意图</div>
+                        <div class="sublabel">自然语言就是指令</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node fix">
+                        <div class="icon">🔧</div>
+                        <div class="label">AI自动执行</div>
+                        <div class="sublabel">规划步骤、调用工具</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-result correct">✅ 直接获得结果<br><span style="font-size:0.75rem;font-weight:normal;">零代码门槛</span></div>
+                </div>
+                <div class="diagram-caption">AI负责"翻译意图"和"执行技术操作"，业务人员只需"说人话"描述需求</div>
+            </div>
+
+            <div class="diagram-legend">
+                <span><span class="legend-dot red"></span> 旧认知：技术工具</span>
+                <span><span class="legend-dot green"></span> 现实：自然语言交互</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 粒子背景
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(26, 115, 232, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 50; i++) {
+            particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(26, 115, 232, ${0.15 * (1 - dist / 150)})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // 滚动进度条
+        const progressBar = document.getElementById('progress-bar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+
+        // 导航点
+        const sections = document.querySelectorAll('.section');
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        function updateActiveSection() {
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            sections.forEach((section, index) => {
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    navDots.forEach(dot => dot.classList.remove('active'));
+                    navDots[index]?.classList.add('active');
+                }
+            });
+        }
+
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                sections[index].scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // 淡入动画
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            updateActiveSection();
+        });
+
+        // 模态框控制
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (!event || event.target.classList.contains('modal-overlay')) {
+                document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
