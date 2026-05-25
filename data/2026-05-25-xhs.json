@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-25",
-  "generatedAt": "2026-05-25 08:49",
+  "generatedAt": "2026-05-25 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -30,8 +30,7 @@
   "byProduct": {
     "i豆活动": 22,
     "i豆乐园": 7,
-    "其他": 39,
-    "其���": 1
+    "其他": 40
   },
   "byCategory": {
     "i豆兑换": 34,
@@ -61,7 +60,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-25）采集到 69 条小红书舆情，负面 6 条，高风险 6 条。",
     "date": "2026-05-25",
-    "generatedAt": "2026-05-25T00:49:07.987Z"
+    "generatedAt": "2026-05-25T04:00:28.720Z"
   },
   "records": [
     {
@@ -1554,7 +1553,7 @@
       "sentiment": "positive",
       "riskLevel": "low",
       "title": "工商银行商城购买iphone16promax安全下车",
-      "content": "工商银行商城购买iphone16promax安全下车",
+      "content": "工商银行商城购���iphone16promax安全下车",
       "url": "https://www.xiaohongshu.com/explore/686b93f2000000002400b0f7",
       "author": "睦睦麻麻👩",
       "status": "已发布",
@@ -1620,7 +1619,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工银豆兑换什么最合算",
+      "title": "工��豆兑换什么最合算",
       "content": "工银豆兑换什么最合算",
       "url": "https://www.xiaohongshu.com/explore/69b03143000000001b014aa3",
       "author": "知行至境",
@@ -1792,7 +1791,7 @@
       "author": "美满",
       "status": "已发布",
       "amount": "-",
-      "relatedProduct": "其���",
+      "relatedProduct": "其他",
       "fetchTime": "2026-05-25T08:41:21.306537",
       "engagement": {
         "likes": "21",
@@ -1919,7 +1918,7 @@
       "title": "工行学生信用卡提额",
       "content": "工行学生信用卡提额",
       "url": "https://www.xiaohongshu.com/explore/6a0c82c80000000006035caa",
-      "author": "��粮不足",
+      "author": "余粮不足",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",

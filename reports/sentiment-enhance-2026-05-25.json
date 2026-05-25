@@ -1,15 +1,15 @@
 {
   "date": "2026-05-25",
-  "generatedAt": "2026-05-25T00:59:23.083Z",
-  "totalRecords": 6,
+  "generatedAt": "2026-05-25T04:02:18.387Z",
+  "totalRecords": 5,
   "beforeStats": {
     "positive": 0,
-    "neutral": 6,
+    "neutral": 5,
     "negative": 0
   },
   "afterStats": {
     "positive": 1,
-    "neutral": 4,
+    "neutral": 3,
     "negative": 1
   },
   "diffCount": 2,
@@ -19,14 +19,14 @@
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "作者使用了'快来领'这样的积极词汇，鼓励他人参与活动，表达了积极的情感态度。"
+      "reason": "作者用'快来领'的语气积极地邀请他人参与领取工行i豆的活动，表达了积极分享好消息的情感态度。"
     },
     {
       "title": "跌了！工行如意金积存更新5.24",
       "before": "neutral",
       "after": "negative",
       "method": "llm",
-      "reason": "帖子标题使用了'跌了！'这样的负面词汇，表达了对工行如意金积存价格下跌的不满和失望。"
+      "reason": "作者用'跌了！'的语气表达了对工行如意金积存价格下跌的不满和失望。"
     }
   ]
 }
