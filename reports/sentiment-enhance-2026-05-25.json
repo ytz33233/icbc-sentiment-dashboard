@@ -1,109 +1,25 @@
 {
   "date": "2026-05-25",
-  "generatedAt": "2026-05-24T23:10:54.474Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-05-25T00:50:11.960Z",
+  "totalRecords": 3,
   "beforeStats": {
-    "positive": 4,
-    "neutral": 23,
-    "negative": 3
+    "positive": 0,
+    "neutral": 3,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 5,
-    "neutral": 22,
-    "negative": 3
+    "positive": 0,
+    "neutral": 2,
+    "negative": 1
   },
-  "diffCount": 13,
+  "diffCount": 1,
   "changes": [
     {
-      "title": "工行i豆+500开心",
-      "before": "positive",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": "使用了'天塌了'这样的夸张表达，通常用来表达失望或不满，因此可以判断作者对工行月月花5月抽奖活动有负面情绪。"
-    },
-    {
-      "title": "抖音：工银i豆当钱花，至高可抵30元！",
+      "title": "跌了！工行如意金积存更新5.24",
       "before": "neutral",
       "after": "negative",
-      "method": "rule-negative",
-      "reason": ""
-    },
-    {
-      "title": "攒工行积分",
-      "before": "neutral",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": "使用了“背刺”一词，表达了作者对工商银行的不满和愤怒。"
-    },
-    {
-      "title": "工商银行｜石景山乐享文旅主题数币硬钱包",
-      "before": "neutral",
-      "after": "positive",
       "method": "llm",
-      "reason": "标题中的'开心'表达了作者对工行i豆增加500的积极情感。"
-    },
-    {
-      "title": "天塌了，工行月月花5月抽奖",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是客观陈述，没有表达作者的个人情感。"
-    },
-    {
-      "title": "工行月月花谢谢参与",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "作者询问如何参与活动，没有表达任何情感倾向。"
-    },
-    {
-      "title": "坐地铁白嫖工银i豆商城？！上海真的很香",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "作者询问如何办理立减金，没有表达任何情感倾向。"
-    },
-    {
-      "title": "5月升金礼",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "作者使用了感叹号和'真的很香'等积极词汇，表达了对活动的满意和兴奋。"
-    },
-    {
-      "title": "工行你还搞这种，好惊喜哟",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是简单的活动名称，没有表达作者的情感态度。"
-    },
-    {
-      "title": "工行每周一测及热门活动（5.18）",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中使用了'好惊喜哟'，表达了作者对工行活动的积极和满意态度。"
-    },
-    {
-      "title": "薅羊毛日记Day97💰62.16（5月22日）",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容仅提供了工行活动的信息，没有表达作者的情感态度。"
-    },
-    {
-      "title": "5.21 工行 开了！小满 300i豆+66i豆",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的'薅羊毛日记'和'💰62.16'暗示作者通过参与工行活动获得了收益，表达了积极的情感态度。"
-    },
-    {
-      "title": "工商银行你背刺我！",
-      "before": "negative",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的'开了！'和'300i豆+66i豆'暗示作者对工行活动感到满意和兴奋，表达了积极的情感态度。"
+      "reason": "使用了感叹号和'跌了'这样的词汇，表达了对工行如意金积存价格下跌的不满和失望。"
     }
   ]
 }
