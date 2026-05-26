@@ -1,17 +1,67 @@
 {
   "date": "2026-05-26",
-  "generatedAt": "2026-05-25T23:10:53.372Z",
-  "totalRecords": 2,
+  "generatedAt": "2026-05-26T04:02:43.675Z",
+  "totalRecords": 16,
   "beforeStats": {
     "positive": 0,
-    "neutral": 2,
+    "neutral": 16,
     "negative": 0
   },
   "afterStats": {
-    "positive": 0,
-    "neutral": 2,
+    "positive": 7,
+    "neutral": 9,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "预告！工行10个活动，10立减！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'预告'和'10立减'表达了作者对工行活动的期待和积极态度。"
+    },
+    {
+      "title": "5.25工行答题🧧➕1.3",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'🧧'表情符号和'➕1.3'表示作者对工行答题活动获得红包的积极和满意态度。"
+    },
+    {
+      "title": "5.25新工行1.4r现金红包🧧",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'🧧'表情符号和'1.4r现金红包'表示作者对工行活动获得现金红包的积极和满意态度。"
+    },
+    {
+      "title": "工行答题1🧧",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'🧧'表情符号表示作者对工行答题活动获得红包的积极和满意态度。"
+    },
+    {
+      "title": "5.26工行  丝滑1.3🧧🧧🧧",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了多个红包表情符号🧧🧧🧧，这通常表示作者对活动感到满意或兴奋。"
+    },
+    {
+      "title": "工行月月花夯爆了，还能叠加地区活动",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了'爆了'一词，通常表示活动非常受欢迎或超出预期，同时提到可以叠加地区活动，这可能让作者感到兴奋或满意。"
+    },
+    {
+      "title": "5.25工行答题1元🧧",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者使用了表情符号🧧，通常代表红包或礼物，表达了对工商银行答题活动的积极和满意态度。"
+    }
+  ]
 }
