@@ -1,0 +1,162 @@
+{
+  "reportDate": "2026-05-27",
+  "generatedAt": "2026-05-27 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "其他": 1
+  },
+  "byCategory": {
+    "其他": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-05-21",
+      "total": 11,
+      "recent": 5,
+      "history": 6,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-22",
+      "total": 9,
+      "recent": 0,
+      "history": 9,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-23",
+      "total": 7,
+      "recent": 0,
+      "history": 7,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-24",
+      "total": 4,
+      "recent": 1,
+      "history": 3,
+      "negative": 1
+    },
+    {
+      "date": "2026-05-25",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 1
+    },
+    {
+      "date": "2026-05-26",
+      "total": 12,
+      "recent": 2,
+      "history": 10,
+      "negative": 0
+    },
+    {
+      "date": "2026-05-27",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "信用卡",
+      "count": 1
+    }
+  ],
+  "hotTopics": [
+    {
+      "topic": "支付宝618活动",
+      "summary": "支付宝6·18购物节福利",
+      "postCount": 1,
+      "postIndices": [
+        0
+      ],
+      "keywords": [
+        "爱购6·18",
+        "支付宝"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 0,
+      "topPosts": [
+        {
+          "id": "20260527-01",
+          "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+          "heatScore": 0,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-05-27）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「其他」等产品，来源以微博为主，热词包括「信用卡」。",
+    "date": "2026-05-27",
+    "generatedAt": "2026-05-26T23:10:53.663Z"
+  },
+  "records": [
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "content": "【爱购6·18】支付宝：超多福利等你来！<br />💳中国境内地区（不含港澳台）的工银信用卡个人客户可享👇<br /><br />1️⃣消费满减<br /><br />✅活动一：碰一下满25元随机立减至高6元<br />🗓️2026年6月1日至2026年6月30日<br />📲持卡人在通过支付宝扣款首选卡设置为工银信用卡后，在铺设支付宝碰一下机具的线下商户购物消费时， ...<a href=\"/status/5302915797355946\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Tue May 26 20:05:12 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5302915797355946",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "信用卡"
+      ],
+      "amount": "25元",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-26",
+      "fetchTime": "2026-05-27",
+      "author": "中国工商银行信用卡",
+      "id": "20260527-01",
+      "category": "其他",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "作者在帖子中客观陈述了工商银行信用卡在支付宝平台的优惠活动信息，没有表达个人情感倾向。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-05-26T23:10:55.889Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

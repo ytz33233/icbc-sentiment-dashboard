@@ -39,7 +39,62 @@
             overflow-x: hidden;
         }
 
-        /* 粒子背景 */
+        /* 点击图片放大 */
+        .zoomable-img {
+            cursor: zoom-in;
+            transition: transform 0.2s ease;
+        }
+        .zoomable-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox 弹窗 */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+            animation: fadeIn 0.2s ease;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: zoomIn 0.2s ease;
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10001;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to   { transform: scale(1);   opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -986,6 +1041,64 @@
 
                 <div class="arrow-down">⬇</div>
 
+                <h3 style="margin-top: 20px;">🔍 市面上的舆情监测方案：为何"有门槛"？</h3>
+                <p class="subtitle">舆情监测看似只是"采集+分析"，但实际操作中面临技术、资金、时间三重门槛</p>
+
+                <div class="cards-grid" style="margin-top: 1.5rem;">
+                    <div class="card fade-in">
+                        <div class="card-icon">🏢</div>
+                        <h3>专业舆情监测系统</h3>
+                        <div style="margin: 12px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--dark-border);">
+                            <img src="images/xinlang-yqt.png" class="zoomable-img" alt="新浪舆情通产品界面" style="width: 100%; display: block;">
+                        </div>
+                        <p>新浪舆情通、清博大数据、鹰眼速览等标准化产品，功能大而全。</p>
+                        <p style="margin-top: 8px; color: var(--danger);"><strong>门槛：</strong>年费数万至数十万，定制化困难，采购流程长，很多功能用不上。</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="card-icon">🔌</div>
+                        <h3>平台数据接入服务</h3>
+                        <div style="margin: 12px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--dark-border);">
+                            <img src="images/xhs-api.jpeg" class="zoomable-img" alt="小红书开放平台开发者入驻" style="width: 100%; display: block;">
+                        </div>
+                        <p>单独采购小红书、微博等平台的API接口，获取原始数据。</p>
+                        <p style="margin-top: 8px; color: var(--danger);"><strong>门槛：</strong>仅解决"采"的问题，数据清洗、去重、分析仍需大量人工和技术投入。</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="card-icon">👨‍💻</div>
+                        <h3>自建技术团队</h3>
+                        <div style="margin: 12px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--dark-border);">
+                            <img src="images/zhongyi-yuqing.png" class="zoomable-img" alt="中移舆情监测系统" style="width: 100%; display: block;">
+                        </div>
+                        <p>招聘爬虫工程师、数据分析师，从零搭建采集与分析体系。</p>
+                        <p style="margin-top: 8px; color: var(--danger);"><strong>门槛：</strong>人力成本高，反爬策略持续维护，周期长，业务部门难以独立承担。</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 32px;">
+                    <h3>⚠️ 总结：舆情监测是一个有"三重门槛"的领域</h3>
+                    <div style="display: flex; justify-content: center; gap: 40px; margin-top: 16px; flex-wrap: wrap;">
+                        <div style="text-align: center; padding: 16px 24px; background: rgba(248, 81, 73, 0.1); border-radius: 12px; border: 1px solid rgba(248, 81, 73, 0.3);">
+                            <div style="font-size: 2rem;">💰</div>
+                            <div style="font-weight: 700; margin-top: 4px;">资金门槛</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">年费数万起</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px 24px; background: rgba(248, 81, 73, 0.1); border-radius: 12px; border: 1px solid rgba(248, 81, 73, 0.3);">
+                            <div style="font-size: 2rem;">🔧</div>
+                            <div style="font-weight: 700; margin-top: 4px;">技术门槛</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">需持续维护</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px 24px; background: rgba(248, 81, 73, 0.1); border-radius: 12px; border: 1px solid rgba(248, 81, 73, 0.3);">
+                            <div style="font-size: 2rem;">⏱️</div>
+                            <div style="font-weight: 700; margin-top: 4px;">时间门槛</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">采购/搭建周期长</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow-down">⬇</div>
+
                 <h3 style="margin-top: 20px;">✅ 智能体方案：小而美、轻量化、按需定制</h3>
                 <div class="cards-grid">
                     <div class="solution-card fade-in">
@@ -1714,6 +1827,37 @@
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
+        });
+    </script>
+    <!-- 图片放大弹窗 -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        // Lightbox 点击放大
+        document.querySelectorAll('.zoomable-img').forEach(function(img) {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var lb = document.getElementById('lightbox');
+                var lbImg = document.getElementById('lightbox-img');
+                lbImg.src = this.src;
+                lbImg.alt = this.alt;
+                lb.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            var lb = document.getElementById('lightbox');
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ESC 键关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>

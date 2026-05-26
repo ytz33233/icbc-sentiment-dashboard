@@ -1,0 +1,83 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>您访问的页面迷路了……</title><style type="text/css">html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            min-height: 480px;
+            font-size: 14px;
+            font-family: "宋体", sans-serif;
+            color: black;
+            background-color: white;
+        }
+
+        body.dark {
+            color: #eee;
+            background-color: #30302f;
+        }
+
+        .out-wrapper {
+            text-align: center;
+            overflow: hidden;
+            height: 480px;
+            margin-top: -240px;
+            top: 50%;
+            position: absolute;
+            width: 100%;
+        }
+
+        .msg-wrapper {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .img {
+            display: block;
+            height: 280px;
+            margin: 10px auto 18px;
+        }
+
+        .status-code {
+            height: 80px;
+            line-height: 95px;
+            font-size: 80px;
+            color: #78A740;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        .desc {
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 10px auto 10px;
+        }
+
+        .ret-block {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .ret-block li {
+            line-height: 26px;
+        }
+
+        .ret-block li span {
+            display: inline-block;
+            width: 16px;
+        }
+
+        .ret-block li a {
+            text-decoration: none;
+            margin-left: 3px;
+            color: #00008b;
+        }
+
+        body.dark .ret-block li a {
+            color: #0bccf9;
+        }</style></head><body class="dark"><div class="out-wrapper"><div class="msg-wrapper"><div class="status-code">404</div><div class="desc">您访问的页面迷路了……</div><ul class="ret-block"><li><span>1.</span>您可以<a href="/">返回首页</a></li><li><span>2.</span>您可以<a href="javascript:window.location.reload()">尝试刷新</a></li></ul></div><img class="img" src="/static/img/404-x1.73e05114.png" srcset="/static/img/404-x2.6cdf1d81.png 2x"></div><script>var img = document.getElementsByTagName("img")[0];
+    if (img && "transform" in img.style) {
+        img.style.transform = "translateX(-50%)";
+        img.style.marginLeft = "50%";
+    }</script></body></html>
