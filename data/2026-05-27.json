@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-27",
-  "generatedAt": "2026-05-27 07:10",
+  "generatedAt": "2026-05-27 12:01",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -89,8 +89,8 @@
   ],
   "hotTopics": [
     {
-      "topic": "支付宝618活动",
-      "summary": "支付宝6·18购物节福利",
+      "topic": "爱购6·18活动",
+      "summary": "支付宝618购物节活动",
       "postCount": 1,
       "postIndices": [
         0
@@ -121,7 +121,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-27）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「其他」等产品，来源以微博为主，热词包括「信用卡」。",
     "date": "2026-05-27",
-    "generatedAt": "2026-05-26T23:10:53.663Z"
+    "generatedAt": "2026-05-27T04:01:43.031Z"
   },
   "records": [
     {
@@ -157,6 +157,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-26T23:10:55.889Z",
+  "llmEnhancedAt": "2026-05-27T04:01:46.216Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
