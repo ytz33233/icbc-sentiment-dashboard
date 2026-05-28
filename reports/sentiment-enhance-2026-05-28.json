@@ -1,130 +1,25 @@
 {
   "date": "2026-05-28",
-  "generatedAt": "2026-05-27T23:10:49.932Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-05-28T04:01:17.964Z",
+  "totalRecords": 2,
   "beforeStats": {
-    "positive": 9,
-    "neutral": 19,
-    "negative": 2
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 9,
-    "neutral": 19,
-    "negative": 2
+    "positive": 1,
+    "neutral": 1,
+    "negative": 0
   },
-  "diffCount": 16,
+  "diffCount": 1,
   "changes": [
     {
-      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
-      "before": "neutral",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": "作者用'跌了！'的语气表达了对工行如意金积存价格下跌的不满和失望。"
-    },
-    {
-      "title": "工行，任务中心，享活动，魔法成长礼，抽i豆",
-      "before": "neutral",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": "使用了'天塌了'这样的夸张表达，通常用来表达失望或不满，因此可以判断作者对工行月月花5月抽奖活动有负面情绪。"
-    },
-    {
-      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+      "title": "工行20元立减金，冲冲冲，发了会通知！",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "帖子标题和内容提到了支付宝的优惠活动，如消费满减、随机立减等，语气积极，分享好消息。"
-    },
-    {
-      "title": "预告！工行10个活动，10立减！",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是对工行每周一测的简单陈述，没有表达作者的情感态度。"
-    },
-    {
-      "title": "5.25工行答题🧧➕1.3",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是对工行每周一测的简单陈述，没有表达作者的情感态度。"
-    },
-    {
-      "title": "5.25工行 每周一测1.1r",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题和内容中包含了🧧表情符号和1.4r现金红包的优惠信息，整体传达了积极、吸引人的信息。"
-    },
-    {
-      "title": "5.26工行  丝滑1.3🧧🧧🧧",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容仅包含活动名称和奖励金额，没有表达作者的情感态度。"
-    },
-    {
-      "title": "工行月月花夯爆了，还能叠加地区活动",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容仅包含银行缩写和数字，没有表达作者的情感态度。"
-    },
-    {
-      "title": "工行app搜：乐园 ❶山野寄心愿邀人随机🉐i荳 ❷快乐补给站、活力创未来 也可...",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的“工行月月花夯爆了”使用了“爆了”一词，表达了对工行活动的强烈兴趣和积极评价，同时提到“还能叠加地区活动”，显示了作者对活动的期待和兴奋。"
-    },
-    {
-      "title": "️工行APP搜：工行消费季 周五六日可抽i豆 北京地区有5-2 其他地区自测",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的“5.25工行答题1元🧧”使用了表情符号🧧，通常代表红包或奖励，表达了对活动的积极和期待。"
-    },
-    {
-      "title": "快来领工行i豆",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "帖子内容主要是对工行app中活动的介绍和说明，如“山野寄心愿邀人随机🉐i荳”、“快乐补给站、活力创未来”等，没有明显的情感倾向，而是客观地分享信息。"
-    },
-    {
-      "title": "跌了！工行如意金积存更新5.24",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "帖子内容主要是对工行消费季活动的介绍，如“周五六日可抽i豆”、“北京地区有5-2”，没有明显的情感倾向，而是客观地分享信息。"
-    },
-    {
-      "title": "5月工行月月花-江苏区域",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的“快来领工行i豆”使用了“快来”一词，表达了对活动的积极推荐和鼓励，显示了作者对活动的积极态度。"
-    },
-    {
-      "title": "工行i豆+500开心",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容仅提供了活动名称，没有表达作者的个人情感或态度。"
-    },
-    {
-      "title": "抖音：工银i豆当钱花，至高可抵30元！",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "内容中使用了'开心'一词，表达了作者对于工行i豆增加的积极情绪。"
-    },
-    {
-      "title": "天塌了，工行月月花5月抽奖",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": "标题和内容均是询问性质，没有表达出作者的个人情感态度，只是提出了一个问题。"
+      "reason": "帖子中使用了'冲冲冲'这样的积极词汇，表达了作者对工行20元立减金活动的兴奋和期待，语气积极。同时，'发了会通知'也体现了作者愿意分享好消息的态度。"
     }
   ]
 }
