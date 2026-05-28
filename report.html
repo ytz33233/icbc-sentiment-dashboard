@@ -1177,16 +1177,16 @@
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">95%+</div>
-                        <div class="stat-label">信息覆盖提升</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10倍</div>
-                        <div class="stat-label">效率提升</div>
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">监测渠道覆盖</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">2次/日</div>
-                        <div class="stat-label">定时采集覆盖</div>
+                        <div class="stat-label">每日定时更新</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30天</div>
+                        <div class="stat-label">趋势回溯追踪</div>
                     </div>
                 </div>
                 <div class="scroll-hint">
@@ -1347,8 +1347,8 @@
                         <div style="margin: 12px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--dark-border);">
                             <img src="images/zhongyi-yuqing.png" class="zoomable-img" alt="中移舆情监测系统" style="width: 100%; display: block;">
                         </div>
-                        <p>招聘爬虫工程师、数据分析师，从零搭建采集与分析体系。</p>
-                        <p style="margin-top: 8px; color: var(--danger);"><strong>门槛：</strong>人力成本高，反爬策略持续维护，周期长，业务部门难以独立承担。</p>
+                        <p>爬虫工程师、数据分析师，从零搭建采集与分析体系。</p>
+                        <p style="margin-top: 8px; color: var(--danger);"><strong>门槛：</strong>人力成本高，反爬策略持续维护，周期长。</p>
                     </div>
                 </div>
 
@@ -1399,31 +1399,23 @@
                 <p class="subtitle">先掌握方法，再理解边界，才能最大化工具价值</p>
 
                 <!-- 使用技巧：垂直步骤流程 -->
-                <h3 style="margin-top: 32px;">💡 使用技巧：让 Claw 更好用的 6 个步骤</h3>
+                <h3 style="margin-top: 32px;">💡 使用技巧：让 Claw 更好用的 4 个步骤</h3>
                 <div class="steps-flow">
-                    <div class="step-item fade-in" data-step="1">
-                        <h4>说人话，给边界</h4>
+                    <div class="step-item fade-in" data-step="1" style="cursor:pointer;" onclick="openModal('chat-modal')">
+                        <h4>说人话，给边界 <span style="color:var(--primary-light); font-size:0.85rem; font-weight:normal;">👆 点击查看示例</span></h4>
                         <p>"帮我汇总今天微博关于 i豆 的负面帖子"——就是完整指令。不需要学编程。<strong>描述"要什么结果"，别描述"怎么做"</strong>；同时给边界"只做XX，不做XX"。</p>
                     </div>
                     <div class="step-item fade-in" data-step="2">
                         <h4>复杂任务先拆解</h4>
                         <p>别一次性扔大需求。先定计划："先查 A 数据 → 整理 B → 写初稿 → 我确认 → 再发邮件"。<strong>分阶段、每步人工确认</strong>，比一步到位更稳。</p>
                     </div>
-                    <div class="step-item fade-in" data-step="3">
-                        <h4>把 AI 当实习生</h4>
+                    <div class="step-item fade-in" data-step="3" style="cursor:pointer;" onclick="openModal('intern-modal')">
+                        <h4>把 AI 当实习生 <span style="color:var(--primary-light); font-size:0.85rem; font-weight:normal;">👆 点击查看示例</span></h4>
                         <p>期望它<strong>快速搭框架、做初筛、跑重复任务</strong>，而不是一步到位。人工审核和精修是必要环节，别跳过。初版 5 分钟 + 人工 25 分钟，远好于从零开始的 3 小时。</p>
                     </div>
-                    <div class="step-item fade-in" data-step="4">
-                        <h4>关键节点设人工审核</h4>
+                    <div class="step-item fade-in" data-step="4" style="cursor:pointer;" onclick="openModal('review-modal')">
+                        <h4>关键节点设人工审核 <span style="color:var(--primary-light); font-size:0.85rem; font-weight:normal;">👆 点击查看示例</span></h4>
                         <p>重要自动化流程中，<strong>设置"自动执行 → 人确认 → 再下一步"</strong>的断点。涉及对外发布、金额数据、客户信息，必须人工把关后再放行。</p>
-                    </div>
-                    <div class="step-item fade-in" data-step="5">
-                        <h4>重要数据要复核、留回滚</h4>
-                        <p>涉及精确数字、对外文案、文件修改，<strong>务必人工核对</strong>。关键操作前自动备份，出问题了能一键回滚，不给业务留隐患。</p>
-                    </div>
-                    <div class="step-item fade-in" data-step="6">
-                        <h4>从简单任务开始，逐步深入</h4>
-                        <p>第一次用别一上来就搞复杂分析。先试试"帮我查最近 3 天关于升金有礼的帖子"，<strong>熟悉风格后再逐步叠加</strong>。越用越默契，回复质量持续提升。</p>
                     </div>
                 </div>
 
@@ -1537,11 +1529,11 @@
                     </div>
                 </div>
 
-                <h3 style="margin-top: 48px;">💡 实践中的新发现</h3>
+                <h3 style="margin-top: 48px;">💡 心得感悟</h3>
                 <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="card fade-in">
                         <div class="card-icon">⚡</div>
-                        <h3>"快"比"完美"重要</h3>
+                        <h3>快速迭代</h3>
                         <p>以前追求一次到位的完美报告。现在AI快速出初版，边看边改，"先看到全貌再精修细节"，反而效率更高。</p>
                     </div>
                     <div class="card fade-in">
@@ -1554,79 +1546,171 @@
                         <h3>越用越默契</h3>
                         <p>系统记住常用操作和偏好后，像一个熟悉业务的老同事。这种"默契"是传统工具给不了的。</p>
                     </div>
-                    <div class="card fade-in">
+                    <div class="card fade-in" style="cursor:pointer;" onclick="openModal('product-modal')">
                         <div class="card-icon">🎨</div>
-                        <h3>从"代码思维"到"产品思维"</h3>
-                        <p>不需要懂开发，直接描述想要的产品形态。技术实现不再阻塞创意，想法到原型的时间大幅缩短。</p>
+                        <h3>人人都是产品经理 <span style="color:var(--primary-light); font-size:0.8rem; font-weight:normal;">👆 点击查看示例</span></h3>
+                        <p>不需要懂开发，不需要等排期。用自然语言描述想要的产品形态，AI 直接帮你把想法变成可运行的工具。人人都是产品经理，创意到落地只需几分钟。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 第5页：总结与展望 -->
+        <!-- 第5页：银行AI原生 -->
         <section class="section" id="section-5">
             <div class="section-number">05</div>
             <div class="section-content">
-                <h2>总结与展望</h2>
-                <p class="subtitle">智能化升级不是终点，而是新的起点</p>
+                <h2>银行AI原生</h2>
+                <p class="subtitle">从"用AI"到"AI原生"，重塑银行服务新形态</p>
 
-                <div class="two-col">
-                    <div>
-                        <h3>✅ 项目成果回顾</h3>
-                        <div class="timeline">
-                            <div class="timeline-item fade-in">
-                                <h4>建立定时监测体系</h4>
-                                <p>每日两次定时采集微博、小红书、投诉平台信息，信息覆盖率从约60%提升至95%以上，消除非工作时间盲区。</p>
+                <div style="margin-top: 28px; border-radius: 16px; overflow: hidden; border: 1px solid var(--dark-border); background: var(--dark-card); max-height: 260px; display: flex; align-items: center; justify-content: center;">
+                    <img src="images/bank-ai-native.png" class="zoomable-img" alt="银行AI原生架构图" style="width: 100%; max-height: 260px; object-fit: contain; display: block;">
+                </div>
+
+                <!-- 能力跃迁标签 -->
+                <div style="margin-top: 36px; text-align: center;">
+                    <div style="display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+                        <div style="background: rgba(124,77,255,0.1); border: 1px solid rgba(124,77,255,0.25); border-radius: 10px; padding: 14px 22px;">
+                            <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">FROM</div>
+                            <div style="font-size: 1rem; font-weight: 700; color: var(--accent);">L3 · 旅程重构</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">部门内贯通</div>
+                        </div>
+                        <div style="color: var(--primary); font-size: 1.4rem;">→</div>
+                        <div style="background: rgba(26,115,232,0.1); border: 1px solid rgba(26,115,232,0.25); border-radius: 10px; padding: 14px 22px;">
+                            <div style="font-size: 0.7rem; color: var(--primary-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">TO</div>
+                            <div style="font-size: 1rem; font-weight: 700; color: var(--primary);">L4 · 价值共创</div>
+                            <div style="font-size: 0.8rem; color: var(--primary-light); margin-top: 4px;">跨领域协同</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 16px; color: var(--text-secondary); font-size: 0.92rem; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        从"特定旅程上的智能交互与产品匹配"跃迁至"基于客户全景情境与终身价值的综合金融方案"
+                    </p>
+                </div>
+
+                <!-- 两个案例 -->
+                <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <!-- 案例1 -->
+                    <div class="card fade-in" style="display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(124,77,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">💼</div>
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">案例一</div>
+                                <h3 style="margin: 0; font-size: 1rem;">代发薪 → 综合金融方案</h3>
                             </div>
-                            <div class="timeline-item fade-in">
-                                <h4>构建智能分析能力</h4>
-                                <p>自动完成情感判断、风险分级、热点聚类，减少主观判断差异，为决策提供客观依据。</p>
+                        </div>
+
+                        <div style="flex: 1;">
+                            <div style="background: rgba(124,77,255,0.05); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px;">
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">❌ L3 阶段</div>
+                                <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">仅聚焦员工个人资金入账、理财推荐</p>
                             </div>
-                            <div class="timeline-item fade-in">
-                                <h4>打造负面预警机制</h4>
-                                <p>负面帖子自动标红，一眼识别风险，业务部门从被动应对转为主动防控，赢得宝贵应对时间。</p>
+                            <div style="background: rgba(26,115,232,0.05); border-radius: 8px; padding: 12px 14px;">
+                                <div style="font-size: 0.75rem; color: var(--primary-light); margin-bottom: 4px;">✅ L4 阶段 · 主智能体驱动</div>
+                                <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">感知薪资变化 + 股权激励，协同触发：</p>
+                                <ul style="margin: 0; padding-left: 14px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;">
+                                    <li><strong style="color: var(--primary-light);">对公智能体</strong>：HR人力资本分析</li>
+                                    <li><strong style="color: var(--primary-light);">零售智能体</strong>：税务规划+信托+教育金</li>
+                                </ul>
                             </div>
-                            <div class="timeline-item fade-in">
-                                <h4>形成可视化决策支持</h4>
-                                <p>数据看板实时呈现舆情全貌，历史趋势、热点追踪、传播分析一目了然，支撑快速决策。</p>
-                            </div>
+                        </div>
+
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--dark-border); font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+                            💡 <strong style="color: var(--text-secondary);">发薪服务</strong> → <strong style="color: var(--primary);">人才价值经营伙伴</strong>
                         </div>
                     </div>
 
-                    <div>
-                        <h3>🚀 下一步规划</h3>
-                        <div class="cards-grid" style="grid-template-columns: 1fr;">
-                            <div class="card fade-in">
-                                <div class="card-icon">🔮</div>
-                                <h3>预测性监测</h3>
-                                <p>从"监测已发生"进化到"预警可能发生"。通过历史模式识别，提前发现潜在舆情风险点，实现防患于未然。</p>
+                    <!-- 案例2 -->
+                    <div class="card fade-in" style="display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                            <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(0,188,212,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">🏠</div>
+                            <div>
+                                <div style="font-size: 0.7rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">案例二</div>
+                                <h3 style="margin: 0; font-size: 1rem;">理财推荐 → 全生命周期陪伴</h3>
                             </div>
+                        </div>
 
-                            <div class="card fade-in">
-                                <div class="card-icon">📱</div>
-                                <h3>渠道扩展</h3>
-                                <p>继续扩展监测范围，覆盖短视频平台、论坛、评论区等更多用户触点，实现真正意义上的全网监测。</p>
+                        <div style="flex: 1;">
+                            <div style="background: rgba(124,77,255,0.05); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px;">
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">❌ L3 阶段</div>
+                                <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">各场景独立梳理旅程，协同难以落地</p>
                             </div>
+                            <div style="background: rgba(0,188,212,0.05); border-radius: 8px; padding: 12px 14px;">
+                                <div style="font-size: 0.75rem; color: var(--secondary); margin-bottom: 4px;">✅ L4 阶段 · 多智能体协同</div>
+                                <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">整合家庭全景数据，预测子女大学申请季：</p>
+                                <ul style="margin: 0; padding-left: 14px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;">
+                                    <li><strong style="color: var(--secondary);">教育金智能体</strong>：评估储备缺口</li>
+                                    <li><strong style="color: var(--secondary);">保险智能体</strong>：检视家庭保障</li>
+                                    <li><strong style="color: var(--secondary);">投资智能体</strong>：调整资产配置</li>
+                                </ul>
+                                <p style="margin: 8px 0 0 0; font-size: 0.82rem; color: var(--text-secondary);">生成式AI整合为 <strong>《家庭财富健康报告》</strong></p>
+                            </div>
+                        </div>
 
-                            <div class="card fade-in">
-                                <div class="card-icon">🎯</div>
-                                <h3>策略闭环</h3>
-                                <p>从"发现问题"延伸到"辅助解决"。在识别风险的基础上，智能推荐历史相似案例和应对策略，形成完整闭环。</p>
-                            </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--dark-border); font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+                            💡 <strong style="color: var(--text-secondary);">单一旅程服务</strong> → <strong style="color: var(--secondary);">长期专业陪伴与规划</strong>
                         </div>
                     </div>
                 </div>
 
-                <div class="footer" style="margin-top: 60px;">
-                    <h2>让智能服务于业务，让效率创造价值</h2>
-                    <p style="color: var(--text-secondary); max-width: 700px; margin: 16px auto 0; font-size: 1.05rem;">
-                        本项目的实践证明：先进的智能化技术已经能够为业务场景带来切实的效率提升和价值创造。<br><br>
-                        核心收获不是"AI有多强"，而是<strong>"人+AI"的组合远超单独的一方</strong>。<br>
-                        人的判断力 + AI的执行力 = 更高效的业务运营。
+                <!-- 核心愿景 -->
+                <div style="margin-top: 36px; text-align: center; padding: 24px; background: rgba(26,115,232,0.04); border-radius: 14px; border: 1px solid rgba(26,115,232,0.12);">
+                    <div style="font-size: 1.8rem; margin-bottom: 8px;">🎯</div>
+                    <h3 style="margin: 0 0 10px 0; font-size: 1.2rem;">核心愿景：AI原生的银行</h3>
+                    <p style="margin: 0 auto; max-width: 680px; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                        未来的银行不是"使用AI工具的银行"，而是 <strong style="color: var(--primary);">"AI原生的银行"</strong> —— AI 嵌入业务血液的基础设施。从"人+AI协同"进化到"AI自主服务，人做高阶决策"。
                     </p>
                 </div>
             </div>
         </section>
+
+        <div class="footer" style="padding: 60px 40px;">
+            <h2>让智能服务于业务，让效率创造价值</h2>
+            <p style="color: var(--text-secondary); max-width: 700px; margin: 16px auto 0; font-size: 1.05rem;">
+                本项目的实践证明：先进的智能化技术已经能够为业务场景带来切实的效率提升和价值创造。<br><br>
+                核心收获不是"AI有多强"，而是<strong>"人+AI"的组合远超单独的一方</strong>。<br>
+                人的判断力 + AI的执行力 = 更高效的业务运营。
+            </p>
+        </div>
+
+    </div>
+
+    <!-- 模态框：人人都是产品经理 实际示例 -->
+    <div class="modal-overlay" id="product-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 900px;">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>🎨 "人人都是产品经理" 实际案例：旅行记账工具</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">点击截图可放大查看。展示用自然语言描述需求，AI 直接生成可运行工具的全过程。</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/travel-account-step1.png" class="zoomable-img" alt="首页：创建活动与加入" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>① 创建活动</strong>：输入活动名称自动生成邀请码，把链接或邀请码发给小伙伴即可加入</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/travel-account-step2.png" class="zoomable-img" alt="记账页：添加支出" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>② 多人记账</strong>：支持越南盾记账、自动按实时汇率换算人民币、选择参与分摊的成员</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/travel-account-step3.png" class="zoomable-img" alt="结算页：自动分摊" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>③ 自动结算</strong>：8 人 34 笔支出，总支出 ¥9374.83，自动生成每人应收应付明细</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/travel-account-step4.png" class="zoomable-img" alt="成员管理：添加小伙伴" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>④ 灵活管理</strong>：随时添加新成员，所有数据实时同步，无需注册登录</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px; background: rgba(26,115,232,0.08); border-radius: 12px; border-left: 3px solid var(--primary);">
+                <p style="margin: 0; font-size: 0.95rem;"><strong>💡 关键体会：</strong>这个旅行记账工具，从提出需求到可运行上线，全程用自然语言与 AI 对话完成，<strong>零代码、零设计稿</strong>。不需要懂开发，不需要等排期，<strong>人人都是产品经理</strong>——有想法，AI 就能帮你做出来。</p>
+            </div>
+        </div>
     </div>
 
     <!-- 模态框：AI算数原理详解 -->
@@ -1812,6 +1896,85 @@
         </div>
     </div>
 
+    <!-- 模态框：说人话给边界 交互示例 -->
+    <div class="modal-overlay" id="chat-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 900px;">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>💬 "说人话，给边界" 实际交互示例</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">点击截图可放大查看。展示真实的 AI 交互过程：描述需求 → AI 理解 → AI 执行 → 获得结果。</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/chat-step1.png" class="zoomable-img" alt="第一步：向AI描述汇报需求" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>① 描述需求</strong>：直接说"我要向领导汇报舆情监测项目"，AI 立即理解意图</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/chat-step2.png" class="zoomable-img" alt="第二步：AI理解并给出框架" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>② AI 理解</strong>：AI 自动拆解为"项目目的、颠覆认知、工作模式改变、需改变的认知"四大板块</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/chat-step3.png" class="zoomable-img" alt="第三步：业务部门提出视角调整" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>③ 给边界</strong>："从技术角度来说的，但我们是业务部门"——AI 立即调整方向，完全从业务视角重写</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/chat-step4.png" class="zoomable-img" alt="第四步：获得业务视角成果" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>④ 获得结果</strong>：输出完全贴合业务视角的汇报结构，突出效率数据和人机协作价值</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px; background: rgba(26,115,232,0.08); border-radius: 12px; border-left: 3px solid var(--primary);">
+                <p style="margin: 0; font-size: 0.95rem;"><strong>💡 关键体会：</strong>不需要写代码、不需要记快捷键，<strong>"说人话"就是最强的操作指令</strong>。AI 理解意图后自主规划路径，业务人员零技术门槛即可驱动复杂任务。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框：把 AI 当实习生 实际示例 -->
+    <div class="modal-overlay" id="intern-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 900px;">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>🎓 "把 AI 当实习生" 实际工作示例</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">点击截图可放大查看。展示真实的"人给方向 → AI 执行 → 人审核 → 再迭代"协作过程。</p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/intern-step3-review.png" class="zoomable-img" alt="第一步：人给方向，提出认知差补充需求" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);"><strong>① 人给方向</strong>："对智能化工具的认知转变这里要加一下，动手用起来，打破对AI的认知差"——提出补充方向</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/intern-step1.png" class="zoomable-img" alt="第二步：人审核后再给新方向" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);"><strong>② 人审核再迭代</strong>：人发现"认知差"板块不够突出，提出补充 6 大认知差对比表格——明确任务边界</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/intern-step2.png" class="zoomable-img" alt="第三步：AI 执行，更新后的方案" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);"><strong>③ AI 执行</strong>：AI 迅速更新，加入 6 大认知差对比表格——从原理出发解释算错原因 + 图示化解决方案，初版质量已可用</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div style="padding: 16px; background: rgba(63,185,80,0.08); border-radius: 12px; border-left: 3px solid var(--success);">
+                    <p style="margin: 0; font-size: 0.95rem;"><strong>✅ 实习生能做的：</strong>快速搭框架、按方向整理内容、用图示化方式表达、根据反馈迭代修改。初版 5 分钟出活。</p>
+                </div>
+                <div style="padding: 16px; background: rgba(248,81,73,0.08); border-radius: 12px; border-left: 3px solid var(--danger);">
+                    <p style="margin: 0; font-size: 0.95rem;"><strong>❌ 实习生不能做的：</strong>判断内容是否真正贴合业务场景、把关最终对外发布的质量、担责。这些必须人来审核和决策。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // 粒子背景
         const canvas = document.getElementById('particles-canvas');
@@ -1948,6 +2111,35 @@
             if (e.key === 'Escape') closeModal();
         });
     </script>
+
+    <!-- 模态框：关键节点设人工审核 实际示例 -->
+    <div class="modal-overlay" id="review-modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 900px;">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>🔐 "关键节点设人工审核" 实际工作示例</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">点击截图可放大查看。展示"AI 产出初版 → 人审核把关 → AI 按反馈修改"的关键节点断点机制。</p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/review-step1.png" class="zoomable-img" alt="第一步：AI生成初版，人审核发现问题" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>① AI 产出初版</strong>：AI 生成汇报初稿后，人发现封面数据不够具体（"95%+、10倍、分钟级"太抽象）</p>
+                </div>
+                <div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--dark-border);">
+                        <img src="images/review-step2.png" class="zoomable-img" alt="第二步：人审核反馈，AI 按边界修改" style="width: 100%; display: block;">
+                    </div>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-secondary);"><strong>② 人把关 + 给边界</strong>：人指出"从监测渠道数量、每日更新次数、趋势回溯天数展现数字"——AI 按方向修改后输出具体指标</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px; background: rgba(26,115,232,0.08); border-radius: 12px; border-left: 3px solid var(--primary);">
+                <p style="margin: 0; font-size: 0.95rem;"><strong>💡 关键体会：</strong><strong>自动执行 → 人确认 → 再下一步</strong>。AI 跑的再快，涉及对外呈现、关键数字、最终决策，必须人看过再放行。这不是不信任 AI，是聪明的业务部门保护自己的方式。</p>
+            </div>
+        </div>
+    </div>
+
     <!-- 图片放大弹窗 -->
     <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">&times;</span>

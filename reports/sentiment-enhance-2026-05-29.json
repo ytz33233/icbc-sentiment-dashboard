@@ -1,0 +1,102 @@
+{
+  "date": "2026-05-29",
+  "generatedAt": "2026-05-28T23:10:51.120Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 10,
+    "neutral": 19,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 9,
+    "neutral": 20,
+    "negative": 1
+  },
+  "diffCount": 12,
+  "changes": [
+    {
+      "title": "工行普卡到期换卡免费了",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者用'跌了！'的语气表达了对工行如意金积存价格下跌的不满和失望。"
+    },
+    {
+      "title": "工行20元立减金，冲冲冲，发了会通知！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "该帖子仅是客观陈述工行普卡到期换卡免费的事实，没有表达作者的个人情感。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子中使用了'冲冲冲'这样的积极词汇，并且提到了'发了会通知'，显示出作者对于工行20元立减金活动的期待和兴奋。"
+    },
+    {
+      "title": "工行，任务中心，享活动，魔法成长礼，抽i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子中提到了'超多福利等你来'和'随机立减至高6元'等积极信息，使用了表情符号💳和✅，表达了对活动的积极态度和鼓励参与。"
+    },
+    {
+      "title": "预告！工行10个活动，10立减！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是对工商银行每周一测活动的客观陈述，没有表达作者的个人情感。"
+    },
+    {
+      "title": "5.25新工行1.4r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是客观陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工行答题1🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是客观陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "5.26工行  丝滑1.3🧧🧧🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "帖子内容仅包含'icbc 1.0'，没有表达任何情感态度，只是客观陈述。"
+    },
+    {
+      "title": "工行app搜：乐园 ❶山野寄心愿邀人随机🉐i荳 ❷快乐补给站、活力创未来 也可...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子提到'工行答题1元🧧'，使用了红包表情符号，表达了积极和分享好消息的情感态度。"
+    },
+    {
+      "title": "快来领工行i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "该帖子仅提供了关于工行APP中的一项活动信息，没有表达作者的个人情感或态度，只是客观陈述了活动内容。"
+    },
+    {
+      "title": "跌了！工行如意金积存更新5.24",
+      "before": "negative",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子标题使用了'快来领'这样的积极词汇，暗示了作者对领取工行i豆活动的积极态度和鼓励他人参与。"
+    },
+    {
+      "title": "抖音：工银i豆当钱花，至高可抵30元！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子提到'工银i豆当钱花，至高可抵30元'，传达了一种积极的信息，即i豆具有实际价值，可以节省金钱，这可能让作者感到满意或兴奋。"
+    }
+  ]
+}
