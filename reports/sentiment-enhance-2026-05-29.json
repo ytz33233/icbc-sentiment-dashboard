@@ -1,6 +1,6 @@
 {
   "date": "2026-05-29",
-  "generatedAt": "2026-05-29T01:18:27.543Z",
+  "generatedAt": "2026-05-29T01:20:22.094Z",
   "totalRecords": 12,
   "beforeStats": {
     "positive": 0,
@@ -19,21 +19,21 @@
       "before": "neutral",
       "after": "negative",
       "method": "llm",
-      "reason": "标题和内容表达了作者错过了工行立夏的数字藏品，可能感到遗憾或失望。"
+      "reason": "标题中使用了'怎么办'，表达了作者对错过工行立夏数字藏品的遗憾和不满。"
     },
     {
       "title": "5月25日，工行1元，目前很丝滑",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "内容中的'目前很丝滑'表达了作者对工行1元活动的满意和积极态度。"
+      "reason": "内容中使用了'目前很丝滑'这个表达，暗示了作者对工行1元活动的满意度和积极体验。"
     },
     {
       "title": "工行亚沙会金融buff拉满✅",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题和内容使用了'金融buff拉满'和'✅'，这些表达带有积极和肯定的意味，暗示工商银行在亚沙会期间提供了有力的金融支持，作者对此表示认可和满意。"
+      "reason": "标题和内容使用了'金融buff拉满'和'✅'，表示对工商银行在亚沙会期间提供的金融服务表示肯定和满意，有积极的情感倾向。"
     }
   ]
 }
