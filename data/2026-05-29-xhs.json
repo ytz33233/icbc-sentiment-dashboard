@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-29",
-  "generatedAt": "2026-05-29 09:17",
+  "generatedAt": "2026-05-29 09:19",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-29）采集到 86 条小红书舆情，负面 9 条，高风险 9 条。",
     "date": "2026-05-29",
-    "generatedAt": "2026-05-29T01:17:06.519Z"
+    "generatedAt": "2026-05-29T01:19:00.078Z"
   },
   "records": [
     {
@@ -2852,7 +2852,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "工行大放水！",
+      "title": "工行大放���！",
       "content": "工行大放水！",
       "url": "https://www.xiaohongshu.com/explore/6a07f2f00000000006031f24",
       "author": "Kuma",
