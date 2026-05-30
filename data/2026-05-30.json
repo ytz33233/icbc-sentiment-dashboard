@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-05-30",
-  "generatedAt": "2026-05-30 07:10",
+  "generatedAt": "2026-05-30 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -121,27 +121,32 @@
   ],
   "hotTopics": [
     {
-      "topic": "工行消费季活动",
-      "summary": "工行消费季相关活动讨论",
-      "postCount": 3,
+      "topic": "工行其他活动",
+      "summary": "讨论工行其他各类活动",
+      "postCount": 9,
       "postIndices": [
-        15,
-        16,
-        17
+        4,
+        5,
+        9,
+        10,
+        11,
+        17,
+        20,
+        27,
+        28
       ],
       "keywords": [
-        "消费季"
+        "工行活动"
       ],
       "sentiment": {
-        "positive": 0,
-        "neutral": 3,
+        "positive": 5,
+        "neutral": 4,
         "negative": 0
       },
       "sources": {
-        "social": 2,
-        "xiaohongshu": 1
+        "xiaohongshu": 9
       },
-      "totalHeat": 2095,
+      "totalHeat": 2617,
       "topPosts": [
         {
           "id": "20260530-18",
@@ -150,22 +155,22 @@
           "sentiment": "neutral"
         },
         {
-          "id": "20260530-16",
-          "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
-          "heatScore": 29,
-          "sentiment": "neutral"
+          "id": "20260530-21",
+          "title": "预告！工行10个活动，10立减！",
+          "heatScore": 216,
+          "sentiment": "positive"
         },
         {
-          "id": "20260530-17",
-          "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
-          "heatScore": 11,
+          "id": "20260530-11",
+          "title": "工行大放���！",
+          "heatScore": 115,
           "sentiment": "neutral"
         }
       ]
     },
     {
       "topic": "工行立减金活动",
-      "summary": "讨论工行立减金相关活动",
+      "summary": "讨论工行立减金和优惠",
       "postCount": 4,
       "postIndices": [
         7,
@@ -209,7 +214,7 @@
     },
     {
       "topic": "工行答题活动",
-      "summary": "关于工行答题活动的讨论",
+      "summary": "讨论工行答题活动和奖励",
       "postCount": 9,
       "postIndices": [
         2,
@@ -256,57 +261,8 @@
       ]
     },
     {
-      "topic": "工行其他活动",
-      "summary": "工行其他各类活动的讨论",
-      "postCount": 10,
-      "postIndices": [
-        0,
-        4,
-        5,
-        9,
-        10,
-        11,
-        20,
-        26,
-        27,
-        28
-      ],
-      "keywords": [
-        "活动"
-      ],
-      "sentiment": {
-        "positive": 5,
-        "neutral": 5,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 10
-      },
-      "totalHeat": 762,
-      "topPosts": [
-        {
-          "id": "20260530-21",
-          "title": "预告！工行10个活动，10立减！",
-          "heatScore": 216,
-          "sentiment": "positive"
-        },
-        {
-          "id": "20260530-01",
-          "title": "工商银行兑换韩币",
-          "heatScore": 163,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260530-11",
-          "title": "工行大放���！",
-          "heatScore": 115,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "topic": "工行储蓄卡服务",
-      "summary": "涉及工行储蓄卡的服务讨论",
+      "summary": "讨论工行储蓄卡相关服务",
       "postCount": 2,
       "postIndices": [
         1,
@@ -340,8 +296,36 @@
       ]
     },
     {
+      "topic": "工行兑换货币",
+      "summary": "讨论工行货币兑换服务",
+      "postCount": 1,
+      "postIndices": [
+        0
+      ],
+      "keywords": [
+        "兑换韩币"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 163,
+      "topPosts": [
+        {
+          "id": "20260530-01",
+          "title": "工商银行兑换韩币",
+          "heatScore": 163,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "topic": "工行数字藏品",
-      "summary": "关于工行数字藏品的讨论",
+      "summary": "讨论工行数字藏品活动",
       "postCount": 1,
       "postIndices": [
         3
@@ -368,36 +352,50 @@
       ]
     },
     {
-      "topic": "工行任务中心活动",
-      "summary": "工行任务中心相关活动",
-      "postCount": 1,
+      "topic": "工行消费季活动",
+      "summary": "讨论工行消费季相关活动",
+      "postCount": 3,
       "postIndices": [
-        14
+        15,
+        14,
+        16
       ],
       "keywords": [
-        "任务中心"
+        "消费季"
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 1,
+        "neutral": 3,
         "negative": 0
       },
       "sources": {
-        "social": 1
+        "social": 3
       },
-      "totalHeat": 16,
+      "totalHeat": 56,
       "topPosts": [
+        {
+          "id": "20260530-16",
+          "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+          "heatScore": 29,
+          "sentiment": "neutral"
+        },
         {
           "id": "20260530-15",
           "title": "工行，任务中心，享活动，魔法成长礼，抽i豆",
           "heatScore": 16,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260530-17",
+          "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
+          "heatScore": 11,
           "sentiment": "neutral"
         }
       ]
     },
     {
       "topic": "工行支付宝活动",
-      "summary": "工行与支付宝合作的活动",
+      "summary": "讨论工行与支付宝合作活动",
       "postCount": 1,
       "postIndices": [
         13
@@ -427,7 +425,7 @@
   "dailyBrief": {
     "text": "今日（2026-05-30）从历史数据中发现 2 条24H内新增舆情。当前累计展示 30 条。",
     "date": "2026-05-30",
-    "generatedAt": "2026-05-29T23:10:35.572Z"
+    "generatedAt": "2026-05-30T04:10:33.008Z"
   },
   "records": [
     {
@@ -501,7 +499,7 @@
       "category": "i豆兑换",
       "heatScore": 163,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -537,7 +535,7 @@
       "category": "其他",
       "heatScore": 300,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -573,7 +571,7 @@
       "category": "其他",
       "heatScore": 127,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -609,7 +607,7 @@
       "category": "其他",
       "heatScore": 24,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -645,7 +643,7 @@
       "category": "其他",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的任何情感倾向。",
+      "llmReason": "标题和内容均是简单的陈述，没有表达出作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -681,7 +679,7 @@
       "category": "其他",
       "heatScore": 13,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅提及了工行生肖卡，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -719,7 +717,7 @@
       "category": "i豆兑换",
       "heatScore": 623,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅提及了工行20立减金的活动，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -755,7 +753,7 @@
       "category": "其他",
       "heatScore": 260,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅提及了工行20元的客户关怀任务，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -791,7 +789,7 @@
       "category": "其他",
       "heatScore": 110,
       "llmSentiment": "positive",
-      "llmReason": "内容中使用了“丝滑”一词，表达了对工行活动的满意和顺畅体验。",
+      "llmReason": "标题中的'目前很丝滑'表达了作者对工行1元活动的积极评价，认为活动进行得顺利。",
       "sentimentMethod": "llm"
     },
     {
@@ -827,7 +825,7 @@
       "category": "其他",
       "heatScore": 115,
       "llmSentiment": "positive",
-      "llmReason": "标题使用了“大放水”的表达，暗示工行有大量优惠，作者对此持积极态度。",
+      "llmReason": "标题中的'大放水'通常表示大量发放福利或优惠，表达了作者对工行活动的积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -863,7 +861,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'金融buff拉满✅'和内容的重复使用，表达了对工商银行金融活动的积极肯定和支持。",
+      "llmReason": "标题中的'金融buff拉满✅'表达了对工商银行金融活动的积极肯定，使用了正面的符号✅来强调这一点。",
       "sentimentMethod": "llm"
     },
     {
@@ -902,7 +900,7 @@
       "category": "i豆兑换",
       "heatScore": 490,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'冲冲冲'和'发了会通知'表达了作者对工行20元立减金活动的期待和兴奋。",
+      "llmReason": "标题中的'冲冲冲'和'发了会通知'表达了作者对工商银行立减金活动的期待和积极态度，语气中带有兴奋和急切。",
       "sentimentMethod": "llm"
     },
     {
@@ -934,7 +932,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'超多福利等你来'和内容中列举的多项优惠活动，表达了对工行信用卡活动的积极宣传和推荐。",
+      "llmReason": "标题中的'超多福利等你来'和内容中提到的'消费满减'等活动信息，表达了对工商银行信用卡活动的积极宣传和推荐，语气中带有吸引和鼓励。",
       "sentimentMethod": "llm"
     },
     {
@@ -966,7 +964,7 @@
       "category": "i豆兑换",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容客观陈述了工行任务中心的活动信息，没有明显的情感倾向。",
+      "llmReason": "标题和内容主要是对工商银行活动的客观陈述，没有明显的正面或负面情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -998,7 +996,7 @@
       "category": "i豆兑换",
       "heatScore": 29,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容客观描述了工行app的消费季活动，没有明显的情感倾向。",
+      "llmReason": "标题和内容主要是对工商银行活动的客观陈述，没有明显的正面或负面情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1178,7 +1176,7 @@
       "category": "其他",
       "heatScore": 216,
       "llmSentiment": "positive",
-      "llmReason": "标题使用了感叹号和预告，表达了对工商银行立减活动的期待和兴奋，内容也提到了立减优惠，整体语气积极。",
+      "llmReason": "标题使用了感叹号和预告字样，内容提到10个活动和10立减，表达了对工商银行活动的期待和兴奋。",
       "sentimentMethod": "llm"
     },
     {
@@ -1396,7 +1394,7 @@
       "category": "其他",
       "heatScore": 37,
       "llmSentiment": "neutral",
-      "llmReason": "帖子内容仅包含'icbc 1.0'，没有表达作者的情感态度，是客观陈述。",
+      "llmReason": "帖子内容仅包含'icbc 1.0'，没有表达作者的任何情感态度，只是客观陈述。",
       "sentimentMethod": "llm"
     },
     {
@@ -1432,7 +1430,7 @@
       "category": "其他",
       "heatScore": 36,
       "llmSentiment": "positive",
-      "llmReason": "帖子中使用了多个红包表情符号🧧🧧🧧，通常表示作者对活动感到满意和开心。",
+      "llmReason": "帖子中使用了多个🧧表情符号，通常代表红包或礼物，表达了作者对活动的积极和满意态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1468,7 +1466,7 @@
       "category": "其他",
       "heatScore": 43,
       "llmSentiment": "positive",
-      "llmReason": "帖子中使用了'夯爆了'这样的词汇，表达了对工行月月花活动的强烈积极情感，同时提到'还能叠加地区活动'，显示了作者对活动的满意和兴奋。",
+      "llmReason": "帖子中使用了'夯爆了'这一表达，意味着活动非常受欢迎或效果非常好，同时提到'还能叠加地区活动'，显示了作者对工行活动的积极评价和满意。",
       "sentimentMethod": "llm"
     },
     {
@@ -1504,10 +1502,10 @@
       "category": "其他",
       "heatScore": 13,
       "llmSentiment": "positive",
-      "llmReason": "帖子中提到'5.25工行答题1元🧧'，使用了红包表情符号🧧，通常表示作者对活动感到满意和开心。",
+      "llmReason": "帖子中提到'答题1元🧧'，使用了🧧表情符号，表达了作者对工行答题活动得到红包的积极和满意态度。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-29T23:10:58.422Z",
+  "llmEnhancedAt": "2026-05-30T04:11:02.435Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
