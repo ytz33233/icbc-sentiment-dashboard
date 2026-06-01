@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-01",
-  "generatedAt": "2026-06-01 07:10",
+  "generatedAt": "2026-06-01 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -122,7 +122,7 @@
   "hotTopics": [
     {
       "topic": "工行活动优惠",
-      "summary": "工行各类优惠活动信息",
+      "summary": "工行各类活动优惠信息",
       "postCount": 17,
       "postIndices": [
         3,
@@ -230,8 +230,8 @@
       ]
     },
     {
-      "topic": "工行答题活动",
-      "summary": "工行答题活动相关信息",
+      "topic": "工行答题红包",
+      "summary": "工行答题红包活动",
       "postCount": 9,
       "postIndices": [
         3,
@@ -246,7 +246,8 @@
       ],
       "keywords": [
         "工行",
-        "答题"
+        "答题",
+        "红包"
       ],
       "sentiment": {
         "positive": 1,
@@ -280,7 +281,7 @@
     },
     {
       "topic": "工行卡服务",
-      "summary": "工行储蓄卡相关服务",
+      "summary": "工行储蓄卡服务信息",
       "postCount": 1,
       "postIndices": [
         2
@@ -340,7 +341,7 @@
   "dailyBrief": {
     "text": "今日（2026-06-01）从历史数据中发现 2 条24H内新增舆情。当前累计展示 30 条。",
     "date": "2026-06-01",
-    "generatedAt": "2026-05-31T23:10:27.598Z"
+    "generatedAt": "2026-06-01T04:10:40.550Z"
   },
   "records": [
     {
@@ -414,7 +415,7 @@
       "category": "i豆兑换",
       "heatScore": 163,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述工商银行提供的兑换韩币服务，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是简单陈述工商银行提供的一项服务，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -450,7 +451,7 @@
       "category": "其他",
       "heatScore": 300,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述工行储蓄卡到期后可以免费换卡的信息，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是简单陈述工商银行的一项服务，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -486,7 +487,7 @@
       "category": "其他",
       "heatScore": 127,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述5月26日工行有答题活动，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是简单陈述工商银行的一项活动，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -522,7 +523,7 @@
       "category": "其他",
       "heatScore": 24,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述9点有两个工行抽奖活动，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是简单陈述工商银行的一项活动，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -558,7 +559,7 @@
       "category": "其他",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述5月29日工行周五有抽奖活动，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是简单陈述工商银行的一项活动，没有表达作者的个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -594,7 +595,7 @@
       "category": "其他",
       "heatScore": 13,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达出作者的个人情感倾向。",
+      "llmReason": "标题和内容仅提及了工行生肖卡，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -632,7 +633,7 @@
       "category": "i豆兑换",
       "heatScore": 623,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达出作者的个人情感倾向。",
+      "llmReason": "标题和内容仅提及了工行20立减金的活动，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -668,7 +669,7 @@
       "category": "其他",
       "heatScore": 260,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达出作者的个人情感倾向。",
+      "llmReason": "标题和内容仅提及了工行的一个客户关怀任务，没有表达作者的个人情感或态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -704,7 +705,7 @@
       "category": "其他",
       "heatScore": 110,
       "llmSentiment": "positive",
-      "llmReason": "使用了'丝滑'一词，通常用来形容体验流畅、顺利，表达了作者对工行活动的积极评价。",
+      "llmReason": "使用了'丝滑'一词来形容工行1元的活动，通常'丝滑'用来形容体验顺畅，因此可以推断作者对活动持积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -740,7 +741,7 @@
       "category": "其他",
       "heatScore": 115,
       "llmSentiment": "positive",
-      "llmReason": "使用了'大放水'一词，通常用来形容活动力度大、优惠多，表达了作者对工行活动的积极评价。",
+      "llmReason": "使用了'大放水'这一表达，通常意味着活动力度大或优惠多，因此可以推断作者对工行的活动持积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -776,7 +777,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'金融buff拉满✅'和内容的重复使用，表达了对工商银行金融活动的积极态度和肯定。",
+      "llmReason": "标题中的'金融buff拉满✅'表达了对工商银行金融活动的积极评价，使用了正面的符号✅来表示肯定。",
       "sentimentMethod": "llm"
     },
     {
@@ -815,7 +816,7 @@
       "category": "i豆兑换",
       "heatScore": 490,
       "llmSentiment": "positive",
-      "llmReason": "使用了'冲冲冲'这样的激励性语言，以及'发了会通知'的期待语气，显示出作者对工商银行提供的20元立减金活动的积极和期待。",
+      "llmReason": "标题中的'冲冲冲'和'发了会通知'表达了作者对工商银行立减金活动的期待和积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -847,7 +848,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'超多福利等你来！'和内容中列举的多项优惠活动，如'消费满减'等，都显示出作者对工商银行活动的积极和兴奋态度。",
+      "llmReason": "标题中的'超多福利等你来'和内容中提到的'消费满减'等优惠活动，表达了对工商银行活动的积极评价和期待。",
       "sentimentMethod": "llm"
     },
     {
@@ -879,7 +880,7 @@
       "category": "i豆兑换",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容主要是对工商银行活动的客观描述，没有明显的情感倾向。",
+      "llmReason": "标题和内容主要是对工商银行活动的客观陈述，没有明显的积极或消极情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -911,7 +912,7 @@
       "category": "i豆兑换",
       "heatScore": 29,
       "llmSentiment": "neutral",
-      "llmReason": "内容主要是对工商银行活动的简单描述，没有表达出明显的情感态度，属于信息分享。",
+      "llmReason": "标题和内容主要是对工商银行活动的客观陈述，没有明显的积极或消极情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -947,7 +948,7 @@
       "category": "i豆兑换",
       "heatScore": 11,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工商银行消费季活动的客观描述，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是对工商银行活动的客观陈述，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -983,7 +984,7 @@
       "category": "其他",
       "heatScore": 2055,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工商银行抽奖活动的简单陈述，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是对工商银行活动的客观陈述，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1019,7 +1020,7 @@
       "category": "其他",
       "heatScore": 308,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工商银行每周一测活动的客观描述，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是对工商银行活动的客观陈述，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1055,7 +1056,7 @@
       "category": "其他",
       "heatScore": 221,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是对工商银行每周一测活动的客观描述，没有表达作者的个人情感。",
+      "llmReason": "标题和内容均是对工商银行活动的客观陈述，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1091,7 +1092,7 @@
       "category": "其他",
       "heatScore": 216,
       "llmSentiment": "positive",
-      "llmReason": "标题使用了感叹号和预告，表达了对工行10个活动和立减优惠的积极期待。",
+      "llmReason": "标题使用了感叹号和预告，表达了对工商银行活动的期待和兴奋，内容提到10个活动和10立减，传递了积极正面的信息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1127,7 +1128,7 @@
       "category": "其他",
       "heatScore": 195,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅是客观陈述了工行答题活动和红包金额，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1165,7 +1166,7 @@
       "category": "薅羊毛",
       "heatScore": 76,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅是客观陈述了工行答题活动和红包金额，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1201,7 +1202,7 @@
       "category": "其他",
       "heatScore": 47,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅是客观陈述了工行答题活动和红包金额，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1237,7 +1238,7 @@
       "category": "其他",
       "heatScore": 46,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅是客观陈述了工行答题活动和红包金额，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1273,7 +1274,7 @@
       "category": "其他",
       "heatScore": 49,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是客观陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容仅是客观陈述了工行答题活动和红包金额，没有表达作者的情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1309,7 +1310,7 @@
       "category": "其他",
       "heatScore": 37,
       "llmSentiment": "neutral",
-      "llmReason": "帖子内容仅包含'icbc 1.0'，没有表达任何情感态度，只是客观陈述。",
+      "llmReason": "帖子内容仅包含'icbc 1.0'，没有表达出作者对工商银行运营活动的情感态度，因此判断为中性。",
       "sentimentMethod": "llm"
     },
     {
@@ -1345,7 +1346,7 @@
       "category": "其他",
       "heatScore": 36,
       "llmSentiment": "positive",
-      "llmReason": "帖子中使用了三个红包表情符号🧧🧧🧧，通常表示作者对活动感到满意和兴奋，是一种积极的情感表达。",
+      "llmReason": "帖子中使用了多个红包表情符号🧧🧧🧧，通常表示作者对工商银行提供的活动感到满意和开心，因此判断为积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -1381,7 +1382,7 @@
       "category": "其他",
       "heatScore": 43,
       "llmSentiment": "positive",
-      "llmReason": "帖子中使用了'夯爆了'这一网络流行语，表示活动非常受欢迎，作者对此感到兴奋和满意，是一种积极的情感态度。",
+      "llmReason": "帖子中使用了'夯爆了'这一网络流行语，表示作者对工商银行的活动感到非常兴奋和满意，同时提到可以叠加地区活动，进一步表明作者对活动的积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1417,10 +1418,10 @@
       "category": "其他",
       "heatScore": 13,
       "llmSentiment": "positive",
-      "llmReason": "帖子中提到'答题1元🧧'，作者对工行的这一活动感到满意和兴奋，使用了红包表情符号🧧，是一种积极的情感表达。",
+      "llmReason": "帖子中提到'5.25工行答题1元🧧'，使用了红包表情符号🧧，通常表示作者对工商银行提供的答题活动感到满意和开心，因此判断为积极。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-05-31T23:10:55.515Z",
+  "llmEnhancedAt": "2026-06-01T04:11:30.144Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
