@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-03",
+  "generatedAt": "2026-06-02T23:10:50.565Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 9,
+    "neutral": 18,
+    "negative": 3
+  },
+  "afterStats": {
+    "positive": 7,
+    "neutral": 20,
+    "negative": 3
+  },
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'搞不起活动可以不搞'的表述，表达了对工行活动的不满和失望，认为工行的活动不值得参与。"
+    },
+    {
+      "title": "6月工行i豆乐园活动攻略",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "标题中提到'错过了怎么办'，暗示作者对错过工行立夏的数字藏品感到遗憾和失望。"
+    },
+    {
+      "title": "工行搞不起活动可以不搞",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "6.1新工行0.9r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单的信息陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工行立夏的数字藏品错过了怎么办",
+      "before": "negative",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了火焰和星星表情符号，表示作者对工商银行的活动感到兴奋和积极。"
+    },
+    {
+      "title": "工行大放���！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是客观陈述，没有表达作者的个人情感倾向。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容主要是活动规则的客观陈述，没有明显的情感倾向。"
+    }
+  ]
+}
