@@ -1,6 +1,6 @@
 {
   "date": "2026-06-04",
-  "generatedAt": "2026-06-03T23:10:49.684Z",
+  "generatedAt": "2026-06-04T04:11:01.203Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -26,49 +26,49 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是简单陈述，没有表达出作者的个人情感态度。"
+      "reason": "帖子内容为工行银行卡换卡服务的客观描述，没有包含作者的个人情感或评价。"
     },
     {
       "title": "工商银行兑换韩币",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "使用了表情符号🔥和✨，表达了积极和兴奋的情感。"
+      "reason": "标题中使用了火焰和星星符号，表示活动的热情和积极性，内容简短但传达了工商银行关注投资者并采取行动的积极信息。"
     },
     {
       "title": "5月25日，工行1元，目前很丝滑",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是简洁的陈述，没有表达出作者的任何情感倾向。"
+      "reason": "标题和内容均是简单陈述，没有表达作者的个人情感或态度。"
     },
     {
       "title": "工行大放���！",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "内容中使用了'很丝滑'这个表达，通常用来形容体验流畅、顺利，表达了作者对工行活动的积极评价。"
+      "reason": "使用了'丝滑'一词，通常表示流程顺畅，体验良好，表达了对工行活动的积极评价。"
     },
     {
       "title": "工行亚沙会金融buff拉满✅",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容都是对工商银行活动的客观陈述，没有表达作者的个人情感。"
+      "reason": "标题和内容均是对工商银行活动信息的简单陈述，没有表达作者的个人情感倾向。"
     },
     {
       "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题和内容中的'冲冲冲'、'发了会通知'表达了作者对工行20元立减金活动的期待和兴奋。"
+      "reason": "标题和内容中的'冲冲冲'和'发了会通知'表达了作者对工商银行立减金活动的兴奋和期待。"
     },
     {
       "title": "工行的i豆现在真抠搜",
       "before": "negative",
       "after": "neutral",
       "method": "llm",
-      "reason": "作者在帖子中提供了关于工商银行app消费季活动的客观信息，包括立减金和抽奖活动，没有表达个人情感倾向。"
+      "reason": "该帖子标题和内容主要是在分享工商银行app的一个活动信息，没有明显的情感倾向，属于客观陈述。"
     }
   ]
 }
