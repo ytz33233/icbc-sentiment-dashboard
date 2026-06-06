@@ -1,6 +1,6 @@
 {
   "date": "2026-06-06",
-  "generatedAt": "2026-06-05T23:10:46.899Z",
+  "generatedAt": "2026-06-06T04:10:50.297Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -8,25 +8,10 @@
     "negative": 4
   },
   "afterStats": {
-    "positive": 9,
-    "neutral": 17,
+    "positive": 7,
+    "neutral": 19,
     "negative": 4
   },
-  "diffCount": 2,
-  "changes": [
-    {
-      "title": "工行大放���！",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的'大放水'和内容中的感叹号表达了作者对工商银行活动的积极和兴奋态度。"
-    },
-    {
-      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
-      "before": "neutral",
-      "after": "positive",
-      "method": "llm",
-      "reason": "标题中的'超多福利等你来！'和内容中列举的多项优惠活动，表达了作者对工商银行活动的积极和满意态度。"
-    }
-  ]
+  "diffCount": 0,
+  "changes": []
 }
