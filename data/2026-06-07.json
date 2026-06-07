@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-07",
-  "generatedAt": "2026-06-07 07:10",
+  "generatedAt": "2026-06-07 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -8,8 +8,8 @@
     "historyCount": 29,
     "negativeCount": 4,
     "negativePct": "13.3",
-    "positiveCount": 7,
-    "neutralCount": 19,
+    "positiveCount": 9,
+    "neutralCount": 17,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "social": 3
   },
   "bySentiment": {
-    "positive": 7,
-    "neutral": 19,
+    "positive": 9,
+    "neutral": 17,
     "negative": 4
   },
   "byRisk": {
@@ -128,7 +128,7 @@
     {
       "topic": "工行i豆活动",
       "summary": "讨论工行i豆相关活动",
-      "postCount": 18,
+      "postCount": 12,
       "postIndices": [
         0,
         1,
@@ -139,30 +139,24 @@
         7,
         8,
         9,
-        11,
-        12,
         17,
-        19,
-        21,
-        22,
-        26,
         28,
         29
       ],
       "keywords": [
-        "工行",
-        "i豆"
+        "i豆",
+        "活动"
       ],
       "sentiment": {
-        "positive": 3,
-        "neutral": 12,
+        "positive": 0,
+        "neutral": 9,
         "negative": 3
       },
       "sources": {
-        "xiaohongshu": 16,
+        "xiaohongshu": 10,
         "social": 2
       },
-      "totalHeat": 4692,
+      "totalHeat": 2747,
       "topPosts": [
         {
           "id": "20260607-05",
@@ -171,15 +165,15 @@
           "sentiment": "neutral"
         },
         {
-          "id": "20260607-22",
-          "title": "工行20立减金去撸",
-          "heatScore": 623,
-          "sentiment": "neutral"
-        },
-        {
           "id": "20260607-08",
           "title": "工行新的1.9元，两个活动",
           "heatScore": 515,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260607-06",
+          "title": "6月工行i豆乐园活动攻略",
+          "heatScore": 133,
           "sentiment": "neutral"
         }
       ]
@@ -187,28 +181,27 @@
     {
       "topic": "工行红包活动",
       "summary": "讨论工行红包发放活动",
-      "postCount": 6,
+      "postCount": 5,
       "postIndices": [
         11,
         12,
         13,
         23,
-        25,
         26
       ],
       "keywords": [
-        "工行",
-        "红包"
+        "红包",
+        "现金"
       ],
       "sentiment": {
-        "positive": 6,
+        "positive": 5,
         "neutral": 0,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 6
+        "xiaohongshu": 5
       },
-      "totalHeat": 1297,
+      "totalHeat": 1295,
       "topPosts": [
         {
           "id": "20260607-27",
@@ -231,17 +224,17 @@
       ]
     },
     {
-      "topic": "工行储蓄卡服务",
-      "summary": "讨论工行储蓄卡相关服务",
+      "topic": "工行立减金",
+      "summary": "讨论工行立减金优惠",
       "postCount": 3,
       "postIndices": [
-        10,
-        15,
-        16
+        21,
+        22,
+        24
       ],
       "keywords": [
-        "工行",
-        "储蓄卡"
+        "立减金",
+        "优惠"
       ],
       "sentiment": {
         "positive": 0,
@@ -251,7 +244,51 @@
       "sources": {
         "xiaohongshu": 3
       },
-      "totalHeat": 463,
+      "totalHeat": 998,
+      "topPosts": [
+        {
+          "id": "20260607-22",
+          "title": "工行20立减金去撸",
+          "heatScore": 623,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260607-23",
+          "title": "工行又一个20元，客户关怀任务",
+          "heatScore": 260,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260607-25",
+          "title": "工行大放���！",
+          "heatScore": 115,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行卡服务",
+      "summary": "讨论工行银行卡服务",
+      "postCount": 4,
+      "postIndices": [
+        10,
+        15,
+        16,
+        20
+      ],
+      "keywords": [
+        "银行卡",
+        "服务"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 4
+      },
+      "totalHeat": 476,
       "topPosts": [
         {
           "id": "20260607-17",
@@ -266,9 +303,9 @@
           "sentiment": "neutral"
         },
         {
-          "id": "20260607-11",
-          "title": "工行银行卡储蓄卡借记卡免费换卡",
-          "heatScore": 0,
+          "id": "20260607-21",
+          "title": "工行生肖卡",
+          "heatScore": 13,
           "sentiment": "neutral"
         }
       ]
@@ -283,7 +320,6 @@
         19
       ],
       "keywords": [
-        "工行",
         "答题"
       ],
       "sentiment": {
@@ -317,51 +353,6 @@
       ]
     },
     {
-      "topic": "工行其他活动",
-      "summary": "讨论工行其他各类活动",
-      "postCount": 4,
-      "postIndices": [
-        14,
-        20,
-        24,
-        27
-      ],
-      "keywords": [
-        "工行",
-        "活动"
-      ],
-      "sentiment": {
-        "positive": 1,
-        "neutral": 3,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 3,
-        "social": 1
-      },
-      "totalHeat": 129,
-      "topPosts": [
-        {
-          "id": "20260607-25",
-          "title": "工行大放���！",
-          "heatScore": 115,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260607-21",
-          "title": "工行生肖卡",
-          "heatScore": 13,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260607-15",
-          "title": "🔥工行5·15｜心系投资者，携手共行动✨",
-          "heatScore": 1,
-          "sentiment": "positive"
-        }
-      ]
-    },
-    {
       "topic": "工行数字藏品",
       "summary": "讨论工行数字藏品活动",
       "postCount": 1,
@@ -369,7 +360,6 @@
         2
       ],
       "keywords": [
-        "工行",
         "数字藏品"
       ],
       "sentiment": {
@@ -389,12 +379,75 @@
           "sentiment": "negative"
         }
       ]
+    },
+    {
+      "topic": "工行其他活动",
+      "summary": "讨论工行其他各类活动",
+      "postCount": 2,
+      "postIndices": [
+        14,
+        25
+      ],
+      "keywords": [
+        "活动"
+      ],
+      "sentiment": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 3,
+      "topPosts": [
+        {
+          "id": "20260607-26",
+          "title": "工行亚沙会金融buff拉满✅",
+          "heatScore": 2,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260607-15",
+          "title": "🔥工行5·15｜心系投资者，携手共行动✨",
+          "heatScore": 1,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行消费季",
+      "summary": "讨论工行消费季活动",
+      "postCount": 1,
+      "postIndices": [
+        27
+      ],
+      "keywords": [
+        "消费季"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 0,
+      "topPosts": [
+        {
+          "id": "20260607-28",
+          "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+          "heatScore": 0,
+          "sentiment": "neutral"
+        }
+      ]
     }
   ],
   "dailyBrief": {
     "text": "今日（2026-06-07）从历史数据中发现 1 条24H内新增舆情。当前累计展示 30 条。",
     "date": "2026-06-07",
-    "generatedAt": "2026-06-06T23:10:27.702Z"
+    "generatedAt": "2026-06-07T04:10:31.124Z"
   },
   "records": [
     {
@@ -765,7 +818,7 @@
       "category": "其他",
       "heatScore": 55,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的信息陈述，没有表达出作者的个人情感态度。",
+      "llmReason": "标题和内容均是简单的信息陈述，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -801,7 +854,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单的信息陈述，没有表达出作者的个人情感态度。",
+      "llmReason": "标题和内容均是简单的信息陈述，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -839,7 +892,7 @@
       "category": "薅羊毛",
       "heatScore": 344,
       "llmSentiment": "positive",
-      "llmReason": "标题中提到'新工行0.9r现金红包🧧'，使用了表情符号🧧，通常表示对红包的积极和喜悦态度。",
+      "llmReason": "标题中提到'新工行0.9r现金红包🧧'，使用了表情符号🧧，通常表示分享好消息或积极情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -877,7 +930,7 @@
       "category": "薅羊毛",
       "heatScore": 212,
       "llmSentiment": "positive",
-      "llmReason": "标题中提到'儿童节发红包🧧啦！'，使用了表情符号🧧和语气词'啦'，表达了对发红包活动的积极和喜悦态度。",
+      "llmReason": "标题中提到'儿童节发红包🧧啦！'，使用了表情符号🧧和语气词'啦'，表达了积极和开心的情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -913,7 +966,7 @@
       "category": "其他",
       "heatScore": 139,
       "llmSentiment": "positive",
-      "llmReason": "标题中使用了'大成功'，表达了对工行3136活动结果的积极和满意态度。",
+      "llmReason": "标题中使用了'大成功'，表达了作者对工商银行运营活动的积极评价和满意情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -949,7 +1002,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "positive",
-      "llmReason": "标题中使用了'🔥'和'✨'表情符号，表达了积极和兴奋的情感，内容中提到'心系投资者，携手共行动'，也体现了作者对工商银行活动的积极评价和支持。",
+      "llmReason": "标题中使用了火焰和星星符号，表达了对工商银行活动的兴奋和积极态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -987,7 +1040,7 @@
       "category": "i豆兑换",
       "heatScore": 163,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是客观陈述工商银行提供的兑换韩币服务，没有表达作者的个人情感态度。",
+      "llmReason": "标题和内容只是简单陈述了工商银行兑换韩币的事实，没有表达任何情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1023,7 +1076,7 @@
       "category": "其他",
       "heatScore": 300,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是客观陈述工行储蓄卡到期免费换卡的服务信息，没有表达作者的个人情感态度。",
+      "llmReason": "标题和内容只是简单陈述了工行储蓄卡到期免费换卡的事实，没有表达任何情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1059,7 +1112,7 @@
       "category": "其他",
       "heatScore": 127,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是客观陈述5.26工行答题的活动信息，没有表达作者的个人情感态度。",
+      "llmReason": "标题和内容只是简单陈述了5.26工行答题的事实，没有表达任何情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1095,7 +1148,7 @@
       "category": "其他",
       "heatScore": 24,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容都是客观陈述9点有两个工行抽奖活动的信息，没有表达作者的个人情感态度。",
+      "llmReason": "标题和内容只是简单陈述了9点～两个工行抽的事实，没有表达任何情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1131,7 +1184,7 @@
       "category": "其他",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容均是简单陈述活动信息，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1167,7 +1220,7 @@
       "category": "其他",
       "heatScore": 13,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容均是简单陈述产品信息，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1205,7 +1258,7 @@
       "category": "i豆兑换",
       "heatScore": 623,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容均是简单陈述活动信息，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1241,7 +1294,7 @@
       "category": "其他",
       "heatScore": 260,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是简单陈述，没有表达作者的情感态度。",
+      "llmReason": "标题和内容均是简单陈述活动信息，没有表达作者的情感态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1277,7 +1330,7 @@
       "category": "其他",
       "heatScore": 110,
       "llmSentiment": "positive",
-      "llmReason": "内容中使用了'很丝滑'这个表达，暗示作者对工行1元活动体验感到满意和顺畅。",
+      "llmReason": "内容中使用了'很丝滑'这个表达，暗示活动体验流畅顺利，体现了作者的积极满意态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1286,7 +1339,7 @@
       "publishTime": "2026-05-16",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "riskLevel": "low",
       "title": "工行大放���！",
       "content": "工行大放水！",
@@ -1312,8 +1365,8 @@
       "shares": 4,
       "category": "其他",
       "heatScore": 115,
-      "llmSentiment": "neutral",
-      "llmReason": "标题和内容均是对工商银行活动的客观陈述，没有表达作者的个人情感。",
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'工行大放水！'表达了作者对工商银行活动的兴奋和期待，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -1349,7 +1402,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "positive",
-      "llmReason": "标题中的'金融buff拉满✅'和内容中的'超多福利等你来！'表达了作者对工商银行活动的积极态度和满意。",
+      "llmReason": "标题中的'工行亚沙会金融buff拉满✅'使用了正面的词汇'buff拉满'和肯定的符号'✅'，表达了作者对工商银行活动的积极评价和满意。",
       "sentimentMethod": "llm"
     },
     {
@@ -1388,7 +1441,7 @@
       "category": "i豆兑换",
       "heatScore": 490,
       "llmSentiment": "positive",
-      "llmReason": "标题和内容中的'冲冲冲'和'发了会通知'表达了作者对工商银行活动的期待和兴奋。",
+      "llmReason": "标题中的'冲冲冲'和内容中的'发了会通知'表达了作者对工商银行活动的积极参与和期待，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -1402,7 +1455,7 @@
       "comments": 0,
       "favorites": 0,
       "recency": "24h内",
-      "sentiment": "neutral",
+      "sentiment": "positive",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "其他",
@@ -1419,8 +1472,8 @@
       "id": "20260607-28",
       "category": "其他",
       "heatScore": 0,
-      "llmSentiment": "neutral",
-      "llmReason": "标题和内容主要是对工商银行活动的规则和优惠进行说明，没有明显的情感倾向。",
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'超多福利等你来！'和内容中列举的多项优惠活动，表达了作者对工商银行活动的积极评价和满意，语气正面。",
       "sentimentMethod": "llm"
     },
     {
@@ -1452,7 +1505,7 @@
       "category": "i豆兑换",
       "heatScore": 29,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容主要是对工商银行活动的规则和优惠进行说明，没有明显的情感倾向。",
+      "llmReason": "标题和内容主要介绍了工商银行的消费季活动和优惠信息，没有明显的正面或负面情感倾向，属于客观陈述。",
       "sentimentMethod": "llm"
     },
     {
@@ -1488,10 +1541,10 @@
       "category": "i豆兑换",
       "heatScore": 11,
       "llmSentiment": "neutral",
-      "llmReason": "该帖子标题和内容主要是在陈述工商银行app的一个活动，没有表达作者的个人情感态度，属于客观信息分享。",
+      "llmReason": "该帖子标题和内容主要是在陈述工商银行app的一个活动信息，没有表达作者的个人情感态度。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-06-06T23:10:45.907Z",
+  "llmEnhancedAt": "2026-06-07T04:10:52.765Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
