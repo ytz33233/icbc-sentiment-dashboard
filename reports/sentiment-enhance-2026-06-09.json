@@ -1,6 +1,6 @@
 {
   "date": "2026-06-09",
-  "generatedAt": "2026-06-08T23:10:47.285Z",
+  "generatedAt": "2026-06-09T04:10:57.299Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 9,
@@ -19,14 +19,14 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是对工商银行活动的客观描述，没有表达作者的个人情感倾向。"
+      "reason": "标题和内容都是对工行活动的简单陈述，没有表达作者的个人情感。"
     },
     {
       "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是对工商银行活动的客观描述，没有表达作者的个人情感倾向。"
+      "reason": "标题和内容主要是对工行信用卡活动的规则说明，没有表达作者的个人情感。"
     }
   ]
 }
