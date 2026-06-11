@@ -1,0 +1,1481 @@
+{
+  "reportDate": "2026-06-12",
+  "generatedAt": "2026-06-12 07:10",
+  "fromHistory": true,
+  "summary": {
+    "total": 30,
+    "recentCount": 1,
+    "historyCount": 29,
+    "negativeCount": 5,
+    "negativePct": "16.7",
+    "positiveCount": 11,
+    "neutralCount": 14,
+    "channelCount": 2,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "xiaohongshu": 27,
+    "social": 3
+  },
+  "bySentiment": {
+    "positive": 11,
+    "neutral": 14,
+    "negative": 5
+  },
+  "byRisk": {
+    "low": 30
+  },
+  "byProduct": {
+    "i豆活动": 7,
+    "其他": 22,
+    "i豆乐园": 1
+  },
+  "byCategory": {
+    "i豆兑换": 11,
+    "其他": 17,
+    "薅羊毛": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-06-06",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-08",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-09",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-10",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-11",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-12",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 8
+    },
+    {
+      "word": "立减金",
+      "count": 3
+    },
+    {
+      "word": "红包",
+      "count": 2
+    },
+    {
+      "word": "兑换",
+      "count": 2
+    },
+    {
+      "word": "i豆乐园",
+      "count": 1
+    },
+    {
+      "word": "通知",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    },
+    {
+      "word": "贬值",
+      "count": 1
+    },
+    {
+      "word": "积分",
+      "count": 1
+    }
+  ],
+  "hotTopics": [
+    {
+      "topic": "工行立减金",
+      "summary": "讨论工行立减金优惠",
+      "postCount": 4,
+      "postIndices": [
+        4,
+        20,
+        21,
+        25
+      ],
+      "keywords": [
+        "立减金"
+      ],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 3,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 4
+      },
+      "totalHeat": 3031,
+      "topPosts": [
+        {
+          "id": "20260612-05",
+          "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+          "heatScore": 1658,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-21",
+          "title": "工行20立减金去撸",
+          "heatScore": 623,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-26",
+          "title": "工行20元立减金，冲冲冲，发了会通知！",
+          "heatScore": 490,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行i豆活动",
+      "summary": "讨论工行i豆相关活动",
+      "postCount": 13,
+      "postIndices": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        16,
+        17,
+        18,
+        27,
+        28
+      ],
+      "keywords": [
+        "i豆",
+        "活动"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 10,
+        "negative": 3
+      },
+      "sources": {
+        "xiaohongshu": 11,
+        "social": 2
+      },
+      "totalHeat": 1129,
+      "topPosts": [
+        {
+          "id": "20260612-08",
+          "title": "工行新的1.9元，两个活动",
+          "heatScore": 515,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-06",
+          "title": "6月工行i豆乐园活动攻略",
+          "heatScore": 133,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-17",
+          "title": "5.26工行答题",
+          "heatScore": 127,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行红包活动",
+      "summary": "讨论工行红包发放活动",
+      "postCount": 3,
+      "postIndices": [
+        11,
+        12,
+        22
+      ],
+      "keywords": [
+        "红包",
+        "现金"
+      ],
+      "sentiment": {
+        "positive": 3,
+        "neutral": 0,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 3
+      },
+      "totalHeat": 666,
+      "topPosts": [
+        {
+          "id": "20260612-12",
+          "title": "6.1新工行0.9r现金红包🧧",
+          "heatScore": 344,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260612-13",
+          "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+          "heatScore": 212,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260612-23",
+          "title": "5月25日，工行1元，目前很丝滑",
+          "heatScore": 110,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行储蓄卡",
+      "summary": "讨论工行储蓄卡相关",
+      "postCount": 4,
+      "postIndices": [
+        10,
+        14,
+        15,
+        19
+      ],
+      "keywords": [
+        "储蓄卡",
+        "换卡"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 4
+      },
+      "totalHeat": 476,
+      "topPosts": [
+        {
+          "id": "20260612-16",
+          "title": "工行储蓄卡到期免费换卡",
+          "heatScore": 300,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-15",
+          "title": "工商银行兑换韩币",
+          "heatScore": 163,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260612-20",
+          "title": "工行生肖卡",
+          "heatScore": 13,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行其他活动",
+      "summary": "讨论工行其他各类活动",
+      "postCount": 2,
+      "postIndices": [
+        13,
+        24
+      ],
+      "keywords": [
+        "活动"
+      ],
+      "sentiment": {
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 141,
+      "topPosts": [
+        {
+          "id": "20260612-14",
+          "title": "工行3136大成功",
+          "heatScore": 139,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260612-25",
+          "title": "工行亚沙会金融buff拉满✅",
+          "heatScore": 2,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行消费季",
+      "summary": "讨论工行消费季活动",
+      "postCount": 1,
+      "postIndices": [
+        26
+      ],
+      "keywords": [
+        "消费季"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 0,
+      "topPosts": [
+        {
+          "id": "20260612-27",
+          "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+          "heatScore": 0,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-06-12）从历史数据中发现 1 条24H内新增舆情。当前累计展示 30 条。",
+    "date": "2026-06-12",
+    "generatedAt": "2026-06-11T23:10:25.910Z"
+  },
+  "records": [
+    {
+      "id": "20260612-01",
+      "date": "2026-06-02",
+      "publishTime": "昨天 20:30",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "low",
+      "title": "工行的i豆现在真抠搜",
+      "content": "工行的i豆现在真抠搜",
+      "url": "https://www.xiaohongshu.com/explore/6a1d7b5e000000000702ef7d",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "1",
+        "comments": "13",
+        "collects": "0",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 1,
+      "comments": 13,
+      "favorites": 0,
+      "shares": 0,
+      "category": "i豆兑换",
+      "heatScore": 27,
+      "llmSentiment": "negative",
+      "llmReason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。",
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "id": "20260612-02",
+      "date": "2026-06-02",
+      "publishTime": "昨天 16:45",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "low",
+      "title": "工行搞不起活动可以不搞",
+      "content": "工行搞不起活动可以不搞",
+      "url": "https://www.xiaohongshu.com/explore/6a1d3ee3000000003700d4b5",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "3",
+        "comments": "10",
+        "collects": "0",
+        "shares": "1"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 3,
+      "comments": 10,
+      "favorites": 0,
+      "shares": 1,
+      "category": "其他",
+      "heatScore": 23,
+      "llmSentiment": "negative",
+      "llmReason": "作者使用了'搞不起活动可以不搞'的表述，表达了对工行活动的不满和失望，认为工行的活动不值得参与。",
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "id": "20260612-03",
+      "date": "2026-05-21",
+      "publishTime": "2026-05-21",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "low",
+      "title": "工行立夏的数字藏品错过了怎么办",
+      "content": "工行立夏的数字藏品错过了怎么办",
+      "url": "https://www.xiaohongshu.com/explore/6a0ebccf0000000008025de4",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "8",
+        "comments": "47",
+        "collects": "2",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 8,
+      "comments": 47,
+      "favorites": 2,
+      "shares": 0,
+      "category": "其他",
+      "heatScore": 105,
+      "llmSentiment": "negative",
+      "llmReason": "标题中提到'错过了怎么办'，暗示作者对错过工行立夏的数字藏品感到遗憾和失望。",
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "id": "20260612-04",
+      "date": "2026-06-02",
+      "publishTime": "昨天 20:30",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "low",
+      "title": "工行的i豆现在真抠搜",
+      "content": "工行的i豆现在真抠搜",
+      "url": "https://www.xiaohongshu.com/explore/6a1d7b5e000000000702ef7d",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "1",
+        "comments": "13",
+        "collects": "0",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 1,
+      "comments": 13,
+      "favorites": 0,
+      "shares": 0,
+      "category": "i豆兑换",
+      "heatScore": 27,
+      "llmSentiment": "negative",
+      "llmReason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。",
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "id": "20260612-30",
+      "date": "2026-06-02",
+      "publishTime": "昨天 20:30",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "negative",
+      "riskLevel": "low",
+      "title": "工行的i豆现在真抠搜",
+      "content": "工行的i豆现在真抠搜",
+      "url": "https://www.xiaohongshu.com/explore/6a1d7b5e000000000702ef7d",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "1",
+        "comments": "13",
+        "collects": "0",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 1,
+      "comments": 13,
+      "favorites": 0,
+      "shares": 0,
+      "category": "i豆兑换",
+      "heatScore": 27,
+      "llmSentiment": "negative",
+      "llmReason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。",
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "id": "20260612-05",
+      "date": "2026-06-02",
+      "publishTime": "昨天 15:10",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "content": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "url": "https://www.xiaohongshu.com/explore/6a1c5f800000000038022199",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "418",
+        "comments": "445",
+        "collects": "233",
+        "shares": "274"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 418,
+      "comments": 445,
+      "favorites": 233,
+      "shares": 274,
+      "category": "i豆兑换",
+      "heatScore": 1658,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了活动信息，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-06",
+      "date": "2026-06-01",
+      "publishTime": "2026-06-01",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "6月工行i豆乐园活动攻略",
+      "content": "6月工行i豆乐园活动攻略",
+      "url": "https://www.xiaohongshu.com/explore/6a1c5e5f000000000702e1f5",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆乐园",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "28",
+        "comments": "42",
+        "collects": "14",
+        "shares": "12"
+      },
+      "sentimentRaw": "positive",
+      "keywords": [
+        "i豆",
+        "i豆乐园"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 28,
+      "comments": 42,
+      "favorites": 14,
+      "shares": 12,
+      "category": "i豆兑换",
+      "heatScore": 133,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了活动攻略信息，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-07",
+      "date": "2026-06-02",
+      "publishTime": "昨天 12:06",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工商i豆",
+      "content": "工商i豆",
+      "url": "https://www.xiaohongshu.com/explore/6a1d052c0000000008002aca",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "i豆活动",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "0",
+        "comments": "10",
+        "collects": "0",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "i豆"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 0,
+      "comments": 10,
+      "favorites": 0,
+      "shares": 0,
+      "category": "i豆兑换",
+      "heatScore": 20,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了活动名称，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-08",
+      "date": "2026-05-30",
+      "publishTime": "2026-05-30",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行新的1.9元，两个活动",
+      "content": "工行新的1.9元，两个活动",
+      "url": "https://www.xiaohongshu.com/explore/6a1917e6000000003501fedf",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "180",
+        "comments": "72",
+        "collects": "127",
+        "shares": "104"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 180,
+      "comments": 72,
+      "favorites": 127,
+      "shares": 104,
+      "category": "其他",
+      "heatScore": 515,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了活动信息，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-09",
+      "date": "2026-06-01",
+      "publishTime": "2026-06-01",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "06.01 工行每周一测0.3",
+      "content": "06.01 工行每周一测0.3",
+      "url": "https://www.xiaohongshu.com/explore/6a1cdb660000000007013697",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "71",
+        "comments": "11",
+        "collects": "19",
+        "shares": "32"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 71,
+      "comments": 11,
+      "favorites": 19,
+      "shares": 32,
+      "category": "其他",
+      "heatScore": 122,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提供了活动信息，没有表达作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-10",
+      "date": "2026-06-02",
+      "publishTime": "昨天 10:18",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行0.8+1300豆",
+      "content": "工行0.8+1300豆",
+      "url": "https://www.xiaohongshu.com/explore/6a1cec07000000003502e244",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "28",
+        "comments": "2",
+        "collects": "15",
+        "shares": "11"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 28,
+      "comments": 2,
+      "favorites": 15,
+      "shares": 11,
+      "category": "其他",
+      "heatScore": 55,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单的信息陈述，没有表达出作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-11",
+      "date": "2026-06-01",
+      "publishTime": "2026-06-01",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行银行卡储蓄卡借记卡免费换卡",
+      "content": "工行银行卡储蓄卡借记卡免费换卡",
+      "url": "https://www.xiaohongshu.com/explore/6a1cd69500000000350239a7",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "0",
+        "comments": "0",
+        "collects": "0",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 0,
+      "category": "其他",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单的信息陈述，没有表达出作者的情感态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-12",
+      "date": "2026-06-02",
+      "publishTime": "昨天 20:09",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "6.1新工行0.9r现金红包🧧",
+      "content": "6.1新工行0.9r现金红包🧧",
+      "url": "https://www.xiaohongshu.com/explore/6a1ce4c70000000008000aca",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "135",
+        "comments": "25",
+        "collects": "106",
+        "shares": "67"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "红包"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 135,
+      "comments": 25,
+      "favorites": 106,
+      "shares": 67,
+      "category": "薅羊毛",
+      "heatScore": 344,
+      "llmSentiment": "positive",
+      "llmReason": "标题中提到了'新工行0.9r现金红包🧧'，使用了现金红包和表情符号🧧，表达了积极和开心的情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-13",
+      "date": "2026-05-31",
+      "publishTime": "2026-05-31",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "content": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "url": "https://www.xiaohongshu.com/explore/6a1ad6e70000000035021ad6",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "65",
+        "comments": "35",
+        "collects": "51",
+        "shares": "63"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "红包"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 65,
+      "comments": 35,
+      "favorites": 51,
+      "shares": 63,
+      "category": "薅羊毛",
+      "heatScore": 212,
+      "llmSentiment": "positive",
+      "llmReason": "标题中提到了'儿童节发红包🧧啦！'，使用了节日和红包🧧，表达了积极和开心的情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-14",
+      "date": "2026-05-17",
+      "publishTime": "2026-05-17",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行3136大成功",
+      "content": "工行3136大成功",
+      "url": "https://www.xiaohongshu.com/explore/6a0916810000000006035607",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-06-02",
+      "engagement": {
+        "likes": "36",
+        "comments": "29",
+        "collects": "30",
+        "shares": "1"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 36,
+      "comments": 29,
+      "favorites": 30,
+      "shares": 1,
+      "category": "其他",
+      "heatScore": 139,
+      "llmSentiment": "positive",
+      "llmReason": "标题中使用了'大成功'，表达了作者对工行3136活动的积极和满意的态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-15",
+      "date": "2026-05-23",
+      "publishTime": "2026-05-23",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工商银行兑换韩币",
+      "content": "工商银行兑换韩币",
+      "url": "https://www.xiaohongshu.com/explore/6a10151800000000080038ed",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "65",
+        "comments": "16",
+        "collects": "44",
+        "shares": "87"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "兑换"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 65,
+      "comments": 16,
+      "favorites": 44,
+      "shares": 87,
+      "category": "i豆兑换",
+      "heatScore": 163,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单陈述工商银行提供的兑换韩币服务，没有表达作者的个人情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-16",
+      "date": "2026-05-18",
+      "publishTime": "2026-05-18",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行储蓄卡到期免费换卡",
+      "content": "工行储蓄卡到期免费换卡",
+      "url": "https://www.xiaohongshu.com/explore/6a0ab8ac000000003502716b",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "67",
+        "comments": "67",
+        "collects": "66",
+        "shares": "17"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 67,
+      "comments": 67,
+      "favorites": 66,
+      "shares": 17,
+      "category": "其他",
+      "heatScore": 300,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单陈述工行储蓄卡到期可以免费换卡的信息，没有表达作者的个人情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-17",
+      "date": "2026-05-26",
+      "publishTime": "2026-05-26",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5.26工行答题",
+      "content": "5.26工行答题",
+      "url": "https://www.xiaohongshu.com/explore/6a14c932000000000602328b",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "50",
+        "comments": "21",
+        "collects": "23",
+        "shares": "38"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 50,
+      "comments": 21,
+      "favorites": 23,
+      "shares": 38,
+      "category": "其他",
+      "heatScore": 127,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单陈述5月26日工行有答题活动，没有表达作者的个人情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-18",
+      "date": "2026-05-29",
+      "publishTime": "37分钟前",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "9点～两个工行抽",
+      "content": "9点～两个工行抽",
+      "url": "https://www.xiaohongshu.com/explore/6a18dcf10000000006023e14",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "11",
+        "comments": "2",
+        "collects": "6",
+        "shares": "4"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 11,
+      "comments": 2,
+      "favorites": 6,
+      "shares": 4,
+      "category": "其他",
+      "heatScore": 24,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单陈述9点有两个工行的抽奖活动，没有表达作者的个人情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-19",
+      "date": "2026-05-29",
+      "publishTime": "56分钟前",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "5月29日工行周五抽i",
+      "content": "5月29日工行周五抽i",
+      "url": "https://www.xiaohongshu.com/explore/6a18d8aa00000000080029dc",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "4",
+        "comments": "6",
+        "collects": "0",
+        "shares": "8"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 4,
+      "comments": 6,
+      "favorites": 0,
+      "shares": 8,
+      "category": "其他",
+      "heatScore": 16,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容均是简单陈述5月29日工行周五有抽奖活动，没有表达作者的个人情感。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-20",
+      "date": "2026-05-27",
+      "publishTime": "2026-05-27",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "neutral",
+      "riskLevel": "low",
+      "title": "工行生肖卡",
+      "content": "工行生肖卡",
+      "url": "https://www.xiaohongshu.com/explore/6a156bf300000000370340a2",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "3",
+        "comments": "4",
+        "collects": "1",
+        "shares": "0"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 3,
+      "comments": 4,
+      "favorites": 1,
+      "shares": 0,
+      "category": "其他",
+      "heatScore": 13,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容仅提及了工行生肖卡，没有表达作者的个人情感或态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-21",
+      "date": "2026-05-27",
+      "publishTime": "2026-05-27",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行20立减金去撸",
+      "content": "工行20立减金去撸",
+      "url": "https://www.xiaohongshu.com/explore/6a15518c0000000038023771",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "242",
+        "comments": "50",
+        "collects": "187",
+        "shares": "218"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "立减金"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 242,
+      "comments": 50,
+      "favorites": 187,
+      "shares": 218,
+      "category": "i豆兑换",
+      "heatScore": 623,
+      "llmSentiment": "positive",
+      "llmReason": "使用了'去撸'这个网络用语，通常表示积极参与或抓住机会，表达了一种积极和兴奋的态度。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-22",
+      "date": "2026-05-28",
+      "publishTime": "2026-05-28",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行又一个20元，客户关怀任务",
+      "content": "工行又一个20元，客户关怀任务",
+      "url": "https://www.xiaohongshu.com/explore/6a177af80000000035020c16",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "111",
+        "comments": "27",
+        "collects": "63",
+        "shares": "26"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 111,
+      "comments": 27,
+      "favorites": 63,
+      "shares": 26,
+      "category": "其他",
+      "heatScore": 260,
+      "llmSentiment": "positive",
+      "llmReason": "提到了'又一个20元'和'客户关怀任务'，暗示了作者对工行提供的优惠或福利感到满意和积极。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-23",
+      "date": "2026-05-26",
+      "publishTime": "2026-05-26",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "5月25日，工行1元，目前很丝滑",
+      "content": "5月25日，工行1元，目前很丝滑",
+      "url": "https://www.xiaohongshu.com/explore/6a1434e1000000003502d08f",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "42",
+        "comments": "9",
+        "collects": "33",
+        "shares": "17"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 42,
+      "comments": 9,
+      "favorites": 33,
+      "shares": 17,
+      "category": "其他",
+      "heatScore": 110,
+      "llmSentiment": "positive",
+      "llmReason": "使用了'很丝滑'来形容工行的活动，这是一个正面的表达，意味着活动进行得顺利，作者对此感到满意。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-24",
+      "date": "2026-05-16",
+      "publishTime": "2026-05-16",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行大放���！",
+      "content": "工行大放水！",
+      "url": "https://www.xiaohongshu.com/explore/6a07f2f00000000006031f24",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "30",
+        "comments": "28",
+        "collects": "19",
+        "shares": "4"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 30,
+      "comments": 28,
+      "favorites": 19,
+      "shares": 4,
+      "category": "其他",
+      "heatScore": 115,
+      "llmSentiment": "positive",
+      "llmReason": "使用了'大放水'这个表达，通常意味着大量的优惠或好处，作者对此感到兴奋和积极。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-25",
+      "date": "2026-05-29",
+      "publishTime": "昨天 16:44",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行亚沙会金融buff拉满✅",
+      "content": "工行亚沙会金融buff拉满✅",
+      "url": "https://www.xiaohongshu.com/explore/6a18005e000000000702b22b",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-29",
+      "engagement": {
+        "likes": "2",
+        "comments": "0",
+        "collects": "0",
+        "shares": "1"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 2,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 1,
+      "category": "其他",
+      "heatScore": 2,
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'金融buff拉满✅'和内容的重复使用，表达了作者对工商银行亚沙会金融活动的积极态度和满意。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "id": "20260612-26",
+      "date": "2026-05-27",
+      "publishTime": "2026-05-27",
+      "source": "小红书",
+      "sourceType": "xiaohongshu",
+      "sentiment": "positive",
+      "riskLevel": "low",
+      "title": "工行20元立减金，冲冲冲，发了会通知！",
+      "content": "工行20元立减金，冲冲冲，发了会通知！",
+      "url": "https://www.xiaohongshu.com/explore/6a15aab000000000070254d1",
+      "author": "小红书",
+      "status": "未处理",
+      "amount": "-",
+      "relatedProduct": "其他",
+      "fetchTime": "2026-05-28",
+      "engagement": {
+        "likes": "183",
+        "comments": "32",
+        "collects": "162",
+        "shares": "84"
+      },
+      "sentimentRaw": "neutral",
+      "keywords": [
+        "立减金",
+        "通知"
+      ],
+      "recency": "历史",
+      "fermentation": "low",
+      "likes": 183,
+      "comments": 32,
+      "favorites": 162,
+      "shares": 84,
+      "category": "i豆兑换",
+      "heatScore": 490,
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'冲冲冲'和'发了会通知'表达了作者对工商银行20元立减金活动的期待和兴奋。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "content": "【爱购6·18】支付宝：超多福利等你来！<br />💳中国境内地区（不含港澳台）的工银信用卡个人客户可享👇<br /><br />1️⃣消费满减<br /><br />✅活动一：碰一下满25元随机立减至高6元<br />🗓️2026年6月1日至2026年6月30日<br />📲持卡人在通过支付宝扣款首选卡设置为工银信用卡后，在铺设支付宝碰一下机具的线下商户购物消费时， ...<a href=\"/status/5302915797355946\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Tue May 26 20:05:12 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5302915797355946",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "positive",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "信用卡"
+      ],
+      "amount": "25元",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-26",
+      "fetchTime": "2026-05-27",
+      "author": "中国工商银行信用卡",
+      "id": "20260612-27",
+      "category": "其他",
+      "heatScore": 0,
+      "llmSentiment": "positive",
+      "llmReason": "标题中的'超多福利等你来'和内容中列举的多项优惠活动，表达了作者对工商银行爱购6·18活动的积极评价和满意。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+      "content": "️工.行app搜：工行消费季 <br />周五六日可抽i豆 <br />部分人还刷新了50-5ljj <br />- <br />2⃣️限广东工`行（除深圳 ） <br />打卡抽1.28立减J <br />#小程序://工行服务/yyhiICM2aE0t4NI",
+      "source": "佩奇线报",
+      "publishTime": "Fri May 22 09:00:13 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5301298897358393",
+      "likes": 5,
+      "comments": 12,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "positive",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-22",
+      "fetchTime": "2026-05-26",
+      "author": "佩奇线报",
+      "id": "20260612-28",
+      "category": "i豆兑换",
+      "heatScore": 29,
+      "llmSentiment": "positive",
+      "llmReason": "标题和内容中提到'可抽i豆'、'部分人还刷新了50-5ljj'等优惠活动，表达了作者对工商银行消费季活动的积极态度和满意。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
+      "source": "扒羊毛 / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Fri May 22 09:20:20 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5301303957784302",
+      "likes": 5,
+      "comments": 3,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "立减金",
+        "兑换",
+        "贬值",
+        "积分"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-22",
+      "fetchTime": "2026-05-26",
+      "author": "扒羊毛",
+      "id": "20260612-29",
+      "category": "i豆兑换",
+      "heatScore": 11,
+      "llmSentiment": "neutral",
+      "llmReason": "标题和内容主要介绍了工商银行消费季活动的优惠信息，没有明显的情感倾向，更多是客观陈述和信息分享。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-06-11T23:10:46.505Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

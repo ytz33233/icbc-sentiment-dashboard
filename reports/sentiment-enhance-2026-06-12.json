@@ -1,0 +1,81 @@
+{
+  "date": "2026-06-12",
+  "generatedAt": "2026-06-11T23:10:46.505Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 6,
+    "neutral": 19,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 11,
+    "neutral": 14,
+    "negative": 5
+  },
+  "diffCount": 9,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
+    },
+    {
+      "title": "6.1新工行0.9r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单的信息陈述，没有表达出作者的情感态度。"
+    },
+    {
+      "title": "工商银行兑换韩币",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中使用了'大成功'，表达了作者对工行3136活动的积极和满意的态度。"
+    },
+    {
+      "title": "工行又一个20元，客户关怀任务",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了'去撸'这个网络用语，通常表示积极参与或抓住机会，表达了一种积极和兴奋的态度。"
+    },
+    {
+      "title": "工行大放���！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了'很丝滑'来形容工行的活动，这是一个正面的表达，意味着活动进行得顺利，作者对此感到满意。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'冲冲冲'和'发了会通知'表达了作者对工商银行20元立减金活动的期待和兴奋。"
+    },
+    {
+      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中的'超多福利等你来'和内容中列举的多项优惠活动，表达了作者对工商银行爱购6·18活动的积极评价和满意。"
+    },
+    {
+      "title": "工.行αpp嗖：工.行消费季，受邀的有50-5立减金，还能抽i豆，i豆攒着兑换实...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容中提到'可抽i豆'、'部分人还刷新了50-5ljj'等优惠活动，表达了作者对工商银行消费季活动的积极态度和满意。"
+    },
+    {
+      "title": "工行的i豆现在真抠搜",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容主要介绍了工商银行消费季活动的优惠信息，没有明显的情感倾向，更多是客观陈述和信息分享。"
+    }
+  ]
+}
