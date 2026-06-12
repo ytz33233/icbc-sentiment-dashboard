@@ -1,0 +1,39 @@
+{
+  "date": "2026-06-13",
+  "generatedAt": "2026-06-12T23:10:46.166Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 11,
+    "neutral": 14,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 8,
+    "neutral": 17,
+    "negative": 5
+  },
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "工行20立减金去撸",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达出作者的个人情感态度。"
+    },
+    {
+      "title": "工行又一个20元，客户关怀任务",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达出作者的个人情感态度。"
+    },
+    {
+      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容主要是对工行消费季活动的客观描述，如'周五六日可抽i豆'、'部分人还刷新了50-5ljj'等，没有明显的正面或负面情感倾向。"
+    }
+  ]
+}
