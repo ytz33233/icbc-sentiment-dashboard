@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-14",
+  "generatedAt": "2026-06-13T23:10:48.717Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 9,
+    "neutral": 16,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 11,
+    "neutral": 14,
+    "negative": 5
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行20立减金去撸",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了“去撸”这个网络用语，通常表示积极参与和享受某种活动，表达了作者对活动的积极态度。"
+    },
+    {
+      "title": "工行又一个20元，客户关怀任务",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“又一个20元”和“客户关怀任务”表达了作者对工行提供福利的积极评价，语气中透露出满意和开心。"
+    }
+  ]
+}
