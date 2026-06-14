@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-15",
+  "generatedAt": "2026-06-14T23:10:50.468Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 11,
+    "neutral": 14,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 9,
+    "neutral": 16,
+    "negative": 5
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行20立减金去撸",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达出作者的个人情感态度。"
+    },
+    {
+      "title": "工行又一个20元，客户关怀任务",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达出作者的个人情感态度。"
+    }
+  ]
+}
