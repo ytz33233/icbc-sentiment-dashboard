@@ -1,0 +1,53 @@
+{
+  "date": "2026-06-16",
+  "generatedAt": "2026-06-15T23:11:01.623Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 8,
+    "neutral": 16,
+    "negative": 6
+  },
+  "afterStats": {
+    "positive": 7,
+    "neutral": 17,
+    "negative": 6
+  },
+  "diffCount": 5,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
+    },
+    {
+      "title": "6.1新工行0.9r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工商银行兑换韩币",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中使用了'大成功'，表达了对工行3136活动结果的积极、满意的态度。"
+    },
+    {
+      "title": "5月25日，工行1元，目前很丝滑",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是对工商银行客户关怀任务的简单提及，没有表达出明显的情感倾向。"
+    },
+    {
+      "title": "工行的i豆现在真抠搜",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "帖子内容是对工行app中活动的描述，提到了受邀用户可以享受的优惠和抽奖活动，但没有表达作者的个人情感，因此是客观的信息分享。"
+    }
+  ]
+}
