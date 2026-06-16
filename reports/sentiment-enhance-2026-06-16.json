@@ -1,6 +1,6 @@
 {
   "date": "2026-06-16",
-  "generatedAt": "2026-06-15T23:11:01.623Z",
+  "generatedAt": "2026-06-16T04:10:51.551Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 8,
@@ -26,28 +26,28 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是简单陈述，没有表达作者的情感态度。"
+      "reason": "帖子内容仅是简单陈述工行的一项服务，没有表达作者的情感态度。"
     },
     {
       "title": "工商银行兑换韩币",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "标题中使用了'大成功'，表达了对工行3136活动结果的积极、满意的态度。"
+      "reason": "帖子使用了“大成功”一词，表达了作者对工行3136活动取得成功的喜悦和满意。"
     },
     {
       "title": "5月25日，工行1元，目前很丝滑",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是对工商银行客户关怀任务的简单提及，没有表达出明显的情感倾向。"
+      "reason": "该帖子仅提供了工行客户关怀任务的信息，没有表达作者的情感态度。"
     },
     {
       "title": "工行的i豆现在真抠搜",
       "before": "negative",
       "after": "neutral",
       "method": "llm",
-      "reason": "帖子内容是对工行app中活动的描述，提到了受邀用户可以享受的优惠和抽奖活动，但没有表达作者的个人情感，因此是客观的信息分享。"
+      "reason": "作者分享了工商银行app的活动信息，没有明显的情感倾向。"
     }
   ]
 }
