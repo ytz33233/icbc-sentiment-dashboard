@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-18",
+  "generatedAt": "2026-06-17T23:10:45.451Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 22,
+    "negative": 8
+  },
+  "afterStats": {
+    "positive": 5,
+    "neutral": 17,
+    "negative": 8
+  },
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
+    },
+    {
+      "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中提到'新工行0.9r现金红包🧧'，使用了现金红包和表情符号🧧，表达了积极和喜悦的情感。"
+    },
+    {
+      "title": "工商银行兑换韩币",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中提到'儿童节发红包🧧啦！'，使用了节日和红包🧧，表达了积极和喜悦的情感。"
+    },
+    {
+      "title": "工行亚沙会金融buff拉满✅",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了“丝滑”一词来形容体验，通常表示流程顺畅、体验良好，表达了作者的满意和积极情感。"
+    },
+    {
+      "title": "工行20元立减金，冲冲冲，发了会通知！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了“buff拉满”和“✅”符号，表示对工行金融buff的肯定和满意，表达了积极的情感态度。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了“冲冲冲”和“发了会通知”的表达，显示出作者对工行20元立减金活动的期待和兴奋，表达了积极的情感态度。"
+    },
+    {
+      "title": "工行的i豆现在真抠搜",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "该帖子内容是对工商银行app中的一项活动进行信息分享，没有表达作者的个人情感态度，而是客观陈述了活动内容和参与方式。帖子中没有明显的积极或消极情感表达，因此判断为中性。"
+    }
+  ]
+}
