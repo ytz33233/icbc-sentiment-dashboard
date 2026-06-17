@@ -1,6 +1,6 @@
 {
   "date": "2026-06-17",
-  "generatedAt": "2026-06-16T23:10:43.665Z",
+  "generatedAt": "2026-06-17T04:11:19.206Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 6,
@@ -8,11 +8,11 @@
     "negative": 7
   },
   "afterStats": {
-    "positive": 6,
-    "neutral": 17,
+    "positive": 0,
+    "neutral": 23,
     "negative": 7
   },
-  "diffCount": 6,
+  "diffCount": 8,
   "changes": [
     {
       "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
@@ -26,35 +26,49 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是简单陈述，没有表达作者的个人情感或态度。"
+      "reason": ""
     },
     {
-      "title": "工商银行兑换韩币",
-      "before": "neutral",
-      "after": "positive",
+      "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "before": "positive",
+      "after": "neutral",
       "method": "llm",
-      "reason": "使用了红包🧧表情符号，并且提到了儿童节发红包，通常表示作者对活动感到满意或开心。"
+      "reason": ""
     },
     {
       "title": "5月25日，工行1元，目前很丝滑",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均是简洁的陈述，没有表达出明显的情感倾向。"
+      "reason": ""
     },
     {
-      "title": "️工.行app搜：工行消费季 周五六日可抽i豆 部分人还刷新了50-5ljj -...",
-      "before": "neutral",
-      "after": "positive",
+      "title": "工行亚沙会金融buff拉满✅",
+      "before": "positive",
+      "after": "neutral",
       "method": "llm",
-      "reason": "作者提到了'超多福利等你来'，显示出对工商银行活动的积极态度和对福利的期待。"
+      "reason": ""
+    },
+    {
+      "title": "工行20元立减金，冲冲冲，发了会通知！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
     },
     {
       "title": "工行的i豆现在真抠搜",
       "before": "negative",
       "after": "neutral",
       "method": "llm",
-      "reason": "作者提到了工商银行app中的活动，如'受邀的有50-5立减金，还能抽i豆'，但没有表达个人情感，只是分享了活动信息。"
+      "reason": ""
     }
   ]
 }
