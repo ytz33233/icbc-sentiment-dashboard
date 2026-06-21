@@ -1,0 +1,95 @@
+{
+  "date": "2026-06-22",
+  "generatedAt": "2026-06-21T23:10:36.375Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 5,
+    "neutral": 15,
+    "negative": 10
+  },
+  "afterStats": {
+    "positive": 5,
+    "neutral": 15,
+    "negative": 10
+  },
+  "diffCount": 11,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
+    },
+    {
+      "title": "6月工行i豆乐园活动攻略",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'搞不起活动可以不搞'的表述，表达了对工行活动的不满和失望，认为工行的活动不值得参与。"
+    },
+    {
+      "title": "6.1新工行0.9r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单的信息陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单的信息陈述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工商银行兑换韩币",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中提到了'0.9r现金红包🧧'，红包通常与积极、开心的情感相关联，尤其是加上了🧧表情符号，表达了对这一活动的积极态度。"
+    },
+    {
+      "title": "5.26工行答题",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中提到了'儿童节发红包🧧'，红包和节日通常与积极、开心的情感相关联，尤其是加上了🧧表情符号，表达了对这一活动的积极态度。"
+    },
+    {
+      "title": "5月25日，工行1元，目前很丝滑",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均为简短的陈述，没有表达出作者的情感倾向。"
+    },
+    {
+      "title": "工行亚沙会金融buff拉满✅",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是对工商银行客户关怀任务的简单陈述，没有表达出作者的个人情感倾向。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了'buff拉满'和'✅'符号，这些都是正面的表达，意味着作者对工行亚沙会金融活动的积极评价和肯定。"
+    },
+    {
+      "title": "工行的i豆现在真抠搜",
+      "before": "negative",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用了'冲冲冲'这样的激励性词汇，表达了作者对工行20元立减金活动的积极态度和急切期待。"
+    },
+    {
+      "title": "工行搞不起活动可以不搞",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "内容主要是对工行信用卡活动的客观描述，包括活动时间、优惠内容等，没有明显的个人情感倾向。使用了表情符号💳，但这个符号更多是用于强调信用卡，而不是表达情感。"
+    }
+  ]
+}
