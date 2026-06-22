@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-23",
+  "generatedAt": "2026-06-22T23:10:39.014Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 5,
+    "neutral": 14,
+    "negative": 11
+  },
+  "afterStats": {
+    "positive": 4,
+    "neutral": 15,
+    "negative": 11
+  },
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
+    },
+    {
+      "title": "6.1新工行0.9r现金红包🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单陈述工行的一项服务，没有表达作者的个人情感。"
+    },
+    {
+      "title": "5.26工行答题",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题中提到工行在儿童节发放红包，并且使用了🧧表情符号，表达了积极、喜庆的情感。"
+    },
+    {
+      "title": "5月25日，工行1元，目前很丝滑",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均是简单的活动描述，没有表达作者的情感态度。"
+    },
+    {
+      "title": "工行亚沙会金融buff拉满✅",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "该帖子标题和内容均是对工商银行某项活动的简单描述，没有表达出作者的个人情感倾向，只是客观陈述了活动信息。"
+    },
+    {
+      "title": "【爱购6·18】支付宝：超多福利等你来！ 💳中国境内地区（不含港澳台）的工银信...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "帖子标题和内容中的'冲冲冲'表达了作者对工行20元立减金活动的兴奋和积极参与的态度，语气积极。"
+    },
+    {
+      "title": "工行的i豆现在真抠搜",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "该帖子主要是对工行信用卡在支付宝平台的618活动规则的介绍，没有表达作者的个人情感倾向，只是客观陈述了活动信息。"
+    }
+  ]
+}
