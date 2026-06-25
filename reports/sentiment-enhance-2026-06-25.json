@@ -1,17 +1,46 @@
 {
   "date": "2026-06-25",
-  "generatedAt": "2026-06-24T23:10:20.965Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-06-25T03:00:00.335Z",
+  "totalRecords": 12,
   "beforeStats": {
     "positive": 0,
-    "neutral": 19,
-    "negative": 11
+    "neutral": 10,
+    "negative": 2
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 19,
-    "negative": 11
+    "neutral": 10,
+    "negative": 2
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "#公众号：江苏体 彩 右下角 彩民季 每天3次抽奖机会，看脸有大 【江苏的手机号...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "U先素质试用 gh搜夏至答题，现在有水，应该都是2026",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "V扫 工.行 答题满30经验值 去试试抽 2026 i豆 - 工.行 部分答案：...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "【没想到加拿大籍华人歌手吴亦凡案当事人都美竹_百度百科 网页链接 ，最近又因为与...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
