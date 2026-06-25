@@ -1,64 +1,29 @@
 {
   "date": "2026-06-23",
-  "generatedAt": "2026-06-23T04:10:20.634Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-06-25T08:29:20.966Z",
+  "totalRecords": 27,
   "beforeStats": {
-    "positive": 5,
-    "neutral": 14,
-    "negative": 11
+    "positive": 2,
+    "neutral": 25,
+    "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 19,
-    "negative": 11
+    "neutral": 27,
+    "negative": 0
   },
-  "diffCount": 7,
+  "diffCount": 2,
   "changes": [
     {
-      "title": "6.1 工行 开了！1.68+4500i豆+5000i豆",
-      "before": "neutral",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": "作者使用了'真抠搜'这个带有贬义的词汇，表达了对工商银行i豆活动的不满和失望。"
-    },
-    {
-      "title": "6.1新工行0.9r现金红包🧧",
+      "title": "工行10元话费的攻略教程",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
       "reason": ""
     },
     {
-      "title": "5.30-工行e生活-儿童节发红包🧧啦！",
+      "title": "工行积存金羊毛｜电脑端开票抽奖攻略🔥",
       "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": ""
-    },
-    {
-      "title": "5月25日，工行1元，目前很丝滑",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": ""
-    },
-    {
-      "title": "工行亚沙会金融buff拉满✅",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": ""
-    },
-    {
-      "title": "工行20元立减金，冲冲冲，发了会通知！",
-      "before": "positive",
-      "after": "neutral",
-      "method": "llm",
-      "reason": ""
-    },
-    {
-      "title": "工行的i豆现在真抠搜",
-      "before": "negative",
       "after": "neutral",
       "method": "llm",
       "reason": ""

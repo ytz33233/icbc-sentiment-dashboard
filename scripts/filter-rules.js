@@ -94,6 +94,17 @@ function isIrrelevantBank(title, content) {
 }
 
 /**
+ * 检查是否包含工行相关关键词
+ * @param {string} title
+ * @param {string} content
+ * @returns {boolean} true = 包含工行相关内容
+ */
+function containsICBC(title, content) {
+  const text = `${title || ''} ${content || ''}`;
+  return /工行|工银|工商银行|ICBC|爱购周末|工银星礼遇/i.test(text);
+}
+
+/**
  * 通用噪音过滤 - 一键过滤所有非必要内容
  * @param {Object} record - 单条舆情记录
  * @returns {Object|null} 过滤后的记录，或 null（表示应丢弃）
@@ -114,6 +125,11 @@ function filterNoise(record) {
 
   // 3. 过滤无关银行
   if (isIrrelevantBank(title, content)) {
+    return { ...record, _filtered: true, _filterReason: '非工行内容' };
+  }
+
+  // 4. 【新增】过滤完全不包含工行关键词的内容（如娱乐新闻、明星八卦等）
+  if (!containsICBC(title, content)) {
     return { ...record, _filtered: true, _filterReason: '非工行内容' };
   }
 
@@ -160,6 +176,7 @@ module.exports = {
   isHuZhu,
   isAd,
   isIrrelevantBank,
+  containsICBC,
   filterNoise,
   filterBatch
 };

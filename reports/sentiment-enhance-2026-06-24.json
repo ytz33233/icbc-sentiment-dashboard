@@ -1,17 +1,39 @@
 {
   "date": "2026-06-24",
-  "generatedAt": "2026-06-24T04:10:20.576Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-06-25T08:29:22.195Z",
+  "totalRecords": 15,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 19,
-    "negative": 11
+    "positive": 1,
+    "neutral": 13,
+    "negative": 1
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 19,
-    "negative": 11
+    "neutral": 14,
+    "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "工行i豆，放了大半年了，一直没舍得用。",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "成都工行信用卡羊毛",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行你没有骗我",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
