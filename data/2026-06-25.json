@@ -1,38 +1,38 @@
 {
   "reportDate": "2026-06-25",
-  "generatedAt": "2026-06-25 11:48",
+  "generatedAt": "2026-06-25 12:00",
   "fromHistory": false,
   "summary": {
-    "total": 11,
+    "total": 10,
     "recentCount": 0,
-    "historyCount": 11,
+    "historyCount": 10,
     "negativeCount": 2,
-    "negativePct": "18.2",
+    "negativePct": "20.0",
     "positiveCount": 0,
-    "neutralCount": 9,
+    "neutralCount": 8,
     "channelCount": 1,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 11
+    "social": 10
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 9,
+    "neutral": 8,
     "negative": 2
   },
   "byRisk": {
-    "low": 11
+    "low": 10
   },
   "byProduct": {
     "升金有礼": 1,
     "其他": 2,
-    "i豆活动": 8
+    "i豆活动": 7
   },
   "byCategory": {
     "薅羊毛": 1,
     "其他": 2,
-    "i豆兑换": 8
+    "i豆兑换": 7
   },
   "trend7d": [
     {
@@ -88,7 +88,7 @@
   "hotKeywords": [
     {
       "word": "i豆",
-      "count": 8
+      "count": 7
     },
     {
       "word": "抽奖",
@@ -121,9 +121,9 @@
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-06-25）共采集 11 条舆情，其中负面 2 条。热词包括「i豆、抽奖、兑换」。",
+    "text": "今日（2026-06-25）共采集 10 条舆情，其中负面 2 条。热词包括「i豆、抽奖、兑换」。",
     "date": "2026-06-25",
-    "generatedAt": "2026-06-25T03:48:49.210Z"
+    "generatedAt": "2026-06-25T04:00:34.241Z"
   },
   "records": [
     {
@@ -179,7 +179,7 @@
       "date": "2026-06-17",
       "fetchTime": "2026-06-25",
       "author": "G黄智雄",
-      "id": "20260625-11",
+      "id": "20260625-10",
       "category": "其他",
       "heatScore": 0,
       "sentimentMethod": "rule-negative"
@@ -286,38 +286,6 @@
       "sentimentMethod": "llm"
     },
     {
-      "title": "工行app搜：工行消费季 部分号有i豆，如无则忽略 - 6月份 元缴费50随机减...",
-      "content": "工行app搜：工行消费季 <br />部分号有i豆，如无则忽略 <br />- <br />6月份 元缴费50随机减 6.18 <br />mp://PWFMs1lZeBOUZlz <br />云缴费APP和小程序各一次 <br />每天7点开始 每天2000份",
-      "source": "佩奇线报",
-      "publishTime": "Thu Jun 04 08:11:42 +0800 2026",
-      "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5305997728155835",
-      "likes": 12,
-      "comments": 90,
-      "favorites": 0,
-      "recency": "历史",
-      "sentiment": "neutral",
-      "sourceType": "social",
-      "riskLevel": "low",
-      "relatedProduct": "i豆活动",
-      "keywords": [
-        "i豆"
-      ],
-      "amount": "-",
-      "status": "未处理",
-      "fermentation": "low",
-      "shares": 0,
-      "date": "2026-06-04",
-      "fetchTime": "2026-06-25",
-      "author": "佩奇线报",
-      "id": "20260625-05",
-      "category": "i豆兑换",
-      "heatScore": 192,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
-    },
-    {
       "title": "4.9买蜷补了 买过的应该还能买 高de地图搜：天猫养车 横幅点进去 弹40.1...",
       "content": "4.9买蜷补了 买过的应该还能买 <br />高de地图搜：天猫养车 <br />横幅点进去 弹40.1-40券 <br />- <br />工.行2026i豆还在反馈 <br />应该只能中1次 昨天没中的去",
       "source": "佩奇线报",
@@ -342,9 +310,41 @@
       "date": "2026-06-21",
       "fetchTime": "2026-06-25",
       "author": "佩奇线报",
-      "id": "20260625-06",
+      "id": "20260625-05",
       "category": "i豆兑换",
       "heatScore": 149,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "V扫 工行 I豆试试 答案A - 工行app搜：工行消费季 每周可抽一次i豆，看...",
+      "content": "V扫 工行 I豆试试 答案A <br />- <br />工行app搜：工行消费季  <br />每周可抽一次i豆，看脸大 <br />部分人还刷新了50-5ljj",
+      "source": "佩奇线报",
+      "publishTime": "Fri Jun 05 08:03:57 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5306358169600279",
+      "likes": 29,
+      "comments": 24,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-06-05",
+      "fetchTime": "2026-06-25",
+      "author": "佩奇线报",
+      "id": "20260625-06",
+      "category": "i豆兑换",
+      "heatScore": 77,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
@@ -445,40 +445,8 @@
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
-    },
-    {
-      "title": "工行搜【消费季】抽200i豆",
-      "content": "工行搜【消费季】抽200i豆",
-      "source": "分享白菜达人",
-      "publishTime": "Wed Jun 10 10:10:39 +0800 2026",
-      "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5308201990096515",
-      "likes": 20,
-      "comments": 18,
-      "favorites": 1,
-      "recency": "历史",
-      "sentiment": "neutral",
-      "sourceType": "social",
-      "riskLevel": "low",
-      "relatedProduct": "i豆活动",
-      "keywords": [
-        "i豆"
-      ],
-      "amount": "200i豆",
-      "status": "未处理",
-      "fermentation": "low",
-      "shares": 0,
-      "date": "2026-06-10",
-      "fetchTime": "2026-06-25",
-      "author": "分享白菜达人",
-      "id": "20260625-10",
-      "category": "i豆兑换",
-      "heatScore": 58,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-06-25T03:48:49.907Z",
+  "llmEnhancedAt": "2026-06-25T04:00:34.970Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
