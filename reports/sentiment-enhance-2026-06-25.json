@@ -1,15 +1,15 @@
 {
   "date": "2026-06-25",
-  "generatedAt": "2026-06-25T03:00:00.335Z",
-  "totalRecords": 12,
+  "generatedAt": "2026-06-25T03:48:49.907Z",
+  "totalRecords": 11,
   "beforeStats": {
     "positive": 0,
-    "neutral": 10,
+    "neutral": 9,
     "negative": 2
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 10,
+    "neutral": 9,
     "negative": 2
   },
   "diffCount": 4,

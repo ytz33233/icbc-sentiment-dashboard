@@ -36,10 +36,12 @@ echo "🔍 [2/7] 微博舆情采集..."
 cd "$SCRIPTS"
 node fetch-weibo-mcp.js "$DATE"
 
-# 3. 小红书采集
+# 3. 小红书采集（使用昨天日期，因为数据源仓库每天更新一次，当天数据可能尚未生成）
 echo ""
 echo "🔍 [3/7] 小红书舆情采集..."
-node fetch-xhs-repo.js "$DATE"
+# 小红书数据源仓库通常在晚上更新，所以采集昨天的数据更稳定
+XHS_DATE=$(date -d "yesterday" +%Y-%m-%d)
+node fetch-xhs-repo.js "$XHS_DATE" || echo "⚠️ 小红书采集失败，继续执行"
 
 # 4. 生成看板数据
 echo ""
