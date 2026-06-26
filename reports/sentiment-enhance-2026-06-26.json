@@ -1,32 +1,17 @@
 {
   "date": "2026-06-26",
-  "generatedAt": "2026-06-25T23:00:34.038Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-06-26T04:00:32.034Z",
+  "totalRecords": 1,
   "beforeStats": {
     "positive": 0,
-    "neutral": 28,
-    "negative": 2
+    "neutral": 1,
+    "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 28,
-    "negative": 2
+    "neutral": 1,
+    "negative": 0
   },
-  "diffCount": 2,
-  "changes": [
-    {
-      "title": "#公众号：江苏体 彩 右下角 彩民季 每天3次抽奖机会，看脸有大 【江苏的手机号...",
-      "before": "neutral",
-      "after": "negative",
-      "method": "rule-negative",
-      "reason": ""
-    },
-    {
-      "title": "工行你没有骗我",
-      "before": "negative",
-      "after": "neutral",
-      "method": "llm",
-      "reason": ""
-    }
-  ]
+  "diffCount": 0,
+  "changes": []
 }
