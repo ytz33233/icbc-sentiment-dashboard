@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-26",
-  "generatedAt": "2026-06-26 07:00",
+  "generatedAt": "2026-06-26 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-06-26）采集到 88 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-06-26",
-    "generatedAt": "2026-06-26T23:00:26.668Z"
+    "generatedAt": "2026-06-27T04:00:31.063Z"
   },
   "records": [
     {
@@ -1624,7 +1624,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行APP里用积分兑换的肯德基KFC券",
-      "content": "工行APP里用积分兑换的肯德基KFC券",
+      "content": "工行APP里用积��兑换的肯德基KFC券",
       "url": "https://www.xiaohongshu.com/explore/6a2bc6f6000000000800137e",
       "author": "爱夏",
       "status": "已发布",
@@ -1689,7 +1689,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "工行立减金，我又幸福了😃😃😃",
+      "title": "工行立减金，我又幸福了😃����😃",
       "content": "工行立减金，我又幸福了😃😃😃",
       "url": "https://www.xiaohongshu.com/explore/6a2f54e60000000017008b63",
       "author": "南殇～旧梦",
@@ -2253,7 +2253,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行北京漫游文化打卡季活动盖章",
-      "content": "工行北京漫游文化打卡季活动盖章",
+      "content": "工行北京漫游文化���卡季活动盖章",
       "url": "https://www.xiaohongshu.com/explore/6a3e3b96000000001101e58d",
       "author": "alicelj",
       "status": "已发布",
@@ -2483,7 +2483,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工行信用卡办哪种比较好？",
+      "title": "工��信用卡办哪种比较好？",
       "content": "工行信用卡办哪种比较好？",
       "url": "https://www.xiaohongshu.com/explore/6a3ba37c000000000f033153",
       "author": "阿因.（小基数减脂中）",
