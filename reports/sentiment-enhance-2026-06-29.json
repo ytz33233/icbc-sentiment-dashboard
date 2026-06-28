@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-29",
+  "generatedAt": "2026-06-28T23:10:31.044Z",
+  "totalRecords": 1,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 0,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "薅羊毛线报圈 工行1500豆 1.工行搜:数字藏品，之前有做过节气任务的 集齐四...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
