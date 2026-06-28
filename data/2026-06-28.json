@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-28",
-  "generatedAt": "2026-06-28 07:10",
+  "generatedAt": "2026-06-28 12:10",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -91,7 +91,7 @@
   "dailyBrief": {
     "text": "今日（2026-06-28）共采集 1 条舆情。热词包括「i豆」。",
     "date": "2026-06-28",
-    "generatedAt": "2026-06-27T23:10:33.032Z"
+    "generatedAt": "2026-06-28T04:10:32.939Z"
   },
   "records": [
     {
@@ -127,6 +127,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-06-27T23:10:33.198Z",
+  "llmEnhancedAt": "2026-06-28T04:10:33.133Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
