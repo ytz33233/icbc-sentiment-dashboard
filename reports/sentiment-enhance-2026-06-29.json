@@ -1,22 +1,43 @@
 {
   "date": "2026-06-29",
-  "generatedAt": "2026-06-28T23:10:31.044Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-06-29T04:10:35.571Z",
+  "totalRecords": 30,
   "beforeStats": {
-    "positive": 1,
-    "neutral": 0,
-    "negative": 0
+    "positive": 0,
+    "neutral": 28,
+    "negative": 2
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 28,
+    "negative": 2
   },
-  "diffCount": 1,
+  "diffCount": 4,
   "changes": [
     {
-      "title": "薅羊毛线报圈 工行1500豆 1.工行搜:数字藏品，之前有做过节气任务的 集齐四...",
-      "before": "positive",
+      "title": "工行这几个活动抽i豆，记得做下 工行搜【乐园】 左下 美好随夏至答题 概率中20...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "周末淘宝闪购 自取比较多哈 没抽的记得随手试试哈 - 工行app搜：工行消费季 ...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "V扫 工.行 答题满30经验值 去试试抽 2026 i豆 - 工.行 部分答案：...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行你没有骗我",
+      "before": "negative",
       "after": "neutral",
       "method": "llm",
       "reason": ""
