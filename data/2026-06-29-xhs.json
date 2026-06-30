@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-29",
-  "generatedAt": "2026-06-29 07:00",
+  "generatedAt": "2026-06-29 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-06-29）采集到 82 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-06-29",
-    "generatedAt": "2026-06-29T23:00:30.014Z"
+    "generatedAt": "2026-06-30T04:00:30.242Z"
   },
   "records": [
     {
@@ -955,7 +955,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "无意间发现工行隐藏���利✨两万i豆白嫖拖把",
+      "title": "无意间发现工行隐藏福利✨两万i豆白嫖拖把",
       "content": "无意间发现工行隐藏福利✨两万i豆白嫖拖把",
       "url": "https://www.xiaohongshu.com/explore/6a1ae38300000000060239e9",
       "author": "羊咩咩",
@@ -1551,7 +1551,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工商银行（2026.6.29）",
-      "content": "工商银行（2026.6.29）",
+      "content": "工商银行（2026.6.29��",
       "url": "https://www.xiaohongshu.com/explore/6a4278640000000008032122",
       "author": "理财小能手",
       "status": "已发布",
@@ -1616,7 +1616,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "工行立减金，我又幸福了😃😃😃",
+      "title": "工行立减��，我又幸福了😃😃😃",
       "content": "工行立减金，我又幸福了😃😃😃",
       "url": "https://www.xiaohongshu.com/explore/6a2f54e60000000017008b63",
       "author": "南殇～旧梦",
@@ -2082,7 +2082,7 @@
       "title": "工行今日答题0.3🧧",
       "content": "工行今日答题0.3🧧",
       "url": "https://www.xiaohongshu.com/explore/6a41c9d6000000000803d7fe",
-      "author": "会省会攒��的小绵羊",
+      "author": "会省会攒钱���小绵羊",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -2146,7 +2146,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行新市民💳网申",
-      "content": "工行新市民💳网���",
+      "content": "工行新市民💳网申",
       "url": "https://www.xiaohongshu.com/explore/6a1ff6170000000035027e70",
       "author": "哇咔咔",
       "status": "已发布",
@@ -2471,7 +2471,7 @@
       "id": "20260629-77",
       "date": "2026-06-26",
       "publishTime": "2026-06-26",
-      "source": "小红���",
+      "source": "小红书",
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
