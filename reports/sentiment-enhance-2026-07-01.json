@@ -1,17 +1,32 @@
 {
   "date": "2026-07-01",
-  "generatedAt": "2026-06-30T23:00:29.641Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-07-01T04:00:32.387Z",
+  "totalRecords": 30,
   "beforeStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 28,
+    "negative": 2
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 28,
+    "negative": 2
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "⏰9点 饿了么搜【夏日拼团季】 🉑抢1.9 库迪小黄油美式 - 2⃣️工行ap...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行你没有骗我",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
