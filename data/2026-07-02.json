@@ -1,0 +1,170 @@
+{
+  "reportDate": "2026-07-02",
+  "generatedAt": "2026-07-02 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 0,
+    "historyCount": 2,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 2,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "i豆乐园": 1,
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-06-26",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-27",
+      "total": 3,
+      "recent": 3,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-28",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-29",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-30",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-01",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-02",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "i豆乐园",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-02）共采集 2 条舆情。热词包括「i豆、i豆乐园」。",
+    "date": "2026-07-02",
+    "generatedAt": "2026-07-01T23:10:32.508Z"
+  },
+  "records": [
+    {
+      "title": "i豆，有200+200+200个 工银i豆乐园更新了一个端午祈安康的活动",
+      "content": "i豆，有200+200+200个<br /><br />工银i豆乐园更新了一个端午祈安康的活动",
+      "source": "扒羊毛",
+      "publishTime": "Thu Jun 18 08:15:28 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5311072106188230",
+      "likes": 16,
+      "comments": 2,
+      "favorites": 2,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆乐园",
+      "keywords": [
+        "i豆",
+        "i豆乐园"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-06-18",
+      "fetchTime": "2026-07-02",
+      "author": "扒羊毛",
+      "id": "20260702-01",
+      "category": "i豆兑换",
+      "heatScore": 23,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行搜【消费季】抽200i豆",
+      "content": "工行搜【消费季】抽200i豆",
+      "source": "分享白菜达人",
+      "publishTime": "Wed Jun 10 10:10:39 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5308201990096515",
+      "likes": 20,
+      "comments": 18,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "200i豆",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-06-10",
+      "fetchTime": "2026-07-02",
+      "author": "分享白菜达人",
+      "id": "20260702-02",
+      "category": "i豆兑换",
+      "heatScore": 58,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-01T23:10:32.646Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
