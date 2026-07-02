@@ -1,0 +1,170 @@
+{
+  "reportDate": "2026-07-03",
+  "generatedAt": "2026-07-03 07:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 1,
+    "historyCount": 1,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 2,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "升金有礼": 1,
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "资产达标": 1,
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-06-27",
+      "total": 3,
+      "recent": 3,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-28",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-29",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-06-30",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-01",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-02",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-03",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 1
+    },
+    {
+      "word": "i豆",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-03）共采集 2 条舆情，其中24H内新增 1 条。主要集中在「升金有礼」等产品，来源以微博为主，热词包括「升金有礼、i豆」。",
+    "date": "2026-07-03",
+    "generatedAt": "2026-07-02T23:00:29.671Z"
+  },
+  "records": [
+    {
+      "title": "工行app搜【升金有礼】 7月份可以报名了 达标可领i荳 - 2⃣️邮储app-...",
+      "content": "工行app搜【升金有礼】<br />7月份可以报名了 达标可领i荳<br />-<br />2⃣️邮储app-我的-权益专.区<br />每周四 开扭蛋有立jj",
+      "source": "惠惠情报局",
+      "publishTime": "Thu Jul 02 12:30:17 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5316209664855126",
+      "likes": 1,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-02",
+      "fetchTime": "2026-07-03",
+      "author": "惠惠情报局",
+      "id": "20260703-01",
+      "category": "资产达标",
+      "heatScore": 1,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行搜【消费季】抽200i豆",
+      "content": "工行搜【消费季】抽200i豆",
+      "source": "分享白菜达人",
+      "publishTime": "Wed Jun 10 10:10:39 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5308201990096515",
+      "likes": 20,
+      "comments": 18,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "200i豆",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-06-10",
+      "fetchTime": "2026-07-03",
+      "author": "分享白菜达人",
+      "id": "20260703-02",
+      "category": "i豆兑换",
+      "heatScore": 58,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-02T23:00:29.818Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
