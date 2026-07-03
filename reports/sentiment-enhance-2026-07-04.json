@@ -1,0 +1,46 @@
+{
+  "date": "2026-07-04",
+  "generatedAt": "2026-07-03T23:10:33.685Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 28,
+    "negative": 2
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 28,
+    "negative": 2
+  },
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "工行app搜【升金有礼】 7月份可以报名了 达标可领i荳 - 2⃣️邮储app-...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "【工行】 app，任务中心，余额变动提醒任务，2000i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "V扫 工.行 答题满30经验值 去试试抽 2026 i豆 - 工.行 部分答案：...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行你没有骗我",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
