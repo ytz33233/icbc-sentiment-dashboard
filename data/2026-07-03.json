@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-03",
-  "generatedAt": "2026-07-03 07:00",
+  "generatedAt": "2026-07-03 12:00",
   "fromHistory": false,
   "summary": {
     "total": 2,
@@ -91,13 +91,17 @@
     {
       "word": "i豆",
       "count": 1
+    },
+    {
+      "word": "提醒",
+      "count": 1
     }
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-03）共采集 2 条舆情，其中24H内新增 1 条。主要集中在「升金有礼」等产品，来源以微博为主，热词包括「升金有礼、i豆」。",
+    "text": "今日（2026-07-03）共采集 2 条舆情，其中24H内新增 1 条。主要集中在「升金有礼」等产品，来源以微博为主，热词包括「升金有礼、i豆、提醒」。",
     "date": "2026-07-03",
-    "generatedAt": "2026-07-02T23:00:29.671Z"
+    "generatedAt": "2026-07-03T04:00:31.746Z"
   },
   "records": [
     {
@@ -133,38 +137,39 @@
       "sentimentMethod": "llm"
     },
     {
-      "title": "工行搜【消费季】抽200i豆",
-      "content": "工行搜【消费季】抽200i豆",
-      "source": "分享白菜达人",
-      "publishTime": "Wed Jun 10 10:10:39 +0800 2026",
+      "title": "【工行】 app，任务中心，余额变动提醒任务，2000i豆",
+      "content": "【工行】<br /><br />app，任务中心，余额变动提醒任务，2000i豆",
+      "source": "蘑菇小牙牙",
+      "publishTime": "Thu Jun 04 08:58:44 +0800 2026",
       "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5308201990096515",
-      "likes": 20,
-      "comments": 18,
-      "favorites": 1,
+      "url": "https://m.weibo.cn/detail/5306009568674038",
+      "likes": 46,
+      "comments": 53,
+      "favorites": 0,
       "recency": "历史",
       "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "i豆活动",
       "keywords": [
-        "i豆"
+        "i豆",
+        "提醒"
       ],
-      "amount": "200i豆",
+      "amount": "2000i豆",
       "status": "未处理",
       "fermentation": "low",
       "shares": 0,
-      "date": "2026-06-10",
+      "date": "2026-06-04",
       "fetchTime": "2026-07-03",
-      "author": "分享白菜达人",
+      "author": "蘑菇小牙牙",
       "id": "20260703-02",
       "category": "i豆兑换",
-      "heatScore": 58,
+      "heatScore": 152,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-02T23:00:29.818Z",
+  "llmEnhancedAt": "2026-07-03T04:00:31.872Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

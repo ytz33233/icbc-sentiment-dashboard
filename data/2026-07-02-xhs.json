@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-02",
-  "generatedAt": "2026-07-02 07:00",
+  "generatedAt": "2026-07-02 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-02）采集到 79 条小红书舆情，负面 5 条，高风险 5 条。",
     "date": "2026-07-02",
-    "generatedAt": "2026-07-02T23:00:26.163Z"
+    "generatedAt": "2026-07-03T04:00:28.690Z"
   },
   "records": [
     {
@@ -1515,7 +1515,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工行新活动 附��案",
+      "title": "工行新活动 附答案",
       "content": "工行新活动 附答案",
       "url": "https://www.xiaohongshu.com/explore/6a372f43000000000f0316b5",
       "author": "烫烫烫",
