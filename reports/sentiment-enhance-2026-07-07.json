@@ -1,0 +1,46 @@
+{
+  "date": "2026-07-07",
+  "generatedAt": "2026-07-06T23:00:35.647Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 28,
+    "negative": 2
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 28,
+    "negative": 2
+  },
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "工行搜【乐园】左下毕业季，3个666i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行，i豆乐园，左下角星青年毕业狂欢季， 抽i豆，攒着i豆换立减金",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "V扫 工.行 答题满30经验值 去试试抽 2026 i豆 - 工.行 部分答案：...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行你没有骗我",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
