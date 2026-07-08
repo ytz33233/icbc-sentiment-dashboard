@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-07",
-  "generatedAt": "2026-07-07 07:00",
+  "generatedAt": "2026-07-07 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-07）采集到 83 条小红书舆情，负面 5 条，高风险 5 条。",
     "date": "2026-07-07",
-    "generatedAt": "2026-07-07T23:00:26.940Z"
+    "generatedAt": "2026-07-08T04:00:31.034Z"
   },
   "records": [
     {
@@ -2690,7 +2690,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "6.8！工行达标领奖咯！👀10.19+9.08🧧",
+      "title": "6.8！工行达标领奖咯！👀10.19+9.08���",
       "content": "6.8！工行达标领奖咯！👀10.19+9.08🧧",
       "url": "https://www.xiaohongshu.com/explore/6a2612fd0000000006035520",
       "author": "退休少女思韵",
