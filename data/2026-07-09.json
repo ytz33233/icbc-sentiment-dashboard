@@ -1,0 +1,249 @@
+{
+  "reportDate": "2026-07-09",
+  "generatedAt": "2026-07-09 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 4,
+    "recentCount": 4,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 4,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 4
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 4,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 4
+  },
+  "byProduct": {
+    "其他": 2,
+    "i豆活动": 2
+  },
+  "byCategory": {
+    "其他": 2,
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-03",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-04",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-06",
+      "total": 4,
+      "recent": 4,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-07",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-08",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-09",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "通知",
+      "count": 2
+    },
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-09）共采集 4 条舆情，其中24H内新增 4 条。主要集中在「其他、i豆活动」等产品，来源以微博为主，热词包括「通知、i豆、抽奖」。",
+    "date": "2026-07-09",
+    "generatedAt": "2026-07-08T23:10:34.642Z"
+  },
+  "records": [
+    {
+      "title": "新工行5000豆 工商银行 任务中心 打开系统通知开关，返回抽如果原来打开的关掉...",
+      "content": "新工行5000豆 <br />工商银行 任务中心 <br />打开系统通知开关，返回抽如果原来打开的关掉重新开 <br />中5000豆",
+      "source": "线报酱",
+      "publishTime": "Wed Jul 08 12:20:47 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318381601294461",
+      "likes": 6,
+      "comments": 8,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "通知"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-09",
+      "author": "线报酱",
+      "id": "20260709-01",
+      "category": "其他",
+      "heatScore": 22,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "至高3万豆！话费、加油卡、视听会员随心兑 💳首绑工银信用卡即抽至高2万工银i豆...",
+      "content": "至高3万豆！话费、加油卡、视听会员随心兑<br /><br />💳首绑工银信用卡即抽至高2万工银i豆，首绑消费再抽1万工银i豆<br />📲通过中国工商银行App绑定微信、支付宝、美团、京东、拼多多、抖音任一平台即可参与<br /> <br />📍首绑有礼抽奖路径:<br />登录中国工商银行App(标准版)点击“首页”&gt;进入“任务中心”&gt;找到并点击“7月 ...<a href=\"/status/5318442787016580\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Wed Jul 08 16:23:55 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318442787016580",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "抽奖",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-09",
+      "author": "中国工商银行信用卡",
+      "id": "20260709-02",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "海底捞+实雾+苹果干+工桁xyk+实雾 1.海底捞领免费周三半份菜-限8日9:0...",
+      "content": "海底捞+实雾+苹果干+工桁xyk+实雾<br /><br />1.海底捞领免费周三半份菜-限8日9:00-9日7:00可用<br />mp://SofUXQZTdD2wrDG<br /><br />2.工行xyk-工银E生活APP-我的-M等级-m2等级以上领i豆<br /><br />3.华味亨  阿克苏苹果干 250g <br />拍2件24.8元；折12.4/袋<br /><a  href=\"https://weibo.cn/sinaurl?u=https%3A%2F%2Fu.jd.com%2FXOXvVUR\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png'></span><span class=\"surl-text\">网页链接</span></a><br /><br />4.平和味道 阅读原文参与试试<br /><a  href=\"https://weibo.cn/sinaurl?u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FJSj6N7vrdRgU9i2tkXbNiw\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png'></span><span class=\"surl-text\">网页链接</span></a><br /><br />5. ...<a href=\"/status/5318412290232914\">全文</a>",
+      "source": "给力么优惠券",
+      "publishTime": "Wed Jul 08 14:22:44 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318412290232914",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "24.8元",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-09",
+      "author": "给力么优惠券",
+      "id": "20260709-03",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行5000豆 工行 任w中心 如图打开系统通知开关 返回抽 如果原来打开的关掉...",
+      "content": "工行5000豆 工行 任w中心<br />如图打开系统通知开关 返回抽<br />如果原来打开的关掉重新开<br />可中5000豆 应该是部分地区<br />——<br />工行 拿到5k豆子记得通知关了<br />等下次可能还有 <br />若有这个余e的也能抽",
+      "source": "惠惠情报局",
+      "publishTime": "Wed Jul 08 12:47:16 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318388264994358",
+      "likes": 1,
+      "comments": 1,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "通知"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-09",
+      "author": "惠惠情报局",
+      "id": "20260709-04",
+      "category": "其他",
+      "heatScore": 3,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-08T23:10:34.777Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
