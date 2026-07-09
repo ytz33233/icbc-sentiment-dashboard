@@ -1,0 +1,179 @@
+{
+  "reportDate": "2026-07-10",
+  "generatedAt": "2026-07-10 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 2,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 2,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "i豆活动": 2
+  },
+  "byCategory": {
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-04",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-06",
+      "total": 4,
+      "recent": 4,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-07",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-08",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-09",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-10",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-10）共采集 2 条舆情，其中24H内新增 2 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、立减金、美团」。",
+    "date": "2026-07-10",
+    "generatedAt": "2026-07-09T23:10:30.897Z"
+  },
+  "records": [
+    {
+      "title": "半夜用我的工银i豆换了230立减金，然后今天下午的时候抽建行的竟然抽到了100立...",
+      "content": "半夜用我的工银i豆换了230立减金，然后今天下午的时候抽建行的竟然抽到了100立减金，用小号的码提现之后微信摇一摇还抽到了7天的蛐蛐音乐会员。好lucky的一天",
+      "source": "薓薓不想起床",
+      "publishTime": "Thu Jul 09 20:15:49 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318863534425396",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-09",
+      "fetchTime": "2026-07-10",
+      "author": "薓薓不想起床",
+      "id": "20260710-01",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "至高20万i豆，领了没？ ☀仲夏七月 礼遇如期而至 工银爱享礼小程序重磅上线，掌...",
+      "content": "至高20万i豆，领了没？<br /><br />☀仲夏七月 礼遇如期而至<br />工银爱享礼小程序重磅上线，掌上一键领取月度专属权益<br /> <br />1️⃣工银i豆怎么领?<br />📅即日起至2026年7月31日，信用卡会员消费达标即可领对应&quot;工银i豆&quot;<br />2️⃣美团/京东/抖音支付，工银i豆当钱花！<br />✨Tips:结算时选工银信用卡，抖音平台需先开通抵现功能！<br /> ...<a href=\"/status/5318844572763932\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Thu Jul 09 19:00:28 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318844572763932",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-09",
+      "fetchTime": "2026-07-10",
+      "author": "中国工商银行信用卡",
+      "id": "20260710-02",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-09T23:10:31.026Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
