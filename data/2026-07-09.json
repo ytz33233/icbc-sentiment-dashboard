@@ -1,43 +1,43 @@
 {
   "reportDate": "2026-07-09",
-  "generatedAt": "2026-07-09 07:10",
+  "generatedAt": "2026-07-09 12:10",
   "fromHistory": false,
   "summary": {
-    "total": 4,
+    "total": 5,
     "recentCount": 4,
-    "historyCount": 0,
+    "historyCount": 1,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
-    "neutralCount": 4,
+    "neutralCount": 5,
     "channelCount": 1,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 4
+    "social": 5
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 4,
+    "neutral": 5,
     "negative": 0
   },
   "byRisk": {
-    "low": 4
+    "low": 5
   },
   "byProduct": {
-    "其他": 2,
+    "其他": 3,
     "i豆活动": 2
   },
   "byCategory": {
-    "其他": 2,
-    "i豆兑换": 2
+    "i豆兑换": 3,
+    "其他": 2
   },
   "trend7d": [
     {
       "date": "2026-07-03",
-      "total": 0,
+      "total": 1,
       "recent": 0,
-      "history": 0,
+      "history": 1,
       "negative": 0
     },
     {
@@ -93,6 +93,10 @@
       "count": 2
     },
     {
+      "word": "立减金",
+      "count": 1
+    },
+    {
       "word": "抽奖",
       "count": 1
     },
@@ -107,11 +111,43 @@
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-09）共采集 4 条舆情，其中24H内新增 4 条。主要集中在「其他、i豆活动」等产品，来源以微博为主，热词包括「通知、i豆、抽奖」。",
+    "text": "今日（2026-07-09）共采集 5 条舆情，其中24H内新增 4 条。主要集中在「其他、i豆活动」等产品，来源以微博为主，热词包括「通知、i豆、立减金」。",
     "date": "2026-07-09",
-    "generatedAt": "2026-07-08T23:10:34.642Z"
+    "generatedAt": "2026-07-09T04:10:35.624Z"
   },
   "records": [
+    {
+      "title": "工行。任务中心-浏览惠普版， 中了就是6立减金",
+      "content": "工行。任务中心-浏览惠普版，<br />中了就是6立减金",
+      "source": "分享白菜达人",
+      "publishTime": "Fri Jul 03 14:19:23 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5316599510991059",
+      "likes": 35,
+      "comments": 40,
+      "favorites": 3,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-03",
+      "fetchTime": "2026-07-09",
+      "author": "分享白菜达人",
+      "id": "20260709-01",
+      "category": "i豆兑换",
+      "heatScore": 120,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
     {
       "title": "新工行5000豆 工商银行 任务中心 打开系统通知开关，返回抽如果原来打开的关掉...",
       "content": "新工行5000豆 <br />工商银行 任务中心 <br />打开系统通知开关，返回抽如果原来打开的关掉重新开 <br />中5000豆",
@@ -137,7 +173,7 @@
       "date": "2026-07-08",
       "fetchTime": "2026-07-09",
       "author": "线报酱",
-      "id": "20260709-01",
+      "id": "20260709-02",
       "category": "其他",
       "heatScore": 22,
       "llmSentiment": "neutral",
@@ -172,7 +208,7 @@
       "date": "2026-07-08",
       "fetchTime": "2026-07-09",
       "author": "中国工商银行信用卡",
-      "id": "20260709-02",
+      "id": "20260709-03",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -204,7 +240,7 @@
       "date": "2026-07-08",
       "fetchTime": "2026-07-09",
       "author": "给力么优惠券",
-      "id": "20260709-03",
+      "id": "20260709-04",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -236,7 +272,7 @@
       "date": "2026-07-08",
       "fetchTime": "2026-07-09",
       "author": "惠惠情报局",
-      "id": "20260709-04",
+      "id": "20260709-05",
       "category": "其他",
       "heatScore": 3,
       "llmSentiment": "neutral",
@@ -244,6 +280,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-08T23:10:34.777Z",
+  "llmEnhancedAt": "2026-07-09T04:10:35.772Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
