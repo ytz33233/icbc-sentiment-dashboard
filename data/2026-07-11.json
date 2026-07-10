@@ -1,0 +1,201 @@
+{
+  "reportDate": "2026-07-11",
+  "generatedAt": "2026-07-11 07:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 3,
+    "recentCount": 1,
+    "historyCount": 2,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 3,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 3
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 3,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 3
+  },
+  "byProduct": {
+    "i豆活动": 3
+  },
+  "byCategory": {
+    "i豆兑换": 3
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-06",
+      "total": 4,
+      "recent": 4,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-07",
+      "total": 2,
+      "recent": 1,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-08",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-09",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-10",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-11",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 3
+    },
+    {
+      "word": "积分",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-11）共采集 3 条舆情，其中24H内新增 1 条，正面 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、积分」。",
+    "date": "2026-07-11",
+    "generatedAt": "2026-07-10T23:00:31.249Z"
+  },
+  "records": [
+    {
+      "title": "薅羊毛线报圈 #薅羊毛线报圈# 工.hang 月月享好/礼 日.均20w+ 达....",
+      "content": "<a  href=\"https://m.weibo.cn/p/index?extparam=%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88&containerid=1008089fa6c95260da319fbed1552080ca4331&launchid=10000360-page_H5\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://n.sinaimg.cn/photo/5213b46e/20180926/timeline_card_small_super_default.png'></span><span class=\"surl-text\">薅羊毛线报圈</span></a><a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88%23&extparam=%23%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#薅羊毛线报圈#</span></a> <br />工.hang 月月享好/礼<br />日.均20w+ 达.biao，可抽i豆<br />路径：工银e生活 αρρ-我的-我的权益-星享事成",
+      "source": "薅羊毛线报圈",
+      "publishTime": "Fri Jul 10 20:27:07 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/detail/5319228766035357",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-10",
+      "fetchTime": "2026-07-11",
+      "author": "薅羊毛线报圈",
+      "id": "20260711-01",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行i豆积分兑立减 #小程序://微金融/kVwTqfYuaJ4Ekap",
+      "content": "工行i豆积分兑立减<br />#小程序://微金融/kVwTqfYuaJ4Ekap",
+      "source": "扒羊毛",
+      "publishTime": "Tue Jul 07 09:51:42 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5317981695640991",
+      "likes": 5,
+      "comments": 2,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "积分"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-07",
+      "fetchTime": "2026-07-11",
+      "author": "扒羊毛",
+      "id": "20260711-02",
+      "category": "i豆兑换",
+      "heatScore": 11,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行app搜：工行消费季 每周可抽一次i豆，看脸大 - 部分人还刷新了50-5l...",
+      "content": "工行app搜：工行消费季  <br />每周可抽一次i豆，看脸大 <br />- <br />部分人还刷新了50-5ljj",
+      "source": "佩奇线报",
+      "publishTime": "Fri Jul 03 08:08:15 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5316506109611037",
+      "likes": 4,
+      "comments": 32,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-03",
+      "fetchTime": "2026-07-11",
+      "author": "佩奇线报",
+      "id": "20260711-03",
+      "category": "i豆兑换",
+      "heatScore": 68,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-10T23:00:31.382Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

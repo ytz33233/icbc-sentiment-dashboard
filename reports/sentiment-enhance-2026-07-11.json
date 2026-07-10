@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-11",
+  "generatedAt": "2026-07-10T23:00:31.383Z",
+  "totalRecords": 3,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 2,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 3,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "薅羊毛线报圈 #薅羊毛线报圈# 工.hang 月月享好/礼 日.均20w+ 达....",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
