@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-12",
+  "generatedAt": "2026-07-11T23:10:33.903Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 29,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 29,
+    "negative": 1
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "薅羊毛线报圈 #薅羊毛线报圈# 工.hang 月月享好/礼 日.均20w+ 达....",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "V扫 工.行 答题满30经验值 去试试抽 2026 i豆 - 工.行 部分答案：...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
