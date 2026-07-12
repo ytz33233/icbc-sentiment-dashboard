@@ -1,0 +1,137 @@
+{
+  "reportDate": "2026-07-13",
+  "generatedAt": "2026-07-13 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 0,
+    "historyCount": 1,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-07",
+      "total": 4,
+      "recent": 2,
+      "history": 2,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-08",
+      "total": 12,
+      "recent": 12,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-09",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-10",
+      "total": 4,
+      "recent": 4,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-11",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-12",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-13",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-13）共采集 1 条舆情。热词包括「i豆、立减金」。",
+    "date": "2026-07-13",
+    "generatedAt": "2026-07-12T23:10:30.564Z"
+  },
+  "records": [
+    {
+      "title": "半夜用我的工银i豆换了230立减金，然后今天下午的时候抽建行的竟然抽到了100立...",
+      "content": "半夜用我的工银i豆换了230立减金，然后今天下午的时候抽建行的竟然抽到了100立减金，用小号的码提现之后微信摇一摇还抽到了7天的蛐蛐音乐会员。好lucky的一天",
+      "source": "薓薓不想起床",
+      "publishTime": "Thu Jul 09 20:15:49 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318863534425396",
+      "likes": 1,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-09",
+      "fetchTime": "2026-07-13",
+      "author": "薓薓不想起床",
+      "id": "20260713-01",
+      "category": "i豆兑换",
+      "heatScore": 1,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-12T23:10:30.695Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
