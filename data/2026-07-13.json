@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-13",
-  "generatedAt": "2026-07-13 07:10",
+  "generatedAt": "2026-07-13 12:10",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -95,7 +95,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-13）共采集 1 条舆情。热词包括「i豆、立减金」。",
     "date": "2026-07-13",
-    "generatedAt": "2026-07-12T23:10:30.564Z"
+    "generatedAt": "2026-07-13T04:10:33.027Z"
   },
   "records": [
     {
@@ -132,6 +132,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-12T23:10:30.695Z",
+  "llmEnhancedAt": "2026-07-13T04:10:33.155Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
