@@ -1,0 +1,142 @@
+{
+  "reportDate": "2026-07-15",
+  "generatedAt": "2026-07-15 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-09",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-10",
+      "total": 4,
+      "recent": 4,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-11",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-12",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-13",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-14",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-15",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-15）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
+    "date": "2026-07-15",
+    "generatedAt": "2026-07-14T23:10:30.191Z"
+  },
+  "records": [
+    {
+      "title": "攒i豆，痛快花！ ✨绑卡消费累积“工银i豆” 💳使用工银信用卡在微信、支付宝、...",
+      "content": "攒i豆，痛快花！<br /><br />✨绑卡消费累积“工银i豆”<br />💳使用工银信用卡在微信、支付宝、京东、美团、抖音、拼多多快捷支付绑卡消费，有机会累积工商银行“工银i豆”<br />🎟️每消费1元累积1“工银i豆”，多消费多累积<br /><br />📍绑定路径<br />登录中国工商银行App-信用卡-一键绑卡-去绑卡，绑定微信、支付宝、京东、美 ...<a href=\"/status/5320650022459378\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Tue Jul 14 18:34:41 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5320650022459378",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "1元",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-14",
+      "fetchTime": "2026-07-15",
+      "author": "中国工商银行信用卡",
+      "id": "20260715-01",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-14T23:10:30.324Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
