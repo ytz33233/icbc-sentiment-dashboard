@@ -1,0 +1,217 @@
+{
+  "reportDate": "2026-07-16",
+  "generatedAt": "2026-07-16 07:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 3,
+    "recentCount": 2,
+    "historyCount": 1,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 3,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 3
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 3,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 3
+  },
+  "byProduct": {
+    "i豆活动": 2,
+    "其他": 1
+  },
+  "byCategory": {
+    "i豆兑换": 2,
+    "其他": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-10",
+      "total": 12,
+      "recent": 4,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-11",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-13",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-14",
+      "total": 8,
+      "recent": 2,
+      "history": 6,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-15",
+      "total": 16,
+      "recent": 4,
+      "history": 12,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-16",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 2
+    },
+    {
+      "word": "美团",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
+      "count": 1
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    },
+    {
+      "word": "通知",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-16）共采集 3 条舆情，其中24H内新增 2 条，正面 2 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
+    "date": "2026-07-16",
+    "generatedAt": "2026-07-15T23:00:29.682Z"
+  },
+  "records": [
+    {
+      "title": "零钱会打理，收益超惊喜！ 💳日常消费信用卡 ✨即时奖励： 🗓️即日起-202...",
+      "content": "零钱会打理，收益超惊喜！<br /><br />💳日常消费信用卡<br />✨即时奖励：<br />🗓️即日起-2026年12月31日<br />📲工银信用卡客户在微信、支付宝、京东、美团、抖音和拼多多快捷支付绑卡消费，有机会累积工商银行“工银i豆”<br />✅每消费1元累积1 “工银i豆”<br /> <br />🎇升级奖励：<br />🗓️截至2026年12月31日<br />💳信用卡消费达 ...<a href=\"/status/5321034175879195\">全文</a>",
+      "source": "中国工商银行信用卡",
+      "publishTime": "Wed Jul 15 20:01:10 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/detail/5321034175879195",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "美团",
+        "信用卡"
+      ],
+      "amount": "1元",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-15",
+      "fetchTime": "2026-07-16",
+      "author": "中国工商银行信用卡",
+      "id": "20260716-01",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "#薅羊毛# #省钱# 快！放水了！工行9.6万工银i豆！ 工行APP--任务中心...",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E8%96%85%E7%BE%8A%E6%AF%9B%23&isnewpage=1&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#薅羊毛#</span></a><a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E7%9C%81%E9%92%B1%23&isnewpage=1&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#省钱#</span></a>  <br />快！放水了！工行9.6万工银i豆！<br /><br />工行APP--任务中心--积存金新客礼--去完成--根据步骤购买--然后抽奖--<br />下午反馈大概率3.8万工银i豆<br />抽完奖之后打开工行--首页搜：积存金--立即卖掉--即可<br /><br />中奖的！等你们来留言反馈！",
+      "source": "薅羊毛线报圈",
+      "publishTime": "Wed Jul 15 18:40:21 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/detail/5321013835599245",
+      "likes": 2,
+      "comments": 1,
+      "favorites": 1,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "抽奖"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-15",
+      "fetchTime": "2026-07-16",
+      "author": "薅羊毛线报圈",
+      "id": "20260716-02",
+      "category": "i豆兑换",
+      "heatScore": 6,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行-任务中心-打开系统通知，有5000豆 - 领了后再去把通知关闭， 下次有活...",
+      "content": "工行-任务中心-打开系统通知，有5000豆  <br />-<br />领了后再去把通知关闭， <br />下次有活动还能参加",
+      "source": "分享白菜达人",
+      "publishTime": "Wed Jul 08 12:20:15 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318381465241511",
+      "likes": 92,
+      "comments": 35,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "通知"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-16",
+      "author": "分享白菜达人",
+      "id": "20260716-03",
+      "category": "其他",
+      "heatScore": 164,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-15T23:00:29.814Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
