@@ -1,17 +1,60 @@
 {
   "date": "2026-07-10",
-  "generatedAt": "2026-07-10T04:10:33.250Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-07-15T06:17:06.569Z",
+  "totalRecords": 49,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "positive": 4,
+    "neutral": 44,
+    "negative": 1
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 48,
+    "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 6,
+  "changes": [
+    {
+      "title": "5.30的时候10万工银i豆兑换了100京东e卡，这个月又有10万i豆了。我看这...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "7月工行i豆乐园活动攻略",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行7🈷️抽i豆活动详细攻略2.0版！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行50000i豆攻略",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "中国工商银行是最垃圾的银行，服务匪夷所思",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "哪个银行积分兑换最划算啊？工行还是农行？",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

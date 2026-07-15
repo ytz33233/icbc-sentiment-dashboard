@@ -1,17 +1,39 @@
 {
   "date": "2026-07-15",
-  "generatedAt": "2026-07-15T04:10:32.700Z",
-  "totalRecords": 2,
+  "generatedAt": "2026-07-15T06:17:10.009Z",
+  "totalRecords": 35,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 2,
+    "positive": 3,
+    "neutral": 32,
     "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 2,
+    "neutral": 35,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "工行拿下1300i豆【附攻略】",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行积分薅羊毛",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行薅32元话费详细攻略来啦🎉🎉",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
