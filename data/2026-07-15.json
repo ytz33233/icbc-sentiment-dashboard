@@ -1,33 +1,35 @@
 {
   "reportDate": "2026-07-15",
-  "generatedAt": "2026-07-15 07:10",
+  "generatedAt": "2026-07-15 12:10",
   "fromHistory": false,
   "summary": {
-    "total": 1,
-    "recentCount": 1,
+    "total": 2,
+    "recentCount": 2,
     "historyCount": 0,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
-    "neutralCount": 1,
+    "neutralCount": 2,
     "channelCount": 1,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 1
+    "social": 2
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 1,
+    "neutral": 2,
     "negative": 0
   },
   "byRisk": {
-    "low": 1
+    "low": 2
   },
   "byProduct": {
+    "升金有礼": 1,
     "i豆活动": 1
   },
   "byCategory": {
+    "资产达标": 1,
     "i豆兑换": 1
   },
   "trend7d": [
@@ -75,13 +77,17 @@
     },
     {
       "date": "2026-07-15",
-      "total": 0,
-      "recent": 0,
+      "total": 1,
+      "recent": 1,
       "history": 0,
       "negative": 0
     }
   ],
   "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 1
+    },
     {
       "word": "i豆",
       "count": 1
@@ -97,11 +103,43 @@
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-15）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
+    "text": "今日（2026-07-15）共采集 2 条舆情，其中24H内新增 2 条。主要集中在「升金有礼、i豆活动」等产品，来源以微博为主，热词包括「升金有礼、i豆、美团」。",
     "date": "2026-07-15",
-    "generatedAt": "2026-07-14T23:10:30.191Z"
+    "generatedAt": "2026-07-15T04:10:32.549Z"
   },
   "records": [
+    {
+      "title": "工行app搜升金有礼，报名+左侧上期达标有礼，符合领取",
+      "content": "工行app搜升金有礼，报名+左侧上期达标有礼，符合领取",
+      "source": "扒羊毛",
+      "publishTime": "Wed Jul 15 10:01:34 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5320883281068875",
+      "likes": 2,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-15",
+      "fetchTime": "2026-07-15",
+      "author": "扒羊毛",
+      "id": "20260715-01",
+      "category": "资产达标",
+      "heatScore": 2,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
     {
       "title": "攒i豆，痛快花！ ✨绑卡消费累积“工银i豆” 💳使用工银信用卡在微信、支付宝、...",
       "content": "攒i豆，痛快花！<br /><br />✨绑卡消费累积“工银i豆”<br />💳使用工银信用卡在微信、支付宝、京东、美团、抖音、拼多多快捷支付绑卡消费，有机会累积工商银行“工银i豆”<br />🎟️每消费1元累积1“工银i豆”，多消费多累积<br /><br />📍绑定路径<br />登录中国工商银行App-信用卡-一键绑卡-去绑卡，绑定微信、支付宝、京东、美 ...<a href=\"/status/5320650022459378\">全文</a>",
@@ -129,7 +167,7 @@
       "date": "2026-07-14",
       "fetchTime": "2026-07-15",
       "author": "中国工商银行信用卡",
-      "id": "20260715-01",
+      "id": "20260715-02",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -137,6 +175,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-14T23:10:30.324Z",
+  "llmEnhancedAt": "2026-07-15T04:10:32.699Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
