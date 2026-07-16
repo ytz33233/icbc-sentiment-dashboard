@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-17",
+  "generatedAt": "2026-07-16T23:00:30.956Z",
+  "totalRecords": 2,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 1,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "#薅羊毛# #薅羊毛线报圈# 工行100元大毛！ 不用的证券户 把卡改为工珩卡，...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
