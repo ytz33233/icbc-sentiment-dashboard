@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-15",
-  "generatedAt": "2026-07-15 07:00",
+  "generatedAt": "2026-07-15 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-15）采集到 83 条小红书舆情，负面 11 条，高风险 11 条。",
     "date": "2026-07-15",
-    "generatedAt": "2026-07-15T23:00:26.715Z"
+    "generatedAt": "2026-07-16T04:00:29.387Z"
   },
   "records": [
     {
@@ -1361,7 +1361,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工银 i 豆换立减金详细攻略（包教包会版）",
+      "title": "工银 i 豆换���减金详细攻略（包教包会版）",
       "content": "工银 i 豆换立减金详细攻略（包教包会版）",
       "url": "https://www.xiaohongshu.com/explore/6872a813000000002201c56c",
       "author": "在逃羊毛",
@@ -1987,7 +1987,7 @@
       "id": "20260715-61",
       "date": "2026-06-25",
       "publishTime": "2026-06-25",
-      "source": "小红书",
+      "source": "小红���",
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",

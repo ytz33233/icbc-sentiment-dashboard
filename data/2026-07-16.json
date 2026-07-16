@@ -1,11 +1,11 @@
 {
   "reportDate": "2026-07-16",
-  "generatedAt": "2026-07-16 07:00",
+  "generatedAt": "2026-07-16 12:00",
   "fromHistory": false,
   "summary": {
     "total": 3,
-    "recentCount": 2,
-    "historyCount": 1,
+    "recentCount": 3,
+    "historyCount": 0,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
@@ -25,12 +25,12 @@
     "low": 3
   },
   "byProduct": {
-    "i豆活动": 2,
-    "其他": 1
+    "其他": 1,
+    "i豆活动": 2
   },
   "byCategory": {
-    "i豆兑换": 2,
-    "其他": 1
+    "薅羊毛": 1,
+    "i豆兑换": 2
   },
   "trend7d": [
     {
@@ -77,13 +77,17 @@
     },
     {
       "date": "2026-07-16",
-      "total": 0,
-      "recent": 0,
+      "total": 1,
+      "recent": 1,
       "history": 0,
       "negative": 0
     }
   ],
   "hotKeywords": [
+    {
+      "word": "抽奖",
+      "count": 2
+    },
     {
       "word": "i豆",
       "count": 2
@@ -95,23 +99,47 @@
     {
       "word": "信用卡",
       "count": 1
-    },
-    {
-      "word": "抽奖",
-      "count": 1
-    },
-    {
-      "word": "通知",
-      "count": 1
     }
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-16）共采集 3 条舆情，其中24H内新增 2 条，正面 2 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
+    "text": "今日（2026-07-16）共采集 3 条舆情，其中24H内新增 3 条，正面 2 条。主要集中在「i豆活动、其他」等产品，来源以微博为主，热词包括「抽奖、i豆、美团」。",
     "date": "2026-07-16",
-    "generatedAt": "2026-07-15T23:00:29.682Z"
+    "generatedAt": "2026-07-16T04:00:32.358Z"
   },
   "records": [
+    {
+      "title": "农行+工行+兔费实雾 1.农行-城市专区-鹤岗-东北超级酷-巡礼东北超-去试试 ...",
+      "content": "农行+工行+兔费实雾<br /><br />1.农行-城市专区-鹤岗-东北超级酷-巡礼东北超-去试试<br /><br />2.工行-任务中心-手机银行任务-升金叠加包+逛官微有礼-去参与试试<br /><br />3.【多闪APP】登录-顶部左侧【卡通头像】点进去下拉至【抽奖区】完成任务抽奖试试 有瑞幸咖啡 肯德基等",
+      "source": "给力么优惠券",
+      "publishTime": "Thu Jul 16 09:04:47 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5321231379203016",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "抽奖"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-16",
+      "fetchTime": "2026-07-16",
+      "author": "给力么优惠券",
+      "id": "20260716-01",
+      "category": "薅羊毛",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
     {
       "title": "零钱会打理，收益超惊喜！ 💳日常消费信用卡 ✨即时奖励： 🗓️即日起-202...",
       "content": "零钱会打理，收益超惊喜！<br /><br />💳日常消费信用卡<br />✨即时奖励：<br />🗓️即日起-2026年12月31日<br />📲工银信用卡客户在微信、支付宝、京东、美团、抖音和拼多多快捷支付绑卡消费，有机会累积工商银行“工银i豆”<br />✅每消费1元累积1 “工银i豆”<br /> <br />🎇升级奖励：<br />🗓️截至2026年12月31日<br />💳信用卡消费达 ...<a href=\"/status/5321034175879195\">全文</a>",
@@ -139,7 +167,7 @@
       "date": "2026-07-15",
       "fetchTime": "2026-07-16",
       "author": "中国工商银行信用卡",
-      "id": "20260716-01",
+      "id": "20260716-02",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -172,46 +200,14 @@
       "date": "2026-07-15",
       "fetchTime": "2026-07-16",
       "author": "薅羊毛线报圈",
-      "id": "20260716-02",
+      "id": "20260716-03",
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
-    },
-    {
-      "title": "工行-任务中心-打开系统通知，有5000豆 - 领了后再去把通知关闭， 下次有活...",
-      "content": "工行-任务中心-打开系统通知，有5000豆  <br />-<br />领了后再去把通知关闭， <br />下次有活动还能参加",
-      "source": "分享白菜达人",
-      "publishTime": "Wed Jul 08 12:20:15 +0800 2026",
-      "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5318381465241511",
-      "likes": 92,
-      "comments": 35,
-      "favorites": 1,
-      "recency": "历史",
-      "sentiment": "neutral",
-      "sourceType": "social",
-      "riskLevel": "low",
-      "relatedProduct": "其他",
-      "keywords": [
-        "通知"
-      ],
-      "amount": "-",
-      "status": "未处理",
-      "fermentation": "low",
-      "shares": 0,
-      "date": "2026-07-08",
-      "fetchTime": "2026-07-16",
-      "author": "分享白菜达人",
-      "id": "20260716-03",
-      "category": "其他",
-      "heatScore": 164,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-15T23:00:29.814Z",
+  "llmEnhancedAt": "2026-07-16T04:00:32.497Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
