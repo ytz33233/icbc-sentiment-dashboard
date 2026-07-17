@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-16",
-  "generatedAt": "2026-07-16 07:00",
+  "generatedAt": "2026-07-16 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-16）采集到 95 条小红书舆情，负面 11 条，高风险 11 条。",
     "date": "2026-07-16",
-    "generatedAt": "2026-07-16T23:00:27.791Z"
+    "generatedAt": "2026-07-17T04:00:28.819Z"
   },
   "records": [
     {
@@ -485,7 +485,7 @@
       "title": "每天提醒工行i豆乐园浇水神器",
       "content": "每天提醒工行i豆乐园浇水神器",
       "url": "https://www.xiaohongshu.com/explore/6847b369000000002100cf5f",
-      "author": "小小张的日常生��",
+      "author": "小小张的日常生活",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆乐园",
@@ -619,7 +619,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "7月工行M2及以上可以领i豆了",
-      "content": "7月工行M2及以上���以领i豆了",
+      "content": "7月工行M2及以上可以��i豆了",
       "url": "https://www.xiaohongshu.com/explore/6a4db03200000000070249a5",
       "author": "小巷表弟",
       "status": "已发布",
@@ -686,7 +686,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "1000工银i豆，工行��出熊猫",
+      "title": "1000工银i豆，工行新出熊猫",
       "content": "1000工银i豆，工行新出熊猫",
       "url": "https://www.xiaohongshu.com/explore/6a4c8b22000000001101b5a6",
       "author": "羊毛酱",
@@ -1231,7 +1231,7 @@
       "title": "工商银行2800块拿下，又是保底😤😤",
       "content": "工商银行2800块拿下，又是保底😤😤",
       "url": "https://www.xiaohongshu.com/explore/68254c7a0000000021007a4c",
-      "author": "天天上��签🐟✨",
+      "author": "天天上上签🐟✨",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -1360,7 +1360,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工银 i 豆换立减金详细攻略（���教包会版）",
+      "title": "工银 i 豆换立减金详细攻略（包教包会版）",
       "content": "工银 i 豆换立减金详细攻略（包教包会版）",
       "url": "https://www.xiaohongshu.com/explore/6872a813000000002201c56c",
       "author": "在逃羊毛",
@@ -2883,7 +2883,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "7.15工行大包来了！",
-      "content": "7.15工行���包来了！",
+      "content": "7.15工行大包来了！",
       "url": "https://www.xiaohongshu.com/explore/6a5734620000000015027b59",
       "author": "神券研究院",
       "status": "已发布",

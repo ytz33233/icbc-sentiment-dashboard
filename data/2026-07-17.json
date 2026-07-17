@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-17",
-  "generatedAt": "2026-07-17 07:00",
+  "generatedAt": "2026-07-17 12:00",
   "fromHistory": false,
   "summary": {
     "total": 2,
@@ -97,7 +97,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-17）共采集 2 条舆情，其中24H内新增 2 条，正面 1 条。主要集中在「升金有礼、i豆活动」等产品，来源以微博为主，热词包括「升金有礼、i豆」。",
     "date": "2026-07-17",
-    "generatedAt": "2026-07-16T23:00:30.829Z"
+    "generatedAt": "2026-07-17T04:00:31.825Z"
   },
   "records": [
     {
@@ -165,6 +165,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-16T23:00:30.955Z",
+  "llmEnhancedAt": "2026-07-17T04:00:31.980Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
