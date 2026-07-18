@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-19",
+  "generatedAt": "2026-07-18T23:10:31.138Z",
+  "totalRecords": 1,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 0,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "同事姐之前带我薅的羊毛休息日派上了用场 此外同事姐还给我领了16w工银i豆（可抵...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}

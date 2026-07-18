@@ -1,0 +1,132 @@
+{
+  "reportDate": "2026-07-19",
+  "generatedAt": "2026-07-19 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-13",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-14",
+      "total": 11,
+      "recent": 3,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-15",
+      "total": 28,
+      "recent": 8,
+      "history": 20,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-16",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-17",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-18",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-19",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-19）共采集 1 条舆情，其中24H内新增 1 条，正面 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆」。",
+    "date": "2026-07-19",
+    "generatedAt": "2026-07-18T23:10:31.000Z"
+  },
+  "records": [
+    {
+      "title": "同事姐之前带我薅的羊毛休息日派上了用场 此外同事姐还给我领了16w工银i豆（可抵...",
+      "content": "同事姐之前带我薅的羊毛休息日派上了用场<br />此外同事姐还给我领了16w工银i豆（可抵人民币160大洋<span class=\"url-icon\"><img alt=\"[挤眼]\" src=\"https://face.t.sinajs.cn/t4/appstyle/expression/ext/normal/dd/201810_jiyan_mobile.png\" style=\"width:1em; height:1em;\" /></span>我爱同事姐！",
+      "source": "Juzy张",
+      "publishTime": "Sat Jul 18 22:54:40 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/detail/5322165001913795",
+      "likes": 1,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-18",
+      "fetchTime": "2026-07-19",
+      "author": "Juzy张",
+      "id": "20260719-01",
+      "category": "i豆兑换",
+      "heatScore": 1,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-18T23:10:31.138Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
