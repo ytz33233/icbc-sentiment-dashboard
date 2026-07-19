@@ -1,0 +1,125 @@
+{
+  "reportDate": "2026-07-20",
+  "generatedAt": "2026-07-20 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "其他": 1
+  },
+  "byCategory": {
+    "其他": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-14",
+      "total": 11,
+      "recent": 3,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-15",
+      "total": 28,
+      "recent": 8,
+      "history": 20,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-16",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-17",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-18",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-19",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-20",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-20）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「其他」等产品，来源以微博为主。",
+    "date": "2026-07-20",
+    "generatedAt": "2026-07-19T23:10:30.321Z"
+  },
+  "records": [
+    {
+      "title": "工行app 老用户去看看 需特邀 任wu中心 有个风险测评 测评完了给工银i荳 ...",
+      "content": "工行app 老用户去看看 需特邀<br />任wu中心 有个风险测评<br />测评完了给工银i荳 结束有10w",
+      "source": "每个羊都有羊毛薅",
+      "publishTime": "Sun Jul 19 20:46:12 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5322495060087489",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-19",
+      "fetchTime": "2026-07-20",
+      "author": "每个羊都有羊毛薅",
+      "id": "20260720-01",
+      "category": "其他",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-19T23:10:30.470Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
