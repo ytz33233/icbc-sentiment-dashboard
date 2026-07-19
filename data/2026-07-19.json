@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-19",
-  "generatedAt": "2026-07-19 07:10",
+  "generatedAt": "2026-07-19 12:10",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -91,7 +91,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-19）共采集 1 条舆情，其中24H内新增 1 条，正面 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆」。",
     "date": "2026-07-19",
-    "generatedAt": "2026-07-18T23:10:31.000Z"
+    "generatedAt": "2026-07-19T04:10:31.473Z"
   },
   "records": [
     {
@@ -127,6 +127,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-18T23:10:31.138Z",
+  "llmEnhancedAt": "2026-07-19T04:10:31.616Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
