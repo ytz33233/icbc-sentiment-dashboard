@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-20",
-  "generatedAt": "2026-07-20 07:10",
+  "generatedAt": "2026-07-20 12:10",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -86,7 +86,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-20）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「其他」等产品，来源以微博为主。",
     "date": "2026-07-20",
-    "generatedAt": "2026-07-19T23:10:30.321Z"
+    "generatedAt": "2026-07-20T04:10:32.745Z"
   },
   "records": [
     {
@@ -120,6 +120,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-19T23:10:30.470Z",
+  "llmEnhancedAt": "2026-07-20T04:10:32.882Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
