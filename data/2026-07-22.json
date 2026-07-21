@@ -1,0 +1,137 @@
+{
+  "reportDate": "2026-07-22",
+  "generatedAt": "2026-07-22 07:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "i豆活动": 1
+  },
+  "byCategory": {
+    "i豆兑换": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-07-16",
+      "total": 6,
+      "recent": 6,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-17",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-18",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-19",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-20",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-21",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-07-22",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    },
+    {
+      "word": "抽奖",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-07-22）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、抽奖」。",
+    "date": "2026-07-22",
+    "generatedAt": "2026-07-21T23:00:30.473Z"
+  },
+  "records": [
+    {
+      "title": "工行抽2000工银i豆～20.26万工银i豆。 路径:工行搜索“数字藏品”进去，...",
+      "content": "工行抽2000工银i豆～20.26万工银i豆。<br />路径:工行搜索“数字藏品”进去，<br />下方滚动横幅“节节候新·节气典藏”。<br />从立夏开始，到大暑结束，分别收集2个、4个、6个节气数字藏品可参与抽奖。<br />今天是最后一期，保底2000i豆。",
+      "source": "惠惠情报局",
+      "publishTime": "Tue Jul 21 22:00:57 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5323238651724423",
+      "likes": 1,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "抽奖"
+      ],
+      "amount": "2000i豆",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-21",
+      "fetchTime": "2026-07-22",
+      "author": "惠惠情报局",
+      "id": "20260722-01",
+      "category": "i豆兑换",
+      "heatScore": 1,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-07-21T23:00:30.602Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
