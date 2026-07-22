@@ -1,33 +1,35 @@
 {
   "reportDate": "2026-07-22",
-  "generatedAt": "2026-07-22 07:00",
+  "generatedAt": "2026-07-22 12:00",
   "fromHistory": false,
   "summary": {
-    "total": 1,
+    "total": 2,
     "recentCount": 1,
-    "historyCount": 0,
+    "historyCount": 1,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
-    "neutralCount": 1,
+    "neutralCount": 2,
     "channelCount": 1,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 1
+    "social": 2
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 1,
+    "neutral": 2,
     "negative": 0
   },
   "byRisk": {
-    "low": 1
+    "low": 2
   },
   "byProduct": {
+    "其他": 1,
     "i豆活动": 1
   },
   "byCategory": {
+    "其他": 1,
     "i豆兑换": 1
   },
   "trend7d": [
@@ -93,11 +95,41 @@
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-22）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、抽奖」。",
+    "text": "今日（2026-07-22）共采集 2 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、抽奖」。",
     "date": "2026-07-22",
-    "generatedAt": "2026-07-21T23:00:30.473Z"
+    "generatedAt": "2026-07-22T04:00:32.942Z"
   },
   "records": [
+    {
+      "title": "工行如图有小虹包",
+      "content": "工行如图有小虹包",
+      "source": "扒羊毛",
+      "publishTime": "Wed Jul 08 19:20:16 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318487167995968",
+      "likes": 11,
+      "comments": 5,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-07-22",
+      "author": "扒羊毛",
+      "id": "20260722-01",
+      "category": "其他",
+      "heatScore": 21,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
     {
       "title": "工行抽2000工银i豆～20.26万工银i豆。 路径:工行搜索“数字藏品”进去，...",
       "content": "工行抽2000工银i豆～20.26万工银i豆。<br />路径:工行搜索“数字藏品”进去，<br />下方滚动横幅“节节候新·节气典藏”。<br />从立夏开始，到大暑结束，分别收集2个、4个、6个节气数字藏品可参与抽奖。<br />今天是最后一期，保底2000i豆。",
@@ -124,7 +156,7 @@
       "date": "2026-07-21",
       "fetchTime": "2026-07-22",
       "author": "惠惠情报局",
-      "id": "20260722-01",
+      "id": "20260722-02",
       "category": "i豆兑换",
       "heatScore": 1,
       "llmSentiment": "neutral",
@@ -132,6 +164,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-21T23:00:30.602Z",
+  "llmEnhancedAt": "2026-07-22T04:00:33.072Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
