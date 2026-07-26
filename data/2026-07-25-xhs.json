@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-25",
-  "generatedAt": "2026-07-25 07:00",
+  "generatedAt": "2026-07-25 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-25）采集到 103 条小红书舆情，负面 6 条，高风险 6 条。",
     "date": "2026-07-25",
-    "generatedAt": "2026-07-25T23:00:27.893Z"
+    "generatedAt": "2026-07-26T04:00:28.440Z"
   },
   "records": [
     {
@@ -551,7 +551,7 @@
       "sentiment": "neutral",
       "riskLevel": "medium",
       "title": "工行i豆乐园更新啦",
-      "content": "工行i豆乐园更新啦",
+      "content": "工行i豆乐��更新啦",
       "url": "https://www.xiaohongshu.com/explore/681319f2000000002100832b",
       "author": "手把手羊毛",
       "status": "已发布",
@@ -618,7 +618,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工商银行6月升金有礼没有1-5万档了？",
+      "title": "工商银行6月升金有礼没有1-5万档���？",
       "content": "工商银行6月升金有礼没有1-5万档了？",
       "url": "https://www.xiaohongshu.com/explore/6a28cdc50000000008025e21",
       "author": "圆圆脸",
@@ -1402,7 +1402,7 @@
       "title": "工行i豆大水",
       "content": "工行i豆大水",
       "url": "https://www.xiaohongshu.com/explore/68a2ac52000000001b01fd93",
-      "author": "手把手羊毛",
+      "author": "��把手羊毛",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
