@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-26",
-  "generatedAt": "2026-07-26 07:00",
+  "generatedAt": "2026-07-26 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -28,9 +28,10 @@
     "low": 74
   },
   "byProduct": {
-    "i豆活动": 23,
+    "i豆活动": 22,
     "升金有礼": 3,
     "i豆乐园": 5,
+    "i��活动": 1,
     "其他": 56,
     "工行商城": 1
   },
@@ -62,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-26）采集到 88 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-07-26",
-    "generatedAt": "2026-07-26T23:00:25.767Z"
+    "generatedAt": "2026-07-27T04:00:29.137Z"
   },
   "records": [
     {
@@ -240,7 +241,7 @@
       "id": "20260726-06",
       "date": "2026-07-07",
       "publishTime": "2026-07-07",
-      "source": "小红书",
+      "source": "小���书",
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
@@ -488,7 +489,7 @@
       "author": "奶绿我要戒咖啡",
       "status": "已发布",
       "amount": "-",
-      "relatedProduct": "i豆活动",
+      "relatedProduct": "i��活动",
       "fetchTime": "2026-07-26T17:49:00.852257",
       "engagement": {
         "likes": "3",
@@ -620,7 +621,7 @@
       "title": "工行i豆1500",
       "content": "工行i豆1500",
       "url": "https://www.xiaohongshu.com/explore/6a446ed700000000160251a2",
-      "author": "你的羊毛指南",
+      "author": "你的羊��指南",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
