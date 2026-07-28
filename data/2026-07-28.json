@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-28",
-  "generatedAt": "2026-07-28 07:10",
+  "generatedAt": "2026-07-28 12:10",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -99,7 +99,7 @@
   "dailyBrief": {
     "text": "今日（2026-07-28）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、美团、信用卡」。",
     "date": "2026-07-28",
-    "generatedAt": "2026-07-27T23:10:30.996Z"
+    "generatedAt": "2026-07-28T04:10:32.437Z"
   },
   "records": [
     {
@@ -137,6 +137,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-27T23:10:31.152Z",
+  "llmEnhancedAt": "2026-07-28T04:10:32.564Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
