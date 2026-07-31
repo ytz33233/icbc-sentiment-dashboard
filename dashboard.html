@@ -1383,6 +1383,104 @@ tr:hover {
   text-decoration: underline;
 }
 
+/* ── Record Row Cards ── */
+tbody tr {
+  position: relative;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: all 0.2s ease;
+}
+tbody tr td:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+tbody tr td:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+
+/* 负面记录 — 左侧红色竖条 */
+tbody tr[data-sentiment="negative"] {
+  border-left: 3px solid var(--bad) !important;
+  background: linear-gradient(90deg, rgba(239,102,120,0.04) 0%, transparent 8%);
+}
+tbody tr[data-sentiment="negative"]:hover td {
+  background: rgba(239,102,120,0.06);
+}
+
+/* 正面记录 — 左侧绿色竖条 */
+tbody tr[data-sentiment="positive"] {
+  border-left: 3px solid var(--green) !important;
+}
+
+/* 24h内新记录 — 右上角NEW角标 */
+tbody tr[data-recency="recent"] td:first-child {
+  position: relative;
+}
+tbody tr[data-recency="recent"] td:first-child::before {
+  content: "NEW";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(255,71,87,0.3);
+  z-index: 1;
+}
+
+/* 内容预览增强 */
+.content-preview {
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 12.5px;
+}
+
+/* 时间列样式 */
+.record-time {
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 来源标签 */
+.record-source {
+  font-size: 11px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 移动端卡片增强 */
+.mobile-card[data-sentiment="negative"] {
+  border-left: 4px solid var(--bad);
+}
+.mobile-card[data-sentiment="positive"] {
+  border-left: 4px solid var(--green);
+}
+.mobile-card[data-recency="recent"] {
+  position: relative;
+}
+.mobile-card[data-recency="recent"]::before {
+  content: "NEW";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(255,71,87,0.3);
+}
+
 /* ── Pagination ── */
 .pagination {
   padding: 14px 20px;
@@ -7024,9 +7122,9 @@ function renderTable() {
     const srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || item.source || '其他';
 
     return `
-      <tr>
-        <td>${item.date}</td>
-        <td>${srcLabel}</td>
+      <tr data-sentiment="${item.sentiment}" data-recency="${item.recency || 'history'}">
+        <td><span class="record-time">${item.date}</span></td>
+        <td><span class="record-source">${srcLabel}</span></td>
         <td><span class="tag ${catClass}">${catLabel}</span></td>
         <td>
           <div class="${heatClass}">🔥 ${item.heatScore || 0}</div>
@@ -7106,7 +7204,7 @@ function renderMobileCards(pageData) {
     const srcLabel = CONFIG.labels.source[item.sourceType] || item.sourceType || item.source || '其他';
 
     return `
-      <div class="mobile-card" onclick="showDetail('${item.id}')">
+      <div class="mobile-card" data-sentiment="${item.sentiment}" data-recency="${item.recency || 'history'}" onclick="showDetail('${item.id}')">
         <div class="mobile-card-head">
           <div class="mobile-card-badges">
             <span class="tag tag-sentiment-${item.sentiment}">${getSentimentLabel(item.sentiment)}</span>
@@ -7536,7 +7634,7 @@ function showNegativeList() {
     var catLabel = CONFIG.labels.category[item.category] || item.category || '其他';
     var catClass = 'tag-category-' + (item.category || '其他');
 
-    return '<div onclick="showDetail(\'' + item.id + '\');" style="cursor:pointer;padding:14px 16px;border-bottom:1px solid var(--border);transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.03)\'" onmouseout="this.style.background=\'transparent\'">' +
+    return '<div onclick="showDetail(\'' + item.id + '\');" style="cursor:pointer;padding:14px 16px;border-bottom:1px solid var(--border);transition:background 0.15s;border-left:3px solid var(--bad);background:linear-gradient(90deg,rgba(239,102,120,0.04) 0%,transparent 6%);" onmouseover="this.style.background=\'rgba(239,102,120,0.06)\'" onmouseout="this.style.background=\'linear-gradient(90deg,rgba(239,102,120,0.04) 0%,transparent 6%)\'">' +
       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">' +
         '<span style="font-size:11px;color:var(--text-dim);">' + item.date + '</span>' +
         '<span style="font-size:11px;color:var(--text-dim);">' + srcLabel + '</span>' +
