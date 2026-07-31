@@ -1,17 +1,32 @@
 {
   "date": "2026-07-29",
-  "generatedAt": "2026-07-29T04:10:32.509Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-07-31T13:19:22.786Z",
+  "totalRecords": 6,
   "beforeStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 5,
+    "negative": 1
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 5,
+    "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "山东的姐妹 手机里有工行αpp，搜任务中心 有悦享星期五，有抽立减金的",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行的立减金真的谁抽谁沉默，转一圈出现谢谢参与😠",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

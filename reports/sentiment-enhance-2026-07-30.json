@@ -1,17 +1,32 @@
 {
   "date": "2026-07-30",
-  "generatedAt": "2026-07-30T04:10:34.910Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-07-31T13:19:23.165Z",
+  "totalRecords": 2,
   "beforeStats": {
     "positive": 0,
-    "neutral": 30,
-    "negative": 0
+    "neutral": 1,
+    "negative": 1
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 30,
-    "negative": 0
+    "neutral": 1,
+    "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "【工行】 反馈，任务中心，超5000万份好礼进去，上面勾选的四个入口都有豆子拿，...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "说起经济不好是一种啥体验，就是连银行都变得抠搜 几年前我一个月可以在工行薅小几十...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

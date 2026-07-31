@@ -1,17 +1,95 @@
 {
   "date": "2026-07-28",
-  "generatedAt": "2026-07-28T04:10:32.565Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-07-31T13:19:21.849Z",
+  "totalRecords": 25,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "positive": 1,
+    "neutral": 19,
+    "negative": 5
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 20,
+    "negative": 5
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 11,
+  "changes": [
+    {
+      "title": "湖南工行-任务中心-享活动-湘约升礼 报名抽立减金",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行app 搜“任务中心”-享活动-礼享财富，反馈刚中2个1元立减金",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "【工行】 app-任务中心-测额有礼 反馈抽到2000工银i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "河南工行 加企V可抽i荳",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "【工行】app-任务中心-体验有礼 试试中了2000工银i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "建行让我付了一分钱送了我两次谢谢参与，而工行直接给了我满8.01减8立减金。之前...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "#台州警讯# 【“积分兑现”不成，卡内资金反被转走】 #网警说案# 天台的陈女士...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "诈骗短信哈 ：尊敬的工行用户：您的银行账户积分已满，可兑换688元现金。请登陆手...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "【 建行“95533”短信称积分换现金？是骗子！】魏先生收到“95533”短信，...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "##今日南阳# 【南阳一男子府衙附近群发诈骗短信时被警方抓获】“尊敬的工行用户，...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "必须赞一下邮政快递服务态度好！提前一日电话提醒今日送到大堂，唔使自己山长水远行出...",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

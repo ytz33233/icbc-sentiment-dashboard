@@ -1,34 +1,36 @@
 {
   "reportDate": "2026-07-29",
-  "generatedAt": "2026-07-29 12:10",
+  "generatedAt": "2026-07-29 21:19",
   "fromHistory": false,
   "summary": {
-    "total": 1,
-    "recentCount": 1,
-    "historyCount": 0,
-    "negativeCount": 0,
-    "negativePct": "0.0",
+    "total": 6,
+    "recentCount": 0,
+    "historyCount": 6,
+    "negativeCount": 1,
+    "negativePct": "16.7",
     "positiveCount": 0,
-    "neutralCount": 1,
+    "neutralCount": 5,
     "channelCount": 1,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 1
+    "social": 6
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "neutral": 5,
+    "negative": 1
   },
   "byRisk": {
-    "low": 1
+    "low": 6
   },
   "byProduct": {
-    "i豆活动": 1
+    "其他": 3,
+    "i豆活动": 3
   },
   "byCategory": {
-    "i豆兑换": 1
+    "i豆兑换": 5,
+    "其他": 1
   },
   "trend7d": [
     {
@@ -62,15 +64,15 @@
     {
       "date": "2026-07-27",
       "total": 1,
-      "recent": 1,
-      "history": 0,
+      "recent": 0,
+      "history": 1,
       "negative": 0
     },
     {
       "date": "2026-07-28",
       "total": 1,
-      "recent": 1,
-      "history": 0,
+      "recent": 0,
+      "history": 1,
       "negative": 0
     },
     {
@@ -84,24 +86,129 @@
   "hotKeywords": [
     {
       "word": "i豆",
-      "count": 1
+      "count": 3
     },
     {
       "word": "积分",
-      "count": 1
+      "count": 3
     },
     {
       "word": "兑换",
+      "count": 3
+    },
+    {
+      "word": "立减金",
+      "count": 2
+    },
+    {
+      "word": "贬值",
+      "count": 2
+    },
+    {
+      "word": "谢谢参与",
       "count": 1
     }
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-07-29）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、积分、兑换」。",
+    "text": "今日（2026-07-29）共采集 6 条舆情，其中负面 1 条。热词包括「i豆、积分、兑换」。",
     "date": "2026-07-29",
-    "generatedAt": "2026-07-29T04:10:32.356Z"
+    "generatedAt": "2026-07-31T13:19:22.629Z"
   },
   "records": [
+    {
+      "title": "工行的立减金真的谁抽谁沉默，转一圈出现谢谢参与😠",
+      "content": "工行的立减金真的谁抽谁沉默，转一圈出现谢谢参与😠",
+      "source": "汀挽挽",
+      "publishTime": "Thu Mar 13 15:17:10 +0800 2025",
+      "sentimentRaw": "negative",
+      "url": "https://m.weibo.cn/detail/5143755037345143",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "negative",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金",
+        "谢谢参与"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2025-03-13",
+      "fetchTime": "2026-07-29",
+      "author": "汀挽挽",
+      "id": "20260729-06",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "sentimentMethod": "rule-negative"
+    },
+    {
+      "title": "山东的姐妹 手机里有工行αpp，搜任务中心 有悦享星期五，有抽立减金的",
+      "content": "山东的姐妹<br /><br />手机里有工行αpp，搜任务中心<br /><br />有悦享星期五，有抽立减金的",
+      "source": "扒羊毛",
+      "publishTime": "Fri May 22 11:02:50 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5301329754850076",
+      "likes": 2,
+      "comments": 16,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-22",
+      "fetchTime": "2026-07-29",
+      "author": "扒羊毛",
+      "id": "20260729-01",
+      "category": "i豆兑换",
+      "heatScore": 34,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行 任wu中心 享活dong 升金集结号 邀10人有1.5万豆 有兴趣看看哈",
+      "content": "工行 任wu中心 享活dong <br />升金集结号 邀10人有1.5万豆 <br />有兴趣看看哈",
+      "source": "头号情报站",
+      "publishTime": "Tue Jan 13 12:15:01 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5254599885720810",
+      "likes": 36,
+      "comments": 30,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-01-13",
+      "fetchTime": "2026-07-29",
+      "author": "头号情报站",
+      "id": "20260729-02",
+      "category": "其他",
+      "heatScore": 98,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
     {
       "title": "📢海航常旅客速看！工银牡丹海航联名卡核心权益 🌟一卡双号：联名卡有效消费自动...",
       "content": "📢海航常旅客速看！工银牡丹海航联名卡核心权益<br />🌟一卡双号：联名卡有效消费自动兑金鹏积分(每48个工银i豆(联名版)自动兑换1金鹏积分，每消费人民币1元累积3个工银i豆(联名版))，外币消费折算累积，副卡消费归主卡。<br />🌍境外0手续费：10种外币直接入账。<br />⏳积分长期有效：一笔兑换激活，活跃日起2 ...<a href=\"/status/5325715119804547\">全文</a>",
@@ -112,7 +219,7 @@
       "likes": 0,
       "comments": 0,
       "favorites": 0,
-      "recency": "24h内",
+      "recency": "历史",
       "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
@@ -129,7 +236,77 @@
       "date": "2026-07-28",
       "fetchTime": "2026-07-29",
       "author": "金鹏积分GO",
-      "id": "20260729-01",
+      "id": "20260729-03",
+      "category": "i豆兑换",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "️工行APP搜：工行消费季 周五六日可抽i豆 北京地区有5-2 其他地区自测",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
+      "source": "佩奇线报 / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Sun May 10 09:23:22 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5296956067810016",
+      "likes": 5,
+      "comments": 25,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "贬值",
+        "积分",
+        "兑换"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-05-10",
+      "fetchTime": "2026-07-29",
+      "author": "佩奇线报",
+      "id": "20260729-04",
+      "category": "i豆兑换",
+      "heatScore": 55,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "【银行“任性”调规则惹质疑 工商银行积分权益大缩水】浙江消费者反映工行积分变i豆...",
+      "content": "【银行“任性”调规则惹质疑 工商银行积分权益大缩水】浙江消费者反映工行积分变i豆且大幅贬值。记者调查发现中行、农行也修改积分规则且权益缩水。工行4月8日通告整合回馈形式推出i豆，转换规则为1积分或50绿色能量等于1豆等。但4月13日后i豆兑换商品价值较积分贬值，如7000积分兑10元礼品，现1万i豆 ...<a href=\"/status/5166883921986361\">全文</a>",
+      "source": "微博理财",
+      "publishTime": "Fri May 16 11:03:06 +0800 2025",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5166883921986361",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "贬值",
+        "积分",
+        "兑换"
+      ],
+      "amount": "1积分",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2025-05-16",
+      "fetchTime": "2026-07-29",
+      "author": "微博理财",
+      "id": "20260729-05",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -137,6 +314,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-07-29T04:10:32.509Z",
+  "llmEnhancedAt": "2026-07-31T13:19:22.785Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

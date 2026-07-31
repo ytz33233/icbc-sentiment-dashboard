@@ -982,23 +982,25 @@ async function main() {
     const activityRecords = allRecords;
     console.log(`🏷️  LLM语义筛选后: ${activityRecords.length}条`);
 
-    // 3.5 过滤过旧记录（超过30天）
-    const recentActivityRecords = filterOldRecords(activityRecords, dateStr);
-    const oldFilteredOut = activityRecords.length - recentActivityRecords.length;
-    if (oldFilteredOut > 0) {
-        console.log(`📅 过滤过旧记录: 移除${oldFilteredOut}条 (>30天)`);
-    }
+    // 3.5 【已修改】不再过滤超过30天的旧记录，保留所有数据，由 recency 字段区分时效
+    // const recentActivityRecords = filterOldRecords(activityRecords, dateStr);
+    // const oldFilteredOut = activityRecords.length - recentActivityRecords.length;
+    // if (oldFilteredOut > 0) {
+    //     console.log(`📅 过滤过旧记录: 移除${oldFilteredOut}条 (>30天)`);
+    // }
+    const recentActivityRecords = activityRecords;
+    console.log(`📅 保留全部记录: ${activityRecords.length}条（含历史数据）`);
 
-    // 4. 如果今日无新数据，从历史数据回填（用于趋势展示）
+    // 4. 如果今日无数据，从历史数据回填（用于趋势展示）
     let finalRecords = recentActivityRecords;
     let fromHistory = false;
 
     if (recentActivityRecords.length === 0) {
         console.log('⚠️  今日无新舆情，从历史数据回填...');
         const historical = loadHistoricalRecords(dateStr);
-        const recentHistorical = filterOldRecords(historical, dateStr);
-        if (recentHistorical.length > 0) {
-            finalRecords = recentHistorical.slice(0, 30);
+        // 不再过滤30天，保留所有历史数据
+        if (historical.length > 0) {
+            finalRecords = historical.slice(0, 30);
             fromHistory = true;
             console.log(`📚 回填历史: ${finalRecords.length}条`);
         }
