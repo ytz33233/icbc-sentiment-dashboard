@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-02",
-  "generatedAt": "2026-08-02 07:00",
+  "generatedAt": "2026-08-02 12:00",
   "fromHistory": false,
   "summary": {
     "total": 2,
@@ -107,7 +107,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-02）共采集 2 条舆情。热词包括「i豆、积分、兑换」。",
     "date": "2026-08-02",
-    "generatedAt": "2026-08-01T23:00:27.301Z"
+    "generatedAt": "2026-08-02T04:00:29.818Z"
   },
   "records": [
     {
@@ -146,14 +146,14 @@
       "sentimentMethod": "llm"
     },
     {
-      "title": "工.行两个活d抽i豆 过一下 —— ❶工.行app-任wu中心 好运暑不完 抽桨...",
+      "title": "工行αpp—任wu中心—享活动—限时升金礼（2月 ）—之前报名且zichan达b...",
       "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
-      "source": "佩奇线报 / 九派财经 / 九派等深线 / 九派新闻",
-      "publishTime": "Tue Jul 21 00:27:21 +0800 2026",
+      "source": "丐帮羊毛日记 / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Wed Feb 25 00:25:46 +0800 2026",
       "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5322913101385409",
-      "likes": 16,
-      "comments": 68,
+      "url": "https://m.weibo.cn/detail/5270004075333692",
+      "likes": 12,
+      "comments": 7,
       "favorites": 0,
       "recency": "历史",
       "sentiment": "neutral",
@@ -170,17 +170,17 @@
       "status": "未处理",
       "fermentation": "low",
       "shares": 0,
-      "date": "2026-07-20",
+      "date": "2026-02-24",
       "fetchTime": "2026-08-02",
-      "author": "佩奇线报",
+      "author": "丐帮羊毛日记",
       "id": "20260802-02",
       "category": "i豆兑换",
-      "heatScore": 152,
+      "heatScore": 26,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-01T23:00:27.429Z",
+  "llmEnhancedAt": "2026-08-02T04:00:29.949Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
