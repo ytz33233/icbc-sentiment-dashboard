@@ -1,11 +1,11 @@
 {
   "reportDate": "2026-08-03",
-  "generatedAt": "2026-08-03 07:00",
+  "generatedAt": "2026-08-03 12:00",
   "fromHistory": false,
   "summary": {
     "total": 1,
-    "recentCount": 0,
-    "historyCount": 1,
+    "recentCount": 1,
+    "historyCount": 0,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
@@ -25,7 +25,7 @@
     "low": 1
   },
   "byProduct": {
-    "其他": 1
+    "i豆活动": 1
   },
   "byCategory": {
     "i豆兑换": 1
@@ -75,8 +75,8 @@
     },
     {
       "date": "2026-08-03",
-      "total": 0,
-      "recent": 0,
+      "total": 1,
+      "recent": 1,
       "history": 0,
       "negative": 0
     }
@@ -87,61 +87,66 @@
       "count": 1
     },
     {
+      "word": "立减金",
+      "count": 1
+    },
+    {
+      "word": "兑换",
+      "count": 1
+    },
+    {
       "word": "贬值",
       "count": 1
     },
     {
       "word": "积分",
       "count": 1
-    },
-    {
-      "word": "兑换",
-      "count": 1
     }
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-08-03）共采集 1 条舆情。热词包括「i豆、贬值、积分」。",
+    "text": "今日（2026-08-03）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「i豆活动」等产品，来源以微博为主，热词包括「i豆、立减金、兑换」。",
     "date": "2026-08-03",
-    "generatedAt": "2026-08-02T23:00:27.758Z"
+    "generatedAt": "2026-08-03T04:00:29.127Z"
   },
   "records": [
     {
-      "title": "U先素质试用 gh财富浏览6000豆",
+      "title": "在微信「工银微金融」小程序，可以将工商银行的i豆兑换为微信立减金，每1.1万i豆...",
       "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
-      "source": "贩卖饮料冫 / 九派财经 / 九派等深线 / 九派新闻",
-      "publishTime": "Sun Nov 30 20:06:31 +0800 2025",
+      "source": "someoneinchn / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Mon Aug 03 09:16:53 +0800 2026",
       "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5238773476232202",
-      "likes": 2,
-      "comments": 3,
+      "url": "https://m.weibo.cn/detail/5327757404802027",
+      "likes": 0,
+      "comments": 0,
       "favorites": 0,
-      "recency": "历史",
+      "recency": "24h内",
       "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
-      "relatedProduct": "其他",
+      "relatedProduct": "i豆活动",
       "keywords": [
         "i豆",
+        "立减金",
+        "兑换",
         "贬值",
-        "积分",
-        "兑换"
+        "积分"
       ],
-      "amount": "-",
+      "amount": "10元",
       "status": "未处理",
       "fermentation": "low",
       "shares": 0,
-      "date": "2025-11-30",
+      "date": "2026-08-03",
       "fetchTime": "2026-08-03",
-      "author": "贩卖饮料冫",
+      "author": "someoneinchn",
       "id": "20260803-01",
       "category": "i豆兑换",
-      "heatScore": 8,
+      "heatScore": 0,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-02T23:00:27.894Z",
+  "llmEnhancedAt": "2026-08-03T04:00:29.256Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
