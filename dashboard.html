@@ -4106,9 +4106,9 @@ const fallbackData = {
   "dailyBrief": {
     "text": "当前展示 39 条历史舆情数据（2026-07-29 至 2026-08-04）。",
     "date": "2026-08-04",
-    "generatedAt": "2026-08-04T04:00:28.899Z"
+    "generatedAt": "2026-08-04T23:10:27.442Z"
   }
-};;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+};;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 const CONFIG = {
   dataDir: 'data/',
@@ -5936,12 +5936,9 @@ function showVersionNotice() {
 
 // ===================== 需关注舆情列表弹窗 =====================
 function showNegativeList() {
-  // 从当前筛选后的数据中找出负面舆情
+  // 从当前筛选后的数据中找出负面舆情（与 KPI 口径保持一致）
   var records = (filteredData || []).filter(function(r) { return r.sentiment === 'negative'; });
-  // 如果当前筛选后没有，尝试从全部加载数据中找
-  if (records.length === 0 && loadedData && loadedData.records) {
-    records = loadedData.records.filter(function(r) { return r.sentiment === 'negative'; });
-  }
+  // 不再 fallback 到全部加载数据，确保 KPI 和弹窗数据一致
 
   document.getElementById('modal-title').textContent = '需关注舆情（' + records.length + ' 条）';
 
