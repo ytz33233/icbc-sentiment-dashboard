@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-03",
-  "generatedAt": "2026-08-03 07:00",
+  "generatedAt": "2026-08-03 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-03）采集到 91 条小红书舆情，负面 5 条，高风险 5 条。",
     "date": "2026-08-03",
-    "generatedAt": "2026-08-03T23:00:28.262Z"
+    "generatedAt": "2026-08-04T04:00:28.453Z"
   },
   "records": [
     {
@@ -885,7 +885,7 @@
       "id": "20260803-27",
       "date": "2026-07-21",
       "publishTime": "2026-07-21",
-      "source": "小���书",
+      "source": "小红书",
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
@@ -1332,7 +1332,7 @@
       "title": "工行i豆每月必须领！",
       "content": "工行i豆每月必须领！",
       "url": "https://www.xiaohongshu.com/explore/68736fcc00000000200187b1",
-      "author": "散养羊��日记",
+      "author": "散养羊毛日记",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",

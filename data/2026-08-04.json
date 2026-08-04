@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-04",
-  "generatedAt": "2026-08-04 07:00",
+  "generatedAt": "2026-08-04 12:00",
   "fromHistory": false,
   "summary": {
     "total": 2,
@@ -25,7 +25,8 @@
     "low": 2
   },
   "byProduct": {
-    "i豆活动": 2
+    "i豆活动": 1,
+    "其他": 1
   },
   "byCategory": {
     "i豆兑换": 2
@@ -47,16 +48,16 @@
     },
     {
       "date": "2026-07-31",
-      "total": 2,
+      "total": 1,
       "recent": 1,
-      "history": 1,
+      "history": 0,
       "negative": 0
     },
     {
       "date": "2026-08-01",
-      "total": 2,
+      "total": 1,
       "recent": 1,
-      "history": 1,
+      "history": 0,
       "negative": 0
     },
     {
@@ -83,70 +84,46 @@
   ],
   "hotKeywords": [
     {
-      "word": "i豆",
+      "word": "积分",
       "count": 2
+    },
+    {
+      "word": "i豆",
+      "count": 1
     },
     {
       "word": "贬值",
       "count": 1
     },
     {
-      "word": "积分",
+      "word": "兑换",
       "count": 1
     },
     {
-      "word": "兑换",
+      "word": "清零",
+      "count": 1
+    },
+    {
+      "word": "信用卡",
       "count": 1
     }
   ],
   "hotTopics": [],
   "dailyBrief": {
-    "text": "今日（2026-08-04）共采集 2 条舆情。热词包括「i豆、贬值、积分」。",
+    "text": "今日（2026-08-04）共采集 2 条舆情。热词包括「积分、i豆、贬值」。",
     "date": "2026-08-04",
-    "generatedAt": "2026-08-03T23:00:28.480Z"
+    "generatedAt": "2026-08-04T04:00:28.722Z"
   },
   "records": [
     {
-      "title": "工行app搜：乐园 ❶小鹿趣闯关 能做的任wu做完 有多个100i荳 - ❷生日...",
-      "content": "工行app搜：乐园<br />❶小鹿趣闯关<br />能做的任wu做完 有多个100i荳<br />-<br />❷生日礼可领888i荳<br />-<br />❸萌友助愿 助3次能抽3次i豆<br />-<br />❹每天记得浇水",
-      "source": "惠惠情报局",
-      "publishTime": "Sat Aug 01 12:04:48 +0800 2026",
-      "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5327074887731192",
-      "likes": 2,
-      "comments": 0,
-      "favorites": 0,
-      "recency": "历史",
-      "sentiment": "neutral",
-      "sourceType": "social",
-      "riskLevel": "low",
-      "relatedProduct": "i豆活动",
-      "keywords": [
-        "i豆"
-      ],
-      "amount": "-",
-      "status": "未处理",
-      "fermentation": "low",
-      "shares": 0,
-      "date": "2026-08-01",
-      "fetchTime": "2026-08-04",
-      "author": "惠惠情报局",
-      "id": "20260804-01",
-      "category": "i豆兑换",
-      "heatScore": 2,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
-    },
-    {
-      "title": "工hang搜：工hang消费季 每周可抽一次i豆 部分人刷新了50-5ljj",
+      "title": "V扫 工行 I豆试试 答案A - 工行app搜：工行消费季 每周可抽一次i豆，看...",
       "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
-      "source": "头号情报站 / 九派财经 / 九派等深线 / 九派新闻",
-      "publishTime": "Fri Jul 31 10:34:01 +0800 2026",
+      "source": "佩奇线报 / 九派财经 / 九派等深线 / 九派新闻",
+      "publishTime": "Fri Jun 05 08:03:57 +0800 2026",
       "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5326689653494640",
-      "likes": 6,
-      "comments": 5,
+      "url": "https://m.weibo.cn/detail/5306358169600279",
+      "likes": 37,
+      "comments": 24,
       "favorites": 0,
       "recency": "历史",
       "sentiment": "neutral",
@@ -163,17 +140,51 @@
       "status": "未处理",
       "fermentation": "low",
       "shares": 0,
-      "date": "2026-07-31",
+      "date": "2026-06-05",
       "fetchTime": "2026-08-04",
-      "author": "头号情报站",
+      "author": "佩奇线报",
+      "id": "20260804-01",
+      "category": "i豆兑换",
+      "heatScore": 85,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "棉袄爹说我不会理财，我嘴上不承认心里以为然。今儿更找到了佐证，买了4年的一个基金...",
+      "content": "棉袄爹说我不会理财，我嘴上不承认心里以为然。今儿更找到了佐证，买了4年的一个基金，从一元变成了六毛五，4年啊，一分钱没赚还赔不少。<span class=\"url-icon\"><img alt=\"[生病]\" src=\"https://face.t.sinajs.cn/t4/appstyle/expression/ext/normal/7c/201810_shengbing_mobile.png\" style=\"width:1em; height:1em;\" /></span>我真真是个败家娘们，决定下周一去赎回。转头就想自己要精明一回，百度说工行积分每年要清零的，麻溜地上网用信用卡积分换了礼品，嗯，这个算精明不？<span class=\"url-icon\"><img alt=\"[害羞]\" src=\"https://face.t.sinajs.cn/t4/appstyle/expression/ext/normal/c1/201810_haixiu_mobile.png\" style=\"width:1em; height:1em;\" /></span>",
+      "source": "水岸伊人",
+      "publishTime": "Fri Nov 23 13:37:16 +0800 2012",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/3515521217484702",
+      "likes": 0,
+      "comments": 17,
+      "favorites": 2,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "积分",
+        "清零",
+        "信用卡"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2012-11-23",
+      "fetchTime": "2026-08-04",
+      "author": "水岸伊人",
       "id": "20260804-02",
       "category": "i豆兑换",
-      "heatScore": 16,
+      "heatScore": 37,
       "llmSentiment": "neutral",
       "llmReason": "",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-03T23:00:28.621Z",
+  "llmEnhancedAt": "2026-08-04T04:00:28.869Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
