@@ -1,17 +1,46 @@
 {
   "date": "2026-08-01",
-  "generatedAt": "2026-08-01T04:00:29.577Z",
-  "totalRecords": 2,
+  "generatedAt": "2026-08-05T06:12:26.128Z",
+  "totalRecords": 32,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 2,
-    "negative": 0
+    "positive": 2,
+    "neutral": 29,
+    "negative": 1
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 2,
-    "negative": 0
+    "neutral": 31,
+    "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "工行 任务中心 如图 部分人有",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行i豆买什么最划算",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "8月工行i豆乐园活动攻略",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工银服务真垃圾",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

@@ -1,17 +1,25 @@
 {
   "date": "2026-08-03",
-  "generatedAt": "2026-08-03T04:00:29.256Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-08-05T06:12:36.981Z",
+  "totalRecords": 22,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 1,
+    "positive": 1,
+    "neutral": 21,
     "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
+    "neutral": 22,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "工行羊毛-0.2r",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

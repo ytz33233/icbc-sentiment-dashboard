@@ -1,17 +1,25 @@
 {
   "date": "2026-08-02",
-  "generatedAt": "2026-08-02T04:00:29.949Z",
-  "totalRecords": 2,
+  "generatedAt": "2026-08-05T06:12:32.149Z",
+  "totalRecords": 30,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 2,
+    "positive": 1,
+    "neutral": 29,
     "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 2,
+    "neutral": 30,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "8月工行立减金活动攻略合集！附超详细教程",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

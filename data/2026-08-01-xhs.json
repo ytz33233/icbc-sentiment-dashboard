@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-01",
-  "generatedAt": "2026-08-01 12:00",
+  "generatedAt": "2026-08-01 14:11",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -28,10 +28,11 @@
     "medium": 11
   },
   "byProduct": {
-    "i豆活动": 23,
+    "i豆活动": 22,
     "升金有礼": 5,
     "i豆乐园": 5,
     "其他": 57,
+    "i��活动": 1,
     "工行商城": 1
   },
   "byCategory": {
@@ -67,7 +68,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-01）采集到 91 条小红书舆情，负面 9 条，高风险 9 条。",
     "date": "2026-08-01",
-    "generatedAt": "2026-08-02T04:00:29.541Z"
+    "generatedAt": "2026-08-05T06:11:45.138Z"
   },
   "records": [
     {
@@ -1272,7 +1273,7 @@
       "author": "执手年華",
       "status": "已发布",
       "amount": "-",
-      "relatedProduct": "i豆活动",
+      "relatedProduct": "i��活动",
       "fetchTime": "2026-08-01T13:04:50.034293",
       "engagement": {
         "likes": "2",
@@ -1564,7 +1565,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "negative",
       "riskLevel": "high",
-      "title": "晕，8🈷️工行抽���",
+      "title": "晕，8🈷️工行抽豆",
       "content": "晕，8🈷️工行抽豆",
       "url": "https://www.xiaohongshu.com/explore/6a6cc871000000002203154d",
       "author": "小贱",
@@ -2657,7 +2658,7 @@
       "title": "工行  北京漫游文化打卡季🆓盖章",
       "content": "工行  北京漫游文化打卡季🆓盖章",
       "url": "https://www.xiaohongshu.com/explore/6a4ccb46000000002101bf74",
-      "author": "鸟语花香",
+      "author": "鸟语花��",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",

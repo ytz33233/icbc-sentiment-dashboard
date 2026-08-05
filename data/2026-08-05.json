@@ -1,13 +1,13 @@
 {
   "reportDate": "2026-08-05",
-  "generatedAt": "2026-08-05 12:10",
+  "generatedAt": "2026-08-05 14:07",
   "fromHistory": false,
   "summary": {
     "total": 4,
     "recentCount": 0,
     "historyCount": 4,
     "negativeCount": 0,
-    "negativePct": "0.0",
+    "negativePct": 0,
     "positiveCount": 0,
     "neutralCount": 4,
     "channelCount": 1,
@@ -17,9 +17,7 @@
     "social": 4
   },
   "bySentiment": {
-    "positive": 0,
-    "neutral": 4,
-    "negative": 0
+    "neutral": 4
   },
   "byRisk": {
     "low": 4
@@ -117,7 +115,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-05）共采集 4 条舆情。热词包括「i豆、提醒、通知」。",
     "date": "2026-08-05",
-    "generatedAt": "2026-08-05T04:10:29.579Z"
+    "generatedAt": "2026-08-05T06:07:39.335Z"
   },
   "records": [
     {
@@ -149,10 +147,7 @@
       "author": "蘑菇小牙牙",
       "id": "20260805-01",
       "category": "i豆兑换",
-      "heatScore": 153,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
+      "heatScore": 153
     },
     {
       "title": "工银e生活或手机银行app直接搜爱享礼可领1000~25000i豆！仅限当月最少...",
@@ -181,10 +176,7 @@
       "author": "扒羊毛",
       "id": "20260805-02",
       "category": "i豆兑换",
-      "heatScore": 2,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
+      "heatScore": 2
     },
     {
       "title": "手机里有工行app的，我的，i豆，i豆乐园-星语心愿，2500i豆",
@@ -214,10 +206,7 @@
       "author": "扒羊毛",
       "id": "20260805-03",
       "category": "i豆兑换",
-      "heatScore": 126,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
+      "heatScore": 126
     },
     {
       "title": "gh任务中心有一万豆，➕1000豆兑10ljj",
@@ -249,12 +238,7 @@
       "author": "饼妹梦想笑了",
       "id": "20260805-04",
       "category": "i豆兑换",
-      "heatScore": 32,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
+      "heatScore": 32
     }
-  ],
-  "llmEnhancedAt": "2026-08-05T04:10:29.712Z",
-  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+  ]
 }
