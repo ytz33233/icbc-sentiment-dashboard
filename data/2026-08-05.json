@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-05",
-  "generatedAt": "2026-08-05 07:10",
+  "generatedAt": "2026-08-05 12:10",
   "fromHistory": false,
   "summary": {
     "total": 4,
@@ -117,7 +117,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-05）共采集 4 条舆情。热词包括「i豆、提醒、通知」。",
     "date": "2026-08-05",
-    "generatedAt": "2026-08-04T23:10:27.251Z"
+    "generatedAt": "2026-08-05T04:10:29.579Z"
   },
   "records": [
     {
@@ -255,6 +255,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-04T23:10:27.412Z",
+  "llmEnhancedAt": "2026-08-05T04:10:29.712Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
