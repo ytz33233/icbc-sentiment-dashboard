@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-03",
-  "generatedAt": "2026-08-03 14:12",
+  "generatedAt": "2026-08-03 23:26",
   "fromHistory": false,
   "summary": {
     "total": 22,
@@ -130,11 +130,148 @@
       "count": 1
     }
   ],
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "topic": "其他",
+      "summary": "其他相关讨论",
+      "postCount": 12,
+      "postIndices": [
+        1,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "keywords": [],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 11,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 12
+      },
+      "totalHeat": 3343,
+      "topPosts": [
+        {
+          "id": "20260803-13",
+          "title": "8月工行免费薅30元电费",
+          "heatScore": 2725,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-02",
+          "title": "8月升金有礼｜更新工行",
+          "heatScore": 131,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-12",
+          "title": "icbc 1.5",
+          "heatScore": 110,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "i豆",
+      "summary": "关于i豆的讨论",
+      "postCount": 5,
+      "postIndices": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "keywords": [
+        "i豆"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 5,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1,
+        "xiaohongshu": 4
+      },
+      "totalHeat": 767,
+      "topPosts": [
+        {
+          "id": "20260803-06",
+          "title": "工商银行今天可以抽i豆了💐",
+          "heatScore": 648,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-03",
+          "title": "工行i豆乐园 幸福扭蛋机",
+          "heatScore": 51,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-04",
+          "title": "工行i豆疑问",
+          "heatScore": 38,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "红包",
+      "summary": "关于红包的讨论",
+      "postCount": 3,
+      "postIndices": [
+        6,
+        10,
+        15
+      ],
+      "keywords": [
+        "红包"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 3
+      },
+      "totalHeat": 220,
+      "topPosts": [
+        {
+          "id": "20260803-11",
+          "title": "工行答题0.2红包🧧 人人可拿",
+          "heatScore": 171,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-16",
+          "title": "08.03 工行小红包",
+          "heatScore": 43,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260803-07",
+          "title": "工行红包0.2r，速来",
+          "heatScore": 6,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
   "dailyBrief": {
     "text": "今日（2026-08-03）共采集 22 条舆情，其中24H内新增 8 条，正面 1 条。主要集中在「其他」等产品，来源以小红书为主，热词包括「i豆、红包、立减金」。",
     "date": "2026-08-03",
-    "generatedAt": "2026-08-05T06:12:34.613Z"
+    "generatedAt": "2026-08-06T15:26:23.290Z"
   },
   "records": [
     {
@@ -955,6 +1092,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-05T06:12:36.980Z",
+  "llmEnhancedAt": "2026-08-06T15:26:25.669Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

@@ -1,13 +1,13 @@
 {
   "reportDate": "2026-08-05",
-  "generatedAt": "2026-08-05 14:07",
+  "generatedAt": "2026-08-05 23:26",
   "fromHistory": false,
   "summary": {
     "total": 4,
     "recentCount": 0,
     "historyCount": 4,
     "negativeCount": 0,
-    "negativePct": 0,
+    "negativePct": "0.0",
     "positiveCount": 0,
     "neutralCount": 4,
     "channelCount": 1,
@@ -17,7 +17,9 @@
     "social": 4
   },
   "bySentiment": {
-    "neutral": 4
+    "positive": 0,
+    "neutral": 4,
+    "negative": 0
   },
   "byRisk": {
     "low": 4
@@ -33,37 +35,37 @@
   "trend7d": [
     {
       "date": "2026-07-30",
-      "total": 1,
-      "recent": 1,
-      "history": 0,
+      "total": 6,
+      "recent": 0,
+      "history": 6,
       "negative": 0
     },
     {
       "date": "2026-07-31",
-      "total": 1,
-      "recent": 1,
-      "history": 0,
+      "total": 20,
+      "recent": 15,
+      "history": 5,
       "negative": 0
     },
     {
       "date": "2026-08-01",
-      "total": 1,
-      "recent": 1,
-      "history": 0,
+      "total": 24,
+      "recent": 16,
+      "history": 8,
       "negative": 0
     },
     {
       "date": "2026-08-02",
-      "total": 0,
-      "recent": 0,
-      "history": 0,
+      "total": 12,
+      "recent": 8,
+      "history": 4,
       "negative": 0
     },
     {
       "date": "2026-08-03",
-      "total": 1,
-      "recent": 1,
-      "history": 0,
+      "total": 13,
+      "recent": 8,
+      "history": 5,
       "negative": 0
     },
     {
@@ -111,11 +113,55 @@
       "count": 1
     }
   ],
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "topic": "i豆",
+      "summary": "关于i豆的讨论",
+      "postCount": 4,
+      "postIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "keywords": [
+        "i豆"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "social": 4
+      },
+      "totalHeat": 313,
+      "topPosts": [
+        {
+          "id": "20260805-01",
+          "title": "【工行】 app，任务中心，余额变动提醒任务，2000i豆",
+          "heatScore": 153,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260805-03",
+          "title": "手机里有工行app的，我的，i豆，i豆乐园-星语心愿，2500i豆",
+          "heatScore": 126,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260805-04",
+          "title": "gh任务中心有一万豆，➕1000豆兑10ljj",
+          "heatScore": 32,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
   "dailyBrief": {
     "text": "今日（2026-08-05）共采集 4 条舆情。热词包括「i豆、提醒、通知」。",
     "date": "2026-08-05",
-    "generatedAt": "2026-08-05T06:07:39.335Z"
+    "generatedAt": "2026-08-06T15:26:26.236Z"
   },
   "records": [
     {
@@ -147,7 +193,10 @@
       "author": "蘑菇小牙牙",
       "id": "20260805-01",
       "category": "i豆兑换",
-      "heatScore": 153
+      "heatScore": 153,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
     },
     {
       "title": "工银e生活或手机银行app直接搜爱享礼可领1000~25000i豆！仅限当月最少...",
@@ -176,7 +225,10 @@
       "author": "扒羊毛",
       "id": "20260805-02",
       "category": "i豆兑换",
-      "heatScore": 2
+      "heatScore": 2,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
     },
     {
       "title": "手机里有工行app的，我的，i豆，i豆乐园-星语心愿，2500i豆",
@@ -206,7 +258,10 @@
       "author": "扒羊毛",
       "id": "20260805-03",
       "category": "i豆兑换",
-      "heatScore": 126
+      "heatScore": 126,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
     },
     {
       "title": "gh任务中心有一万豆，➕1000豆兑10ljj",
@@ -238,7 +293,12 @@
       "author": "饼妹梦想笑了",
       "id": "20260805-04",
       "category": "i豆兑换",
-      "heatScore": 32
+      "heatScore": 32,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
     }
-  ]
+  ],
+  "llmEnhancedAt": "2026-08-06T15:26:26.379Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

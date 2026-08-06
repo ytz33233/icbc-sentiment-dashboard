@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-07-31",
-  "generatedAt": "2026-07-31 14:12",
+  "generatedAt": "2026-07-31 23:25",
   "fromHistory": false,
   "summary": {
     "total": 80,
@@ -130,11 +130,352 @@
       "count": 1
     }
   ],
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "topic": "其他",
+      "summary": "其他相关讨论",
+      "postCount": 36,
+      "postIndices": [
+        30,
+        31,
+        32,
+        33,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        57,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        66,
+        68,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "keywords": [],
+      "sentiment": {
+        "positive": 4,
+        "neutral": 32,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 36
+      },
+      "totalHeat": 6188,
+      "topPosts": [
+        {
+          "id": "20260731-31",
+          "title": "工商银行你背刺我！",
+          "heatScore": 1046,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-50",
+          "title": "7月工行最全攒豆攻略！（见图二、三、四）",
+          "heatScore": 969,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260731-69",
+          "title": "工行大方啊",
+          "heatScore": 590,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "i豆",
+      "summary": "关于i豆的讨论",
+      "postCount": 26,
+      "postIndices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "keywords": [
+        "i豆"
+      ],
+      "sentiment": {
+        "positive": 2,
+        "neutral": 24,
+        "negative": 0
+      },
+      "sources": {
+        "social": 2,
+        "xiaohongshu": 24
+      },
+      "totalHeat": 2700,
+      "topPosts": [
+        {
+          "id": "20260731-06",
+          "title": "工银i豆",
+          "heatScore": 867,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-07",
+          "title": "工行i豆🫘换什么好呢",
+          "heatScore": 601,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-08",
+          "title": "工商银行6星级客户i豆兑换",
+          "heatScore": 368,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "立减金",
+      "summary": "关于立减金的讨论",
+      "postCount": 7,
+      "postIndices": [
+        35,
+        37,
+        39,
+        46,
+        52,
+        56,
+        69
+      ],
+      "keywords": [
+        "立减金"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 7,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 7
+      },
+      "totalHeat": 952,
+      "topPosts": [
+        {
+          "id": "20260731-70",
+          "title": "工行莫名多了一张100元立减金",
+          "heatScore": 380,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-53",
+          "title": "工行5元立减金，人人有",
+          "heatScore": 284,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-38",
+          "title": "工行立减金集合",
+          "heatScore": 116,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "升金有礼",
+      "summary": "关于升金有礼的讨论",
+      "postCount": 4,
+      "postIndices": [
+        3,
+        12,
+        14,
+        17
+      ],
+      "keywords": [
+        "升金有礼"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 1
+      },
+      "sources": {
+        "xiaohongshu": 4
+      },
+      "totalHeat": 120,
+      "topPosts": [
+        {
+          "id": "20260731-13",
+          "title": "麻了，工行的升金有礼是在这个界面吗？",
+          "heatScore": 49,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-15",
+          "title": "工商银行6月升金有礼没有1-5万档了？",
+          "heatScore": 39,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-18",
+          "title": "工行6月升金有礼活动",
+          "heatScore": 22,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "红包",
+      "summary": "关于红包的讨论",
+      "postCount": 2,
+      "postIndices": [
+        38,
+        58
+      ],
+      "keywords": [
+        "红包"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 111,
+      "topPosts": [
+        {
+          "id": "20260731-39",
+          "title": "7.31工行红包🧧",
+          "heatScore": 78,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-59",
+          "title": "工行新红包，速来",
+          "heatScore": 33,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "积分",
+      "summary": "关于积分的讨论",
+      "postCount": 2,
+      "postIndices": [
+        47,
+        61
+      ],
+      "keywords": [
+        "积分"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 101,
+      "topPosts": [
+        {
+          "id": "20260731-48",
+          "title": "大量收工行/中行读书卡读书积分",
+          "heatScore": 65,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-62",
+          "title": "回收安徽工行京东图书积分",
+          "heatScore": 36,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "商城",
+      "summary": "关于商城的讨论",
+      "postCount": 3,
+      "postIndices": [
+        34,
+        48,
+        67
+      ],
+      "keywords": [
+        "商城"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 3
+      },
+      "totalHeat": 59,
+      "topPosts": [
+        {
+          "id": "20260731-35",
+          "title": "工行商城买金条 找我有优惠返现哦",
+          "heatScore": 52,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-49",
+          "title": "工商银行商城购买iphone16promax安全下车",
+          "heatScore": 4,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260731-68",
+          "title": "工行分期商城优惠来了",
+          "heatScore": 3,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
   "dailyBrief": {
     "text": "今日（2026-07-31）共采集 80 条舆情，其中24H内新增 15 条，其中负面 1 条，正面 6 条。主要集中在「其他、i豆活动」等产品，来源以小红书为主，热词包括「i豆、立减金、兑换」。",
     "date": "2026-07-31",
-    "generatedAt": "2026-08-05T06:12:10.421Z"
+    "generatedAt": "2026-08-06T15:25:59.212Z"
   },
   "records": [
     {
@@ -3113,6 +3454,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-05T06:12:19.041Z",
+  "llmEnhancedAt": "2026-08-06T15:26:07.660Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

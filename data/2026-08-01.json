@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-01",
-  "generatedAt": "2026-08-01 14:12",
+  "generatedAt": "2026-08-01 23:26",
   "fromHistory": false,
   "summary": {
     "total": 32,
@@ -121,11 +121,122 @@
       "count": 1
     }
   ],
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "topic": "其他",
+      "summary": "其他相关讨论",
+      "postCount": 22,
+      "postIndices": [
+        0,
+        3,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "keywords": [],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 21,
+        "negative": 1
+      },
+      "sources": {
+        "social": 1,
+        "xiaohongshu": 21
+      },
+      "totalHeat": 2744,
+      "topPosts": [
+        {
+          "id": "20260801-17",
+          "title": "工行抽10.88r",
+          "heatScore": 693,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260801-18",
+          "title": "8月！又有工行5000豆",
+          "heatScore": 290,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260801-13",
+          "title": "晕，8🈷️工行抽豆",
+          "heatScore": 232,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "i豆",
+      "summary": "关于i豆的讨论",
+      "postCount": 10,
+      "postIndices": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "keywords": [
+        "i豆"
+      ],
+      "sentiment": {
+        "positive": 2,
+        "neutral": 8,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1,
+        "xiaohongshu": 9
+      },
+      "totalHeat": 631,
+      "topPosts": [
+        {
+          "id": "20260801-03",
+          "title": "工行i豆买什么最划算",
+          "heatScore": 335,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260801-05",
+          "title": "7月工行工银i豆乐园活动持续更新",
+          "heatScore": 103,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260801-06",
+          "title": "12月30日工行i豆乐园岁末任务更新",
+          "heatScore": 54,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
   "dailyBrief": {
     "text": "今日（2026-08-01）共采集 32 条舆情，其中24H内新增 16 条，其中负面 1 条，正面 2 条。主要集中在「其他、i豆活动」等产品，来源以小红书为主，热词包括「i豆、i豆乐园、兑换」。",
     "date": "2026-08-01",
-    "generatedAt": "2026-08-05T06:12:22.617Z"
+    "generatedAt": "2026-08-06T15:26:11.265Z"
   },
   "records": [
     {
@@ -1300,6 +1411,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-05T06:12:26.127Z",
+  "llmEnhancedAt": "2026-08-06T15:26:14.765Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

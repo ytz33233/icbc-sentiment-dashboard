@@ -8,6 +8,91 @@ function log(...args) {
   console.log(...args);
 }
 
+/**
+ * 基于关键词的Fallback话题聚类（不依赖API）
+ */
+function fallbackTopicCluster(records) {
+  // 提取关键词组，按共同关键词聚类
+  const clusters = [];
+  const used = new Set();
+
+  // 先按关键词频率排序
+  const keywordMap = {};
+  records.forEach(r => {
+    (r.keywords || []).forEach(k => {
+      keywordMap[k] = (keywordMap[k] || 0) + 1;
+    });
+  });
+
+  // 选择高频关键词作为话题核心
+  const topKeywords = Object.entries(keywordMap)
+    .filter(([k, c]) => c >= 2 && k.length >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8);
+
+  for (const [keyword, count] of topKeywords) {
+    const posts = records.filter((r, idx) => {
+      if (used.has(idx)) return false;
+      const hasKeyword = (r.keywords || []).includes(keyword);
+      if (hasKeyword) used.add(idx);
+      return hasKeyword;
+    });
+
+    if (posts.length >= 2) {
+      const sentiment = { positive: 0, neutral: 0, negative: 0 };
+      posts.forEach(p => { sentiment[p.sentiment || 'neutral']++; });
+
+      clusters.push({
+        topic: keyword,
+        summary: `关于${keyword}的讨论`,
+        postCount: posts.length,
+        postIndices: posts.map(p => records.indexOf(p)).filter(i => i >= 0),
+        keywords: [keyword],
+        sentiment,
+        sources: posts.reduce((acc, p) => {
+          const src = p.sourceType || p.source || 'unknown';
+          acc[src] = (acc[src] || 0) + 1;
+          return acc;
+        }, {}),
+        totalHeat: posts.reduce((sum, p) => sum + (p.heatScore || 0), 0),
+        topPosts: posts
+          .sort((a, b) => (b.heatScore || 0) - (a.heatScore || 0))
+          .slice(0, 3)
+          .map(p => ({ id: p.id, title: p.title, heatScore: p.heatScore, sentiment: p.sentiment }))
+      });
+    }
+  }
+
+  // 未归类的放入"其他"
+  const otherPosts = records.filter((_, idx) => !used.has(idx));
+  if (otherPosts.length >= 2) {
+    const sentiment = { positive: 0, neutral: 0, negative: 0 };
+    otherPosts.forEach(p => { sentiment[p.sentiment || 'neutral']++; });
+    clusters.push({
+      topic: '其他',
+      summary: '其他相关讨论',
+      postCount: otherPosts.length,
+      postIndices: otherPosts.map(p => records.indexOf(p)).filter(i => i >= 0),
+      keywords: [],
+      sentiment,
+      sources: otherPosts.reduce((acc, p) => {
+        const src = p.sourceType || p.source || 'unknown';
+        acc[src] = (acc[src] || 0) + 1;
+        return acc;
+      }, {}),
+      totalHeat: otherPosts.reduce((sum, p) => sum + (p.heatScore || 0), 0),
+      topPosts: otherPosts
+        .sort((a, b) => (b.heatScore || 0) - (a.heatScore || 0))
+        .slice(0, 3)
+        .map(p => ({ id: p.id, title: p.title, heatScore: p.heatScore, sentiment: p.sentiment }))
+    });
+  }
+
+  // 按热度排序
+  clusters.sort((a, b) => b.totalHeat - a.totalHeat);
+  return { topics: clusters };
+}
+
 async function callLLMTopicCluster(records) {
   if (records.length === 0) {
     return { topics: [] };
@@ -69,6 +154,12 @@ ${items}
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
+          // 检查API错误（如余额不足）
+          if (json.error) {
+            log('[LLM Topic API Error]', json.error.message || JSON.stringify(json.error));
+            resolve({ topics: [], _apiError: true });
+            return;
+          }
           const text = json.choices?.[0]?.message?.content?.trim() || '';
           const jsonMatch = text.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
@@ -112,7 +203,15 @@ async function topicCluster(records) {
   log(`输入: ${records.length} 条`);
 
   const startTime = Date.now();
-  const llmResult = await callLLMTopicCluster(records);
+  let llmResult = await callLLMTopicCluster(records);
+
+  // API失败或返回空时，使用Fallback关键词聚类
+  let usedFallback = false;
+  if (!llmResult.topics || llmResult.topics.length === 0) {
+    log('[TopicCluster] API返回空，使用Fallback关键词聚类');
+    llmResult = fallbackTopicCluster(records);
+    usedFallback = true;
+  }
 
   // 丰富话题信息：补全 heat、sources 等统计
   const topics = (llmResult.topics || []).map(t => {
@@ -156,7 +255,7 @@ async function topicCluster(records) {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
   log('========================================');
-  log('【话题聚类完成】');
+  log('【话题聚类完成】' + (usedFallback ? ' (Fallback模式)' : ''));
   log(`  耗时: ${elapsed}s`);
   log(`  话题数: ${topics.length}`);
   topics.forEach((t, i) => {
