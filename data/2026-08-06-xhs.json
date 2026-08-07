@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-06",
-  "generatedAt": "2026-08-06 07:00",
+  "generatedAt": "2026-08-06 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-06）采集到 92 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-08-06",
-    "generatedAt": "2026-08-06T23:00:27.168Z"
+    "generatedAt": "2026-08-07T04:00:27.789Z"
   },
   "records": [
     {
@@ -585,7 +585,7 @@
       "sentiment": "neutral",
       "riskLevel": "medium",
       "title": "工行i豆兑换 有人换过吗 哪个好呀",
-      "content": "工行i豆兑�� 有人换过吗 哪个好呀",
+      "content": "工行i豆兑换 有人换过吗 哪个好呀",
       "url": "https://www.xiaohongshu.com/explore/6a6f3b740000000005028643",
       "author": "幸福来敲门",
       "status": "已发布",
@@ -685,7 +685,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "medium",
-      "title": "八���安徽工行升金有礼来袭",
+      "title": "八月安徽工行升金有礼来袭",
       "content": "八月安徽工行升金有礼来袭",
       "url": "https://www.xiaohongshu.com/explore/6a741ae90000000027020f33",
       "author": "大李的财富江湖",
@@ -1835,7 +1835,7 @@
       "title": "哪个银行积分兑换最划算啊？工行还是农行？",
       "content": "哪个银行积分兑换最划算啊？工行还是农行？",
       "url": "https://www.xiaohongshu.com/explore/6a4f16c200000000080011a2",
-      "author": "���吧啦",
+      "author": "小吧啦",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "工行商城",
@@ -2693,7 +2693,7 @@
       "sentiment": "positive",
       "riskLevel": "low",
       "title": "工行1号真得劲",
-      "content": "工��1号真得劲",
+      "content": "工行1号真得劲",
       "url": "https://www.xiaohongshu.com/explore/6a6cce6c0000000022011a5b",
       "author": "233",
       "status": "已发布",
