@@ -1,0 +1,132 @@
+{
+  "reportDate": "2026-08-09",
+  "generatedAt": "2026-08-09 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "升金有礼": 1
+  },
+  "byCategory": {
+    "资产达标": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-08-03",
+      "total": 21,
+      "recent": 13,
+      "history": 8,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-04",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-05",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-06",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-07",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-08",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-09",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 1
+    }
+  ],
+  "hotTopics": [],
+  "dailyBrief": {
+    "text": "今日（2026-08-09）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「升金有礼」等产品，来源以微博为主，热词包括「升金有礼」。",
+    "date": "2026-08-09",
+    "generatedAt": "2026-08-08T23:10:27.293Z"
+  },
+  "records": [
+    {
+      "title": "中行app-首页-热门活dong 去找到【吱付超给利】 上个月有参与的去抽哈 顺...",
+      "content": "中行app-首页-热门活dong <br />去找到【吱付超给利】 <br />上个月有参与的去抽哈 <br />顺带8月报名 达标后次月8号开 <br />—— <br />2⃣️工行app搜【升金有礼】 <br />8月份可以报名了 达标可领i荳 <br /><a  href=\"https://weibo.cn/sinaurl?u=https%3A%2F%2Fiehou.com%2Fxianbao-464975.htm\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png'></span><span class=\"surl-text\">网页链接</span></a>",
+      "source": "奋而不斗",
+      "publishTime": "Sat Aug 08 20:50:03 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5329743786019746",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-08-08",
+      "fetchTime": "2026-08-09",
+      "author": "奋而不斗",
+      "id": "20260809-01",
+      "category": "资产达标",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-08-08T23:10:27.438Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
