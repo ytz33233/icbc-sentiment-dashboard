@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-10",
-  "generatedAt": "2026-08-10 07:10",
+  "generatedAt": "2026-08-10 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -314,7 +314,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-10）从历史数据中发现 7 条24H内新增舆情。当前累计展示 30 条。",
     "date": "2026-08-10",
-    "generatedAt": "2026-08-09T23:10:26.877Z"
+    "generatedAt": "2026-08-10T04:10:28.348Z"
   },
   "records": [
     {
@@ -1383,6 +1383,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-09T23:10:29.831Z",
+  "llmEnhancedAt": "2026-08-10T04:10:31.283Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
