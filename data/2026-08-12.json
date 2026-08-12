@@ -1,37 +1,37 @@
 {
   "reportDate": "2026-08-12",
-  "generatedAt": "2026-08-12 11:08",
+  "generatedAt": "2026-08-12 12:00",
   "fromHistory": false,
   "summary": {
-    "total": 19,
+    "total": 18,
     "recentCount": 1,
-    "historyCount": 18,
+    "historyCount": 17,
     "negativeCount": 0,
     "negativePct": "0.0",
     "positiveCount": 0,
-    "neutralCount": 19,
+    "neutralCount": 18,
     "channelCount": 2,
     "highRiskCount": 0
   },
   "bySource": {
-    "social": 3,
+    "social": 2,
     "xiaohongshu": 16
   },
   "bySentiment": {
     "positive": 0,
-    "neutral": 19,
+    "neutral": 18,
     "negative": 0
   },
   "byRisk": {
-    "low": 19
+    "low": 18
   },
   "byProduct": {
     "其他": 14,
     "i豆乐园": 1,
-    "i豆活动": 4
+    "i豆活动": 3
   },
   "byCategory": {
-    "i豆兑换": 8,
+    "i豆兑换": 7,
     "其他": 9,
     "薅羊毛": 2
   },
@@ -88,11 +88,11 @@
   ],
   "hotKeywords": [
     {
-      "word": "i豆",
-      "count": 5
+      "word": "立减金",
+      "count": 4
     },
     {
-      "word": "立减金",
+      "word": "i豆",
       "count": 4
     },
     {
@@ -122,6 +122,7 @@
       "summary": "其他相关讨论",
       "postCount": 11,
       "postIndices": [
+        7,
         8,
         9,
         10,
@@ -131,8 +132,7 @@
         14,
         15,
         16,
-        17,
-        18
+        17
       ],
       "keywords": [],
       "sentiment": {
@@ -146,19 +146,19 @@
       "totalHeat": 786,
       "topPosts": [
         {
-          "id": "20260812-12",
+          "id": "20260812-11",
           "title": "08.07 工行答题0.5",
           "heatScore": 237,
           "sentiment": "neutral"
         },
         {
-          "id": "20260812-13",
+          "id": "20260812-12",
           "title": "8月10日工行每周一测0.6元🧧",
           "heatScore": 206,
           "sentiment": "neutral"
         },
         {
-          "id": "20260812-09",
+          "id": "20260812-08",
           "title": "工商答题，指在工行，ACC，共0.6",
           "heatScore": 96,
           "sentiment": "neutral"
@@ -168,25 +168,26 @@
     {
       "topic": "立减金",
       "summary": "关于立减金的讨论",
-      "postCount": 3,
+      "postCount": 4,
       "postIndices": [
         0,
-        6,
-        7
+        4,
+        5,
+        6
       ],
       "keywords": [
         "立减金"
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 3,
+        "neutral": 4,
         "negative": 0
       },
       "sources": {
         "social": 1,
-        "xiaohongshu": 2
+        "xiaohongshu": 3
       },
-      "totalHeat": 151,
+      "totalHeat": 165,
       "topPosts": [
         {
           "id": "20260812-01",
@@ -195,15 +196,15 @@
           "sentiment": "neutral"
         },
         {
-          "id": "20260812-07",
+          "id": "20260812-06",
           "title": "8月工行立减金活动合集💰",
           "heatScore": 26,
           "sentiment": "neutral"
         },
         {
-          "id": "20260812-08",
-          "title": "工行立减金，有没有互邀请的，或者卖人头",
-          "heatScore": 0,
+          "id": "20260812-05",
+          "title": "工行发i豆了！！",
+          "heatScore": 14,
           "sentiment": "neutral"
         }
       ]
@@ -211,53 +212,51 @@
     {
       "topic": "i豆",
       "summary": "关于i豆的讨论",
-      "postCount": 5,
+      "postCount": 3,
       "postIndices": [
         1,
         2,
-        3,
-        4,
-        5
+        3
       ],
       "keywords": [
         "i豆"
       ],
       "sentiment": {
         "positive": 1,
-        "neutral": 4,
+        "neutral": 2,
         "negative": 0
       },
       "sources": {
-        "social": 2,
-        "xiaohongshu": 3
+        "social": 1,
+        "xiaohongshu": 2
       },
-      "totalHeat": 115,
+      "totalHeat": 70,
       "topPosts": [
         {
-          "id": "20260812-04",
+          "id": "20260812-03",
           "title": "工行i豆，换啥划算？",
           "heatScore": 40,
           "sentiment": "positive"
-        },
-        {
-          "id": "20260812-03",
-          "title": "【工行】app-任务中心-享活动 试试财富浏览礼，做3个任务最高领到6000工银...",
-          "heatScore": 31,
-          "sentiment": "neutral"
         },
         {
           "id": "20260812-02",
           "title": "0点 工行i豆乐园刷新 自己去过一下 ——工行αpp搜【乐园】【任wu中心也过一...",
           "heatScore": 16,
           "sentiment": "neutral"
+        },
+        {
+          "id": "20260812-04",
+          "title": "工商银行 i豆",
+          "heatScore": 14,
+          "sentiment": "neutral"
         }
       ]
     }
   ],
   "dailyBrief": {
-    "text": "今日（2026-08-12）共采集 19 条舆情，其中24H内新增 1 条，正面 2 条。主要集中在「i豆活动」等产品，来源以小红书为主，热词包括「i豆、立减金、i豆乐园」。",
+    "text": "今日（2026-08-12）共采集 18 条舆情，其中24H内新增 1 条，正面 2 条。主要集中在「i豆活动」等产品，来源以小红书为主，热词包括「立减金、i豆、i豆乐园」。",
     "date": "2026-08-12",
-    "generatedAt": "2026-08-12T03:08:10.409Z"
+    "generatedAt": "2026-08-12T04:00:28.956Z"
   },
   "records": [
     {
@@ -294,8 +293,8 @@
     },
     {
       "title": "0点 工行i豆乐园刷新 自己去过一下 ——工行αpp搜【乐园】【任wu中心也过一...",
-      "content": "0点 工行i豆乐园刷新  自己去过一下  <br />——工行αpp搜【乐园】【任wu中心也过一遍】 <br />i豆乐园每个都去过一遍 <br /> <br />0点 各地邮储αpp-活动中心的签到邮礼  去过一下 <br />有大",
-      "source": "丐帮羊毛日记",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
+      "source": "丐帮羊毛日记 / 九派财经 / 九派等深线 / 九派新闻",
       "publishTime": "Mon Jun 01 00:23:24 +0800 2026",
       "sentimentRaw": "neutral",
       "url": "https://m.weibo.cn/detail/5304792714057303",
@@ -309,7 +308,10 @@
       "relatedProduct": "i豆乐园",
       "keywords": [
         "i豆",
-        "i豆乐园"
+        "i豆乐园",
+        "贬值",
+        "积分",
+        "兑换"
       ],
       "amount": "-",
       "status": "未处理",
@@ -326,42 +328,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "title": "【工行】app-任务中心-享活动 试试财富浏览礼，做3个任务最高领到6000工银...",
-      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166959156006609\">全文</a>",
-      "source": "好心天天分享 / 九派财经 / 九派等深线 / 九派新闻",
-      "publishTime": "Mon Dec 01 09:24:11 +0800 2025",
-      "sentimentRaw": "neutral",
-      "url": "https://m.weibo.cn/detail/5238974216144289",
-      "likes": 8,
-      "comments": 10,
-      "favorites": 2,
-      "recency": "历史",
-      "sentiment": "neutral",
-      "sourceType": "social",
-      "riskLevel": "low",
-      "relatedProduct": "i豆活动",
-      "keywords": [
-        "i豆",
-        "贬值",
-        "积分",
-        "兑换"
-      ],
-      "amount": "-",
-      "status": "未处理",
-      "fermentation": "low",
-      "shares": 0,
-      "date": "2025-12-01",
-      "fetchTime": "2026-08-12",
-      "author": "好心天天分享",
       "id": "20260812-03",
-      "category": "i豆兑换",
-      "heatScore": 31,
-      "llmSentiment": "neutral",
-      "llmReason": "",
-      "sentimentMethod": "llm"
-    },
-    {
-      "id": "20260812-04",
       "date": "2026-08-11",
       "publishTime": "2026-08-11",
       "source": "小红书",
@@ -399,7 +366,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-05",
+      "id": "20260812-04",
       "date": "2026-07-03",
       "publishTime": "2026-07-03",
       "source": "小红书",
@@ -437,7 +404,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-06",
+      "id": "20260812-05",
       "date": "2025-12-19",
       "publishTime": "2025-12-19",
       "source": "小红书",
@@ -476,7 +443,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-07",
+      "id": "20260812-06",
       "date": "2026-08-12",
       "publishTime": "昨天 14:44",
       "source": "小红书",
@@ -514,7 +481,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-08",
+      "id": "20260812-07",
       "date": "2026-08-12",
       "publishTime": "昨天 20:44",
       "source": "小红书",
@@ -552,7 +519,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-09",
+      "id": "20260812-08",
       "date": "2026-08-10",
       "publishTime": "2026-08-10",
       "source": "小红书",
@@ -588,7 +555,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-10",
+      "id": "20260812-09",
       "date": "2026-06-25",
       "publishTime": "2026-06-25",
       "source": "小红书",
@@ -624,7 +591,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-11",
+      "id": "20260812-10",
       "date": "2026-08-12",
       "publishTime": "昨天 21:09",
       "source": "小红书",
@@ -660,7 +627,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-12",
+      "id": "20260812-11",
       "date": "2026-08-07",
       "publishTime": "2026-08-07",
       "source": "小红书",
@@ -696,7 +663,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-13",
+      "id": "20260812-12",
       "date": "2026-08-10",
       "publishTime": "2026-08-10",
       "source": "小红书",
@@ -732,7 +699,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-14",
+      "id": "20260812-13",
       "date": "2026-08-12",
       "publishTime": "昨天 16:59",
       "source": "小红书",
@@ -768,7 +735,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-15",
+      "id": "20260812-14",
       "date": "2026-08-08",
       "publishTime": "2026-08-08",
       "source": "小红书",
@@ -804,7 +771,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-16",
+      "id": "20260812-15",
       "date": "2026-04-16",
       "publishTime": "2026-04-16",
       "source": "小红书",
@@ -840,7 +807,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-17",
+      "id": "20260812-16",
       "date": "2026-08-12",
       "publishTime": "昨天 12:28",
       "source": "小红书",
@@ -878,7 +845,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-18",
+      "id": "20260812-17",
       "date": "2026-08-11",
       "publishTime": "2026-08-11",
       "source": "小红书",
@@ -914,7 +881,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260812-19",
+      "id": "20260812-18",
       "date": "2026-08-09",
       "publishTime": "2026-08-09",
       "source": "小红书",
@@ -950,6 +917,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-12T03:08:12.222Z",
+  "llmEnhancedAt": "2026-08-12T04:00:30.781Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
