@@ -1,17 +1,32 @@
 {
   "date": "2026-08-12",
-  "generatedAt": "2026-08-11T23:00:27.304Z",
-  "totalRecords": 3,
+  "generatedAt": "2026-08-12T03:08:12.223Z",
+  "totalRecords": 19,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 3,
+    "positive": 2,
+    "neutral": 17,
     "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 3,
+    "neutral": 19,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行i豆，换啥划算？",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "快来！薅羊毛！工行！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }

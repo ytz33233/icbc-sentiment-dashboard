@@ -1,17 +1,46 @@
 {
   "date": "2026-08-06",
-  "generatedAt": "2026-08-06T04:10:29.849Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-08-12T03:07:59.542Z",
+  "totalRecords": 28,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 1,
+    "positive": 4,
+    "neutral": 24,
     "negative": 0
   },
   "afterStats": {
     "positive": 0,
-    "neutral": 1,
+    "neutral": 28,
     "negative": 0
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 4,
+  "changes": [
+    {
+      "title": "工银 i 豆换立减金详细攻略（包教包会版）",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行建行中行｜银行立减金活动完整攻略！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "给工商银行到期换卡点个赞",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行你还搞这种，好惊喜哟",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
