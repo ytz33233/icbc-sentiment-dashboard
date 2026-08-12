@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-13",
+  "generatedAt": "2026-08-12T23:00:30.994Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 29,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 29,
+    "negative": 1
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行。任务中心-浏览惠普版， 中了就是6立减金",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": ""
+    },
+    {
+      "title": "工行越来越坑了",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
+}
