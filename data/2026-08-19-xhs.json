@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-19",
-  "generatedAt": "2026-08-19 07:00",
+  "generatedAt": "2026-08-19 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-19）采集到 82 条小红书舆情，负面 3 条，高风险 3 条。",
     "date": "2026-08-19",
-    "generatedAt": "2026-08-19T23:00:18.136Z"
+    "generatedAt": "2026-08-20T04:00:18.579Z"
   },
   "records": [
     {
@@ -755,7 +755,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工商银行i豆免费兑换滴漏咖啡机",
-      "content": "工商��行i豆免费兑换滴漏咖啡机",
+      "content": "工商银行i豆免费兑换滴漏咖啡机",
       "url": "https://www.xiaohongshu.com/explore/6a72c4770000000005022547",
       "author": "Rorschach",
       "status": "已发布",
@@ -788,7 +788,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "medium",
-      "title": "工行升���有礼吐槽",
+      "title": "工行升金有礼吐槽",
       "content": "工行升金有礼吐槽",
       "url": "https://www.xiaohongshu.com/explore/6a30d5130000000022019fce",
       "author": "一定会发财13",
@@ -1326,7 +1326,7 @@
       "sentiment": "negative",
       "riskLevel": "high",
       "title": "工行骚扰短信",
-      "content": "工行骚���短信",
+      "content": "工行骚扰短信",
       "url": "https://www.xiaohongshu.com/explore/6a83b160000000000801077c",
       "author": "momo",
       "status": "已发布",
@@ -1392,7 +1392,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "这工商银行不作为，找谁啊",
-      "content": "这工商��行不作为，找谁啊",
+      "content": "这工商银行不作为，找谁啊",
       "url": "https://www.xiaohongshu.com/explore/694b3e3d000000001f006257",
       "author": "初见",
       "status": "已发布",
@@ -1457,7 +1457,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "���商银行信用卡积分兑换啦",
+      "title": "工商银行信用卡积分兑换啦",
       "content": "工商银行信用卡积分兑换啦",
       "url": "https://www.xiaohongshu.com/explore/6a7c534a000000002800aeaf",
       "author": "积分兑换",
@@ -1959,7 +1959,7 @@
       "content": "工行低碳行打卡2.3w豆",
       "url": "https://www.xiaohongshu.com/explore/6a7f0a7800000000220111e3",
       "author": "哇咔咔",
-      "status": "已���布",
+      "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
       "fetchTime": "2026-08-19T10:14:08.253217",
