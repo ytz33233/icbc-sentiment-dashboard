@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-24",
+  "generatedAt": "2026-08-23T23:00:41.493Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 5,
+    "neutral": 24,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 4,
+    "neutral": 25,
+    "negative": 1
+  },
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "12月18日工行新动有礼回馈，1Wi豆起",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "语气带有讽刺和不满，暗示活动优惠力度小或虚假。"
+    },
+    {
+      "title": "工行i豆的最强兑换方式☞买金！！！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题含银行表情符号，但内容仅为活动名称列举，无明确情感表达。"
+    },
+    {
+      "title": "7月工行升金达标8000×2豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用'最强兑换方式'和感叹号，语气积极，分享兑换技巧。"
+    },
+    {
+      "title": "工行如意金积存，终于提取出来了‼️指南如下",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题为信息分享，介绍2026年高端信用卡指南，无情感倾向。"
+    },
+    {
+      "title": "工行交港硕学费优惠焚决",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享中奖好消息，'中了50'和'自己去试试'带有鼓励和开心情绪。"
+    },
+    {
+      "title": "［羊毛集锦］新开了工行的卡，准备攒豆啦",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "分享攻略信息，无情感倾向"
+    },
+    {
+      "title": "工行你有活动是真减啊",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容仅为简单陈述‘工行100豆’，没有表达任何情感倾向，属于客观信息分享。"
+    }
+  ]
+}

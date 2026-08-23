@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-23",
-  "generatedAt": "2026-08-23 22:57",
+  "generatedAt": "2026-08-23 07:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-23）采集到 92 条小红书舆情，负面 1 条，高风险 1 条。",
     "date": "2026-08-23",
-    "generatedAt": "2026-08-23T14:57:09.670Z"
+    "generatedAt": "2026-08-23T23:00:24.614Z"
   },
   "records": [
     {
@@ -383,7 +383,7 @@
       "title": "8月21日工行i 豆任务更新，666i豆",
       "content": "8月21日工行i 豆任务更新，666i豆",
       "url": "https://www.xiaohongshu.com/explore/6a872851000000000902eb85",
-      "author": "���巷表弟",
+      "author": "小巷表弟",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
@@ -517,7 +517,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "麻了，工行的升金有礼是在这个界面吗？",
-      "content": "��了，工行的升金有礼是在这个界面吗？",
+      "content": "麻了，工行的升金有礼是在这个界面吗？",
       "url": "https://www.xiaohongshu.com/explore/6991db0d000000000a0285a3",
       "author": "94张张啊",
       "status": "已发布",
@@ -655,7 +655,7 @@
       "title": "八月安徽工行升金有礼来袭",
       "content": "八月安徽工行升金有礼来袭",
       "url": "https://www.xiaohongshu.com/explore/6a741ae90000000027020f33",
-      "author": "大李���财富江湖",
+      "author": "大李的财富江湖",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "升金有礼",
