@@ -2,8 +2,8 @@
 // 单条调试：测试 Kimi API 对情感判断的响应
 const https = require('https');
 
-const API_KEY = 'sk-EUgPbnZS9txUrdvkxKVZRXYIYsxCLRtUgybor8pF2uCkfdMT';
-const API_URL = 'https://api.moonshot.cn/v1/chat/completions';
+const API_KEY = 'sk-0274e33f7183414ca3d9c751ae310a05';
+const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 const testCases = [
   { title: '工行的立减金真的谁抽谁沉默，转一圈出现谢谢参与😠', expected: 'negative' },
@@ -24,7 +24,7 @@ async function callLLM(title) {
 帖子标题：${title}`;
 
   const body = JSON.stringify({
-    model: 'moonshot-v1-8k',
+    model: 'deepseek-chat',
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.1,
     max_tokens: 50

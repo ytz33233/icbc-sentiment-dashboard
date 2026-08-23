@@ -1,17 +1,67 @@
 {
   "date": "2026-08-23",
-  "generatedAt": "2026-08-23T04:10:22.018Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-08-23T14:57:54.804Z",
+  "totalRecords": 28,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 29,
-    "negative": 1
+    "positive": 3,
+    "neutral": 25,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 0,
-    "neutral": 29,
+    "positive": 5,
+    "neutral": 22,
     "negative": 1
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "工行i豆的最强兑换方式☞买金！！！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用'最强兑换方式'和感叹号，语气积极，分享兑换技巧。"
+    },
+    {
+      "title": "工行如意金积存，终于提取出来了‼️指南如下",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'终于提取出来了'表达完成心愿的喜悦"
+    },
+    {
+      "title": "中了50！工行自己去试试！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'中了50'分享中奖好消息，语气积极"
+    },
+    {
+      "title": "200w+工行i🫘豆推荐兑换什么❓",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均为询问兑换建议，无情感倾向。"
+    },
+    {
+      "title": "工行八月到十月节气集豆攻略来了！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "提供攻略信息，无情感倾向"
+    },
+    {
+      "title": "工行你有活动是真减啊",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "语气带有讽刺和不满，暗示活动优惠力度小或虚假。"
+    },
+    {
+      "title": "感谢工行，猝不及防的幸运~",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "表达感谢和惊喜，语气积极满意。"
+    }
+  ]
 }

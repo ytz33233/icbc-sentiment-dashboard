@@ -1,8 +1,8 @@
 const https = require('https');
 
-const API_KEY = process.env.LLM_API_KEY || 'sk-EUgPbnZS9txUrdvkxKVZRXYIYsxCLRtUgybor8pF2uCkfdMT';
-const API_URL = 'https://api.moonshot.cn/v1/chat/completions';
-const MODEL = 'moonshot-v1-8k';
+const API_KEY = process.env.LLM_API_KEY || 'sk-0274e33f7183414ca3d9c751ae310a05';
+const API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const MODEL = 'deepseek-chat';
 const BATCH_SIZE = 5;
 
 function log(...args) {
