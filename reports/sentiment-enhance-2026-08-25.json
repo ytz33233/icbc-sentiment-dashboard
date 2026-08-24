@@ -1,0 +1,39 @@
+{
+  "date": "2026-08-25",
+  "generatedAt": "2026-08-24T23:10:40.310Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 5,
+    "neutral": 24,
+    "negative": 1
+  },
+  "afterStats": {
+    "positive": 6,
+    "neutral": 23,
+    "negative": 1
+  },
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "抢先看！工行1.08+8.18+1+3.88",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用'抢先看'和具体金额，语气积极，分享好消息。"
+    },
+    {
+      "title": "抢先看！8.24明天工行能领14.76！！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用'抢先看'和感叹号，强调可领取金额，语气兴奋积极。"
+    },
+    {
+      "title": "［羊毛集锦］新开了工行的卡，准备攒豆啦",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "陈述开卡和攒豆计划，无情感倾向"
+    }
+  ]
+}
