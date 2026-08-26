@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-27",
+  "generatedAt": "2026-08-26T23:00:27.748Z",
+  "totalRecords": 1,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 1,
+    "neutral": 0,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "工行如图有小虹包",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容提到“有小虹包”，暗示有红包或优惠活动，语气带有分享好消息的积极意味。"
+    }
+  ]
+}

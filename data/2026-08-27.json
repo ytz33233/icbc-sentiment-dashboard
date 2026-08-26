@@ -1,0 +1,155 @@
+{
+  "reportDate": "2026-08-27",
+  "generatedAt": "2026-08-27 07:00",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 0,
+    "historyCount": 1,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 1,
+    "neutralCount": 0,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 1,
+    "neutral": 0,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "其他": 1
+  },
+  "byCategory": {
+    "其他": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-08-21",
+      "total": 14,
+      "recent": 0,
+      "history": 14,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-22",
+      "total": 12,
+      "recent": 0,
+      "history": 12,
+      "negative": 2
+    },
+    {
+      "date": "2026-08-23",
+      "total": 10,
+      "recent": 6,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-24",
+      "total": 23,
+      "recent": 0,
+      "history": 23,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-25",
+      "total": 13,
+      "recent": 9,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-26",
+      "total": 2,
+      "recent": 1,
+      "history": 1,
+      "negative": 1
+    },
+    {
+      "date": "2026-08-27",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [],
+  "hotTopics": [
+    {
+      "topic": "工行红包活动",
+      "summary": "工行小虹包相关讨论",
+      "postCount": 1,
+      "postIndices": [
+        0
+      ],
+      "keywords": [
+        "工行",
+        "小虹包"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 21,
+      "topPosts": [
+        {
+          "id": "20260827-01",
+          "title": "工行如图有小虹包",
+          "heatScore": 21,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-08-27）共采集 1 条舆情。",
+    "date": "2026-08-27",
+    "generatedAt": "2026-08-26T23:00:26.300Z"
+  },
+  "records": [
+    {
+      "title": "工行如图有小虹包",
+      "content": "工行如图有小虹包",
+      "source": "扒羊毛",
+      "publishTime": "Wed Jul 08 19:20:16 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5318487167995968",
+      "likes": 11,
+      "comments": 5,
+      "favorites": 0,
+      "recency": "历史",
+      "sentiment": "positive",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-07-08",
+      "fetchTime": "2026-08-27",
+      "author": "扒羊毛",
+      "id": "20260827-01",
+      "category": "其他",
+      "heatScore": 21,
+      "llmSentiment": "positive",
+      "llmReason": "标题和内容提到“有小虹包”，暗示有红包或优惠活动，语气带有分享好消息的积极意味。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-08-26T23:00:27.747Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
