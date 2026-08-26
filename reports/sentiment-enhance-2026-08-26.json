@@ -1,39 +1,53 @@
 {
   "date": "2026-08-26",
-  "generatedAt": "2026-08-26T04:00:51.053Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-08-26T16:49:00.898Z",
+  "totalRecords": 12,
   "beforeStats": {
-    "positive": 5,
-    "neutral": 24,
-    "negative": 1
+    "positive": 2,
+    "neutral": 10,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 6,
-    "neutral": 23,
-    "negative": 1
+    "positive": 5,
+    "neutral": 5,
+    "negative": 2
   },
-  "diffCount": 3,
+  "diffCount": 5,
   "changes": [
     {
-      "title": "抢先看！工行1.08+8.18+1+3.88",
+      "title": "工行升金有礼超级大缩水",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题和内容均提到‘超级大缩水’，表达了对活动力度缩水的不满和失望。"
+    },
+    {
+      "title": "工行Visa卡，新人领礼品都没了",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "作者抱怨新人领礼品活动没有了，表达不满。"
+    },
+    {
+      "title": "工行八闽有礼活动又来了",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "使用'抢先看'和具体金额，语气积极，分享好消息。"
+      "reason": "作者分享活动再次到来的好消息，语气积极。"
     },
     {
-      "title": "抢先看！8.24明天工行能领14.76！！",
+      "title": "08.24工行  丝滑0.8🧧🧧🧧",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "使用'抢先看'和感叹号，强调可领金额，语气兴奋积极。"
+      "reason": "使用‘丝滑’和多个红包表情表达顺利获得0.8元红包的满意和开心。"
     },
     {
-      "title": "［羊毛集锦］新开了工行的卡，准备攒豆啦",
-      "before": "positive",
-      "after": "neutral",
+      "title": "工行每周一测答题0.2*4丝滑拿下BACA",
+      "before": "neutral",
+      "after": "positive",
       "method": "llm",
-      "reason": "陈述开卡和攒豆计划，语气中性"
+      "reason": "‘丝滑拿下’表达顺利完成任务并获得0.2*4奖励的积极情绪，BACA可能指代活动名称，整体语气满意。"
     }
   ]
 }

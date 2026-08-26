@@ -1,17 +1,116 @@
 {
   "date": "2026-08-25",
-  "generatedAt": "2026-08-25T04:10:44.689Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-08-26T16:48:45.868Z",
+  "totalRecords": 36,
   "beforeStats": {
-    "positive": 5,
-    "neutral": 24,
-    "negative": 1
+    "positive": 2,
+    "neutral": 34,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 5,
-    "neutral": 24,
-    "negative": 1
+    "positive": 12,
+    "neutral": 22,
+    "negative": 2
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 14,
+  "changes": [
+    {
+      "title": "终于来了！好久没拿工行i豆了",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容表达期待和喜悦，'终于来了'和'好久没拿'体现积极情绪。"
+    },
+    {
+      "title": "［羊毛集锦］工行i豆新任务，快来攒豆吧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题为信息分享，'羊毛集锦'和'快来攒豆'是客观活动介绍，无强烈情感。"
+    },
+    {
+      "title": "工商银行打卡失败，有没有的解",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题表达打卡失败，'有没有的解'体现困惑和不满情绪。"
+    },
+    {
+      "title": "急!工商银行商城单笔消费怎么能提额啊？？？",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题和内容都使用'急!'表达急切和不满，询问如何提额，带有焦虑和抱怨情绪。"
+    },
+    {
+      "title": "🔥工行立减金｜全国可冲！1.88‑3.88元",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用🔥表情和'全国可冲'等积极词汇，分享立减金优惠信息，语气兴奋和满意。"
+    },
+    {
+      "title": "工行抽奖，又中了6666豆子，折💰6.66r",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'又中了'和'折💰6.66r'表达中奖的喜悦和分享好消息，语气积极开心。"
+    },
+    {
+      "title": "8月❗️工行17元立减金（第三更）",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容使用感叹号和金额，表达分享优惠的积极情绪。"
+    },
+    {
+      "title": "工行答题0.8红包🧧 人人可拿",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用红包和人人可拿等词，语气积极，分享好消息。"
+    },
+    {
+      "title": "工行每周一测领0.8！➕0.3抽奖！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用感叹号和金额，表达分享优惠的积极情绪。"
+    },
+    {
+      "title": "工行答题领0.2！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用感叹号和金额，表达分享优惠的积极情绪。"
+    },
+    {
+      "title": "8.25！工行3.16立减！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用感叹号强调立减金额，语气积极，分享优惠好消息。"
+    },
+    {
+      "title": "我爱工行！588888的大豆子！！！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用‘我爱工行’和多个感叹号，表达强烈的喜爱和兴奋，属于积极情感。"
+    },
+    {
+      "title": "湖北工行，昨天抽过今天又中了",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘昨天抽过今天又中了’分享中奖的好消息，语气带有喜悦和满足。"
+    },
+    {
+      "title": "8.25今天！工行1+1.08+1.08🧧！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用感叹号和红包表情，分享获得红包的好消息，语气积极开心。"
+    }
+  ]
 }
