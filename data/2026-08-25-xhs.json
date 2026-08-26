@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-25",
-  "generatedAt": "2026-08-25 07:00",
+  "generatedAt": "2026-08-25 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-25）采集到 91 条小红书舆情，负面 3 条，高风险 3 条。",
     "date": "2026-08-25",
-    "generatedAt": "2026-08-25T23:00:21.371Z"
+    "generatedAt": "2026-08-26T04:00:30.794Z"
   },
   "records": [
     {
@@ -1322,7 +1322,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工商银���信用卡积分换啥好",
+      "title": "工商银行信用卡积分换啥好",
       "content": "工商银行信用卡积分换啥好",
       "url": "https://www.xiaohongshu.com/explore/6a88f8e7000000003a02d3a5",
       "author": "希望🌲",

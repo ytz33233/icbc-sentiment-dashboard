@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-26",
-  "generatedAt": "2026-08-26 07:00",
+  "generatedAt": "2026-08-26 12:00",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -114,54 +114,6 @@
   ],
   "hotTopics": [
     {
-      "topic": "工行信用卡权益",
-      "summary": "工行信用卡积分、返现及高端卡权益讨论",
-      "postCount": 5,
-      "postIndices": [
-        8,
-        9,
-        11,
-        14,
-        15
-      ],
-      "keywords": [
-        "信用卡",
-        "积分",
-        "返现",
-        "高端卡",
-        "优惠"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 5,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 5
-      },
-      "totalHeat": 2289,
-      "topPosts": [
-        {
-          "id": "20260826-12",
-          "title": "新年新气象！2026高端信用卡指北（工行篇）",
-          "heatScore": 1542,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260826-09",
-          "title": "Ysh&工行返现 12笔成功 图式拆解",
-          "heatScore": 273,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260826-15",
-          "title": "工行交港硕学费优惠焚决",
-          "heatScore": 224,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "topic": "工行i豆活动",
       "summary": "工行i豆获取、兑换、答题及活动汇总",
       "postCount": 11,
@@ -216,16 +168,52 @@
       ]
     },
     {
-      "topic": "工行活动合集",
-      "summary": "工行各类活动预告、汇总及羊毛信息",
-      "postCount": 11,
+      "topic": "工行信用卡权益",
+      "summary": "工行信用卡积分、高端卡及用卡指南",
+      "postCount": 2,
+      "postIndices": [
+        9,
+        11
+      ],
+      "keywords": [
+        "信用卡",
+        "积分",
+        "高端卡",
+        "权益"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 1580,
+      "topPosts": [
+        {
+          "id": "20260826-12",
+          "title": "新年新气象！2026高端信用卡指北（工行篇）",
+          "heatScore": 1542,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260826-10",
+          "title": "工商银行信用卡积分换啥好",
+          "heatScore": 38,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行羊毛福利",
+      "summary": "工行各类红包、返现、立减等福利活动",
+      "postCount": 9,
       "postIndices": [
         0,
-        5,
-        7,
-        10,
+        8,
         13,
-        17,
+        15,
         19,
         20,
         21,
@@ -233,21 +221,21 @@
         27
       ],
       "keywords": [
-        "活动",
-        "羊毛",
         "红包",
+        "返现",
+        "立减",
         "福利",
-        "预告"
+        "羊毛"
       ],
       "sentiment": {
         "positive": 2,
-        "neutral": 8,
+        "neutral": 6,
         "negative": 1
       },
       "sources": {
-        "xiaohongshu": 11
+        "xiaohongshu": 9
       },
-      "totalHeat": 808,
+      "totalHeat": 1154,
       "topPosts": [
         {
           "id": "20260826-14",
@@ -256,22 +244,22 @@
           "sentiment": "positive"
         },
         {
-          "id": "20260826-18",
-          "title": "工行低碳行",
-          "heatScore": 65,
+          "id": "20260826-09",
+          "title": "Ysh&工行返现 12笔成功 图式拆解",
+          "heatScore": 273,
           "sentiment": "neutral"
         },
         {
-          "id": "20260826-21",
-          "title": "抢先看！8.24明天工行能领14.76！！",
-          "heatScore": 45,
+          "id": "20260826-16",
+          "title": "港科银联云闪付能工行立减10%吗",
+          "heatScore": 212,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "topic": "工行贵金属",
-      "summary": "工行如意金积存及提取相关经验分享",
+      "topic": "工行贵金属业务",
+      "summary": "工行如意金积存及提取相关经验",
       "postCount": 1,
       "postIndices": [
         12
@@ -301,17 +289,18 @@
       ]
     },
     {
-      "topic": "工行风物集兑换",
-      "summary": "工行风物集兑换及换购活动",
+      "topic": "工行跨境缴费",
+      "summary": "工行缴纳港校学费及境外支付优惠",
       "postCount": 2,
       "postIndices": [
-        18,
-        22
+        14,
+        15
       ],
       "keywords": [
-        "风物集",
-        "兑换",
-        "换购"
+        "港硕",
+        "学费",
+        "跨境",
+        "云闪付"
       ],
       "sentiment": {
         "positive": 0,
@@ -321,12 +310,56 @@
       "sources": {
         "xiaohongshu": 2
       },
-      "totalHeat": 122,
+      "totalHeat": 436,
+      "topPosts": [
+        {
+          "id": "20260826-15",
+          "title": "工行交港硕学费优惠焚决",
+          "heatScore": 224,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260826-16",
+          "title": "港科银联云闪付能工行立减10%吗",
+          "heatScore": 212,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行其他活动",
+      "summary": "工行风物集、低碳行及兑换活动",
+      "postCount": 3,
+      "postIndices": [
+        17,
+        18,
+        22
+      ],
+      "keywords": [
+        "风物集",
+        "低碳行",
+        "兑换"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 3
+      },
+      "totalHeat": 187,
       "topPosts": [
         {
           "id": "20260826-19",
           "title": "工行风物集2换1",
           "heatScore": 82,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260826-18",
+          "title": "工行低碳行",
+          "heatScore": 65,
           "sentiment": "neutral"
         },
         {
@@ -336,12 +369,78 @@
           "sentiment": "neutral"
         }
       ]
+    },
+    {
+      "topic": "工行升金活动",
+      "summary": "工行升金达标及月月花活动",
+      "postCount": 2,
+      "postIndices": [
+        5,
+        7
+      ],
+      "keywords": [
+        "升金",
+        "达标",
+        "月月花"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 2
+      },
+      "totalHeat": 46,
+      "topPosts": [
+        {
+          "id": "20260826-08",
+          "title": "7月工行升金达标8000×2豆",
+          "heatScore": 26,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260826-06",
+          "title": "🏦工行7月升金有礼+月月花",
+          "heatScore": 20,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "工行活动汇总",
+      "summary": "工行综合活动信息及预告",
+      "postCount": 1,
+      "postIndices": [
+        10
+      ],
+      "keywords": [
+        "活动",
+        "汇总"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 28,
+      "topPosts": [
+        {
+          "id": "20260826-11",
+          "title": "工商银行活动",
+          "heatScore": 28,
+          "sentiment": "neutral"
+        }
+      ]
     }
   ],
   "dailyBrief": {
     "text": "今日（2026-08-26）从历史数据中发现 3 条24H内新增舆情。当前累计展示 30 条。",
     "date": "2026-08-26",
-    "generatedAt": "2026-08-25T23:00:25.124Z"
+    "generatedAt": "2026-08-26T04:00:36.064Z"
   },
   "records": [
     {
@@ -415,7 +514,7 @@
       "category": "i豆兑换",
       "heatScore": 150,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述活动信息，无情感倾向。",
+      "llmReason": "客观陈述活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -453,7 +552,7 @@
       "category": "i豆兑换",
       "heatScore": 46,
       "llmSentiment": "neutral",
-      "llmReason": "客观描述任务更新和奖励，无情感表达。",
+      "llmReason": "客观陈述任务更新及奖励，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -567,7 +666,7 @@
       "category": "资产达标",
       "heatScore": 20,
       "llmSentiment": "neutral",
-      "llmReason": "标题包含表情符号但仅用于装饰，内容为活动信息，无明确情感倾向。",
+      "llmReason": "标题包含银行图标和活动名称，客观陈述，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -606,7 +705,7 @@
       "category": "i豆兑换",
       "heatScore": 370,
       "llmSentiment": "positive",
-      "llmReason": "标题使用'最强兑换方式'和感叹号，语气积极，分享兑换技巧。",
+      "llmReason": "标题使用'最强兑换方式'和感叹号，语气积极兴奋，分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -717,7 +816,7 @@
       "category": "i豆兑换",
       "heatScore": 38,
       "llmSentiment": "neutral",
-      "llmReason": "询问积分兑换建议，属于信息咨询，无情感倾向。",
+      "llmReason": "提问式标题，询问积分兑换建议，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -753,7 +852,7 @@
       "category": "其他",
       "heatScore": 28,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及活动名称，无具体内容或情感表达。",
+      "llmReason": "仅提及活动名称，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -791,7 +890,7 @@
       "category": "其他",
       "heatScore": 1542,
       "llmSentiment": "neutral",
-      "llmReason": "标题为信息分享，无情感倾向",
+      "llmReason": "标题为信息分享，介绍2026高端信用卡指南，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -827,7 +926,7 @@
       "category": "其他",
       "heatScore": 584,
       "llmSentiment": "positive",
-      "llmReason": "'终于提取出来了'表达完成后的满足感，指南分享带有积极情绪",
+      "llmReason": "使用'终于提取出来了'表达成功后的喜悦，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -863,7 +962,7 @@
       "category": "其他",
       "heatScore": 504,
       "llmSentiment": "positive",
-      "llmReason": "'中了50'是分享好消息，语气兴奋，鼓励他人尝试",
+      "llmReason": "'中了50'分享中奖好消息，语气兴奋，鼓励他人尝试。",
       "sentimentMethod": "llm"
     },
     {
@@ -899,7 +998,7 @@
       "category": "其他",
       "heatScore": 224,
       "llmSentiment": "neutral",
-      "llmReason": "标题为攻略分享，无情感倾向",
+      "llmReason": "标题为优惠信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -935,7 +1034,7 @@
       "category": "其他",
       "heatScore": 212,
       "llmSentiment": "neutral",
-      "llmReason": "标题为疑问句，客观询问，无情感倾向",
+      "llmReason": "标题为疑问句，询问优惠是否适用，客观陈述，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1189,7 +1288,7 @@
       "category": "其他",
       "heatScore": 40,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述活动内容，无情感倾向",
+      "llmReason": "客观陈述活动内容，无情感表达",
       "sentimentMethod": "llm"
     },
     {
@@ -1450,6 +1549,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-25T23:00:39.377Z",
+  "llmEnhancedAt": "2026-08-26T04:00:51.053Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
