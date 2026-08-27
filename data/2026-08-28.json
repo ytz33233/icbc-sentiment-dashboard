@@ -1,0 +1,245 @@
+{
+  "reportDate": "2026-08-28",
+  "generatedAt": "2026-08-28 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 0,
+    "historyCount": 2,
+    "negativeCount": 1,
+    "negativePct": "50.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 1
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "i豆活动": 1,
+    "其他": 1
+  },
+  "byCategory": {
+    "i豆兑换": 2
+  },
+  "trend7d": [
+    {
+      "date": "2026-08-22",
+      "total": 12,
+      "recent": 0,
+      "history": 12,
+      "negative": 2
+    },
+    {
+      "date": "2026-08-23",
+      "total": 10,
+      "recent": 6,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-24",
+      "total": 23,
+      "recent": 0,
+      "history": 23,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-25",
+      "total": 13,
+      "recent": 9,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-26",
+      "total": 2,
+      "recent": 1,
+      "history": 1,
+      "negative": 1
+    },
+    {
+      "date": "2026-08-27",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-08-28",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "i豆",
+      "count": 1
+    },
+    {
+      "word": "贬值",
+      "count": 1
+    },
+    {
+      "word": "积分",
+      "count": 1
+    },
+    {
+      "word": "兑换",
+      "count": 1
+    },
+    {
+      "word": "立减金",
+      "count": 1
+    }
+  ],
+  "hotTopics": [
+    {
+      "topic": "工行抽立减金",
+      "summary": "工行小程序抽立减金活动分享",
+      "postCount": 1,
+      "postIndices": [
+        1
+      ],
+      "keywords": [
+        "工行",
+        "立减金",
+        "小程序"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 25,
+      "topPosts": [
+        {
+          "id": "20260828-02",
+          "title": "工行，小程序页面中间-龙江印象，抽立减金试试",
+          "heatScore": 25,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "topic": "银行积分缩水",
+      "summary": "多家银行积分权益缩水引发消费者不满",
+      "postCount": 1,
+      "postIndices": [
+        0
+      ],
+      "keywords": [
+        "银行",
+        "积分",
+        "权益缩水"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 5,
+      "topPosts": [
+        {
+          "id": "20260828-01",
+          "title": "#多家银行被指积分权益大缩水# 【 #银行被指积分权益缩水消费者发声# ：并未提...",
+          "heatScore": 5,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-08-28）共采集 2 条舆情。热词包括「i豆、贬值、积分」。",
+    "date": "2026-08-28",
+    "generatedAt": "2026-08-27T23:10:26.809Z"
+  },
+  "records": [
+    {
+      "title": "#多家银行被指积分权益大缩水# 【 #银行被指积分权益缩水消费者发声# ：并未提...",
+      "content": "<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&extparam=%23%E5%A4%9A%E5%AE%B6%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E5%A4%A7%E7%BC%A9%E6%B0%B4%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#多家银行被指积分权益大缩水#</span></a>【<a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&extparam=%23%E9%93%B6%E8%A1%8C%E8%A2%AB%E6%8C%87%E7%A7%AF%E5%88%86%E6%9D%83%E7%9B%8A%E7%BC%A9%E6%B0%B4%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%91%E5%A3%B0%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#银行被指积分权益缩水消费者发声#</span></a>：并未提前告知会贬值，也无缓冲期】据中国消费者报消息：5月9日，浙江消费者晓聪反映称，中国工商银行随意变更积分兑换比例，偷偷贬值积分，涉嫌损害消费者权益。记者发现，4月8日，工行官网发布了一则通告称：“工银i豆”可在累积后 ...<a href=\"/status/5166957928121412\">全文</a>",
+      "source": "九派新闻",
+      "publishTime": "Fri May 16 15:57:10 +0800 2025",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5166957928121412",
+      "likes": 1,
+      "comments": 1,
+      "favorites": 1,
+      "recency": "历史",
+      "sentiment": "negative",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "i豆活动",
+      "keywords": [
+        "i豆",
+        "贬值",
+        "积分",
+        "兑换"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2025-05-16",
+      "fetchTime": "2026-08-28",
+      "author": "九派新闻",
+      "id": "20260828-01",
+      "category": "i豆兑换",
+      "heatScore": 5,
+      "llmSentiment": "negative",
+      "llmReason": "标题和内容提到银行积分权益缩水，消费者发声，暗示不满和抱怨。",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行，小程序页面中间-龙江印象，抽立减金试试",
+      "content": "工行，小程序页面中间-龙江印象，抽立减金试试",
+      "source": "优惠女孩的日常",
+      "publishTime": "Mon Dec 30 14:52:01 +0800 2024",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5117294395523500",
+      "likes": 8,
+      "comments": 7,
+      "favorites": 2,
+      "recency": "历史",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [
+        "立减金"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2024-12-30",
+      "fetchTime": "2026-08-28",
+      "author": "优惠女孩的日常",
+      "id": "20260828-02",
+      "category": "i豆兑换",
+      "heatScore": 25,
+      "llmSentiment": "neutral",
+      "llmReason": "内容为分享工行小程序抽立减金的活动信息，无情感倾向，属于客观陈述。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-08-27T23:10:28.101Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

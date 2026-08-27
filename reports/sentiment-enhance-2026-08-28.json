@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-28",
+  "generatedAt": "2026-08-27T23:10:28.102Z",
+  "totalRecords": 2,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 1
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "#多家银行被指积分权益大缩水# 【 #银行被指积分权益缩水消费者发声# ：并未提...",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题和内容提到银行积分权益缩水，消费者发声，暗示不满和抱怨。"
+    }
+  ]
+}
