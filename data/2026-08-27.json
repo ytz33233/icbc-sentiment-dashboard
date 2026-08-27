@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-27",
-  "generatedAt": "2026-08-27 07:00",
+  "generatedAt": "2026-08-27 12:00",
   "fromHistory": false,
   "summary": {
     "total": 1,
@@ -84,15 +84,15 @@
   "hotKeywords": [],
   "hotTopics": [
     {
-      "topic": "工行红包活动",
-      "summary": "工行小虹包相关讨论",
+      "topic": "工行红包",
+      "summary": "工行相关红包活动信息",
       "postCount": 1,
       "postIndices": [
         0
       ],
       "keywords": [
         "工行",
-        "小虹包"
+        "红包"
       ],
       "sentiment": {
         "positive": 0,
@@ -116,7 +116,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-27）共采集 1 条舆情。",
     "date": "2026-08-27",
-    "generatedAt": "2026-08-26T23:00:26.300Z"
+    "generatedAt": "2026-08-27T04:00:24.615Z"
   },
   "records": [
     {
@@ -146,10 +146,10 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "positive",
-      "llmReason": "标题和内容提到“有小虹包”，暗示有红包或优惠活动，语气带有分享好消息的积极意味。",
+      "llmReason": "作者分享工行有小红包的消息，语气带有分享好消息的积极意味。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-26T23:00:27.747Z",
+  "llmEnhancedAt": "2026-08-27T04:00:25.756Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

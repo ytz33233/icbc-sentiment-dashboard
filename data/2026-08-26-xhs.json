@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-26",
-  "generatedAt": "2026-08-26 07:00",
+  "generatedAt": "2026-08-26 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-26）采集到 88 条小红书舆情，负面 4 条，高风险 4 条。",
     "date": "2026-08-26",
-    "generatedAt": "2026-08-26T23:00:23.121Z"
+    "generatedAt": "2026-08-27T04:00:22.803Z"
   },
   "records": [
     {
@@ -482,7 +482,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "麻了，工行的升金有礼是在这个界面吗？",
-      "content": "麻了，工行的升金有礼是在这个界面吗？",
+      "content": "麻了，工行的升金有礼是在��个界面吗？",
       "url": "https://www.xiaohongshu.com/explore/6991db0d000000000a0285a3",
       "author": "94张张啊",
       "status": "已发布",
@@ -549,7 +549,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "medium",
-      "title": "八月安徽工行升金有礼来袭",
+      "title": "八月安徽工行��金有礼来袭",
       "content": "八月安徽工行升金有礼来袭",
       "url": "https://www.xiaohongshu.com/explore/6a741ae90000000027020f33",
       "author": "大李的财富江湖",
@@ -1589,7 +1589,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "大量收工行/中行读书卡读书积分",
-      "content": "大量收工行/中行读书卡读书积分",
+      "content": "大量���工行/中行读书卡读书积分",
       "url": "https://www.xiaohongshu.com/explore/69d30f52000000001a030670",
       "author": "东南亚摩羯座黄果",
       "status": "已发布",
