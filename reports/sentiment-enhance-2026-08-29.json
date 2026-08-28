@@ -1,0 +1,123 @@
+{
+  "date": "2026-08-29",
+  "generatedAt": "2026-08-28T23:10:37.131Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 9,
+    "neutral": 16,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 7,
+    "neutral": 18,
+    "negative": 5
+  },
+  "diffCount": 15,
+  "changes": [
+    {
+      "title": "工行，小程序页面中间-龙江印象，抽立减金试试",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "标题和内容均提到‘超级大缩水’，表达了对活动力度缩水的不满和失望。"
+    },
+    {
+      "title": "工行如图有小虹包",
+      "before": "positive",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "作者抱怨新人领礼品活动没有了，表达不满。"
+    },
+    {
+      "title": "工行的i豆太棒了",
+      "before": "positive",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "标题和内容都使用'急!'表达急切和不满，询问如何提额，带有焦虑和抱怨情绪。"
+    },
+    {
+      "title": "工行薅羊毛啦",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。"
+    },
+    {
+      "title": "工行易方达抽奖0.4",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用'太棒了'表达对工行i豆的赞赏和满意，语气积极。"
+    },
+    {
+      "title": "工行Visa卡，新人领礼品都没了",
+      "before": "negative",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'薅羊毛啦'带有兴奋和分享好处的积极情绪，语气愉快。"
+    },
+    {
+      "title": "工行八闽有礼活动又来了",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "作者客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。"
+    },
+    {
+      "title": "08.24工行  丝滑0.8🧧🧧🧧",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均为客观陈述兑换活动，无情感倾向。"
+    },
+    {
+      "title": "工行每周一测答题0.2*4丝滑拿下BACA",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均为客观陈述积分活动，无情感倾向。"
+    },
+    {
+      "title": "工行666i豆➕1-1.88r",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用‘丝滑’和多个红包表情，表达顺利获得0.8元红包的愉悦心情。"
+    },
+    {
+      "title": "8月24日工行i豆新任务，666i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘丝滑拿下’体现轻松完成任务并获得奖励的满意态度。"
+    },
+    {
+      "title": "终于来了！好久没拿工行i豆了",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容仅列出活动内容，无情感倾向表达。"
+    },
+    {
+      "title": "工行积分兑换行李箱",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用'终于来了'和'好久没拿'表达期待和喜悦，语气积极。"
+    },
+    {
+      "title": "工商银行打卡失败，有没有的解",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "仅陈述兑换物品，无情感表达。"
+    },
+    {
+      "title": "急!工商银行商城单笔消费怎么能提额啊？？？",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题和内容均为信息汇总，无情感倾向。"
+    }
+  ]
+}
