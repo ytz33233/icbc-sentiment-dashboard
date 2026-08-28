@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-28",
-  "generatedAt": "2026-08-28 07:10",
+  "generatedAt": "2026-08-28 12:10",
   "fromHistory": false,
   "summary": {
     "total": 2,
@@ -106,7 +106,7 @@
   ],
   "hotTopics": [
     {
-      "topic": "工行抽立减金",
+      "topic": "工行抽奖活动",
       "summary": "工行小程序抽立减金活动分享",
       "postCount": 1,
       "postIndices": [
@@ -114,8 +114,8 @@
       ],
       "keywords": [
         "工行",
-        "立减金",
-        "小程序"
+        "小程序",
+        "立减金"
       ],
       "sentiment": {
         "positive": 0,
@@ -169,7 +169,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-28）共采集 2 条舆情。热词包括「i豆、贬值、积分」。",
     "date": "2026-08-28",
-    "generatedAt": "2026-08-27T23:10:26.809Z"
+    "generatedAt": "2026-08-28T04:10:27.876Z"
   },
   "records": [
     {
@@ -236,10 +236,10 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "内容为分享工行小程序抽立减金的活动信息，无情感倾向，属于客观陈述。",
+      "llmReason": "内容为分享工行小程序抽立减金的信息，无情感倾向，属于客观信息分享。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-27T23:10:28.101Z",
+  "llmEnhancedAt": "2026-08-28T04:10:28.960Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
