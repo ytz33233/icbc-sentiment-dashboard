@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-29",
-  "generatedAt": "2026-08-29 07:10",
+  "generatedAt": "2026-08-29 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -181,7 +181,7 @@
     },
     {
       "topic": "工行活动缩水",
-      "summary": "工行积分、权益及礼品缩水反馈",
+      "summary": "工行积分、权益及礼品缩水问题",
       "postCount": 3,
       "postIndices": [
         0,
@@ -276,7 +276,7 @@
     },
     {
       "topic": "工行答题活动",
-      "summary": "工行每周一测及答题抽奖",
+      "summary": "工行每周一测等答题活动",
       "postCount": 2,
       "postIndices": [
         14,
@@ -285,7 +285,7 @@
       "keywords": [
         "答题",
         "每周一测",
-        "抽奖"
+        "BACA"
       ],
       "sentiment": {
         "positive": 1,
@@ -322,7 +322,7 @@
       "keywords": [
         "薅羊毛",
         "抽奖",
-        "优惠"
+        "易方达"
       ],
       "sentiment": {
         "positive": 1,
@@ -350,39 +350,32 @@
     },
     {
       "topic": "工行其他问题",
-      "summary": "工行打卡、提额及积分兑换问题",
-      "postCount": 3,
+      "summary": "工行打卡、提额等使用问题",
+      "postCount": 2,
       "postIndices": [
-        22,
         24,
         25
       ],
       "keywords": [
         "打卡",
         "提额",
-        "积分兑换"
+        "商城"
       ],
       "sentiment": {
         "positive": 0,
-        "neutral": 1,
+        "neutral": 0,
         "negative": 2
       },
       "sources": {
-        "xiaohongshu": 3
+        "xiaohongshu": 2
       },
-      "totalHeat": 31,
+      "totalHeat": 22,
       "topPosts": [
         {
           "id": "20260829-25",
           "title": "工商银行打卡失败，有没有的解",
           "heatScore": 17,
           "sentiment": "negative"
-        },
-        {
-          "id": "20260829-23",
-          "title": "工行积分兑换行李箱",
-          "heatScore": 9,
-          "sentiment": "neutral"
         },
         {
           "id": "20260829-26",
@@ -393,8 +386,38 @@
       ]
     },
     {
+      "topic": "工行积分兑换",
+      "summary": "工行积分兑换实物商品",
+      "postCount": 1,
+      "postIndices": [
+        22
+      ],
+      "keywords": [
+        "积分",
+        "兑换",
+        "行李箱"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 9,
+      "topPosts": [
+        {
+          "id": "20260829-23",
+          "title": "工行积分兑换行李箱",
+          "heatScore": 9,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "topic": "工行地区活动",
-      "summary": "工行各地特色活动及福利",
+      "summary": "工行各地特色活动及优惠",
       "postCount": 3,
       "postIndices": [
         9,
@@ -441,7 +464,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-29）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-08-29",
-    "generatedAt": "2026-08-28T23:10:27.565Z"
+    "generatedAt": "2026-08-29T04:10:28.631Z"
   },
   "records": [
     {
@@ -656,7 +679,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。",
+      "llmReason": "标题和内容均为客观陈述，分享活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -686,7 +709,7 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "neutral",
-      "llmReason": "作者简单陈述工行有小红包的事实，语气中性，无情感色彩。",
+      "llmReason": "标题和内容均为客观陈述，提及有小红包，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -724,7 +747,7 @@
       "category": "i豆兑换",
       "heatScore": 298,
       "llmSentiment": "positive",
-      "llmReason": "使用'太棒了'表达对工行i豆的赞赏和满意，语气积极。",
+      "llmReason": "使用“太棒了”表达积极满意和赞赏。",
       "sentimentMethod": "llm"
     },
     {
@@ -760,7 +783,7 @@
       "category": "薅羊毛",
       "heatScore": 24,
       "llmSentiment": "positive",
-      "llmReason": "'薅羊毛啦'带有兴奋和分享好处的积极情绪，语气愉快。",
+      "llmReason": "使用“薅羊毛啦”表达开心和分享好消息的积极情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -798,7 +821,7 @@
       "category": "i豆兑换",
       "heatScore": 119,
       "llmSentiment": "neutral",
-      "llmReason": "作者客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。",
+      "llmReason": "客观陈述活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -872,7 +895,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述活动再次举办，无情感倾向。",
+      "llmReason": "标题和内容为活动信息分享，语气中性，无积极或消极表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -908,7 +931,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述获得豆子数量，无情感倾向。",
+      "llmReason": "标题和内容仅陈述获得豆子数量，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -944,7 +967,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述兑换活动，无情感倾向。",
+      "llmReason": "标题和内容为活动信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -982,7 +1005,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述积分活动，无情感倾向。",
+      "llmReason": "标题和内容为活动信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1130,7 +1153,7 @@
       "category": "i豆兑换",
       "heatScore": 42,
       "llmSentiment": "neutral",
-      "llmReason": "客观描述新任务和奖励，无情感表达。",
+      "llmReason": "客观描述新任务及奖励，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -1168,7 +1191,7 @@
       "category": "i豆兑换",
       "heatScore": 18,
       "llmSentiment": "neutral",
-      "llmReason": "简单陈述抽奖结果，无情感倾向。",
+      "llmReason": "简单陈述抽奖结果，未表达情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1207,7 +1230,7 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅列出活动内容，无情感倾向表达。",
+      "llmReason": "标题和内容仅列出活动内容，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1245,7 +1268,7 @@
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述活动名称，无情感色彩。",
+      "llmReason": "仅陈述活动名称，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1321,7 +1344,7 @@
       "category": "i豆兑换",
       "heatScore": 8,
       "llmSentiment": "neutral",
-      "llmReason": "标题为信息分享，'快来攒豆吧'是号召性用语，但整体无强烈情感倾向。",
+      "llmReason": "标题为信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1550,6 +1573,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-28T23:10:37.130Z",
+  "llmEnhancedAt": "2026-08-29T04:10:38.705Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

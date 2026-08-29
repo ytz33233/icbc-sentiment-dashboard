@@ -1,6 +1,6 @@
 {
   "date": "2026-08-29",
-  "generatedAt": "2026-08-28T23:10:37.131Z",
+  "generatedAt": "2026-08-29T04:10:38.706Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 9,
@@ -40,42 +40,42 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。"
+      "reason": "标题和内容均为客观陈述，分享活动信息，无情感倾向。"
     },
     {
       "title": "工行易方达抽奖0.4",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "使用'太棒了'表达对工行i豆的赞赏和满意，语气积极。"
+      "reason": "使用“太棒了”表达积极满意和赞赏。"
     },
     {
       "title": "工行Visa卡，新人领礼品都没了",
       "before": "negative",
       "after": "positive",
       "method": "llm",
-      "reason": "'薅羊毛啦'带有兴奋和分享好处的积极情绪，语气愉快。"
+      "reason": "使用“薅羊毛啦”表达开心和分享好消息的积极情绪。"
     },
     {
       "title": "工行八闽有礼活动又来了",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "作者客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。"
+      "reason": "客观陈述活动信息，无情感倾向。"
     },
     {
       "title": "08.24工行  丝滑0.8🧧🧧🧧",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均为客观陈述兑换活动，无情感倾向。"
+      "reason": "标题和内容为活动信息分享，无情感倾向。"
     },
     {
       "title": "工行每周一测答题0.2*4丝滑拿下BACA",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容均为客观陈述积分活动，无情感倾向。"
+      "reason": "标题和内容为活动信息分享，无情感倾向。"
     },
     {
       "title": "工行666i豆➕1-1.88r",
@@ -96,7 +96,7 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题和内容仅列出活动内容，无情感倾向表达。"
+      "reason": "标题和内容仅列出活动内容，无情感倾向。"
     },
     {
       "title": "工行积分兑换行李箱",
