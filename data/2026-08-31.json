@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-08-31",
-  "generatedAt": "2026-08-31 07:10",
+  "generatedAt": "2026-08-31 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -8,8 +8,8 @@
     "historyCount": 27,
     "negativeCount": 5,
     "negativePct": "16.7",
-    "positiveCount": 9,
-    "neutralCount": 16,
+    "positiveCount": 7,
+    "neutralCount": 18,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "xiaohongshu": 27
   },
   "bySentiment": {
-    "positive": 9,
-    "neutral": 16,
+    "positive": 7,
+    "neutral": 18,
     "negative": 5
   },
   "byRisk": {
@@ -128,7 +128,7 @@
   "hotTopics": [
     {
       "topic": "工行i豆任务",
-      "summary": "i豆获取、抽奖、兑换",
+      "summary": "i豆获取、抽奖及兑换活动",
       "postCount": 11,
       "postIndices": [
         7,
@@ -175,63 +175,6 @@
           "id": "20260831-18",
           "title": "工行666i豆➕1-1.88r",
           "heatScore": 144,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "topic": "工行羊毛活动",
-      "summary": "立减金、抽奖、红包等福利",
-      "postCount": 13,
-      "postIndices": [
-        5,
-        6,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15,
-        16,
-        25,
-        26,
-        29
-      ],
-      "keywords": [
-        "立减金",
-        "抽奖",
-        "红包",
-        "活动",
-        "羊毛"
-      ],
-      "sentiment": {
-        "positive": 4,
-        "neutral": 9,
-        "negative": 0
-      },
-      "sources": {
-        "social": 2,
-        "xiaohongshu": 11
-      },
-      "totalHeat": 1046,
-      "topPosts": [
-        {
-          "id": "20260831-30",
-          "title": "08.24 工行每周一测0.8",
-          "heatScore": 467,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260831-26",
-          "title": "工行卡点立减金汇总！！！",
-          "heatScore": 205,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260831-10",
-          "title": "广州社保卡换工行有100立减金",
-          "heatScore": 119,
           "sentiment": "neutral"
         }
       ]
@@ -284,27 +227,131 @@
       ]
     },
     {
-      "topic": "工行积分兑换",
-      "summary": "积分兑换实物商品",
-      "postCount": 1,
+      "topic": "工行立减金活动",
+      "summary": "分享立减金、红包领取攻略",
+      "postCount": 6,
       "postIndices": [
-        24
+        5,
+        6,
+        9,
+        15,
+        25,
+        26
       ],
       "keywords": [
-        "积分",
-        "兑换",
-        "行李箱"
+        "立减金",
+        "红包",
+        "抽奖",
+        "社保卡"
       ],
       "sentiment": {
-        "positive": 0,
+        "positive": 2,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "social": 2,
+        "xiaohongshu": 4
+      },
+      "totalHeat": 505,
+      "topPosts": [
+        {
+          "id": "20260831-26",
+          "title": "工行卡点立减金汇总！！！",
+          "heatScore": 205,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260831-10",
+          "title": "广州社保卡换工行有100立减金",
+          "heatScore": 119,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260831-27",
+          "title": "🔥工行立减金｜全国可冲！1.88‑3.88元",
+          "heatScore": 69,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行答题活动",
+      "summary": "每周一测答题领奖励",
+      "postCount": 2,
+      "postIndices": [
+        16,
+        29
+      ],
+      "keywords": [
+        "答题",
+        "每周一测",
+        "奖励"
+      ],
+      "sentiment": {
+        "positive": 1,
         "neutral": 1,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 1
+        "xiaohongshu": 2
       },
-      "totalHeat": 9,
+      "totalHeat": 501,
       "topPosts": [
+        {
+          "id": "20260831-30",
+          "title": "08.24 工行每周一测0.8",
+          "heatScore": 467,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260831-17",
+          "title": "工行每周一测答题0.2*4丝滑拿下BACA",
+          "heatScore": 34,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行羊毛活动",
+      "summary": "各类薅羊毛、抽奖、兑换信息",
+      "postCount": 6,
+      "postIndices": [
+        8,
+        10,
+        11,
+        13,
+        14,
+        24
+      ],
+      "keywords": [
+        "薅羊毛",
+        "抽奖",
+        "兑换",
+        "活动"
+      ],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 5,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 6
+      },
+      "totalHeat": 49,
+      "topPosts": [
+        {
+          "id": "20260831-09",
+          "title": "工行薅羊毛啦",
+          "heatScore": 24,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260831-11",
+          "title": "工行易方达抽奖0.4",
+          "heatScore": 15,
+          "sentiment": "neutral"
+        },
         {
           "id": "20260831-25",
           "title": "工行积分兑换行李箱",
@@ -314,8 +361,8 @@
       ]
     },
     {
-      "topic": "工行提额与商城",
-      "summary": "商城消费提额问题咨询",
+      "topic": "工行提额咨询",
+      "summary": "用户咨询商城消费提额方法",
       "postCount": 1,
       "postIndices": [
         4
@@ -347,7 +394,7 @@
   "dailyBrief": {
     "text": "今日（2026-08-31）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-08-31",
-    "generatedAt": "2026-08-30T23:10:27.533Z"
+    "generatedAt": "2026-08-31T04:10:27.404Z"
   },
   "records": [
     {
@@ -592,7 +639,7 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容为客观描述，提及有小红包，无积极或消极情感表达。",
+      "llmReason": "客观描述工行有小红包，无积极或消极情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -704,7 +751,7 @@
       "category": "i豆兑换",
       "heatScore": 119,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述活动信息，无情感倾向。",
+      "llmReason": "客观陈述广州社保卡换工行有100立减金，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -742,7 +789,7 @@
       "category": "薅羊毛",
       "heatScore": 15,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述抽奖信息，无情感倾向。",
+      "llmReason": "仅陈述抽奖活动及金额，无情感倾向",
       "sentimentMethod": "llm"
     },
     {
@@ -778,7 +825,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述活动再次举办，无情感倾向。",
+      "llmReason": "客观告知活动再次举办，无情感色彩",
       "sentimentMethod": "llm"
     },
     {
@@ -814,7 +861,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述获得豆子数量，无情感倾向。",
+      "llmReason": "仅提及获得豆的数量，无情感表达",
       "sentimentMethod": "llm"
     },
     {
@@ -850,7 +897,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述兑换活动，无情感倾向。",
+      "llmReason": "仅提及活动名称，无情感倾向",
       "sentimentMethod": "llm"
     },
     {
@@ -888,7 +935,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容均为客观陈述积分活动，无情感倾向。",
+      "llmReason": "仅列出活动名称，无情感表达",
       "sentimentMethod": "llm"
     },
     {
@@ -924,7 +971,7 @@
       "category": "其他",
       "heatScore": 66,
       "llmSentiment": "positive",
-      "llmReason": "标题和内容使用‘丝滑’和多个红包表情，表达顺利获得0.8元红包的满意和开心。",
+      "llmReason": "使用'丝滑'和多个红包表情，表达顺利获得0.8元红包的满意和开心。",
       "sentimentMethod": "llm"
     },
     {
@@ -960,7 +1007,7 @@
       "category": "其他",
       "heatScore": 34,
       "llmSentiment": "positive",
-      "llmReason": "‘丝滑拿下’表达轻松完成任务并获得0.2*4奖励的积极情绪。",
+      "llmReason": "'丝滑拿下'表达轻松完成任务并获得奖励的积极情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -969,7 +1016,7 @@
       "publishTime": "2026-08-24",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行666i豆➕1-1.88r",
       "content": "工行666i豆➕1-1.88r",
@@ -997,8 +1044,8 @@
       "shares": 21,
       "category": "i豆兑换",
       "heatScore": 144,
-      "llmSentiment": "positive",
-      "llmReason": "‘666i豆’和‘1-1.88r’分享获得奖励的好消息，语气积极。",
+      "llmSentiment": "neutral",
+      "llmReason": "仅陈述获得i豆和金额，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1036,7 +1083,7 @@
       "category": "i豆兑换",
       "heatScore": 42,
       "llmSentiment": "neutral",
-      "llmReason": "仅客观陈述新任务和奖励内容，无情感倾向。",
+      "llmReason": "客观描述新任务和奖励，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1045,7 +1092,7 @@
       "publishTime": "2026-08-24",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行i豆今天抽666×2",
       "content": "工行i豆今天抽666×2",
@@ -1073,8 +1120,8 @@
       "shares": 3,
       "category": "i豆兑换",
       "heatScore": 18,
-      "llmSentiment": "positive",
-      "llmReason": "‘今天抽666×2’分享抽奖获得双倍奖励的好消息，语气积极。",
+      "llmSentiment": "neutral",
+      "llmReason": "仅陈述抽奖结果，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1113,7 +1160,7 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅列出活动内容，无情感倾向表达。",
+      "llmReason": "标题和内容仅列出活动内容，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1151,7 +1198,7 @@
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述活动名称，无情感色彩。",
+      "llmReason": "仅陈述活动名称，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1189,7 +1236,7 @@
       "category": "i豆兑换",
       "heatScore": 35,
       "llmSentiment": "positive",
-      "llmReason": "使用'终于来了'和'好久没拿'表达期待和喜悦，语气积极。",
+      "llmReason": "使用“终于来了”和“好久没拿”表达期待和喜悦，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -1227,7 +1274,7 @@
       "category": "i豆兑换",
       "heatScore": 8,
       "llmSentiment": "neutral",
-      "llmReason": "标题为信息分享，'快来攒豆吧'是号召性语言，但整体无强烈情感倾向。",
+      "llmReason": "标题为信息分享，内容为活动提示，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1342,7 +1389,7 @@
       "category": "i豆兑换",
       "heatScore": 69,
       "llmSentiment": "positive",
-      "llmReason": "使用火焰表情和'全国可冲'，表达积极推荐和兴奋情绪。",
+      "llmReason": "使用火焰表情和'可冲'等词，表达积极推荐和兴奋情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1380,7 +1427,7 @@
       "category": "薅羊毛",
       "heatScore": 5,
       "llmSentiment": "positive",
-      "llmReason": "使用'又中了'和'折💰'，表达中奖的喜悦和分享好消息。",
+      "llmReason": "'又中了'和'折💰'表达中奖的喜悦和分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1452,10 +1499,10 @@
       "category": "其他",
       "heatScore": 467,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述日期和活动内容，无情感倾向。",
+      "llmReason": "仅提供日期和活动名称，客观陈述。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-08-30T23:10:36.930Z",
+  "llmEnhancedAt": "2026-08-31T04:10:36.330Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
