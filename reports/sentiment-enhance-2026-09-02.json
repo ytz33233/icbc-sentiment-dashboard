@@ -1,6 +1,6 @@
 {
   "date": "2026-09-02",
-  "generatedAt": "2026-09-01T23:10:35.910Z",
+  "generatedAt": "2026-09-02T04:10:37.937Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -8,10 +8,25 @@
     "negative": 5
   },
   "afterStats": {
-    "positive": 7,
-    "neutral": 18,
+    "positive": 9,
+    "neutral": 16,
     "negative": 5
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行666i豆➕1-1.88r",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘666i豆’和‘1-1.88r’分享获得奖励的好消息，语气积极。"
+    },
+    {
+      "title": "工行i豆今天抽666×2",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘今天抽666×2’分享获得双倍奖励的好消息，语气积极。"
+    }
+  ]
 }
