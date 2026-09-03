@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "generatedAt": "2026-09-02T23:10:36.857Z",
+  "generatedAt": "2026-09-03T04:10:35.677Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 9,
@@ -19,14 +19,14 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "仅陈述获得i豆和金额，无情感倾向。"
+      "reason": "仅陈述获得666i豆和1-1.88元的事实，无情感倾向。"
     },
     {
       "title": "工行i豆今天抽666×2",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "简单陈述抽奖结果，无情感倾向。"
+      "reason": "简单陈述抽奖结果，无情感色彩。"
     }
   ]
 }
