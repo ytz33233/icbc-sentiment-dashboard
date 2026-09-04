@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-04",
-  "generatedAt": "2026-09-04 07:10",
+  "generatedAt": "2026-09-04 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -128,7 +128,7 @@
   "hotTopics": [
     {
       "topic": "工行i豆任务",
-      "summary": "i豆获取、抽奖及兑换活动",
+      "summary": "i豆获取、抽奖、兑换等讨论",
       "postCount": 11,
       "postIndices": [
         7,
@@ -280,6 +280,35 @@
       ]
     },
     {
+      "topic": "工行答题活动",
+      "summary": "每周一测等答题得奖励",
+      "postCount": 1,
+      "postIndices": [
+        29
+      ],
+      "keywords": [
+        "答题",
+        "每周一测"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 467,
+      "topPosts": [
+        {
+          "id": "20260904-30",
+          "title": "08.24 工行每周一测0.8",
+          "heatScore": 467,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "topic": "工行活动问题",
       "summary": "打卡失败、提额等操作求助",
       "postCount": 2,
@@ -288,9 +317,9 @@
         4
       ],
       "keywords": [
-        "打卡失败",
+        "打卡",
         "提额",
-        "求助"
+        "失败"
       ],
       "sentiment": {
         "positive": 0,
@@ -350,7 +379,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-04）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-09-04",
-    "generatedAt": "2026-09-03T23:10:25.689Z"
+    "generatedAt": "2026-09-04T04:10:28.390Z"
   },
   "records": [
     {
@@ -565,7 +594,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。",
+      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -595,7 +624,7 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "neutral",
-      "llmReason": "作者客观描述工行有小红包，未带明显情绪。",
+      "llmReason": "作者客观陈述工行有小红包的事实，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -669,7 +698,7 @@
       "category": "薅羊毛",
       "heatScore": 24,
       "llmSentiment": "positive",
-      "llmReason": "'薅羊毛啦'带有兴奋和分享好处的积极语气。",
+      "llmReason": "'薅羊毛啦'带有兴奋和分享好消息的积极语气。",
       "sentimentMethod": "llm"
     },
     {
@@ -745,7 +774,7 @@
       "category": "薅羊毛",
       "heatScore": 15,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为客观陈述抽奖信息，无情感倾向。",
+      "llmReason": "标题和内容均为客观陈述抽奖信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -781,7 +810,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为告知活动再次举办，语气中性，无积极或消极表达。",
+      "llmReason": "陈述活动再次到来，语气中性，无积极或消极表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -817,7 +846,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅陈述获得6666豆的事实，无情感修饰词。",
+      "llmReason": "仅提及获得6666豆三次，属于信息分享，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -853,7 +882,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为活动名称及兑换提示，无情感倾向。",
+      "llmReason": "描述活动内容，客观陈述，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -891,7 +920,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为活动名称及积分信息，客观陈述，无情感色彩。",
+      "llmReason": "仅列出活动名称，无主观评价或情绪表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -927,7 +956,7 @@
       "category": "其他",
       "heatScore": 66,
       "llmSentiment": "positive",
-      "llmReason": "使用‘丝滑’和多个红包表情，表达顺利获得0.8元红包的愉悦心情。",
+      "llmReason": "使用“丝滑”和多个红包表情，表达顺利获得0.8元红包的愉悦心情。",
       "sentimentMethod": "llm"
     },
     {
@@ -963,7 +992,7 @@
       "category": "其他",
       "heatScore": 34,
       "llmSentiment": "positive",
-      "llmReason": "‘丝滑拿下’表明答题任务顺利完成，语气轻松满意。",
+      "llmReason": "“丝滑拿下”体现轻松完成任务并获得奖励的满意态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1001,7 +1030,7 @@
       "category": "i豆兑换",
       "heatScore": 144,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述获得666i豆和1-1.88元的事实，无情感倾向。",
+      "llmReason": "仅陈述获得i豆和金额，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1039,7 +1068,7 @@
       "category": "i豆兑换",
       "heatScore": 42,
       "llmSentiment": "neutral",
-      "llmReason": "客观描述新任务内容，无主观评价。",
+      "llmReason": "客观描述新任务及奖励，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -1077,7 +1106,7 @@
       "category": "i豆兑换",
       "heatScore": 18,
       "llmSentiment": "neutral",
-      "llmReason": "简单陈述抽奖结果，无情感色彩。",
+      "llmReason": "陈述抽奖结果，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1116,7 +1145,7 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为活动名称的客观列举，无情感倾向。",
+      "llmReason": "标题和内容仅列出活动内容，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1154,7 +1183,7 @@
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及活动名称，无情感表达。",
+      "llmReason": "仅陈述活动名称，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1230,7 +1259,7 @@
       "category": "i豆兑换",
       "heatScore": 8,
       "llmSentiment": "neutral",
-      "llmReason": "标题为信息分享，内容为活动提示，无情感倾向。",
+      "llmReason": "标题为信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1345,7 +1374,7 @@
       "category": "i豆兑换",
       "heatScore": 69,
       "llmSentiment": "positive",
-      "llmReason": "使用🔥表情和“可冲”等词，表达积极推荐和兴奋情绪。",
+      "llmReason": "使用🔥表情和'可冲'等词，表达积极推荐和兴奋。",
       "sentimentMethod": "llm"
     },
     {
@@ -1383,7 +1412,7 @@
       "category": "薅羊毛",
       "heatScore": 5,
       "llmSentiment": "positive",
-      "llmReason": "“又中了”和“折💰”表达中奖的喜悦和分享好消息。",
+      "llmReason": "'又中了'和'折💰'表达中奖的喜悦和分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1419,7 +1448,7 @@
       "category": "其他",
       "heatScore": 1885,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述赠送豆子并提醒查看，无情感倾向。",
+      "llmReason": "客观告知有豆子赠送，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1459,6 +1488,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-09-03T23:10:35.032Z",
+  "llmEnhancedAt": "2026-09-04T04:10:36.787Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
