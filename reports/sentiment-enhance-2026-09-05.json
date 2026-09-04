@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-05",
+  "generatedAt": "2026-09-04T23:10:33.837Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 7,
+    "neutral": 18,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 10,
+    "neutral": 15,
+    "negative": 5
+  },
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "工行八闽有礼活动又来了",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“又来了”表达了对活动再次到来的积极期待和满意。"
+    },
+    {
+      "title": "工行666i豆➕1-1.88r",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘666i豆’和‘1-1.88r’分享收益，语气轻松正面，无抱怨。"
+    },
+    {
+      "title": "工行i豆今天抽666×2",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘今天抽666×2’分享抽奖获得双倍奖励的好消息，语气积极。"
+    }
+  ]
+}
