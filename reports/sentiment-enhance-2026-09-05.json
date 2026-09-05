@@ -1,6 +1,6 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-04T23:10:33.837Z",
+  "generatedAt": "2026-09-05T04:10:35.994Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -8,12 +8,19 @@
     "negative": 5
   },
   "afterStats": {
-    "positive": 10,
-    "neutral": 15,
+    "positive": 11,
+    "neutral": 14,
     "negative": 5
   },
-  "diffCount": 3,
+  "diffCount": 4,
   "changes": [
+    {
+      "title": "工行如图有小虹包",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者用“如图有小虹包”分享好消息，语气积极，暗示有红包可领。"
+    },
     {
       "title": "工行八闽有礼活动又来了",
       "before": "neutral",
@@ -26,14 +33,14 @@
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "‘666i豆’和‘1-1.88r’分享收益，语气轻松正面，无抱怨。"
+      "reason": "‘666i豆’和‘1-1.88r’分享获得奖励的好消息，语气积极。"
     },
     {
       "title": "工行i豆今天抽666×2",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "‘今天抽666×2’分享抽奖获得双倍奖励的好消息，语气积极。"
+      "reason": "‘今天抽666×2’分享获得双倍奖励的好消息，语气带有满足感。"
     }
   ]
 }
