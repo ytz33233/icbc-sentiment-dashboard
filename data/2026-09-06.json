@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-06",
-  "generatedAt": "2026-09-06 07:10",
+  "generatedAt": "2026-09-06 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -8,8 +8,8 @@
     "historyCount": 27,
     "negativeCount": 5,
     "negativePct": "16.7",
-    "positiveCount": 11,
-    "neutralCount": 14,
+    "positiveCount": 9,
+    "neutralCount": 16,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "xiaohongshu": 27
   },
   "bySentiment": {
-    "positive": 11,
-    "neutral": 14,
+    "positive": 9,
+    "neutral": 16,
     "negative": 5
   },
   "byRisk": {
@@ -128,7 +128,7 @@
   "hotTopics": [
     {
       "topic": "工行i豆任务",
-      "summary": "i豆获取、抽奖、兑换等",
+      "summary": "i豆获取、抽奖及兑换相关讨论",
       "postCount": 11,
       "postIndices": [
         7,
@@ -180,8 +180,8 @@
       ]
     },
     {
-      "topic": "工行羊毛活动",
-      "summary": "立减金、红包、抽奖等福利",
+      "topic": "工行活动福利",
+      "summary": "分享工行各类抽奖、立减金、红包活动",
       "postCount": 11,
       "postIndices": [
         5,
@@ -198,8 +198,9 @@
       ],
       "keywords": [
         "立减金",
-        "红包",
         "抽奖",
+        "红包",
+        "活动",
         "福利"
       ],
       "sentiment": {
@@ -236,27 +237,29 @@
     {
       "topic": "工行权益缩水",
       "summary": "银行积分权益缩水，用户不满",
-      "postCount": 3,
+      "postCount": 4,
       "postIndices": [
         0,
         1,
-        2
+        2,
+        3
       ],
       "keywords": [
         "缩水",
         "权益",
+        "工行",
         "积分"
       ],
       "sentiment": {
         "positive": 0,
         "neutral": 0,
-        "negative": 3
+        "negative": 4
       },
       "sources": {
         "social": 1,
-        "xiaohongshu": 2
+        "xiaohongshu": 3
       },
-      "totalHeat": 516,
+      "totalHeat": 533,
       "topPosts": [
         {
           "id": "20260906-02",
@@ -265,22 +268,22 @@
           "sentiment": "negative"
         },
         {
-          "id": "20260906-03",
-          "title": "工行Visa卡，新人领礼品都没了",
-          "heatScore": 12,
+          "id": "20260906-04",
+          "title": "工商银行打卡失败，有没有的解",
+          "heatScore": 17,
           "sentiment": "negative"
         },
         {
-          "id": "20260906-01",
-          "title": "#多家银行被指积分权益大缩水# 【 #银行被指积分权益缩水消费者发声# ：并未提...",
-          "heatScore": 5,
+          "id": "20260906-03",
+          "title": "工行Visa卡，新人领礼品都没了",
+          "heatScore": 12,
           "sentiment": "negative"
         }
       ]
     },
     {
       "topic": "工行答题活动",
-      "summary": "每周一测等答题得奖励",
+      "summary": "每周一测等答题获取奖励",
       "postCount": 2,
       "postIndices": [
         16,
@@ -288,7 +291,8 @@
       ],
       "keywords": [
         "答题",
-        "每周一测"
+        "每周一测",
+        "奖励"
       ],
       "sentiment": {
         "positive": 1,
@@ -311,43 +315,6 @@
           "title": "工行每周一测答题0.2*4丝滑拿下BACA",
           "heatScore": 34,
           "sentiment": "positive"
-        }
-      ]
-    },
-    {
-      "topic": "工行活动问题",
-      "summary": "打卡失败、提额求助等",
-      "postCount": 2,
-      "postIndices": [
-        3,
-        4
-      ],
-      "keywords": [
-        "打卡",
-        "提额",
-        "失败"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 0,
-        "negative": 2
-      },
-      "sources": {
-        "xiaohongshu": 2
-      },
-      "totalHeat": 22,
-      "topPosts": [
-        {
-          "id": "20260906-04",
-          "title": "工商银行打卡失败，有没有的解",
-          "heatScore": 17,
-          "sentiment": "negative"
-        },
-        {
-          "id": "20260906-05",
-          "title": "急!工商银行商城单笔消费怎么能提额啊？？？",
-          "heatScore": 5,
-          "sentiment": "negative"
         }
       ]
     },
@@ -380,12 +347,42 @@
           "sentiment": "neutral"
         }
       ]
+    },
+    {
+      "topic": "工行提额咨询",
+      "summary": "用户咨询工行商城消费提额方法",
+      "postCount": 1,
+      "postIndices": [
+        4
+      ],
+      "keywords": [
+        "提额",
+        "商城",
+        "消费"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1
+      },
+      "sources": {
+        "xiaohongshu": 1
+      },
+      "totalHeat": 5,
+      "topPosts": [
+        {
+          "id": "20260906-05",
+          "title": "急!工商银行商城单笔消费怎么能提额啊？？？",
+          "heatScore": 5,
+          "sentiment": "negative"
+        }
+      ]
     }
   ],
   "dailyBrief": {
     "text": "今日（2026-09-06）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-09-06",
-    "generatedAt": "2026-09-05T23:10:27.615Z"
+    "generatedAt": "2026-09-06T04:10:27.999Z"
   },
   "records": [
     {
@@ -600,7 +597,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达个人情感。",
+      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -614,7 +611,7 @@
       "comments": 5,
       "favorites": 0,
       "recency": "历史",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "其他",
@@ -629,8 +626,8 @@
       "id": "20260906-07",
       "category": "其他",
       "heatScore": 21,
-      "llmSentiment": "positive",
-      "llmReason": "作者用“如图有小虹包”暗示有红包可领，语气带有分享好消息的积极意味。",
+      "llmSentiment": "neutral",
+      "llmReason": "作者客观陈述工行有小红包，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -668,7 +665,7 @@
       "category": "i豆兑换",
       "heatScore": 298,
       "llmSentiment": "positive",
-      "llmReason": "“太棒了”直接表达了对工行i豆的满意和赞赏。",
+      "llmReason": "使用'太棒了'表达积极满意和赞赏。",
       "sentimentMethod": "llm"
     },
     {
@@ -704,7 +701,7 @@
       "category": "薅羊毛",
       "heatScore": 24,
       "llmSentiment": "positive",
-      "llmReason": "“薅羊毛啦”带有兴奋和分享好处的积极情绪。",
+      "llmReason": "'薅羊毛啦'带有兴奋和分享好消息的积极语气。",
       "sentimentMethod": "llm"
     },
     {
@@ -742,7 +739,7 @@
       "category": "i豆兑换",
       "heatScore": 119,
       "llmSentiment": "neutral",
-      "llmReason": "作者客观陈述广州社保卡换工行有100立减金的活动，没有明显情感倾向。",
+      "llmReason": "客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -789,7 +786,7 @@
       "publishTime": "2026-08-24",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行八闽有礼活动又来了",
       "content": "工行八闽有礼活动又来了",
@@ -815,8 +812,8 @@
       "shares": 1,
       "category": "其他",
       "heatScore": 1,
-      "llmSentiment": "positive",
-      "llmReason": "“又来了”表达了对活动再次到来的积极期待和满意。",
+      "llmSentiment": "neutral",
+      "llmReason": "陈述活动再次到来，语气中性，无积极或消极表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -852,7 +849,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述获得6666豆的事实，无情感修饰。",
+      "llmReason": "仅陈述获得6666豆三次，属于信息分享，无情感色彩。",
       "sentimentMethod": "llm"
     },
     {
@@ -888,7 +885,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "客观提及北京地区兑换活动，无情感倾向。",
+      "llmReason": "提及北京好品兑换活动，客观描述，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -926,7 +923,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述江苏工行图书积分活动，无情感倾向。",
+      "llmReason": "仅列出活动名称，无任何情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1112,7 +1109,7 @@
       "category": "i豆兑换",
       "heatScore": 18,
       "llmSentiment": "positive",
-      "llmReason": "‘今天抽666×2’分享抽中双倍奖励的好消息，语气带有开心和炫耀成分。",
+      "llmReason": "‘今天抽666×2’分享抽中双倍奖励的好消息，语气带有兴奋和满意。",
       "sentimentMethod": "llm"
     },
     {
@@ -1151,7 +1148,7 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅列出活动内容，无情感倾向。",
+      "llmReason": "标题和内容仅为活动名称的客观列举，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1189,7 +1186,7 @@
       "category": "i豆兑换",
       "heatScore": 6,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述活动名称，无情感表达。",
+      "llmReason": "仅提及活动名称，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1265,7 +1262,7 @@
       "category": "i豆兑换",
       "heatScore": 8,
       "llmSentiment": "neutral",
-      "llmReason": "标题为信息分享，无情感倾向。",
+      "llmReason": "标题为信息分享，内容为活动提示，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1380,7 +1377,7 @@
       "category": "i豆兑换",
       "heatScore": 69,
       "llmSentiment": "positive",
-      "llmReason": "使用🔥表情和'全国可冲'等词，表达积极推荐和兴奋情绪。",
+      "llmReason": "使用🔥表情和'可冲'等词，表达积极推荐和兴奋情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1454,7 +1451,7 @@
       "category": "其他",
       "heatScore": 1885,
       "llmSentiment": "neutral",
-      "llmReason": "客观告知有赠送豆子，无情感倾向。",
+      "llmReason": "客观陈述赠送豆子并提醒查看，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1490,10 +1487,10 @@
       "category": "其他",
       "heatScore": 467,
       "llmSentiment": "neutral",
-      "llmReason": "仅提供日期和活动信息，无情感表达。",
+      "llmReason": "仅提供日期和活动名称，属于客观信息分享。",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-09-05T23:10:35.670Z",
+  "llmEnhancedAt": "2026-09-06T04:10:36.402Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-06",
-  "generatedAt": "2026-09-05T23:10:35.671Z",
+  "generatedAt": "2026-09-06T04:10:36.402Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 11,
@@ -8,10 +8,25 @@
     "negative": 5
   },
   "afterStats": {
-    "positive": 11,
-    "neutral": 14,
+    "positive": 9,
+    "neutral": 16,
     "negative": 5
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行如图有小虹包",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "作者客观陈述工行有小红包，无情感色彩。"
+    },
+    {
+      "title": "工行八闽有礼活动又来了",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "陈述活动再次到来，语气中性，无积极或消极表达。"
+    }
+  ]
 }
