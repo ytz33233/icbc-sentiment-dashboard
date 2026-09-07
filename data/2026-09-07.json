@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-07",
-  "generatedAt": "2026-09-07 07:10",
+  "generatedAt": "2026-09-07 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -8,8 +8,8 @@
     "historyCount": 27,
     "negativeCount": 5,
     "negativePct": "16.7",
-    "positiveCount": 9,
-    "neutralCount": 16,
+    "positiveCount": 7,
+    "neutralCount": 18,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "xiaohongshu": 27
   },
   "bySentiment": {
-    "positive": 9,
-    "neutral": 16,
+    "positive": 7,
+    "neutral": 18,
     "negative": 5
   },
   "byRisk": {
@@ -128,7 +128,7 @@
   "hotTopics": [
     {
       "topic": "工行i豆任务",
-      "summary": "i豆获取、抽奖及兑换相关讨论",
+      "summary": "i豆获取、抽奖及兑换",
       "postCount": 11,
       "postIndices": [
         7,
@@ -175,61 +175,6 @@
           "id": "20260907-18",
           "title": "工行666i豆➕1-1.88r",
           "heatScore": 144,
-          "sentiment": "positive"
-        }
-      ]
-    },
-    {
-      "topic": "工行活动羊毛",
-      "summary": "分享工行各类抽奖、立减金活动",
-      "postCount": 12,
-      "postIndices": [
-        5,
-        6,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15,
-        16,
-        25,
-        26
-      ],
-      "keywords": [
-        "立减金",
-        "抽奖",
-        "活动",
-        "薅羊毛"
-      ],
-      "sentiment": {
-        "positive": 4,
-        "neutral": 8,
-        "negative": 0
-      },
-      "sources": {
-        "social": 2,
-        "xiaohongshu": 10
-      },
-      "totalHeat": 579,
-      "topPosts": [
-        {
-          "id": "20260907-26",
-          "title": "工行卡点立减金汇总！！！",
-          "heatScore": 205,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260907-10",
-          "title": "广州社保卡换工行有100立减金",
-          "heatScore": 119,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20260907-27",
-          "title": "🔥工行立减金｜全国可冲！1.88‑3.88元",
-          "heatScore": 69,
           "sentiment": "positive"
         }
       ]
@@ -282,38 +227,141 @@
       ]
     },
     {
-      "topic": "工行每周一测",
-      "summary": "每周答题活动，获取奖励",
-      "postCount": 1,
+      "topic": "工行立减金活动",
+      "summary": "各地立减金领取与分享",
+      "postCount": 6,
       "postIndices": [
+        5,
+        6,
+        9,
+        15,
+        25,
+        26
+      ],
+      "keywords": [
+        "立减金",
+        "红包",
+        "活动",
+        "领取"
+      ],
+      "sentiment": {
+        "positive": 2,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "social": 2,
+        "xiaohongshu": 4
+      },
+      "totalHeat": 505,
+      "topPosts": [
+        {
+          "id": "20260907-26",
+          "title": "工行卡点立减金汇总！！！",
+          "heatScore": 205,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260907-10",
+          "title": "广州社保卡换工行有100立减金",
+          "heatScore": 119,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260907-27",
+          "title": "🔥工行立减金｜全国可冲！1.88‑3.88元",
+          "heatScore": 69,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行答题活动",
+      "summary": "每周答题领奖励",
+      "postCount": 2,
+      "postIndices": [
+        16,
         29
       ],
       "keywords": [
-        "每周一测",
         "答题",
+        "每周一测",
         "奖励"
       ],
       "sentiment": {
-        "positive": 0,
+        "positive": 1,
         "neutral": 1,
         "negative": 0
       },
       "sources": {
-        "xiaohongshu": 1
+        "xiaohongshu": 2
       },
-      "totalHeat": 467,
+      "totalHeat": 501,
       "topPosts": [
         {
           "id": "20260907-30",
           "title": "08.24 工行每周一测0.8",
           "heatScore": 467,
           "sentiment": "neutral"
+        },
+        {
+          "id": "20260907-17",
+          "title": "工行每周一测答题0.2*4丝滑拿下BACA",
+          "heatScore": 34,
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "topic": "工行薅���毛",
+      "summary": "各类优惠活动汇总分享",
+      "postCount": 5,
+      "postIndices": [
+        8,
+        10,
+        11,
+        13,
+        14
+      ],
+      "keywords": [
+        "薅羊毛",
+        "活动",
+        "优惠",
+        "抽奖"
+      ],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 4,
+        "negative": 0
+      },
+      "sources": {
+        "xiaohongshu": 5
+      },
+      "totalHeat": 40,
+      "topPosts": [
+        {
+          "id": "20260907-09",
+          "title": "工行薅羊毛啦",
+          "heatScore": 24,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260907-11",
+          "title": "工行易方达抽奖0.4",
+          "heatScore": 15,
+          "sentiment": "neutral"
+        },
+        {
+          "id": "20260907-12",
+          "title": "工行八闽有礼活动又来了",
+          "heatScore": 1,
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "topic": "工行积分兑换",
-      "summary": "积分兑换实物或礼品",
+      "summary": "积分兑换实物商品",
       "postCount": 1,
       "postIndices": [
         24
@@ -342,8 +390,8 @@
       ]
     },
     {
-      "topic": "工行提额求助",
-      "summary": "用户咨询工行商城消费提额方法",
+      "topic": "工行提额与商城",
+      "summary": "商城消费提额问题咨询",
       "postCount": 1,
       "postIndices": [
         4
@@ -375,7 +423,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-07）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-09-07",
-    "generatedAt": "2026-09-06T23:10:26.218Z"
+    "generatedAt": "2026-09-07T04:10:27.434Z"
   },
   "records": [
     {
@@ -590,7 +638,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达情感倾向。",
+      "llmReason": "作者只是客观分享工行小程序的活动信息，没有表达个人情感。",
       "sentimentMethod": "llm"
     },
     {
@@ -620,7 +668,7 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "neutral",
-      "llmReason": "作者客观陈述工行有小红包的事实，语气中性，无情感色彩。",
+      "llmReason": "作者客观陈述工行有小红包的事实，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -658,7 +706,7 @@
       "category": "i豆兑换",
       "heatScore": 298,
       "llmSentiment": "positive",
-      "llmReason": "使用'太棒了'表达对工行i豆的赞赏和满意，语气积极。",
+      "llmReason": "使用'太棒了'表达对工行i豆的赞赏和满意。",
       "sentimentMethod": "llm"
     },
     {
@@ -694,7 +742,7 @@
       "category": "薅羊毛",
       "heatScore": 24,
       "llmSentiment": "positive",
-      "llmReason": "'薅羊毛啦'带有兴奋和分享好处的积极情绪，语气愉快。",
+      "llmReason": "'薅羊毛啦'带有兴奋和分享好处的积极语气。",
       "sentimentMethod": "llm"
     },
     {
@@ -732,7 +780,7 @@
       "category": "i豆兑换",
       "heatScore": 119,
       "llmSentiment": "neutral",
-      "llmReason": "作者客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。",
+      "llmReason": "客观陈述广州社保卡换工行有100立减金的活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -806,7 +854,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "陈述活动再次到来，语气中性，无积极或消极表达。",
+      "llmReason": "客观告知活动再次举办，语气中性，无积极或消极表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -878,7 +926,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "提及北京地区活动可兑换好品，客观描述，无情感倾向。",
+      "llmReason": "客观描述北京地区活动可兑换好品，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -916,7 +964,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "列举活动名称和积分信息，纯客观陈述，无情感表达。",
+      "llmReason": "仅提及活动名称和积分信息，无主观评价或情绪表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -952,7 +1000,7 @@
       "category": "其他",
       "heatScore": 66,
       "llmSentiment": "positive",
-      "llmReason": "使用'丝滑'和多个红包表情，表达顺利获得0.8元红包的满意和开心。",
+      "llmReason": "使用‘丝滑’和多个红包表情，表达顺利获得0.8元红包的满意和开心。",
       "sentimentMethod": "llm"
     },
     {
@@ -988,7 +1036,7 @@
       "category": "其他",
       "heatScore": 34,
       "llmSentiment": "positive",
-      "llmReason": "'丝滑拿下'表明答题任务顺利完成，语气积极满意。",
+      "llmReason": "‘丝滑拿下’表达轻松完成任务并获得奖励的积极情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -997,7 +1045,7 @@
       "publishTime": "2026-08-24",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行666i豆➕1-1.88r",
       "content": "工行666i豆➕1-1.88r",
@@ -1025,8 +1073,8 @@
       "shares": 21,
       "category": "i豆兑换",
       "heatScore": 144,
-      "llmSentiment": "positive",
-      "llmReason": "分享获得666i豆和1-1.88元红包的好消息，语气积极。",
+      "llmSentiment": "neutral",
+      "llmReason": "仅陈述获得i豆和金额，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1064,7 +1112,7 @@
       "category": "i豆兑换",
       "heatScore": 42,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述新任务内容，无情感倾向。",
+      "llmReason": "客观描述新任务及奖励，无情感表达。",
       "sentimentMethod": "llm"
     },
     {
@@ -1073,7 +1121,7 @@
       "publishTime": "2026-08-24",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行i豆今天抽666×2",
       "content": "工行i豆今天抽666×2",
@@ -1101,8 +1149,8 @@
       "shares": 3,
       "category": "i豆兑换",
       "heatScore": 18,
-      "llmSentiment": "positive",
-      "llmReason": "分享抽中666i豆两次的好消息，语气带有喜悦。",
+      "llmSentiment": "neutral",
+      "llmReason": "陈述抽奖结果，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1141,7 +1189,7 @@
       "category": "i豆兑换",
       "heatScore": 3,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为活动信息列举，无情感倾向。",
+      "llmReason": "标题和内容仅列出活动内容，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1370,7 +1418,7 @@
       "category": "i豆兑换",
       "heatScore": 69,
       "llmSentiment": "positive",
-      "llmReason": "使用火焰表情和'可冲'等词，传达积极推荐和兴奋情绪。",
+      "llmReason": "使用火焰表情和‘可冲’等词，传达积极推荐和兴奋情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1408,7 +1456,7 @@
       "category": "薅羊毛",
       "heatScore": 5,
       "llmSentiment": "positive",
-      "llmReason": "'又中了'和'折💰'表达中奖的喜悦和分享好消息。",
+      "llmReason": "‘又中了’和‘折💰’表达中奖的喜悦和分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1484,6 +1532,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-09-06T23:10:34.499Z",
+  "llmEnhancedAt": "2026-09-07T04:10:35.960Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
