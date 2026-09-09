@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generatedAt": "2026-09-08T23:10:36.105Z",
+  "generatedAt": "2026-09-09T04:10:36.397Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 8,
@@ -8,10 +8,18 @@
     "negative": 5
   },
   "afterStats": {
-    "positive": 8,
-    "neutral": 17,
+    "positive": 7,
+    "neutral": 18,
     "negative": 5
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "工行i豆今天抽666×2",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "陈述抽奖结果，无情感倾向。"
+    }
+  ]
 }
