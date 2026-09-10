@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-09T23:10:36.020Z",
+  "generatedAt": "2026-09-10T04:10:33.440Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -8,10 +8,46 @@
     "negative": 5
   },
   "afterStats": {
-    "positive": 7,
-    "neutral": 18,
+    "positive": 12,
+    "neutral": 13,
     "negative": 5
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 5,
+  "changes": [
+    {
+      "title": "工行666i豆➕1-1.88r",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享获得i豆和现金奖励的好消息，语气积极。"
+    },
+    {
+      "title": "1.5倍工银i豆+奶茶代金券+影音会员......",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题列举1.5倍工银i豆、奶茶代金券、影音会员等福利，语气积极，属于分享好消息。"
+    },
+    {
+      "title": "［羊毛集锦］工行i豆新任务，快来攒豆吧",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“快来攒豆吧”语气积极，鼓励参与新任务，属于分享福利信息。"
+    },
+    {
+      "title": "工行卡点立减金汇总！！！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用'汇总！！！'和感叹号，语气积极，分享好消息"
+    },
+    {
+      "title": "工行送了10000豆，去看看",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'工行送了10000豆'分享好消息，语气积极"
+    }
+  ]
 }
