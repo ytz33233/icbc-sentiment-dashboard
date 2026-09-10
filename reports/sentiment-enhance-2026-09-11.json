@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-11",
+  "generatedAt": "2026-09-10T23:10:33.935Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 12,
+    "neutral": 13,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 15,
+    "neutral": 10,
+    "negative": 5
+  },
+  "diffCount": 3,
+  "changes": [
+    {
+      "title": "工行易方达抽奖0.4",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享抽奖获得0.4元的好消息，语气积极"
+    },
+    {
+      "title": "工行八闽有礼活动又来了",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "用‘又来了’表达活动再次上线的期待和分享好消息的积极语气"
+    },
+    {
+      "title": "工行6666豆*3",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享获得6666豆×3的奖励信息，属于好消息分享"
+    }
+  ]
+}
