@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-11",
-  "generatedAt": "2026-09-11 07:10",
+  "generatedAt": "2026-09-11 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -145,6 +145,7 @@
       ],
       "keywords": [
         "i豆",
+        "666豆",
         "抽奖",
         "兑换"
       ],
@@ -180,7 +181,7 @@
     },
     {
       "topic": "工行立减金活动",
-      "summary": "工行立减金领取、抽奖及汇总分享",
+      "summary": "工行立减金领取及抽奖活动分享",
       "postCount": 10,
       "postIndices": [
         5,
@@ -197,7 +198,8 @@
       "keywords": [
         "立减金",
         "抽奖",
-        "活动"
+        "红包",
+        "答题"
       ],
       "sentiment": {
         "positive": 4,
@@ -241,7 +243,7 @@
       ],
       "keywords": [
         "积分缩水",
-        "权益",
+        "权益缩水",
         "工行"
       ],
       "sentiment": {
@@ -276,8 +278,8 @@
       ]
     },
     {
-      "topic": "工行薅羊毛分享",
-      "summary": "工行各类薅羊毛活动分享",
+      "topic": "工行薅羊毛",
+      "summary": "工行各类薅羊毛活动汇总分享",
       "postCount": 1,
       "postIndices": [
         8
@@ -306,7 +308,7 @@
     },
     {
       "topic": "工行卡使用问题",
-      "summary": "工行卡打卡失败、提额等使用问题求助",
+      "summary": "工行卡打卡失败、提额等使用问题",
       "postCount": 2,
       "postIndices": [
         3,
@@ -315,7 +317,7 @@
       "keywords": [
         "打卡失败",
         "提额",
-        "求助"
+        "商城"
       ],
       "sentiment": {
         "positive": 0,
@@ -352,7 +354,7 @@
       ],
       "keywords": [
         "积分兑换",
-        "商品",
+        "行李箱",
         "图书"
       ],
       "sentiment": {
@@ -389,7 +391,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-11）从历史数据中发现 3 条24H内新增舆情，其中负面 1 条。当前累计展示 30 条。",
     "date": "2026-09-11",
-    "generatedAt": "2026-09-10T23:10:26.202Z"
+    "generatedAt": "2026-09-11T04:10:26.511Z"
   },
   "records": [
     {
@@ -604,7 +606,7 @@
       "category": "i豆兑换",
       "heatScore": 25,
       "llmSentiment": "neutral",
-      "llmReason": "客观分享抽奖活动信息，无情感倾向",
+      "llmReason": "客观分享抽奖活动信息，无明确情感倾向",
       "sentimentMethod": "llm"
     },
     {
@@ -634,7 +636,7 @@
       "category": "其他",
       "heatScore": 21,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述有小虹包的信息，无情感倾向",
+      "llmReason": "客观陈述工行有红包的信息，无情感表达",
       "sentimentMethod": "llm"
     },
     {
@@ -708,7 +710,7 @@
       "category": "薅羊毛",
       "heatScore": 24,
       "llmSentiment": "positive",
-      "llmReason": "使用“薅羊毛啦”表达参与优惠活动的积极分享态度",
+      "llmReason": "“薅羊毛啦”语气积极，分享优惠活动，带有开心情绪",
       "sentimentMethod": "llm"
     },
     {
@@ -746,7 +748,7 @@
       "category": "i豆兑换",
       "heatScore": 119,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述社保卡换工行有立减金的信息，无情感倾向",
+      "llmReason": "客观陈述社保卡换工行可得立减金的信息，无情感倾向",
       "sentimentMethod": "llm"
     },
     {
@@ -784,7 +786,7 @@
       "category": "薅羊毛",
       "heatScore": 15,
       "llmSentiment": "positive",
-      "llmReason": "分享抽奖获得0.4元的好消息，语气积极",
+      "llmReason": "分享抽奖获得0.4元的好消息，语气积极，属于分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -820,7 +822,7 @@
       "category": "其他",
       "heatScore": 1,
       "llmSentiment": "positive",
-      "llmReason": "用‘又来了’表达活动再次上线的期待和分享好消息的积极语气",
+      "llmReason": "用‘又来了’表达活动再次上线的期待和分享，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -856,7 +858,7 @@
       "category": "其他",
       "heatScore": 2,
       "llmSentiment": "positive",
-      "llmReason": "分享获得6666豆×3的奖励信息，属于好消息分享",
+      "llmReason": "分享获得6666豆*3的奖励信息，属于分享好消息，语气积极。",
       "sentimentMethod": "llm"
     },
     {
@@ -892,7 +894,7 @@
       "category": "其他",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "仅客观陈述工行北京好品来换活动，无情感倾向",
+      "llmReason": "仅客观陈述工行北京好品来换活动，无明确情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -930,7 +932,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
-      "llmReason": "仅客观列出江苏工行相关图书积分信息，无情感倾向",
+      "llmReason": "仅列出江苏工行相关积分信息，属于客观信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -966,7 +968,7 @@
       "category": "其他",
       "heatScore": 66,
       "llmSentiment": "positive",
-      "llmReason": "使用“丝滑”和红包表情符号，表达顺利获得奖励的积极满意情绪。",
+      "llmReason": "使用“丝滑”和红包表情🧧，表达顺利获得奖励的积极满意情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1002,7 +1004,7 @@
       "category": "其他",
       "heatScore": 34,
       "llmSentiment": "positive",
-      "llmReason": "使用“丝滑拿下”，语气轻松愉快，表达顺利获得奖励的积极情绪。",
+      "llmReason": "“丝滑拿下”表达顺利获得奖励的积极满意情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1231,7 +1233,7 @@
       "category": "i豆兑换",
       "heatScore": 35,
       "llmSentiment": "positive",
-      "llmReason": "“终于来了！”和“好久没拿工行i豆了”表达期待与开心，语气积极。",
+      "llmReason": "“终于来了！”表达期待和开心，“好久没拿工行i豆了”带有获得福利的积极情绪。",
       "sentimentMethod": "llm"
     },
     {
@@ -1269,7 +1271,7 @@
       "category": "i豆兑换",
       "heatScore": 8,
       "llmSentiment": "positive",
-      "llmReason": "“快来攒豆吧”带有鼓励和分享优惠的积极语气。",
+      "llmReason": "“快来攒豆吧”语气积极，鼓励参与工行i豆新任务，属于分享福利信息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1308,7 +1310,7 @@
       "category": "i豆兑换",
       "heatScore": 9,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述“工行积分兑换行李箱”，属于客观信息分享，无情感倾向。",
+      "llmReason": "仅客观陈述“工行积分兑换行李箱”，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1458,7 +1460,7 @@
       "category": "其他",
       "heatScore": 1885,
       "llmSentiment": "positive",
-      "llmReason": "'工行送了10000豆'表达收到赠送的积极态度，'去看看'带有期待",
+      "llmReason": "'工行送了10000豆'表达收到福利的积极态度",
       "sentimentMethod": "llm"
     },
     {
@@ -1498,6 +1500,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-09-10T23:10:33.934Z",
+  "llmEnhancedAt": "2026-09-11T04:10:34.091Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
