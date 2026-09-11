@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-12",
+  "generatedAt": "2026-09-11T23:10:34.997Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 15,
+    "neutral": 10,
+    "negative": 5
+  },
+  "afterStats": {
+    "positive": 15,
+    "neutral": 10,
+    "negative": 5
+  },
+  "diffCount": 0,
+  "changes": []
+}
