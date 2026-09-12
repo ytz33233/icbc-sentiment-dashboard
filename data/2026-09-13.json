@@ -1,0 +1,156 @@
+{
+  "reportDate": "2026-09-13",
+  "generatedAt": "2026-09-13 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 1,
+    "recentCount": 1,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 1,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 1
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 1,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 1
+  },
+  "byProduct": {
+    "其他": 1
+  },
+  "byCategory": {
+    "其他": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-09-07",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-08",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-09",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-10",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-11",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-12",
+      "total": 1,
+      "recent": 1,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-13",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [],
+  "hotTopics": [
+    {
+      "topic": "工行杯找队友",
+      "summary": "校园墙投稿寻找工行杯比赛队友",
+      "postCount": 1,
+      "postIndices": [
+        0
+      ],
+      "keywords": [
+        "工行杯",
+        "队友",
+        "校园墙"
+      ],
+      "sentiment": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 1
+      },
+      "totalHeat": 5,
+      "topPosts": [
+        {
+          "id": "20260913-01",
+          "title": "妞儿学校，校园墙几个帖子： 墙，投稿，想找一个工行杯的队友，现在两个人的gpa都...",
+          "heatScore": 5,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-09-13）共采集 1 条舆情，其中24H内新增 1 条。主要集中在「其他」等产品，来源以微博为主。",
+    "date": "2026-09-13",
+    "generatedAt": "2026-09-12T23:10:25.056Z"
+  },
+  "records": [
+    {
+      "title": "妞儿学校，校园墙几个帖子： 墙，投稿，想找一个工行杯的队友，现在两个人的gpa都...",
+      "content": "妞儿学校，校园墙几个帖子：<br />墙，投稿，想找一个工行杯的队友，现在两个人的gpa都3.5+，但是都是新手。想找一个商科的队友，微微卡绩点3.4吧，谢谢墙！联系方式：…<br />问问有没有人想一起参加中国国际大学生创新大赛，本人acct，gpa3.5+，希望可以找到跨专业的同学，认真努力完成作品，最好是有商赛经验 ...<a href=\"/status/5342324403733799\">全文</a>",
+      "source": "柑橘属星轨",
+      "publishTime": "Sat Sep 12 14:00:56 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5342324403733799",
+      "likes": 1,
+      "comments": 2,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "其他",
+      "keywords": [],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-09-12",
+      "fetchTime": "2026-09-13",
+      "author": "柑橘属星轨",
+      "id": "20260913-01",
+      "category": "其他",
+      "heatScore": 5,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子是校园墙上的客观信息分享，寻找工行杯队友，无情感倾向。",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-09-12T23:10:25.692Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}
