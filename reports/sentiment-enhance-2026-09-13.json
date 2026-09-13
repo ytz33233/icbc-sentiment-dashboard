@@ -1,32 +1,249 @@
 {
   "date": "2026-09-13",
-  "generatedAt": "2026-09-13T04:10:34.718Z",
-  "totalRecords": 30,
+  "generatedAt": "2026-09-13T11:27:23.983Z",
+  "totalRecords": 67,
   "beforeStats": {
-    "positive": 15,
-    "neutral": 10,
-    "negative": 5
+    "positive": 3,
+    "neutral": 64,
+    "negative": 0
   },
   "afterStats": {
-    "positive": 17,
-    "neutral": 8,
-    "negative": 5
+    "positive": 24,
+    "neutral": 33,
+    "negative": 10
   },
-  "diffCount": 2,
+  "diffCount": 33,
   "changes": [
     {
-      "title": "8月24日工行i豆新任务，666i豆",
+      "title": "工行I豆 玩不起了",
       "before": "neutral",
-      "after": "positive",
+      "after": "negative",
       "method": "llm",
-      "reason": "分享新任务和奖励信息，语气积极，属于分享好消息"
+      "reason": "标题'玩不起了'表达对工行I豆活动的不满和失望。"
     },
     {
-      "title": "工行i豆今天抽666×2",
+      "title": "看了一眼工行i豆，天塌了，��要骂人了！",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题'天塌了'和'要骂人了'表达强烈的愤怒和不满情绪。"
+    },
+    {
+      "title": "天塌了，工行不能使用I豆买金了",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题'天塌了'表达对工行不能使用I豆买金的失望和不满。"
+    },
+    {
+      "title": "天塌了，i豆不能抵钱买工行金了",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题'天塌了'表达对i豆不能抵钱买工行金的失望和不满。"
+    },
+    {
+      "title": "工行13000i豆，记得领",
       "before": "neutral",
       "after": "positive",
       "method": "llm",
-      "reason": "分享抽到666×2的好结果，语气积极开心"
+      "reason": "作者提醒他人领取工行i豆，语气积极，分享好消息。"
+    },
+    {
+      "title": "8月升金有礼｜更新工行",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者分享工行8月升金有礼活动更新，语气积极，属于分享好消息。"
+    },
+    {
+      "title": "9.7白露工行得866i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容提到获得866i豆，语气积极，分享好消息"
+    },
+    {
+      "title": "8月工行i豆乐园活动攻略",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "客观分享活动攻略，无情感倾向"
+    },
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "提到有人拿到大量i豆，语气积极，分享好消息"
+    },
+    {
+      "title": "工银i豆使用巧思",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享使用巧思，语气积极"
+    },
+    {
+      "title": "麻了，工行的升金有礼是在这个界面吗？",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "使用“麻了”表达无奈和不满"
+    },
+    {
+      "title": "工商银行6月升金有礼没有1-5万档了？",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "质疑缺少档位，隐含不满或失望"
+    },
+    {
+      "title": "工行i豆乐园，9月更新啦",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘更新啦’语气积极，带有分享好消息的意味"
+    },
+    {
+      "title": "教师福利｜工行APP教师认证白嫖10000i豆🥳",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用'福利'和'白嫖'，并带有庆祝表情🥳，表达获得好处的开心和分享好消息的积极态度。"
+    },
+    {
+      "title": "9月份 工行可以拿下13698个i豆！！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "使用'拿下13698个i豆'和双感叹号，语气兴奋，表达对获得大量i豆的积极期待。"
+    },
+    {
+      "title": "工行 3月升金礼 收到",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'收到'升金礼，语气简洁但表达已获得奖励的满意和积极分享。"
+    },
+    {
+      "title": "银行月月刷8月总结｜工行建行出公告9月悬了",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "'9月悬了'表达对工行建行9月活动前景的担忧和失望，带有消极情绪。"
+    },
+    {
+      "title": "工行你玩不起！",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "标题直接指责工行'玩不起'，表达不满和抱怨"
+    },
+    {
+      "title": "工行的活动策划脑子多少有点🧊",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "用'脑子有点🧊'讽刺工行活动策划，表达嘲讽和不满"
+    },
+    {
+      "title": "😭工行信用卡积分别乱兑！十几万白白亏大",
+      "before": "neutral",
+      "after": "negative",
+      "method": "llm",
+      "reason": "使用😭表情并称'白白亏大'，表达懊悔和不满情绪"
+    },
+    {
+      "title": "工商银行商城购买iphone16promax安全下车",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“安全下车”表示顺利、无问题地完成购买，语气积极满意，分享好消息。"
+    },
+    {
+      "title": "9月份工行话费可省30元",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享可省30元话费的好消息，语气积极"
+    },
+    {
+      "title": "工行第三方存管和几个领豆活动",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享领豆活动信息，属于分享优惠好消息"
+    },
+    {
+      "title": "又可以薅66000工行了",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'又可以薅66000工行了'中'薅'表示获得优惠的喜悦，语气积极"
+    },
+    {
+      "title": "9月首刷‼️先来拿3000工银豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'先来拿3000工银豆'带有号召分享好消息的积极语气"
+    },
+    {
+      "title": "工行大方啊",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'工行大方啊'直接称赞工行，语气积极满意"
+    },
+    {
+      "title": "坐标：北京国贸，顺利拿下工行黑白菜",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“顺利拿下”表达成功和满意，语气积极。"
+    },
+    {
+      "title": "工行银证100大毛到手！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“100大毛到手”表示获得收益，语气开心、分享好消息。"
+    },
+    {
+      "title": "9.9日工行可领0.2-0.88🧧，快来",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“快来”带有邀请和分享优惠的积极语气。"
+    },
+    {
+      "title": "ICBC牛🐮",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“牛🐮”表达称赞和认可，态度积极。"
+    },
+    {
+      "title": "又舒服了，工行领了330",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "“又舒服了”表达愉悦和满意，领到钱是开心的事。"
+    },
+    {
+      "title": "工行66元+10000豆+10000豆，发威的一天",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容用“发威的一天”以及列举获得的66元、10000豆等奖励，语气积极、开心，属于分享好消息。"
+    },
+    {
+      "title": "最喜欢工行 资产提升活动",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "直接表达“最喜欢工行 资产提升活动”，语气积极、满意，明确表达对活动的喜爱。"
     }
   ]
 }
