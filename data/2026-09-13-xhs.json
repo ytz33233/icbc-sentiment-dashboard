@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-13",
-  "generatedAt": "2026-09-13 07:00",
+  "generatedAt": "2026-09-13 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-13）采集到 82 条小红书舆情，负面 8 条，高风险 8 条。",
     "date": "2026-09-13",
-    "generatedAt": "2026-09-13T23:00:22.204Z"
+    "generatedAt": "2026-09-14T04:00:23.055Z"
   },
   "records": [
     {
@@ -2120,7 +2120,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工行携程通疗养积分兑换",
+      "title": "工行携程��疗养积分兑换",
       "content": "工行携程通疗养积分兑换",
       "url": "https://www.xiaohongshu.com/explore/6a82c5ff000000002403d8f8",
       "author": "谦宸",
@@ -2156,7 +2156,7 @@
       "title": "工行M4领12000豆",
       "content": "工行M4领12000豆",
       "url": "https://www.xiaohongshu.com/explore/6a76950e0000000027022c3e",
-      "author": "雾���藏星星",
+      "author": "雾里藏星星",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -2354,7 +2354,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行-节气知多少",
-      "content": "工行-节��知多少",
+      "content": "工行-节气知多少",
       "url": "https://www.xiaohongshu.com/explore/6a9e6524000000002502d5b8",
       "author": "一朵会开花的蘑菇",
       "status": "已发布",

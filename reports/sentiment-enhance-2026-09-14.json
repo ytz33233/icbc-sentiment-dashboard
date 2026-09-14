@@ -1,17 +1,123 @@
 {
   "date": "2026-09-14",
-  "generatedAt": "2026-09-13T23:00:27.408Z",
-  "totalRecords": 1,
+  "generatedAt": "2026-09-14T04:00:35.608Z",
+  "totalRecords": 30,
   "beforeStats": {
-    "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "positive": 10,
+    "neutral": 13,
+    "negative": 7
   },
   "afterStats": {
-    "positive": 0,
-    "neutral": 1,
-    "negative": 0
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 15,
+  "changes": [
+    {
+      "title": "工银i豆",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "使用“麻了”表达无奈和不满"
+    },
+    {
+      "title": "304万工银i豆 是相当于三千块钱吗",
+      "before": "neutral",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "质疑缺少档位，隐含不满或失望"
+    },
+    {
+      "title": "工行13000i豆，记得领",
+      "before": "positive",
+      "after": "negative",
+      "method": "rule-negative",
+      "reason": "'9月悬了'表达对工行建行9月活动前景的担忧和失望，带有消极情绪。"
+    },
+    {
+      "title": "宝子们查收工银i豆积攒攻略！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "仅重复标题内容，无情感表达，属于客观陈述。"
+    },
+    {
+      "title": "8月升金有礼｜更新工行",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "提出关于工银i豆价值换算的疑问，属于信息询问，无积极或消极情感。"
+    },
+    {
+      "title": "工行今日i豆活动汇总（可兑立减金）",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "提醒领取工行i豆，语气积极，分享好消息。"
+    },
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题为活动信息分享，客观陈述获得i豆，无情感倾向"
+    },
+    {
+      "title": "工银i豆使用巧思",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "标题为客观陈述有人获得i豆，无明确情感倾向"
+    },
+    {
+      "title": "麻了，工行的升金有礼是在这个界面吗？",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "客观陈述工行i豆新任务及奖励数量，无情感倾向"
+    },
+    {
+      "title": "工商银行6月升金有礼没有1-5万档了？",
+      "before": "negative",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "客观陈述工行新任务及奖励数量，无情感倾向"
+    },
+    {
+      "title": "工行i豆乐园，9月更新啦",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "仅提及工银i豆领取教程，属于信息分享，无情感倾向"
+    },
+    {
+      "title": "工行i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用'更新啦'，语气轻松积极，带有分享好消息的意味。"
+    },
+    {
+      "title": "教师福利｜工行APP教师认证白嫖10000i豆🥳",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "仅提及'工银I豆乐园'，为客观陈述，无情感倾向。"
+    },
+    {
+      "title": "工行最低200i豆，有卡的记得一定要参加。",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题使用感叹号并强调可获得大量i豆，语气积极，分享好消息。"
+    },
+    {
+      "title": "银行月月刷8月总结｜工行建行出公告9月悬了",
+      "before": "negative",
+      "after": "positive",
+      "method": "llm",
+      "reason": "表示已收到工行3月升金礼，语气积极，分享获得奖励的好消息。"
+    }
+  ]
 }
