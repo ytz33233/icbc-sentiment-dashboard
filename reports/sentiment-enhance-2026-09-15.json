@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-15",
+  "generatedAt": "2026-09-14T23:00:28.870Z",
+  "totalRecords": 6,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 5,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 2,
+    "neutral": 4,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "【工行】 app-任务中心-测额有礼 反馈抽到2000工银i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者分享抽到2000工银i豆的好消息，语气积极，属于分享好消息。"
+    }
+  ]
+}
