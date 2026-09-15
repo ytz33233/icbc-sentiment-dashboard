@@ -1,0 +1,203 @@
+{
+  "reportDate": "2026-09-16",
+  "generatedAt": "2026-09-16 07:10",
+  "fromHistory": false,
+  "summary": {
+    "total": 2,
+    "recentCount": 2,
+    "historyCount": 0,
+    "negativeCount": 0,
+    "negativePct": "0.0",
+    "positiveCount": 0,
+    "neutralCount": 2,
+    "channelCount": 1,
+    "highRiskCount": 0
+  },
+  "bySource": {
+    "social": 2
+  },
+  "bySentiment": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "byRisk": {
+    "low": 2
+  },
+  "byProduct": {
+    "升金有礼": 2
+  },
+  "byCategory": {
+    "薅羊毛": 1,
+    "资产达标": 1
+  },
+  "trend7d": [
+    {
+      "date": "2026-09-10",
+      "total": 4,
+      "recent": 0,
+      "history": 4,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-11",
+      "total": 7,
+      "recent": 0,
+      "history": 7,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-12",
+      "total": 1,
+      "recent": 0,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-13",
+      "total": 2,
+      "recent": 1,
+      "history": 1,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-14",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-15",
+      "total": 2,
+      "recent": 2,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-09-16",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    }
+  ],
+  "hotKeywords": [
+    {
+      "word": "升金有礼",
+      "count": 2
+    }
+  ],
+  "hotTopics": [
+    {
+      "topic": "工行升金有礼活动",
+      "summary": "工商银行App升金有礼8月领取及9月报名",
+      "postCount": 2,
+      "postIndices": [
+        0,
+        1
+      ],
+      "keywords": [
+        "工行",
+        "升金有礼",
+        "薅羊毛"
+      ],
+      "sentiment": {
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0
+      },
+      "sources": {
+        "social": 2
+      },
+      "totalHeat": 0,
+      "topPosts": [
+        {
+          "id": "20260916-01",
+          "title": "薅羊毛线报圈 #薅羊毛线报圈# 工行app搜【升金有礼】 8月份可以去领了 页面...",
+          "heatScore": 0,
+          "sentiment": "positive"
+        },
+        {
+          "id": "20260916-02",
+          "title": "工行app搜【升金有礼】 8月份可以去领了 页面左上角 9月去报名 达标可领i荳...",
+          "heatScore": 0,
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  ],
+  "dailyBrief": {
+    "text": "今日（2026-09-16）共采集 2 条舆情，其中24H内新增 2 条，正面 1 条。主要集中在「升金有礼」等产品，来源以微博为主，热词包括「升金有礼」。",
+    "date": "2026-09-16",
+    "generatedAt": "2026-09-15T23:10:25.725Z"
+  },
+  "records": [
+    {
+      "title": "薅羊毛线报圈 #薅羊毛线报圈# 工行app搜【升金有礼】 8月份可以去领了 页面...",
+      "content": "<a  href=\"https://m.weibo.cn/p/index?extparam=%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88&containerid=1008089fa6c95260da319fbed1552080ca4331&launchid=10000360-page_H5\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://n.sinaimg.cn/photo/5213b46e/20180926/timeline_card_small_super_default.png'></span><span class=\"surl-text\">薅羊毛线报圈</span></a><a  href=\"https://m.weibo.cn/search?containerid=231522type%3D1%26t%3D10%26q%3D%23%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88%23&extparam=%23%E8%96%85%E7%BE%8A%E6%AF%9B%E7%BA%BF%E6%8A%A5%E5%9C%88%23&launchid=10000360-page_H5\" data-hide=\"\"><span class=\"surl-text\">#薅羊毛线报圈#</span></a> <br />工行app搜【升金有礼】<br />8月份可以去领了 页面左上角<br />9月去报名 达标可领i荳",
+      "source": "薅羊毛线报圈",
+      "publishTime": "Tue Sep 15 17:40:31 +0800 2026",
+      "sentimentRaw": "positive",
+      "url": "https://m.weibo.cn/detail/5343466825454316",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-09-15",
+      "fetchTime": "2026-09-16",
+      "author": "薅羊毛线报圈",
+      "id": "20260916-01",
+      "category": "薅羊毛",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子是薅羊毛线报，客观分享工行活动信息，无情感倾向",
+      "sentimentMethod": "llm"
+    },
+    {
+      "title": "工行app搜【升金有礼】 8月份可以去领了 页面左上角 9月去报名 达标可领i荳...",
+      "content": "工行app搜【升金有礼】 <br />8月份可以去领了 页面左上角 <br />9月去报名 达标可领i荳 <br /><br /><a  href=\"https://weibo.cn/sinaurl?u=https%3A%2F%2Fiehou.com%2Fxianbao-471365.htm\" data-hide=\"\"><span class='url-icon'><img style='width: 1rem;height: 1rem' src='https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png'></span><span class=\"surl-text\">网页链接</span></a>",
+      "source": "奋而不斗",
+      "publishTime": "Tue Sep 15 13:38:03 +0800 2026",
+      "sentimentRaw": "neutral",
+      "url": "https://m.weibo.cn/detail/5343405808814413",
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "recency": "24h内",
+      "sentiment": "neutral",
+      "sourceType": "social",
+      "riskLevel": "low",
+      "relatedProduct": "升金有礼",
+      "keywords": [
+        "升金有礼"
+      ],
+      "amount": "-",
+      "status": "未处理",
+      "fermentation": "low",
+      "shares": 0,
+      "date": "2026-09-15",
+      "fetchTime": "2026-09-16",
+      "author": "奋而不斗",
+      "id": "20260916-02",
+      "category": "资产达标",
+      "heatScore": 0,
+      "llmSentiment": "neutral",
+      "llmReason": "帖子客观陈述工行活动参与方式，属于信息分享，无情感倾向",
+      "sentimentMethod": "llm"
+    }
+  ],
+  "llmEnhancedAt": "2026-09-15T23:10:26.494Z",
+  "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
+}

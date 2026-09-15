@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-16",
+  "generatedAt": "2026-09-15T23:10:26.495Z",
+  "totalRecords": 2,
+  "beforeStats": {
+    "positive": 1,
+    "neutral": 1,
+    "negative": 0
+  },
+  "afterStats": {
+    "positive": 0,
+    "neutral": 2,
+    "negative": 0
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "薅羊毛线报圈 #薅羊毛线报圈# 工行app搜【升金有礼】 8月份可以去领了 页面...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "帖子是薅羊毛线报，客观分享工行活动信息，无情感倾向"
+    }
+  ]
+}
