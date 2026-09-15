@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-14",
-  "generatedAt": "2026-09-14 07:00",
+  "generatedAt": "2026-09-14 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-14）采集到 83 条小红书舆情，负面 7 条，高风险 7 条。",
     "date": "2026-09-14",
-    "generatedAt": "2026-09-14T23:00:22.596Z"
+    "generatedAt": "2026-09-15T04:00:22.811Z"
   },
   "records": [
     {
@@ -1360,7 +1360,7 @@
       "title": "工行10元立减金教师身份认证礼流程",
       "content": "工行10元立减金教师身份认证礼流程",
       "url": "https://www.xiaohongshu.com/explore/6a9bdb34000000001203c407",
-      "author": "让���界震惊宝宝",
+      "author": "让世界震惊宝宝",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -2088,7 +2088,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行携程通疗养积分兑换",
-      "content": "工行携程通疗养��分兑换",
+      "content": "工行携程通疗养积分兑换",
       "url": "https://www.xiaohongshu.com/explore/6a82c5ff000000002403d8f8",
       "author": "谦宸",
       "status": "已发布",
