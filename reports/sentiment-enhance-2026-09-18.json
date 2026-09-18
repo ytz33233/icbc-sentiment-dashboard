@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-17T23:00:29.303Z",
+  "generatedAt": "2026-09-18T04:00:28.798Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 9,
@@ -19,14 +19,14 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题为'工银i豆使用巧思'，属于信息分享，无明确情感倾向。"
+      "reason": "标题为使用巧思，属于信息分享或经验介绍，无明确情感倾向。"
     },
     {
       "title": "工行i豆乐园",
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "标题为'工行i豆乐园'，仅为名称或信息陈述，无情感倾向。"
+      "reason": "标题仅为工行i豆乐园，属于客观陈述，无情感倾向。"
     }
   ]
 }
