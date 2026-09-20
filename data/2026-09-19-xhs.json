@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-19",
-  "generatedAt": "2026-09-19 07:00",
+  "generatedAt": "2026-09-19 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-19）采集到 92 条小红书舆情，负面 3 条，高风险 3 条。",
     "date": "2026-09-19",
-    "generatedAt": "2026-09-19T23:00:18.172Z"
+    "generatedAt": "2026-09-20T04:00:18.418Z"
   },
   "records": [
     {
@@ -621,7 +621,7 @@
       "content": "工银i豆领取教程",
       "url": "https://www.xiaohongshu.com/explore/6aa0bb250000000028033506",
       "author": "洼洼",
-      "status": "已��布",
+      "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
       "fetchTime": "2026-09-19T14:06:56.984616",
@@ -1399,7 +1399,7 @@
       "content": "工商银行2800块拿下，又是保底😤😤",
       "url": "https://www.xiaohongshu.com/explore/68254c7a0000000021007a4c",
       "author": "天天上上签🐟✨",
-      "status": "已���布",
+      "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
       "fetchTime": "2026-09-19T14:06:26.272925",
