@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-20",
-  "generatedAt": "2026-09-20 07:00",
+  "generatedAt": "2026-09-20 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-20）采集到 91 条小红书舆情，负面 6 条，高风险 6 条。",
     "date": "2026-09-20",
-    "generatedAt": "2026-09-20T23:00:18.573Z"
+    "generatedAt": "2026-09-21T04:00:18.241Z"
   },
   "records": [
     {
@@ -886,7 +886,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "宝子们查收工银i豆积攒攻略！",
+      "title": "宝子们查收工银i豆积攒攻略���",
       "content": "宝子们查收工银i豆积攒攻略！",
       "url": "https://www.xiaohongshu.com/explore/6a8fea550000000008010213",
       "author": "饿饿带你薅羊毛",
@@ -1161,7 +1161,7 @@
       "content": "工行 3月升金礼 收到",
       "url": "https://www.xiaohongshu.com/explore/69de67780000000021039a1e",
       "author": "西瓜宝宝",
-      "status": "已发布",
+      "status": "已���布",
       "amount": "-",
       "relatedProduct": "其他",
       "fetchTime": "2026-09-20T19:31:29.234947",
@@ -1292,7 +1292,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "广东工行立减金🧧",
-      "content": "广东工行立减金🧧",
+      "content": "广东工行立减金��",
       "url": "https://www.xiaohongshu.com/explore/6aaf3662000000002502fcd6",
       "author": "71..",
       "status": "已发布",
@@ -1789,7 +1789,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行五折30亓立减更新版教程（更新于9.17）",
-      "content": "工行五折30亓立减更新版教程（更新于9.17）",
+      "content": "工行五折30��立减更新版教程（更新于9.17）",
       "url": "https://www.xiaohongshu.com/explore/6aaabd310000000026019766",
       "author": "Rose（教程版）",
       "status": "已发布",
@@ -2877,7 +2877,7 @@
       "id": "20260920-89",
       "date": "2026-09-11",
       "publishTime": "2026-09-11",
-      "source": "小红书",
+      "source": "��红书",
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",

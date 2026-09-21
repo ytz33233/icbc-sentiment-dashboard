@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generatedAt": "2026-09-20T23:00:29.315Z",
+  "generatedAt": "2026-09-21T04:00:22.824Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -8,10 +8,60 @@
     "negative": 7
   },
   "afterStats": {
-    "positive": 7,
-    "neutral": 16,
+    "positive": 0,
+    "neutral": 23,
     "negative": 7
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "【工行】 app-任务中心-测额有礼 反馈抽到2000工银i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行升金有礼，我得到了，35元立减金，太棒了吧 #工行升金#",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行 “升金有礼”奖励工银i豆 ⭐工商银行APP-搜“升金有礼” i豆可以换礼品...",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行13000i豆，记得领",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "宝子们查收工银i豆积攒攻略！",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    },
+    {
+      "title": "工行i豆乐园，9月更新啦",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": ""
+    }
+  ]
 }
