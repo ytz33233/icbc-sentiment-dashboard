@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-09-21",
-  "generatedAt": "2026-09-21 07:00",
+  "generatedAt": "2026-09-21 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -62,7 +62,7 @@
   "dailyBrief": {
     "text": "今日（2026-09-21）采集到 84 条小红书舆情，负面 6 条，高风险 6 条。",
     "date": "2026-09-21",
-    "generatedAt": "2026-09-21T23:00:18.548Z"
+    "generatedAt": "2026-09-22T04:00:17.813Z"
   },
   "records": [
     {
@@ -2785,7 +2785,7 @@
       "title": "工行的羊毛不薅，你真亏了",
       "content": "工行的羊毛不薅，你真亏了",
       "url": "https://www.xiaohongshu.com/explore/6aabfac2000000002b000771",
-      "author": "��蛋儿妹妹",
+      "author": "铁蛋儿妹妹",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
