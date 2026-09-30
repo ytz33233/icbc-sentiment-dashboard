@@ -1,6 +1,6 @@
 {
-  "reportDate": "2026-09-30",
-  "generatedAt": "2026-09-30 12:10",
+  "reportDate": "2026-10-01",
+  "generatedAt": "2026-10-01 07:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -38,13 +38,6 @@
   },
   "trend7d": [
     {
-      "date": "2026-09-24",
-      "total": 0,
-      "recent": 0,
-      "history": 0,
-      "negative": 0
-    },
-    {
       "date": "2026-09-25",
       "total": 0,
       "recent": 0,
@@ -81,6 +74,13 @@
     },
     {
       "date": "2026-09-30",
+      "total": 0,
+      "recent": 0,
+      "history": 0,
+      "negative": 0
+    },
+    {
+      "date": "2026-10-01",
       "total": 0,
       "recent": 0,
       "history": 0,
@@ -150,19 +150,19 @@
       "totalHeat": 3952,
       "topPosts": [
         {
-          "id": "20260930-14",
+          "id": "20261001-14",
           "title": "工银i豆",
           "heatScore": 935,
           "sentiment": "neutral"
         },
         {
-          "id": "20260930-15",
+          "id": "20261001-15",
           "title": "304万工银i豆 是相当于三千块钱吗",
           "heatScore": 863,
           "sentiment": "neutral"
         },
         {
-          "id": "20260930-16",
+          "id": "20261001-16",
           "title": "工行13000i豆，记得领",
           "heatScore": 480,
           "sentiment": "neutral"
@@ -195,19 +195,19 @@
       "totalHeat": 270,
       "topPosts": [
         {
-          "id": "20260930-18",
+          "id": "20261001-18",
           "title": "8月升金有礼｜更新工行",
           "heatScore": 179,
           "sentiment": "neutral"
         },
         {
-          "id": "20260930-05",
+          "id": "20261001-05",
           "title": "麻了，工行的升金有礼是在这个界面吗？",
           "heatScore": 50,
           "sentiment": "negative"
         },
         {
-          "id": "20260930-06",
+          "id": "20261001-06",
           "title": "工商银行6月升金有礼没有1-5万档了？",
           "heatScore": 40,
           "sentiment": "negative"
@@ -216,13 +216,13 @@
     }
   ],
   "dailyBrief": {
-    "text": "今日（2026-09-30）无新增舆情，当前展示 30 条历史持续舆情（其中历史 30 条）。",
-    "date": "2026-09-30",
-    "generatedAt": "2026-09-30T04:10:19.039Z"
+    "text": "今日（2026-10-01）无新增舆情，当前展示 30 条历史持续舆情（其中历史 30 条）。",
+    "date": "2026-10-01",
+    "generatedAt": "2026-09-30T23:10:19.026Z"
   },
   "records": [
     {
-      "id": "20260930-01",
+      "id": "20261001-01",
       "date": "2026-09-04",
       "publishTime": "2026-09-04",
       "source": "小红书",
@@ -260,7 +260,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-02",
+      "id": "20261001-02",
       "date": "2025-04-14",
       "publishTime": "2025-04-14",
       "source": "小红书",
@@ -298,7 +298,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-03",
+      "id": "20261001-03",
       "date": "2026-09-05",
       "publishTime": "2026-09-05",
       "source": "小红书",
@@ -336,7 +336,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-04",
+      "id": "20261001-04",
       "date": "2026-09-06",
       "publishTime": "2026-09-06",
       "source": "小红书",
@@ -374,7 +374,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-05",
+      "id": "20261001-05",
       "date": "2026-02-15",
       "publishTime": "2026-02-15",
       "source": "小红书",
@@ -412,7 +412,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-06",
+      "id": "20261001-06",
       "date": "2026-06-10",
       "publishTime": "2026-06-10",
       "source": "小红书",
@@ -450,7 +450,7 @@
       "sentimentMethod": "rule-negative"
     },
     {
-      "id": "20260930-07",
+      "id": "20261001-07",
       "date": "2026-08-31",
       "publishTime": "2026-08-31",
       "source": "小红书",
@@ -510,7 +510,7 @@
       "date": "2025-10-09",
       "fetchTime": "2026-09-15",
       "author": "蘑菇小牙牙",
-      "id": "20260930-08",
+      "id": "20261001-08",
       "category": "i豆兑换",
       "heatScore": 214,
       "llmSentiment": "neutral",
@@ -542,7 +542,7 @@
       "date": "2023-11-22",
       "fetchTime": "2026-09-15",
       "author": "蘑菇小牙牙",
-      "id": "20260930-09",
+      "id": "20261001-09",
       "category": "i豆兑换",
       "heatScore": 1795,
       "llmSentiment": "neutral",
@@ -574,7 +574,7 @@
       "date": "2025-10-09",
       "fetchTime": "2026-09-15",
       "author": "分享白菜达人",
-      "id": "20260930-10",
+      "id": "20261001-10",
       "category": "i豆兑换",
       "heatScore": 36,
       "llmSentiment": "neutral",
@@ -606,7 +606,7 @@
       "date": "2026-09-08",
       "fetchTime": "2026-09-15",
       "author": "惠惠情报局",
-      "id": "20260930-11",
+      "id": "20261001-11",
       "category": "资产达标",
       "heatScore": 1,
       "llmSentiment": "neutral",
@@ -639,7 +639,7 @@
       "date": "2026-09-08",
       "fetchTime": "2026-09-15",
       "author": "海阔kuo天空2023",
-      "id": "20260930-12",
+      "id": "20261001-12",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -672,7 +672,7 @@
       "date": "2026-09-01",
       "fetchTime": "2026-09-15",
       "author": "线报侠",
-      "id": "20260930-13",
+      "id": "20261001-13",
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "neutral",
@@ -680,7 +680,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-14",
+      "id": "20261001-14",
       "date": "2026-02-11",
       "publishTime": "2026-02-11",
       "source": "小红书",
@@ -718,7 +718,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-15",
+      "id": "20261001-15",
       "date": "2026-08-30",
       "publishTime": "2026-08-30",
       "source": "小红书",
@@ -756,7 +756,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-16",
+      "id": "20261001-16",
       "date": "2026-09-08",
       "publishTime": "2026-09-08",
       "source": "小红书",
@@ -794,7 +794,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-17",
+      "id": "20261001-17",
       "date": "2026-08-27",
       "publishTime": "2026-08-27",
       "source": "小红书",
@@ -832,7 +832,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-18",
+      "id": "20261001-18",
       "date": "2026-08-06",
       "publishTime": "2026-08-06",
       "source": "小红书",
@@ -870,7 +870,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-19",
+      "id": "20261001-19",
       "date": "2026-09-07",
       "publishTime": "2026-09-07",
       "source": "小红书",
@@ -909,7 +909,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-20",
+      "id": "20261001-20",
       "date": "2026-09-07",
       "publishTime": "2026-09-07",
       "source": "小红书",
@@ -947,7 +947,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-21",
+      "id": "20261001-21",
       "date": "2026-08-01",
       "publishTime": "2026-08-01",
       "source": "小红书",
@@ -986,7 +986,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-22",
+      "id": "20261001-22",
       "date": "2025-10-13",
       "publishTime": "2025-10-13",
       "source": "小红书",
@@ -1024,7 +1024,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-23",
+      "id": "20261001-23",
       "date": "2026-09-10",
       "publishTime": "2026-09-10",
       "source": "小红书",
@@ -1062,7 +1062,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-24",
+      "id": "20261001-24",
       "date": "2026-09-10",
       "publishTime": "2026-09-10",
       "source": "小红书",
@@ -1100,7 +1100,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-25",
+      "id": "20261001-25",
       "date": "2026-09-07",
       "publishTime": "2026-09-07",
       "source": "小红书",
@@ -1138,7 +1138,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-26",
+      "id": "20261001-26",
       "date": "2026-09-11",
       "publishTime": "2026-09-11",
       "source": "小红书",
@@ -1176,7 +1176,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-27",
+      "id": "20261001-27",
       "date": "2026-09-01",
       "publishTime": "2026-09-01",
       "source": "小红书",
@@ -1215,7 +1215,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-28",
+      "id": "20261001-28",
       "date": "2026-09-09",
       "publishTime": "2026-09-09",
       "source": "小红书",
@@ -1253,7 +1253,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-29",
+      "id": "20261001-29",
       "date": "2026-09-01",
       "publishTime": "2026-09-01",
       "source": "小红书",
@@ -1292,7 +1292,7 @@
       "sentimentMethod": "llm"
     },
     {
-      "id": "20260930-30",
+      "id": "20261001-30",
       "date": "2026-08-21",
       "publishTime": "2026-08-21",
       "source": "小红书",
@@ -1330,6 +1330,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-09-30T04:10:23.051Z",
+  "llmEnhancedAt": "2026-09-30T23:10:23.510Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
