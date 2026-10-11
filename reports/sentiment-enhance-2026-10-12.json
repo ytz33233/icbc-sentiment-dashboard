@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-12",
+  "generatedAt": "2026-10-11T23:00:30.518Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 0,
+    "neutral": 23,
+    "negative": 7
+  },
+  "afterStats": {
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
+  },
+  "diffCount": 7,
+  "changes": [
+    {
+      "title": "【工行】 app-任务中心-测额有礼 反馈抽到2000工银i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者反馈抽到2000工银i豆，属于分享获得奖励的好消息，语气积极。"
+    },
+    {
+      "title": "工行升金有礼，我得到了，35元立减金，太棒了吧 #工行升金#",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者表示自己得到了35元立减金，并说“太棒了吧”，语气开心、满意。"
+    },
+    {
+      "title": "工行 “升金有礼”奖励工银i豆 ⭐工商银行APP-搜“升金有礼” i豆可以换礼品...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享工行奖励活动信息，语气积极，鼓励查看详情"
+    },
+    {
+      "title": "工行13000i豆，记得领",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "提醒领取i豆，语气积极，分享好消息"
+    },
+    {
+      "title": "宝子们查收工银i豆积攒攻略！",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "热情分享积攒攻略，语气积极"
+    },
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题和内容表达教师节有人成功获得大量i豆，语气带有惊喜和分享好消息的积极意味。"
+    },
+    {
+      "title": "工行i豆乐园，9月更新啦",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "‘更新啦’语气积极，带有分享好消息的意味。"
+    }
+  ]
+}
