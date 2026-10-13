@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-13T23:10:30.545Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
+  },
+  "afterStats": {
+    "positive": 9,
+    "neutral": 14,
+    "negative": 7
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工银i豆使用巧思",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'使用巧思'暗示分享实用技巧，语气积极、有帮助性。"
+    },
+    {
+      "title": "工行i豆乐园",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "'i豆乐园'带有趣味、积极的命名色彩，表达对活动的正面态度。"
+    }
+  ]
+}
