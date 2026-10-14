@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-10-14",
-  "generatedAt": "2026-10-14 07:10",
+  "generatedAt": "2026-10-14 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -168,7 +168,7 @@
     },
     {
       "topic": "工行i豆价值与使用",
-      "summary": "探讨工行i豆价值及兑换使用技巧",
+      "summary": "讨论工行i豆价值换算及使用技巧",
       "postCount": 2,
       "postIndices": [
         14,
@@ -177,8 +177,8 @@
       "keywords": [
         "i豆",
         "价值",
-        "兑换",
-        "使用"
+        "使用",
+        "兑换"
       ],
       "sentiment": {
         "positive": 0,
@@ -218,7 +218,7 @@
         "工行",
         "i豆",
         "买金",
-        "不能使用"
+        "无法使用"
       ],
       "sentiment": {
         "positive": 0,
@@ -331,14 +331,14 @@
     },
     {
       "topic": "中行支付活动",
-      "summary": "中行吱付超给利活动分享",
+      "summary": "中行app支付优惠活动分享",
       "postCount": 1,
       "postIndices": [
         10
       ],
       "keywords": [
         "中行",
-        "吱付超给利",
+        "支付",
         "活动"
       ],
       "sentiment": {
@@ -363,7 +363,7 @@
   "dailyBrief": {
     "text": "今日（2026-10-14）无新增舆情，当前展示 30 条历史持续舆情（其中历史 30 条）。",
     "date": "2026-10-14",
-    "generatedAt": "2026-10-13T23:10:21.680Z"
+    "generatedAt": "2026-10-14T04:10:21.245Z"
   },
   "records": [
     {
@@ -691,7 +691,7 @@
       "category": "i豆兑换",
       "heatScore": 1795,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述工商银行任务中心的小雪节气礼活动内容，无情感倾向。",
+      "llmReason": "作者仅客观陈述工商银行任务中心的小雪节气礼活动内容，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -723,7 +723,7 @@
       "category": "i豆兑换",
       "heatScore": 36,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述工商银行任务中心测额有礼抽i豆的活动信息，无情感倾向。",
+      "llmReason": "作者仅陈述工商银行任务中心测额有礼抽i豆的活动信息，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -755,7 +755,7 @@
       "category": "资产达标",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "客观分享中行和工行活动信息及参与方式，无情感倾向。",
+      "llmReason": "作者主要分享中行和工行活动信息，属于客观信息分享，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -788,7 +788,7 @@
       "category": "i豆兑换",
       "heatScore": 0,
       "llmSentiment": "positive",
-      "llmReason": "作者表示得到了35元立减金，并说“太棒了吧”，语气积极、开心。",
+      "llmReason": "作者表示得到了35元立减金，并说“太棒了吧”，语气积极、开心、满意。",
       "sentimentMethod": "llm"
     },
     {
@@ -1203,7 +1203,7 @@
       "category": "i豆兑换",
       "heatScore": 48,
       "llmSentiment": "positive",
-      "llmReason": "标题使用'真有人拿到了'，表达对获得202600i豆的羡慕和惊喜，语气积极。",
+      "llmReason": "标题使用'真有人拿到了'，表达对获得202600i豆的羡慕和惊喜，语气积极，属于分享好消息。",
       "sentimentMethod": "llm"
     },
     {
@@ -1241,7 +1241,7 @@
       "category": "i豆兑换",
       "heatScore": 35,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述9月10日工行i豆新任务及奖励数量，无情感倾向。",
+      "llmReason": "仅客观陈述9月10日工行i豆新任务及奖励数量，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1279,7 +1279,7 @@
       "category": "i豆兑换",
       "heatScore": 36,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述工行新任务及奖励数量，无情感倾向。",
+      "llmReason": "仅客观陈述工行新任务及奖励数量，无情感倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1317,7 +1317,7 @@
       "category": "i豆兑换",
       "heatScore": 61,
       "llmSentiment": "positive",
-      "llmReason": "'使用巧思'暗示分享实用技巧，语气积极、有帮助性。",
+      "llmReason": "标题'使用巧思'暗示分享实用技巧，语气积极，属于信息分享且带有正面倾向。",
       "sentimentMethod": "llm"
     },
     {
@@ -1356,7 +1356,7 @@
       "category": "i豆兑换",
       "heatScore": 20,
       "llmSentiment": "positive",
-      "llmReason": "'i豆乐园'带有趣味、积极的命名色彩，表达对活动的正面态度。",
+      "llmReason": "标题'i豆乐园'使用'乐园'一词，带有积极、愉快的色彩，表达对活动的正面态度。",
       "sentimentMethod": "llm"
     },
     {
@@ -1394,7 +1394,7 @@
       "category": "i豆兑换",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题和内容仅为教程信息分享，无情感倾向",
+      "llmReason": "标题为教程类信息分享，内容仅重复标题，无情感倾向",
       "sentimentMethod": "llm"
     },
     {
@@ -1433,7 +1433,7 @@
       "category": "i豆兑换",
       "heatScore": 15,
       "llmSentiment": "positive",
-      "llmReason": "使用“更新啦”语气积极，分享新动态，带有开心、期待的情绪",
+      "llmReason": "标题使用'更新啦'，语气积极，分享新动态，带有开心、分享好消息的意味",
       "sentimentMethod": "llm"
     },
     {
@@ -1471,10 +1471,10 @@
       "category": "i豆兑换",
       "heatScore": 7,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及“工行i豆”，客观陈述，无情感倾向",
+      "llmReason": "标题仅提及'工行i豆'，内容重复标题，为客观陈述，无情感倾向",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-10-13T23:10:30.544Z",
+  "llmEnhancedAt": "2026-10-14T04:10:29.839Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
