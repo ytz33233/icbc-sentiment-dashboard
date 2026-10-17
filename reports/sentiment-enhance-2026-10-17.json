@@ -1,6 +1,6 @@
 {
   "date": "2026-10-17",
-  "generatedAt": "2026-10-16T23:10:30.493Z",
+  "generatedAt": "2026-10-17T04:10:28.371Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -12,6 +12,21 @@
     "neutral": 16,
     "negative": 7
   },
-  "diffCount": 0,
-  "changes": []
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "客观陈述有人获得工行i豆的事实，无情感倾向"
+    },
+    {
+      "title": "工银i豆使用巧思",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "分享使用巧思，语气积极，带有分享好消息的意味"
+    }
+  ]
 }
