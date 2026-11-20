@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-20T23:00:27.955Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
+  },
+  "afterStats": {
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
+  },
+  "diffCount": 2,
+  "changes": [
+    {
+      "title": "工行 “升金有礼”奖励工银i豆 ⭐工商银行APP-搜“升金有礼” i豆可以换礼品...",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "作者分享工行奖励活动信息，语气积极，使用⭐等符号，属于分享好消息"
+    },
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "positive",
+      "after": "neutral",
+      "method": "llm",
+      "reason": "客观陈述有人获得i豆的事实，无积极或消极情感表达"
+    }
+  ]
+}
