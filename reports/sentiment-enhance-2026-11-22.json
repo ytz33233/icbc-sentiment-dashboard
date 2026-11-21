@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-21T23:10:28.803Z",
+  "totalRecords": 30,
+  "beforeStats": {
+    "positive": 7,
+    "neutral": 16,
+    "negative": 7
+  },
+  "afterStats": {
+    "positive": 8,
+    "neutral": 15,
+    "negative": 7
+  },
+  "diffCount": 1,
+  "changes": [
+    {
+      "title": "教师节真有人拿到了工行202600i豆",
+      "before": "neutral",
+      "after": "positive",
+      "method": "llm",
+      "reason": "标题强调'真有人拿到了'202600i豆，语气带有惊喜和分享好消息的积极意味"
+    }
+  ]
+}
