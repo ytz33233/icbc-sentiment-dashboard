@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "generatedAt": "2026-11-20T23:00:27.955Z",
+  "generatedAt": "2026-11-21T04:00:28.612Z",
   "totalRecords": 30,
   "beforeStats": {
     "positive": 7,
@@ -26,7 +26,7 @@
       "before": "positive",
       "after": "neutral",
       "method": "llm",
-      "reason": "客观陈述有人获得i豆的事实，无积极或消极情感表达"
+      "reason": "客观陈述有人获得i豆的事实，无情感倾向"
     }
   ]
 }

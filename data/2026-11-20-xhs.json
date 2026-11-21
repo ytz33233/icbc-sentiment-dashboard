@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-20",
-  "generatedAt": "2026-11-20 07:00",
+  "generatedAt": "2026-11-20 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -63,7 +63,7 @@
   "dailyBrief": {
     "text": "今日（2026-11-20）采集到 75 条小红书舆情，负面 7 条，高风险 7 条。",
     "date": "2026-11-20",
-    "generatedAt": "2026-11-20T23:00:18.382Z"
+    "generatedAt": "2026-11-21T04:00:18.774Z"
   },
   "records": [
     {
@@ -1161,7 +1161,7 @@
       "title": "垃圾工行！气气",
       "content": "垃圾工行！气气",
       "url": "https://www.xiaohongshu.com/explore/69b042c800000000260338b3",
-      "author": "阿���不姓温",
+      "author": "阿温不姓温",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -1389,7 +1389,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工行立冬��气答题答案汇总合集来啦🎉",
+      "title": "工行立冬节气答题答案汇总合集来啦🎉",
       "content": "工行立冬节气答题答案汇总合集来啦🎉",
       "url": "https://www.xiaohongshu.com/explore/6aecff7700000000160041e5",
       "author": "Rose（教程版）",
@@ -1524,7 +1524,7 @@
       "title": "工行新一期",
       "content": "工行新一期",
       "url": "https://www.xiaohongshu.com/explore/6ae9c496000000000b0228a8",
-      "author": "小泊林",
+      "author": "小泊��",
       "status": "已发布",
       "amount": "-",
       "relatedProduct": "其他",
@@ -1591,7 +1591,7 @@
       "content": "工行1立减",
       "url": "https://www.xiaohongshu.com/explore/6afd4942000000002b018029",
       "author": "猪猪领",
-      "status": "已发布",
+      "status": "��发布",
       "amount": "-",
       "relatedProduct": "其他",
       "fetchTime": "2026-11-20T10:51:10.845665",
@@ -2548,7 +2548,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "positive",
       "riskLevel": "low",
-      "title": "快！工行5元",
+      "title": "快！工��5元",
       "content": "快！工行5元",
       "url": "https://www.xiaohongshu.com/explore/6afeb551000000002b035e12",
       "author": "羊毛情报站",
