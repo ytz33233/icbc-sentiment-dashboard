@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-22",
-  "generatedAt": "2026-11-22 07:10",
+  "generatedAt": "2026-11-22 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -8,8 +8,8 @@
     "historyCount": 30,
     "negativeCount": 7,
     "negativePct": "23.3",
-    "positiveCount": 8,
-    "neutralCount": 15,
+    "positiveCount": 0,
+    "neutralCount": 23,
     "channelCount": 2,
     "highRiskCount": 0
   },
@@ -18,8 +18,8 @@
     "social": 6
   },
   "bySentiment": {
-    "positive": 8,
-    "neutral": 15,
+    "positive": 0,
+    "neutral": 23,
     "negative": 7
   },
   "byRisk": {
@@ -107,10 +107,17 @@
   ],
   "hotTopics": [
     {
-      "topic": "工银i豆获取攻略",
-      "summary": "分享工银i豆获取方法、活动汇总与领取教程",
-      "postCount": 15,
+      "topic": "i豆",
+      "summary": "关于i豆的讨论",
+      "postCount": 23,
       "postIndices": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        12,
         13,
         14,
         15,
@@ -122,27 +129,25 @@
         22,
         23,
         24,
+        25,
         26,
         27,
         28,
         29
       ],
       "keywords": [
-        "工银i豆",
-        "攻略",
-        "获取",
-        "任务",
-        "领取"
+        "i豆"
       ],
       "sentiment": {
-        "positive": 3,
-        "neutral": 12,
-        "negative": 0
+        "positive": 6,
+        "neutral": 13,
+        "negative": 4
       },
       "sources": {
-        "xiaohongshu": 15
+        "xiaohongshu": 20,
+        "social": 3
       },
-      "totalHeat": 3114,
+      "totalHeat": 3952,
       "topPosts": [
         {
           "id": "20261122-14",
@@ -165,154 +170,29 @@
       ]
     },
     {
-      "topic": "工行任务中心活动",
-      "summary": "工行任务中心测额有礼、节气礼等抽i豆活动",
-      "postCount": 3,
-      "postIndices": [
-        7,
-        8,
-        9
-      ],
-      "keywords": [
-        "任务中心",
-        "测额有礼",
-        "节气礼",
-        "i豆"
-      ],
-      "sentiment": {
-        "positive": 1,
-        "neutral": 2,
-        "negative": 0
-      },
-      "sources": {
-        "social": 3
-      },
-      "totalHeat": 2045,
-      "topPosts": [
-        {
-          "id": "20261122-09",
-          "title": "工行-任务中心-小雪节气礼 做任务合成有机会中立减金或其他",
-          "heatScore": 1795,
-          "sentiment": "neutral"
-        },
-        {
-          "id": "20261122-08",
-          "title": "【工行】 app-任务中心-测额有礼 反馈抽到2000工银i豆",
-          "heatScore": 214,
-          "sentiment": "positive"
-        },
-        {
-          "id": "20261122-10",
-          "title": "工行 任务中心 测额有礼-抽i豆",
-          "heatScore": 36,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "topic": "工行i豆兑换受限",
-      "summary": "用户抱怨工行i豆无法抵钱买金等兑换限制",
-      "postCount": 4,
-      "postIndices": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "keywords": [
-        "工行i豆",
-        "兑换",
-        "买金",
-        "抱怨"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 0,
-        "negative": 4
-      },
-      "sources": {
-        "xiaohongshu": 4
-      },
-      "totalHeat": 527,
-      "topPosts": [
-        {
-          "id": "20261122-01",
-          "title": "工行I豆 玩不起了",
-          "heatScore": 186,
-          "sentiment": "negative"
-        },
-        {
-          "id": "20261122-03",
-          "title": "天塌了，工行不能使用I豆买金了",
-          "heatScore": 137,
-          "sentiment": "negative"
-        },
-        {
-          "id": "20261122-02",
-          "title": "看了一眼工行i豆，天塌了，��要骂人了！",
-          "heatScore": 123,
-          "sentiment": "negative"
-        }
-      ]
-    },
-    {
-      "topic": "银行月月刷活动",
-      "summary": "银行月月刷活动总结及9月活动不确定性",
-      "postCount": 1,
-      "postIndices": [
-        6
-      ],
-      "keywords": [
-        "月月刷",
-        "工行",
-        "建行",
-        "公告"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 0,
-        "negative": 1
-      },
-      "sources": {
-        "xiaohongshu": 1
-      },
-      "totalHeat": 371,
-      "topPosts": [
-        {
-          "id": "20261122-07",
-          "title": "银行月月刷8月总结｜工行建行出公告9月悬了",
-          "heatScore": 371,
-          "sentiment": "negative"
-        }
-      ]
-    },
-    {
-      "topic": "工行升金有礼活动",
-      "summary": "讨论工行升金有礼活动的入口、档位与奖励",
+      "topic": "升金有礼",
+      "summary": "关于升金有礼的讨论",
       "postCount": 5,
       "postIndices": [
         4,
         5,
+        10,
         11,
-        12,
         17
       ],
       "keywords": [
-        "升金有礼",
-        "工行",
-        "立减金",
-        "档位"
+        "升金有礼"
       ],
       "sentiment": {
-        "positive": 2,
-        "neutral": 1,
+        "positive": 1,
+        "neutral": 2,
         "negative": 2
       },
       "sources": {
         "xiaohongshu": 3,
         "social": 2
       },
-      "totalHeat": 269,
+      "totalHeat": 270,
       "topPosts": [
         {
           "id": "20261122-18",
@@ -333,72 +213,12 @@
           "sentiment": "negative"
         }
       ]
-    },
-    {
-      "topic": "工银i豆使用技巧",
-      "summary": "分享工银i豆使用巧思与兑换价值参考",
-      "postCount": 1,
-      "postIndices": [
-        25
-      ],
-      "keywords": [
-        "工银i豆",
-        "使用",
-        "巧思"
-      ],
-      "sentiment": {
-        "positive": 1,
-        "neutral": 0,
-        "negative": 0
-      },
-      "sources": {
-        "xiaohongshu": 1
-      },
-      "totalHeat": 61,
-      "topPosts": [
-        {
-          "id": "20261122-26",
-          "title": "工银i豆使用巧思",
-          "heatScore": 61,
-          "sentiment": "positive"
-        }
-      ]
-    },
-    {
-      "topic": "中行支付优惠活动",
-      "summary": "中行APP热门活动吱付超给利参与提醒",
-      "postCount": 1,
-      "postIndices": [
-        10
-      ],
-      "keywords": [
-        "中行",
-        "吱付超给利",
-        "热门活动"
-      ],
-      "sentiment": {
-        "positive": 0,
-        "neutral": 1,
-        "negative": 0
-      },
-      "sources": {
-        "social": 1
-      },
-      "totalHeat": 1,
-      "topPosts": [
-        {
-          "id": "20261122-11",
-          "title": "中行app-首页-热门活dong 去找到【吱付超给利】 今天还没开的看自己去开 ...",
-          "heatScore": 1,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "dailyBrief": {
     "text": "今日（2026-11-22）无新增舆情，当前展示 30 条历史持续舆情（其中历史 30 条）。",
     "date": "2026-11-22",
-    "generatedAt": "2026-11-21T23:10:21.937Z"
+    "generatedAt": "2026-11-22T04:10:19.345Z"
   },
   "records": [
     {
@@ -676,7 +496,7 @@
       "comments": 86,
       "favorites": 1,
       "recency": "历史",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "i豆活动",
@@ -693,8 +513,8 @@
       "id": "20261122-08",
       "category": "i豆兑换",
       "heatScore": 214,
-      "llmSentiment": "positive",
-      "llmReason": "作者分享抽到2000工银i豆的好消息，语气积极",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -726,7 +546,7 @@
       "category": "i豆兑换",
       "heatScore": 1795,
       "llmSentiment": "neutral",
-      "llmReason": "客观介绍任务中心活动内容，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -758,7 +578,7 @@
       "category": "i豆兑换",
       "heatScore": 36,
       "llmSentiment": "neutral",
-      "llmReason": "仅陈述活动名称，信息分享，无情感表达",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -790,7 +610,7 @@
       "category": "资产达标",
       "heatScore": 1,
       "llmSentiment": "neutral",
-      "llmReason": "客观分享中行和工行活动报名信息，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -804,7 +624,7 @@
       "comments": 0,
       "favorites": 0,
       "recency": "历史",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "升金有礼",
@@ -822,8 +642,8 @@
       "id": "20261122-12",
       "category": "i豆兑换",
       "heatScore": 0,
-      "llmSentiment": "positive",
-      "llmReason": "作者表示获得35元立减金并说'太棒了吧'，语气开心满意",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -837,7 +657,7 @@
       "comments": 0,
       "favorites": 0,
       "recency": "历史",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "sourceType": "social",
       "riskLevel": "low",
       "relatedProduct": "升金有礼",
@@ -855,8 +675,8 @@
       "id": "20261122-13",
       "category": "i豆兑换",
       "heatScore": 0,
-      "llmSentiment": "positive",
-      "llmReason": "作者分享工行奖励活动信息，语气积极，使用⭐等符号，属于分享好消息",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -894,7 +714,7 @@
       "category": "i豆兑换",
       "heatScore": 935,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及“工银i豆”名称，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -932,7 +752,7 @@
       "category": "i豆兑换",
       "heatScore": 863,
       "llmSentiment": "neutral",
-      "llmReason": "客观询问兑换比例，无情感表达",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -941,7 +761,7 @@
       "publishTime": "2026-09-08",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行13000i豆，记得领",
       "content": "工行13000i豆，记得领",
@@ -969,8 +789,8 @@
       "shares": 93,
       "category": "i豆兑换",
       "heatScore": 480,
-      "llmSentiment": "positive",
-      "llmReason": "提醒领取i豆，语气积极友好，属于分享好消息",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -979,7 +799,7 @@
       "publishTime": "2026-08-27",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "宝子们查收工银i豆积攒攻略！",
       "content": "宝子们查收工银i豆积攒攻略！",
@@ -1007,8 +827,8 @@
       "shares": 31,
       "category": "i豆兑换",
       "heatScore": 255,
-      "llmSentiment": "positive",
-      "llmReason": "使用“宝子们”亲切称呼并分享攻略，语气积极热情",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1046,7 +866,7 @@
       "category": "资产达标",
       "heatScore": 179,
       "llmSentiment": "neutral",
-      "llmReason": "标题为活动名称，客观陈述，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1085,7 +905,7 @@
       "category": "i豆兑换",
       "heatScore": 116,
       "llmSentiment": "neutral",
-      "llmReason": "标题为活动汇总信息分享，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1123,7 +943,7 @@
       "category": "i豆兑换",
       "heatScore": 124,
       "llmSentiment": "neutral",
-      "llmReason": "标题为活动信息陈述，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1162,7 +982,7 @@
       "category": "i豆兑换",
       "heatScore": 100,
       "llmSentiment": "neutral",
-      "llmReason": "标题为活动攻略分享，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1200,7 +1020,7 @@
       "category": "i豆兑换",
       "heatScore": 64,
       "llmSentiment": "neutral",
-      "llmReason": "标题为获取方法分享，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1209,7 +1029,7 @@
       "publishTime": "2026-09-10",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "教师节真有人拿到了工行202600i豆",
       "content": "教师节真有人拿到了工行202600i豆",
@@ -1237,8 +1057,8 @@
       "shares": 15,
       "category": "i豆兑换",
       "heatScore": 48,
-      "llmSentiment": "positive",
-      "llmReason": "标题强调'真有人拿到了'202600i豆，语气带有惊喜和分享好消息的积极意味",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1276,7 +1096,7 @@
       "category": "i豆兑换",
       "heatScore": 35,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述工行i豆新任务及奖励数量，属于信息分享，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1314,7 +1134,7 @@
       "category": "i豆兑换",
       "heatScore": 36,
       "llmSentiment": "neutral",
-      "llmReason": "客观陈述工行新任务及奖励数量，属于信息分享，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1323,7 +1143,7 @@
       "publishTime": "2026-09-11",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工银i豆使用巧思",
       "content": "工银i豆使用巧思",
@@ -1351,8 +1171,8 @@
       "shares": 3,
       "category": "i豆兑换",
       "heatScore": 61,
-      "llmSentiment": "positive",
-      "llmReason": "'使用巧思'暗示作者对工银i豆的使用有积极心得，语气积极",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1391,7 +1211,7 @@
       "category": "i豆兑换",
       "heatScore": 20,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及'工行i豆乐园'名称，为客观陈述，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1429,7 +1249,7 @@
       "category": "i豆兑换",
       "heatScore": 16,
       "llmSentiment": "neutral",
-      "llmReason": "标题为教程类信息分享，客观陈述领取方法，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1438,7 +1258,7 @@
       "publishTime": "2026-09-01",
       "source": "小红书",
       "sourceType": "xiaohongshu",
-      "sentiment": "positive",
+      "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行i豆乐园，9月更新啦",
       "content": "工行i豆乐园，9月更新啦",
@@ -1467,8 +1287,8 @@
       "shares": 1,
       "category": "i豆兑换",
       "heatScore": 15,
-      "llmSentiment": "positive",
-      "llmReason": "'更新啦'语气轻快，带有分享好消息的积极意味",
+      "llmSentiment": "neutral",
+      "llmReason": "",
       "sentimentMethod": "llm"
     },
     {
@@ -1506,10 +1326,10 @@
       "category": "i豆兑换",
       "heatScore": 7,
       "llmSentiment": "neutral",
-      "llmReason": "仅提及'工行i豆'，为客观陈述，无情感倾向",
+      "llmReason": "",
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-11-21T23:10:28.802Z",
+  "llmEnhancedAt": "2026-11-22T04:10:23.322Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
