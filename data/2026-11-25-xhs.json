@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-25",
-  "generatedAt": "2026-11-25 07:00",
+  "generatedAt": "2026-11-25 12:00",
   "fromHistory": false,
   "source": "xhs_repo",
   "summary": {
@@ -61,7 +61,7 @@
   "dailyBrief": {
     "text": "今日（2026-11-25）采集到 75 条小红书舆情，负面 0 条，高风险 0 条。",
     "date": "2026-11-25",
-    "generatedAt": "2026-11-25T23:00:18.525Z"
+    "generatedAt": "2026-11-26T04:00:18.220Z"
   },
   "records": [
     {
@@ -348,7 +348,7 @@
       "content": "工商银行6星级客户i豆兑换",
       "url": "https://www.xiaohongshu.com/explore/69d49b7f0000000023013114",
       "author": "🏝甜甜🌻",
-      "status": "���发布",
+      "status": "已发布",
       "amount": "-",
       "relatedProduct": "i豆活动",
       "fetchTime": "2026-11-25T11:04:34.626907",
@@ -447,7 +447,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工银I豆有部分快到期了，换���啥好",
+      "title": "工银I豆有部分快到期了，换点啥好",
       "content": "工银I豆有部分快到期了，换点啥好",
       "url": "https://www.xiaohongshu.com/explore/6b02e80f000000002a024190",
       "author": "momo",
@@ -1590,7 +1590,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行 咱就是说能不能玩的起",
-      "content": "工行 咱就是��能不能玩的起",
+      "content": "工行 咱就是说能不能玩的起",
       "url": "https://www.xiaohongshu.com/explore/6affcb40000000002a03b47f",
       "author": "推醒",
       "status": "已发布",
@@ -1656,7 +1656,7 @@
       "sentiment": "neutral",
       "riskLevel": "low",
       "title": "工行抽2026豆",
-      "content": "工行���2026豆",
+      "content": "工行抽2026豆",
       "url": "https://www.xiaohongshu.com/explore/6aecaddf0000000003014223",
       "author": "小贱",
       "status": "已发布",
@@ -1721,7 +1721,7 @@
       "sourceType": "xiaohongshu",
       "sentiment": "neutral",
       "riskLevel": "low",
-      "title": "工行随���0.2-1.88🧧，刚中0.59",
+      "title": "工行随机0.2-1.88🧧，刚中0.59",
       "content": "工行随机0.2-1.88🧧，刚中0.59",
       "url": "https://www.xiaohongshu.com/explore/6b05398a000000002a01ab06",
       "author": "悄悄打枪滴",
