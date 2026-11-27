@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-27",
-  "generatedAt": "2026-11-27 07:10",
+  "generatedAt": "2026-11-27 12:10",
   "fromHistory": true,
   "summary": {
     "total": 30,
@@ -218,7 +218,7 @@
   "dailyBrief": {
     "text": "今日（2026-11-27）无新增舆情，当前展示 30 条历史持续舆情（其中历史 30 条）。",
     "date": "2026-11-27",
-    "generatedAt": "2026-11-26T23:10:19.715Z"
+    "generatedAt": "2026-11-27T04:10:18.826Z"
   },
   "records": [
     {
@@ -1330,6 +1330,6 @@
       "sentimentMethod": "llm"
     }
   ],
-  "llmEnhancedAt": "2026-11-26T23:10:23.630Z",
+  "llmEnhancedAt": "2026-11-27T04:10:22.700Z",
   "llmEnhancedMethod": "rule-negative-preserved + llm-for-others"
 }
